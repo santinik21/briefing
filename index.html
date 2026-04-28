@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -16,35 +16,19 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
-
-    /* Alert caja */
-    .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
-
-    /* Meta rotativa */
     .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
-
-    /* Cards base */
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
-    .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
-
-    /* Grid 2 cols */
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
-
-    /* Tareas lista */
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
-
-    /* Calendario */
     .cal-cuando{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:4px;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
-
-    /* Hábitos */
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -54,8 +38,6 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
-
-    /* Mails */
     .mail-list{list-style:none;font-size:14px;}
     .mail-list li{padding:7px 0;border-bottom:1px solid var(--border);}
     .mail-list li:last-child{border-bottom:none;}
@@ -64,8 +46,6 @@
     .tag-uni{background:rgba(96,165,250,0.15);color:var(--blue);}
     .tag-sys{background:rgba(139,143,155,0.15);color:var(--muted);}
     .mail-from{color:var(--muted);font-size:12px;margin-top:1px;}
-
-    /* LANCER */
     .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
     .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
     .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -77,8 +57,6 @@
     .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
     .deuda-bloque .val{font-size:18px;font-weight:700;}
     .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
-
-    /* Noticias */
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -87,8 +65,6 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
-
-    /* Idea de negocio */
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -97,250 +73,239 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
-
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
-    @media(max-width:600px){
-      body{padding:14px;}
-      .grid-2{grid-template-columns:1fr;}
-      .lancer-grid{grid-template-columns:repeat(2,1fr);}
-      .hab-grid{grid-template-columns:1fr;}
-    }
+    @media(max-width:600px){body{padding:14px;}.grid-2{grid-template-columns:1fr;}.lancer-grid{grid-template-columns:repeat(2,1fr);}.hab-grid{grid-template-columns:1fr;}}
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Briefing diario</h1>
-    <div class="fecha">martes 28 de abril de 2026</div>
-  </header>
+<header>
+  <h1>Briefing diario</h1>
+  <div class="fecha">martes 28 de abril de 2026</div>
+</header>
 
-  <div class="alert">📋 <strong>Cargá la caja de ayer antes de arrancar el día.</strong> Los datos que se muestran son del viernes 25/4 — llevan 3 días sin cargarse.</div>
+<div class="meta-rotativa">🎯 <strong>Meta del año · semana 18:</strong> Regalo express para falsos influencers — trabajar con micro-influencers entregando producto a cambio de contenido real.</div>
 
-  <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Si no cierran los números de Lancer hasta mayo, abandonar — es el momento de evaluar con frialdad</div>
-
-  <!-- 2. TAREAS TRELLO -->
-  <div class="sec-title">Tareas</div>
-  <div class="grid-2">
-    <div class="card">
-      <h2>Hoy</h2>
-      <ul class="task-list">
-        <li>Buscar iPhone 17 Pro Max</li>
-        <li>Cómo vender en Mercado Libre</li>
-        <li>Buzo Farías</li>
-        <li>Ver si conviene comprar o vender Lancer</li>
-        <li>Ver de armar la app con productos importados de China</li>
-        <li>Armar agentes financieros y de noticias con Claude</li>
-        <li>Terminar curso de Claude y de emprender</li>
-        <li>Investigar black box</li>
-        <li>Agregar 13 Pro Max 256</li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Mañana</h2>
-      <ul class="task-list">
-        <li>Regalo bocha</li>
-        <li>Pagar multa suegra</li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- 3. CALENDARIO -->
-  <div class="sec-title">Agenda</div>
+<div class="sec-title">Tareas</div>
+<div class="grid-2">
   <div class="card">
-    <h2>Próximo evento</h2>
-    <div class="cal-cuando">En 6 días — lunes 4/5</div>
-    <div class="cal-titulo">Último día para rendir — Siglo 21</div>
-    <div class="cal-hora">Todo el día</div>
-  </div>
-
-  <!-- 4. HÁBITOS -->
-  <div class="sec-title">Hábitos — Abril 2026</div>
-  <div class="card">
-    <h2>Progreso mensual</h2>
-    <div class="hab-pct">55%</div>
-    <div class="sub" style="margin-top:4px;">172 de 310 posibles (10 hábitos × 31 días)</div>
-    <ul class="hab-insights">
-      <li>🔴 <strong>Leer de inversiones: 32%</strong> — el más bajo del mes. 21 días sin hacerlo.</li>
-      <li>🔴 <strong>Entrenar: 42%</strong> — meta del mes era volver a boxeo. Quedan 2 días para sumar.</li>
-      <li>🟡 <strong>Estudiar: 42%</strong> — meta 60% (18 días). Solo hiciste 13/26 días disponibles. No cierra.</li>
-      <li>🟢 <strong>Despertar 8:00 + Planificar: 77%</strong> — los más consistentes. Buena base.</li>
-    </ul>
-    <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-g">77%</span></div>
-      <div class="hab-item"><span>Planificar el día</span><span class="badge-g">77%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-g">61%</span></div>
-      <div class="hab-item"><span>Trabajar 4 hs</span><span class="badge-w">58%</span></div>
-      <div class="hab-item"><span>Estudiar 2 hs</span><span class="badge-r">42%</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">32%</span></div>
-      <div class="hab-item"><span>Entrenar</span><span class="badge-r">42%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-w">45%</span></div>
-      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">58%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-g">61%</span></div>
-    </div>
-  </div>
-
-  <!-- 5. MAILS -->
-  <div class="sec-title">Mails</div>
-  <div class="card">
-    <h2>Sin leer</h2>
-    <ul class="mail-list">
-      <li>
-        <span class="mail-tag tag-imp">Seguridad</span>GitHub — Personal access token agregado a tu cuenta
-        <div class="mail-from">noreply@github.com · Vie 24/4</div>
-      </li>
-      <li>
-        <span class="mail-tag tag-imp">Sistema</span>Fallo en Google Apps Script: Lancer (×2)
-        <div class="mail-from">noreply-apps-scripts@google.com · Lun 27/4 — tu automatización de Lancer está fallando</div>
-      </li>
-      <li>
-        <span class="mail-tag tag-uni">IOL</span>¡IOL te lleva a alentar a la Selección!
-        <div class="mail-from">IOL Inversiones · Lun 27/4</div>
-      </li>
-      <li>
-        <span class="mail-tag tag-sys">Promo</span>invitación (última oportunidad)
-        <div class="mail-from">Jaime Higuera — ecomgrowthpartners.com · Lun 27/4</div>
-      </li>
-      <li>
-        <span class="mail-tag tag-sys">Promo</span>Menos de $9,90, lujo por menos — Alibaba
-        <div class="mail-from">noreply@service.alibaba.com · Lun 27/4</div>
-      </li>
+    <h2>Hoy</h2>
+    <ul class="task-list">
+      <li>Reunión hermano Nacho</li>
+      <li>Ver si conviene comprar o vender Lancer</li>
+      <li>Armar app con productos importados de China</li>
+      <li>Agentes financieros y de noticias con Claude</li>
+      <li>Terminar curso de Claude y de emprender</li>
+      <li>Investigar black box</li>
     </ul>
   </div>
-
-  <!-- 6. LANCER -->
-  <div class="sec-title">LANCER</div>
-
   <div class="card">
-    <h2>Caja viernes 25/4</h2>
-    <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$2.371.408</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~0.5 (est.)</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto del día</div><div class="val">S/D</div></div>
-    </div>
-    <div class="sub" style="margin-top:4px;">Efectivo IP: $400.000 · ACC: $80.000 · UALA: $30.000 · USD billete: $1.500 (~$2.1M ARS) · Tarjeta: $2.157.120 (no incluido en total)</div>
+    <h2>Mañana</h2>
+    <ul class="task-list">
+      <li>Buzo Farías</li>
+      <li>Regalo bocha</li>
+      <li>Pagar multa suegra</li>
+    </ul>
   </div>
+</div>
 
+<div class="sec-title">Agenda</div>
+<div class="card">
+  <h2>Próximo evento</h2>
+  <div class="cal-cuando">Lunes 4 de mayo (en 6 días)</div>
+  <div class="cal-titulo">Último día para rendir en Siglo 21</div>
+  <div class="cal-hora">Todo el día · ⚠️ Fecha límite de examen</div>
+</div>
+
+<div class="sec-title">Hábitos — Abril 2026</div>
+<div class="card">
+  <h2>Progreso mensual (datos al 27/4 · Nivel 5 · XP 1600)</h2>
+  <div class="hab-pct">58%</div>
+  <div class="sub" style="margin-top:4px;">Promedio general de los 10 hábitos en abril.</div>
+  <ul class="hab-insights">
+    <li>📈 Racha 100% los días 20, 21 y 22 — mejor tramo del mes. Ayer (27/4): 80%.</li>
+    <li>🔴 Leer inversiones: 35.5% — el más bajo. Solo 1 de cada 3 días. Es el único hábito que depende de tiempo dedicado a formación, no ejecutar.</li>
+    <li>⚠️ Estudiar (45.2%) no va a llegar al 60% este mes — con 3 días restantes el techo es ~47%. Ajustar expectativa y arrancar mayo desde el día 1.</li>
+  </ul>
+  <div class="hab-grid">
+    <div class="hab-item">Despertar 8:00 <span class="badge-g">77.4%</span></div>
+    <div class="hab-item">Planificar el día <span class="badge-g">80.6%</span></div>
+    <div class="hab-item">Desayuno sano <span class="badge-g">64.5%</span></div>
+    <div class="hab-item">Trabajar 4 horas <span class="badge-g">61.3%</span></div>
+    <div class="hab-item">Estudiar 2 horas <span class="badge-w">45.2%</span></div>
+    <div class="hab-item">Leer inversiones <span class="badge-r">35.5%</span></div>
+    <div class="hab-item">Entrenar <span class="badge-w">45.2%</span></div>
+    <div class="hab-item">Leer 10 páginas <span class="badge-w">48.4%</span></div>
+    <div class="hab-item">Dejar celular 00:00 <span class="badge-w">58.1%</span></div>
+    <div class="hab-item">Pensar 5 min <span class="badge-g">64.5%</span></div>
+  </div>
+</div>
+
+<div class="sec-title">Mails</div>
+<div class="card">
+  <h2>Sin leer (ambas cuentas)</h2>
+  <ul class="mail-list">
+    <li>
+      <span class="mail-tag tag-imp">ALERTA</span><strong>Alerta de seguridad — Google (ambas cuentas)</strong>
+      <div class="mail-from">no-reply@accounts.google.com · Hoy 15:05 · Revisá qué dispositivo/acceso disparó la alerta en santiagoniklison y pionik2001</div>
+    </li>
+    <li>
+      <span class="mail-tag tag-uni">INV</span><strong>¡IOL te lleva a alentar a la Selección!</strong>
+      <div class="mail-from">IOL Inversiones · Ayer 20:31 · Promo de marketing para clientes inversores</div>
+    </li>
+    <li>
+      <span class="mail-tag tag-uni">UNI</span><strong>Siglo 21 quiere conocer tu opinión</strong>
+      <div class="mail-from">Experiencia@soysiglo.edu.ar · Hoy 06:01 · Encuesta de experiencia estudiantil</div>
+    </li>
+    <li>
+      <span class="mail-tag tag-sys">MKT</span><strong>ya has hecho lo más difícil / invitación última oportunidad</strong>
+      <div class="mail-from">Ecom Growth Partners · x2 mails ayer y hoy · Marketing no solicitado, ignorar</div>
+    </li>
+    <li>
+      <span class="mail-tag tag-sys">MKT</span><strong>ChangoManía Smart TV / JBL / Luxon Pay</strong>
+      <div class="mail-from">Múltiples remitentes · Ofertas retail, sin relevancia directa para LANCER</div>
+    </li>
+  </ul>
+</div>
+
+<div class="sec-title">LANCER</div>
+
+<div class="card">
+  <h2>Caja ayer (27/4)</h2>
+  <div class="lancer-grid">
+    <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.466.820</div></div>
+    <div class="lancer-stat"><div class="lbl">Cels est. (cash)</div><div class="val">~1 est.</div></div>
+    <div class="lancer-stat"><div class="lbl">Gasto registrado</div><div class="val">$274.000</div></div>
+  </div>
+  <div class="sub">Desglose: Ef. IP $900.000 · UALA $26.550 · Tarjeta $600.300 · Gastos: $174k pauta UALA + $100k pauta BORMIDA. Cels estimados cash: $900k ÷ $778k ≈ 1.</div>
+</div>
+
+<div class="card">
+  <h2>Progreso mensual — meta 50 iPhones</h2>
+  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
+    <span style="font-size:18px;font-weight:700;">~19 est. / 50</span>
+    <span class="sub">Quedan 3 días (28, 29, 30/4)</span>
+  </div>
+  <div class="progress"><div class="progress-fill" style="width:38%"></div></div>
+  <div class="sub" style="color:var(--danger);">⚠️ Break-even: 33 iPhones/mes. Estimado actual: ~19. Por debajo del punto de equilibrio. Meta de 50 no es alcanzable este mes.</div>
+  <div class="sub" style="margin-top:6px;">Ventas acumuladas mes: $14.952.446 ARS (estimación: total pesos ÷ precio promedio $778k).</div>
+  <div class="sub" style="margin-top:4px;color:var(--warning);">Nota: cobro pendiente Flor Parra (tarjeta) $2.491.960 ARS aparece en cuentas a cobrar — verificar fecha de acreditación.</div>
+</div>
+
+<div class="grid-2">
   <div class="card">
-    <h2>Progreso mensual — meta 50 iPhones</h2>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">~31 / 50</span>
-      <span class="sub">Faltan 2 días</span>
-    </div>
-    <div class="progress"><div class="progress-fill" style="width:62%"></div></div>
-    <div class="sub">Punto de eq.: 33 iPhone/mes — estás en el límite (31 est. = just below breakeven)</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: ~$13.485.626 ARS (exc. tarjeta) · Tarjeta mes: ~$9.839.656 ARS</div>
+    <h2>Ventas diarias — Abril</h2>
+    <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
   </div>
-
-  <div class="grid-2">
-    <div class="card">
-      <h2>Ventas diarias</h2>
-      <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
-    </div>
-    <div class="card">
-      <h2>Margen estimado</h2>
-      <div class="chart-container"><canvas id="chart-margen"></canvas></div>
-    </div>
-  </div>
-
   <div class="card">
-    <h2>Deudas y cobros</h2>
-    <div class="deudas-grid">
-      <div class="deuda-bloque">
-        <div class="lbl">A pagar</div>
-        <div class="val">$293.400 ARS</div>
-        <div class="val-usd">+ USD 6.904</div>
-      </div>
-      <div class="deuda-bloque">
-        <div class="lbl">A cobrar</div>
-        <div class="val">$155.000 ARS</div>
-        <div class="val-usd">+ USD 122</div>
-      </div>
+    <h2>Margen estimado (~20% aprox.)</h2>
+    <div class="chart-container"><canvas id="chart-margen"></canvas></div>
+  </div>
+</div>
+
+<div class="card">
+  <h2>Deudas y cobros</h2>
+  <div class="deudas-grid">
+    <div class="deuda-bloque">
+      <div class="lbl">A pagar</div>
+      <div class="val">$293.400 ARS</div>
+      <div class="val-usd">+ USD 6.895</div>
+    </div>
+    <div class="deuda-bloque">
+      <div class="lbl">A cobrar</div>
+      <div class="val">$155.000 ARS</div>
+      <div class="val-usd">+ USD 122 · + $2.491.960 ARS (Flor Parra tarjeta)</div>
     </div>
   </div>
+</div>
 
-  <!-- 7. NOTICIAS -->
-  <div class="sec-title">📰 Argentina</div>
-  <div class="card">
-    <div class="noticia">
-      <div class="noticia-meta">Economía · Infobae · 27 abril 2026</div>
-      <div class="noticia-titulo">El dólar toca máximos desde febrero y el riesgo país roza los 600 puntos</div>
-      <div class="noticia-body">
-        <p>Argentina vivió el lunes una jornada financiera mixta que marcó el fin de la calma cambiaria que había reinado en el primer trimestre. El dólar mayorista avanzó $17.50 (+1.3%) y cerró en $1.417, su nivel más alto desde el 6 de febrero. El minorista llegó a $1.440 en el Banco Nación y el dólar blue tocó $1.430. Es la primera suba mensual del dólar en todo 2026, lo que representa un cambio de tendencia que el mercado está monitoreando.</p>
-        <p>Al mismo tiempo, el riesgo país avanzó hasta los 582 puntos básicos, acercándose de nuevo al umbral psicológico de los 600 puntos que preocupa a los analistas. Los bonos soberanos retrocedieron en la jornada, aunque el Merval logró subir 0.9%, impulsado por acciones del sector energético.</p>
-        <p>El Banco Central compró USD 54 millones en la jornada, acumulando $2.433 millones en abril y superando los $6.800 millones en lo que va de 2026 —más de la mitad de la meta anual de reservas. Este ritmo de compras es notable y da cierto colchón al frente externo. Sin embargo, el contexto global agrega presión: el petróleo Brent subió 2.8% a USD 108.20 por barril, y las tensiones geopolíticas en Medio Oriente generan volatilidad en mercados emergentes.</p>
-        <p><strong>Para LANCER:</strong> Cada suba del dólar impacta directamente en el costo de importación de iPhones y accesorios. Si comprás el próximo lote de stock hoy, pagás más pesos por el mismo precio en USD. Dos movimientos concretos: (1) Si tenés stock comprado a dólar más bajo, tu margen actual es mejor — es momento de vender antes que el cliente empiece a comparar precios actualizados. (2) Revisá tus precios de lista antes de fin de mes: si la competencia no actualizó todavía, tenés una ventana de 7-10 días para absorber margen extra sin perder ventas. El consenso de mercado proyecta $1.699/USD para diciembre — la tendencia es al alza.</p>
-      </div>
+<div class="sec-title">📰 Argentina</div>
+<div class="card">
+  <div class="noticia">
+    <div class="noticia-meta">Retail Tech · Cronista / Perfil / Inteligencia Argentina · Abril 2026</div>
+    <div class="noticia-titulo">Aranceles cero en celulares: iPhones bajaron hasta 17% y el mercado local se reconfigura</div>
+    <div class="noticia-body">
+      <p>Desde enero de 2026, el gobierno de Milei eliminó los aranceles de importación sobre teléfonos celulares, pasando del 16% al 0% en dos tramos (mayo 2025: 16% → 8%; enero 2026: 0%). Esto se sumó al levantamiento del cepo cambiario de abril 2025 y la apertura del mercado de cambios: los importadores ahora pueden pagar mercadería desde el momento de despacho en aduana, eliminando la espera de 30 días que encarecía el capital de trabajo.</p>
+      <p>El impacto en precios fue inmediato pero gradual. Los celulares acumulan una baja promedio del 17% en pesos desde el pico de finales de 2025. Las proyecciones más agresivas hablan de hasta 40% de reducción a medida que se normalice el flujo importador. El iPhone 17 Pro Max hoy cuesta aproximadamente USD 2.409 en Argentina, contra USD 1.549 en Chile y USD 1.600 en México — la brecha sigue existiendo por VAT y logística, pero pasó de ser el doble a un 25-30% más caro que países vecinos.</p>
+      <p>Para LANCER, esto es doble filo. El mercado de iPhones nuevos se agranda: más gente puede acceder a precios más competitivos, ampliando la base de clientes potenciales. Pero la presión de precios hacia abajo aprieta el margen en el negocio de celulares. La competencia de importadores grises y Mercado Libre se intensificó. El dato clave: las importaciones de celulares podrían duplicarse en 2026 según proyecciones sectoriales. Si LANCER no ajusta la propuesta de valor — servicio, garantía propia, financiación, atención local — el precio deja de ser ventaja defensiva.</p>
+      <p><strong>Implicancia concreta:</strong> Revisá los precios de tu lista frente al mercado esta semana. Si tus proveedores no bajaron, estás perdiendo competitividad. Apostar fuerte en accesorios (margen mayor, menos competencia importada) y servicio técnico/postventa es la respuesta correcta a este contexto.</p>
     </div>
   </div>
-
-  <div class="sec-title">🌎 Internacional</div>
-  <div class="card">
-    <div class="noticia">
-      <div class="noticia-meta">Tech · The Motley Fool · 27 abril 2026</div>
-      <div class="noticia-titulo">Tim Cook se retira: Apple le pasa el mando a John Ternus el 1 de septiembre</div>
-      <div class="noticia-body">
-        <p>Apple confirmó el lunes que Tim Cook dejará el cargo de CEO el 1 de septiembre de 2026. Lo reemplazará John Ternus, actual vicepresidente senior de hardware, quien fue responsable del chip M-series y de la ingeniería de los últimos iPhone y AirPods. El anuncio generó una caída de 2.5% en la acción (AAPL), que cotiza en USD 267.40, con un rendimiento de -0.64% en lo que va de 2026 vs. +4.67% del S&P 500.</p>
-        <p>Cook lleva 15 años como CEO y transformó Apple en la empresa más valiosa del mundo —capitalización actual de ~USD 4 billones. Su talón de Aquiles fue la inteligencia artificial: en 2025-2026, mientras Google Gemini y OpenAI redefinían los asistentes de voz, Apple Intelligence llegó tarde y con funciones limitadas. Ternus, por su lado, tiene un perfil más técnico y orientado a hardware, lo que el mercado interpreta como una posible apuesta por integrar IA directamente en el silicio Apple.</p>
-        <p>El timing del cambio no es casual: Apple reporta resultados del Q2 FY2026 el miércoles 30 de abril post-cierre. Goldman Sachs mantiene su precio objetivo en USD 330 (buy) y Bank of America reitera Buy con target USD 325. Ambos argumentan que los temores sobre márgenes y demanda están exagerados, y ven 23% de upside desde los niveles actuales. La temporada del iPhone 17 —presentado en septiembre 2025— sigue siendo el principal motor de ingresos del trimestre.</p>
-        <p><strong>Para Santiago:</strong> A nivel LANCER, el cambio de CEO no altera la cadena de suministro de iPhones ni los precios en el corto plazo. El iPhone 17 ya está en producción y distribución. Lo relevante es que los earnings del 30/4 pueden generar volatilidad en el CEDEAR de AAPL: si los resultados sorprenden positivamente (probable según analistas), el CEDEAR podría recuperar terreno. Si tenés posición o pensás abrir una, el jueves post-earnings es el momento de decisión. El múltiplo de 34x P/E es elevado para el crecimiento actual, pero el ecosistema Apple sigue siendo el más fidelizado del mercado premium.</p>
-      </div>
+  <div class="noticia">
+    <div class="noticia-meta">Economía · BCRA / Infobae · Abril 2026</div>
+    <div class="noticia-titulo">BCRA acumula USD 235M diarios: dólar en $1.400, inflación cede y el contexto importador se estabiliza</div>
+    <div class="noticia-body">
+      <p>El Banco Central sigue comprando divisas a ritmo récord en el esquema de bandas cambiarias (piso $1.000 / techo $1.400, con ajuste mensual del 1%). Al cierre de abril, el tipo de cambio oficial roza el techo de la banda en $1.400. El BCRA acumuló más de USD 2.000 millones de compras en los primeros dos meses del año, lo que le permite seguir reconstruyendo reservas luego del acuerdo con el FMI de USD 20.000 millones (EFF, 48 meses, firmado en abril 2025).</p>
+      <p>La inflación muestra señales de desaceleración confirmadas por el REM. Los analistas proyectan que el IPC de abril caería por debajo del 2.5% mensual — contra picos de 3-4% en el inicio del año. Si se mantiene esta tendencia, el dólar real se aprecia lentamente, lo que abarata el costo en pesos de la mercadería importada.</p>
+      <p><strong>Implicancia concreta para LANCER:</strong> Un dólar estabilizado cerca de $1.400 durante 30-60 días es una ventana de previsibilidad para planificar compras de stock. El riesgo está en si el BCRA deja de intervenir y el tipo de cambio sube hacia o más allá del techo — eso encarece todo el stock dolarizado. Para importar en mayo, cerrá precio ahora. Seguí el dólar MEP y el blue como indicadores tempranos de presión en el mercado.</p>
     </div>
   </div>
+</div>
 
-  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
-  <div class="sec-title">💡 Idea de negocio — semana 18</div>
-  <div class="idea-card">
-    <h2>Idea de la semana</h2>
-    <div class="idea-titulo">Consignataria de hacienda — bróker de ganado en el NOA</div>
-    <div class="idea-body">
-
-      <h3>Qué es</h3>
-      <p>Crear una empresa consignataria que actúe como intermediaria entre productores ganaderos del NOA (Tucumán, Santiago del Estero, Salta) y frigoríficos o compradores mayoristas. La consignataria no compra el ganado: lo representa, facilita la venta, y cobra una comisión del 3-5% sobre el valor de la transacción. Modelo de capital casi nulo, escalable por reputación y red de contactos.</p>
-
-      <h3>Por qué ahora</h3>
-      <p>El negocio ganadero argentino está naturalmente dolarizado: el novillo cotiza en USD por kilo vivo. Con el dólar en $1.417 y proyectado a $1.699 para diciembre, cualquier transacción en USD genera un margen cambiario adicional al cobrar la comisión. Tucumán tiene tradición ganadera activa en el pedemonte y acceso a productores medianos (200-500 cabezas) que hoy dependen de consignatarias tradicionales con estructuras lentas. La digitalización del sector es bajísima: los remates siguen siendo por WhatsApp o presenciales. Quien llegue con transparencia, velocidad y tecnología tiene ventaja estructural sobre los incumbentes.</p>
-
-      <h3>Cómo arrancarla</h3>
-      <ul>
-        <li><strong>Habilitación:</strong> Inscribirse como consignatario ante el SENASA y el registro provincial (~$50K ARS, 30-60 días de trámite).</li>
-        <li><strong>Red inicial:</strong> Identificar 3-5 productores de conocidos o familia dispuestos a consignar. En este negocio, el capital social es el activo más valioso.</li>
-        <li><strong>Primera operación:</strong> Publicar en portales como Lotes y Hacienda o grupos de WhatsApp rurales. El primer remate puede ser virtual.</li>
-        <li><strong>Logística:</strong> Subcontratar el transporte a camioneros ganaderos establecidos — no asumir costo de flota propio en la etapa inicial.</li>
-        <li><strong>Escalado:</strong> Con 2-3 operaciones exitosas, construir reputación. Agregar una web/app simple con catálogo de hacienda disponible para diferenciarse.</li>
-      </ul>
-
-      <h3>Modelo de ingreso</h3>
-      <p>Comisión del 3-4% sobre el valor de cada venta. Ejemplo: lote de 50 novillos × 430 kg promedio × USD 2.10/kg = USD 45.150 bruto → comisión 3% = USD 1.354 ≈ $1.9M ARS por operación. Con 3-4 operaciones al mes: $5.7M–$7.5M ARS/mes. Sin inversión en hacienda propia, el riesgo de capital es mínimo.</p>
-
-      <h3>Riesgos principales</h3>
-      <ul>
-        <li><strong>Reputacional:</strong> Un lote con problemas sanitarios o un transporte que falla destruye la confianza en toda la red. El primer error cuesta caro.</li>
-        <li><strong>Regulatorio:</strong> El SENASA controla activos sanitarios, guías de traslado y el Documento de Tránsito Animal (DTA). Cualquier irregularidad genera multas importantes.</li>
-        <li><strong>Competencia instalada:</strong> Las consignatarias tradicionales tienen décadas de relaciones. Diferenciarse requiere velocidad, precio y tecnología — no solo contactos.</li>
-      </ul>
-
-      <h3>Esfuerzo e inversión inicial</h3>
-      <p>Capital necesario: ~$150K–$200K ARS (trámites, comunicación, primer evento). Tiempo: 3-6 meses hasta la primera operación formal. Requiere networking intenso en el sector y acceso a un referente ganadero que valide el primer negocio. Si tenés vínculos con el campo por tu contexto familiar en Tucumán, el costo de entrada es mucho menor que para alguien externo al sector.</p>
-
+<div class="sec-title">🌎 Internacional</div>
+<div class="card">
+  <div class="noticia">
+    <div class="noticia-meta">Tech · CNBC / Apple Insider / MacObserver · 28 abr 2026</div>
+    <div class="noticia-titulo">Apple reporta Q2 el 30 de abril: Tim Cook se va en septiembre, John Ternus asume y el iPhone 17 rompe todos los récords</div>
+    <div class="noticia-body">
+      <p>Apple publicará sus resultados del Q2 FY2026 el miércoles 30 de abril a las 17:00 ET (18:00 Argentina). El consenso de analistas proyecta ingresos de USD 109.690 millones (+15% YoY) y EPS de USD 1.95 (+18%). El contexto es muy favorable: el Q1 FY2026 fue el trimestre más fuerte en la historia de Apple con USD 143.760 millones en ingresos (+15.7% YoY), impulsado por el iPhone 17 con ingresos de USD 85.270 millones (+23.3%). Los Servicios (App Store, Apple TV+, iCloud, Apple Pay) alcanzaron un nuevo máximo histórico de USD 30.010 millones.</p>
+      <p>La noticia más grande de la semana fue el anuncio de sucesión: Tim Cook pasará a ser Executive Chairman y John Ternus — actual SVP de Hardware Engineering, el cerebro detrás del iPhone, iPad y Mac de los últimos años — asumirá como CEO el 1 de septiembre de 2026. Las acciones cayeron 2.5% en la sesión del anuncio pero recuperaron rápidamente. UBS subió su precio objetivo a USD 323 (desde ~USD 271 actual), implicando un 21% de upside con calificación compra. La lectura del mercado: la transición es ordenada, el negocio es sólido, y Cook deja en orden los dos pilares del crecimiento futuro — Apple Intelligence (IA) y Servicios.</p>
+      <p>Para el mercado de iPhones, el modelo 17 mostró demanda sin precedentes en China (+23% en las primeras 9 semanas de 2026, contra un mercado que cayó 4%) y récords en EE.UU. La mayor participación de China — USD 25.530 millones vs USD 18.510 millones un año atrás — es la señal más potente: el mercado chino volvió para Apple en serio.</p>
+      <p><strong>Implicancia para LANCER:</strong> El momentum de Apple es muy positivo para el ecosistema de reventa y accesorios. Un iPhone 17 fuerte implica que el mercado de seminuevos también se dinamiza (la gente actualiza). Seguí los earnings del miércoles — si Apple guía bien para Q3 y adelanta demanda fuerte del iPhone 17 Pro/Max, eso impacta en los precios de usados en Argentina desde el segundo semestre. También implica que Apple Intelligence se consolida: funcionalidades que van a empujar upgrades en el mercado local.</p>
     </div>
   </div>
+</div>
 
-  <footer>Generado 28/04/2026 · Cargá la caja de los días 26, 27 y 28 antes de revisar los datos de LANCER</footer>
+<div class="sec-title">💡 Idea de negocio — semana 18</div>
+<div class="idea-card">
+  <h2>Idea de la semana</h2>
+  <div class="idea-titulo">Programa de Trade-In en LANCER: recompra de iPhones usados y reventa como "certificados Lancer"</div>
+  <div class="idea-body">
+    <h3>Qué es</h3>
+    <p>Un sistema formalizado de recompra de iPhones usados en el local. El cliente trae su dispositivo actual, LANCER lo evalúa en el acto (5-10 minutos) y le ofrece un valor de canje que puede aplicar como descuento a la compra de un iPhone nuevo o seminuevo. LANCER recompra el dispositivo, lo recondicioná (limpieza, testeo, cambio de batería si aplica) y lo revende como "iPhone certificado Lancer" con garantía propia de 3 meses.</p>
 
-  <script>
-    const ventasData = [{"fecha":"01/04","total":1421485},{"fecha":"02/04","total":0},{"fecha":"03/04","total":0},{"fecha":"04/04","total":674500},{"fecha":"05/04","total":0},{"fecha":"06/04","total":148500},{"fecha":"07/04","total":667140},{"fecha":"08/04","total":424597},{"fecha":"09/04","total":78362},{"fecha":"10/04","total":714832},{"fecha":"11/04","total":920427},{"fecha":"12/04","total":0},{"fecha":"13/04","total":1252041},{"fecha":"14/04","total":38900},{"fecha":"15/04","total":32000},{"fecha":"16/04","total":107000},{"fecha":"17/04","total":0},{"fecha":"18/04","total":1047150},{"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},{"fecha":"22/04","total":2771681},{"fecha":"23/04","total":41000},{"fecha":"24/04","total":774600},{"fecha":"25/04","total":2371408},{"fecha":"26/04","total":0},{"fecha":"27/04","total":0},{"fecha":"28/04","total":0},{"fecha":"29/04","total":0},{"fecha":"30/04","total":0}];
-    const margenData = [{"fecha":"01/04","margen":213222},{"fecha":"02/04","margen":0},{"fecha":"03/04","margen":0},{"fecha":"04/04","margen":101175},{"fecha":"05/04","margen":0},{"fecha":"06/04","margen":22275},{"fecha":"07/04","margen":100071},{"fecha":"08/04","margen":63689},{"fecha":"09/04","margen":11754},{"fecha":"10/04","margen":107224},{"fecha":"11/04","margen":138064},{"fecha":"12/04","margen":0},{"fecha":"13/04","margen":187806},{"fecha":"14/04","margen":5835},{"fecha":"15/04","margen":4800},{"fecha":"16/04","margen":16050},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":157072},{"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},{"fecha":"22/04","margen":415752},{"fecha":"23/04","margen":6150},{"fecha":"24/04","margen":116190},{"fecha":"25/04","margen":355711},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":0},{"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0},{"fecha":"30/04","margen":0}];
-    new Chart(document.getElementById('chart-ventas'), {
-      type: 'line',
-      data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-    });
-    new Chart(document.getElementById('chart-margen'), {
-      type: 'bar',
-      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-    });
-  </script>
+    <h3>Por qué ahora</h3>
+    <p>La baja de aranceles (0% desde enero 2026) está generando un ciclo de actualización masivo: quienes tienen iPhone 12/13 quieren pasarse al 15 o 16. Eso crea oferta de usados barata y demanda de acceso facilitado a modelos nuevos. Al mismo tiempo, el mercado gris de seminuevos está completamente desordenado — no hay garantía ni trazabilidad. LANCER puede ocupar el nicho de "reventa de confianza" en Tucumán, donde la reputación del local ya existe. Timing perfecto: Apple acaba de mostrar que el iPhone 17 tiene demanda récord, lo que presionará al alza el precio de los nuevos y empujará la demanda de usados.</p>
+
+    <h3>Cómo arrancarla</h3>
+    <ul>
+      <li><strong>Paso 1:</strong> Armar tabla de precios de recompra por modelo (iPhone 12 → 16) con criterios claros: pantalla, batería, estado chasis. Publicarla en Instagram como contenido de valor.</li>
+      <li><strong>Paso 2:</strong> Lanzar con 3-5 dispositivos propios reacondicionados como stock piloto. Foto profesional, descripción detallada del estado, precio con pequeño descuento vs. mercado.</li>
+      <li><strong>Paso 3:</strong> Contenido en redes mostrando el proceso de evaluación en cámara: "traé tu iPhone, te damos el precio en 5 minutos". Genera confianza y atrae tráfico al local.</li>
+      <li><strong>Paso 4:</strong> Garantía de 3 meses en todos los reacondicionados como diferenciador vs. Mercado Libre.</li>
+      <li><strong>Paso 5:</strong> Medir rotación: si un usado tarda más de 15 días en venderse, el precio de recompra fue alto. Ajustar tabla mensualmente.</li>
+    </ul>
+
+    <h3>Modelo de ingreso</h3>
+    <p>El margen surge del diferencial entre precio de recompra y precio de reventa. Ejemplo rough: iPhone 13 en buen estado → recompra a USD 200, venta certificada a USD 280-300 → margen USD 80-100 por unidad. Con 5-8 usados por mes: USD 400-800 de margen adicional. Es margen casi puro (sin costo de importación), más eficiente que vender iPhones nuevos.</p>
+
+    <h3>Riesgos principales</h3>
+    <ul>
+      <li><strong>Sobreestimar el valor de recompra:</strong> Si pagás de más, el margen se destruye. La tabla tiene que ser conservadora y revisarse cada 2 semanas.</li>
+      <li><strong>Tiempo de rotación alto:</strong> Un usado que no se vende en 30 días deprecia. Limitar el stock máximo a 5-7 dispositivos en simultáneo.</li>
+      <li><strong>Dispositivos robados:</strong> Verificar siempre IMEI antes de comprar. Un dispositivo con IMEI reportado es pérdida total. Hay bases de IMEI locales (RENABAP/operadoras).</li>
+    </ul>
+
+    <h3>Esfuerzo / inversión inicial</h3>
+    <p>Capital inicial: USD 600-1.000 para comprar los primeros 3-5 dispositivos. Tiempo de setup: 1-2 semanas para armar la tabla, fotografiar y publicar. Sin inversión en infraestructura. Si funciona, este sistema se convierte en un diferenciador que ningún otro local de Tucumán tiene formalizado — y además atrae clientes nuevos al local que después compran accesorios o iPhones nuevos.</p>
+  </div>
+</div>
+
+<footer>Generado 28/04/2026 · Datos de caja al 27/04 · Habitos al 27/04 · Semana 18</footer>
+
+<script>
+  const ventasData = [{"fecha":"01/04","total":1421485},{"fecha":"02/04","total":0},{"fecha":"03/04","total":0},{"fecha":"04/04","total":674500},{"fecha":"05/04","total":0},{"fecha":"06/04","total":148500},{"fecha":"07/04","total":667140},{"fecha":"08/04","total":424597},{"fecha":"09/04","total":78362},{"fecha":"10/04","total":714832},{"fecha":"11/04","total":920427},{"fecha":"12/04","total":0},{"fecha":"13/04","total":1252041},{"fecha":"14/04","total":38900},{"fecha":"15/04","total":32000},{"fecha":"16/04","total":107000},{"fecha":"17/04","total":0},{"fecha":"18/04","total":1047150},{"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},{"fecha":"22/04","total":2771681},{"fecha":"23/04","total":41000},{"fecha":"24/04","total":774600},{"fecha":"25/04","total":2371408},{"fecha":"26/04","total":0},{"fecha":"27/04","total":1466820},{"fecha":"28/04","total":0},{"fecha":"29/04","total":0},{"fecha":"30/04","total":0}];
+  const margenData = [{"fecha":"01/04","margen":284297},{"fecha":"02/04","margen":0},{"fecha":"03/04","margen":0},{"fecha":"04/04","margen":134900},{"fecha":"05/04","margen":0},{"fecha":"06/04","margen":29700},{"fecha":"07/04","margen":133428},{"fecha":"08/04","margen":84919},{"fecha":"09/04","margen":15672},{"fecha":"10/04","margen":142966},{"fecha":"11/04","margen":184085},{"fecha":"12/04","margen":0},{"fecha":"13/04","margen":250408},{"fecha":"14/04","margen":7780},{"fecha":"15/04","margen":6400},{"fecha":"16/04","margen":21400},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":209430},{"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},{"fecha":"22/04","margen":554336},{"fecha":"23/04","margen":8200},{"fecha":"24/04","margen":154920},{"fecha":"25/04","margen":474281},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":293364},{"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0},{"fecha":"30/04","margen":0}];
+  new Chart(document.getElementById('chart-ventas'), {
+    type: 'line',
+    data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+  });
+  new Chart(document.getElementById('chart-margen'), {
+    type: 'bar',
+    data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
+    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+  });
+</script>
 </body>
 </html>
