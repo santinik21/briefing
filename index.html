@@ -3,251 +3,343 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — jueves 24 de abril de 2026</title>
+  <title>Briefing diario — 28 de abril de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
-    :root { --bg:#0f1115; --card:#1a1d24; --card-2:#22262f; --text:#e8e8ec; --muted:#8b8f9b; --accent:#4ade80; --warning:#fbbf24; --danger:#f87171; --border:#2a2e38; }
+    :root {
+      --bg:#0f1115; --card:#1a1d24; --card-2:#22262f; --text:#e8e8ec;
+      --muted:#8b8f9b; --accent:#4ade80; --warning:#fbbf24;
+      --danger:#f87171; --border:#2a2e38; --blue:#60a5fa;
+    }
     *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.5;padding:24px;max-width:1200px;margin:0 auto;}
+    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;padding:24px;max-width:960px;margin:0 auto;}
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
-    header h1{font-size:24px;font-weight:600;}
-    header .fecha{color:var(--muted);font-size:14px;}
+    header h1{font-size:22px;font-weight:600;}
+    header .fecha{color:var(--muted);font-size:13px;}
+
+    /* Alert caja */
     .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-bottom:24px;}
-    .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:16px;}
-    .card h2{font-size:12px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin-bottom:8px;font-weight:600;}
-    .card .big{font-size:28px;font-weight:700;margin-bottom:4px;}
-    .card .sub{font-size:13px;color:var(--muted);}
-    .card.wide{grid-column:1/-1;}
-    .card ul{list-style:none;font-size:14px;}
-    .card ul li{padding:6px 0;border-bottom:1px solid var(--border);}
-    .card ul li:last-child{border-bottom:none;}
-    .progress{height:8px;background:var(--card-2);border-radius:4px;overflow:hidden;margin-top:8px;}
-    .progress-fill{height:100%;background:var(--accent);transition:width 0.3s ease;}
-    .chart-container{position:relative;height:250px;margin-top:12px;}
-    .section-title{font-size:14px;text-transform:uppercase;letter-spacing:0.05em;color:var(--muted);margin:24px 0 12px 0;font-weight:600;}
-    .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:16px;font-size:14px;}
+
+    /* Meta rotativa */
+    .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
-    .dolar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px;}
-    .dolar-item{text-align:center;padding:8px;background:var(--card-2);border-radius:4px;}
-    .dolar-item .label{font-size:10px;color:var(--muted);text-transform:uppercase;}
-    .dolar-item .value{font-size:16px;font-weight:700;margin-top:2px;}
-    .badge-rojo{color:var(--danger);font-size:11px;font-weight:600;margin-left:4px;}
-    .badge-verde{color:var(--accent);font-size:11px;font-weight:600;margin-left:4px;}
-    @media (max-width:600px){body{padding:16px;}.dolar-grid{grid-template-columns:repeat(2,1fr);}header{flex-direction:column;gap:4px;}}
+
+    /* Cards base */
+    .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
+    .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
+    .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
+    .card .sub{font-size:13px;color:var(--muted);}
+
+    /* Grid 2 cols */
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+
+    /* Tareas lista */
+    .task-list{list-style:none;font-size:14px;}
+    .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
+    .task-list li:last-child{border-bottom:none;}
+    .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
+
+    /* Calendario */
+    .cal-cuando{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+    .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
+    .cal-hora{font-size:13px;color:var(--muted);}
+
+    /* Hábitos */
+    .hab-pct{font-size:44px;font-weight:800;line-height:1;}
+    .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
+    .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
+    .badge-r{color:var(--danger);font-weight:700;font-size:12px;}
+    .badge-g{color:var(--accent);font-weight:700;font-size:12px;}
+    .badge-w{color:var(--warning);font-weight:700;font-size:12px;}
+    .hab-insights{margin-top:12px;font-size:14px;}
+    .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
+    .hab-insights li:last-child{border-bottom:none;}
+
+    /* Mails */
+    .mail-list{list-style:none;font-size:14px;}
+    .mail-list li{padding:7px 0;border-bottom:1px solid var(--border);}
+    .mail-list li:last-child{border-bottom:none;}
+    .mail-tag{display:inline-block;font-size:10px;font-weight:700;padding:1px 6px;border-radius:3px;margin-right:6px;text-transform:uppercase;}
+    .tag-imp{background:rgba(248,113,113,0.15);color:var(--danger);}
+    .tag-uni{background:rgba(96,165,250,0.15);color:var(--blue);}
+    .tag-sys{background:rgba(139,143,155,0.15);color:var(--muted);}
+    .mail-from{color:var(--muted);font-size:12px;margin-top:1px;}
+
+    /* LANCER */
+    .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
+    .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
+    .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
+    .lancer-stat .val{font-size:20px;font-weight:700;}
+    .progress{height:8px;background:var(--card-2);border-radius:4px;overflow:hidden;margin:8px 0;}
+    .progress-fill{height:100%;background:var(--accent);}
+    .chart-container{position:relative;height:220px;margin-top:10px;}
+    .deudas-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px;}
+    .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
+    .deuda-bloque .val{font-size:18px;font-weight:700;}
+    .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
+
+    /* Noticias */
+    .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
+    .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+    .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
+    .noticia-titulo{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.3;}
+    .noticia-body{font-size:14px;color:#c8cad0;line-height:1.7;}
+    .noticia-body p{margin-bottom:8px;}
+    .noticia-body p:last-child{margin-bottom:0;}
+    .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
+
+    /* Idea de negocio */
+    .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
+    .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
+    .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
+    .idea-body{font-size:14px;color:#c8cad0;line-height:1.75;}
+    .idea-body h3{font-size:13px;font-weight:700;color:var(--text);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.04em;}
+    .idea-body p{margin-bottom:10px;}
+    .idea-body ul{padding-left:18px;margin-bottom:10px;}
+    .idea-body ul li{margin-bottom:4px;}
+
+    footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
+    @media(max-width:600px){
+      body{padding:14px;}
+      .grid-2{grid-template-columns:1fr;}
+      .lancer-grid{grid-template-columns:repeat(2,1fr);}
+      .hab-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">jueves 24 de abril de 2026</div>
+    <div class="fecha">martes 28 de abril de 2026</div>
   </header>
 
-  <div class="alert">📋 <strong>Cargá la caja de ayer (23/4) en la hoja antes de arrancar el día.</strong> Los datos que se muestran abajo son del 22/4.</div>
+  <div class="alert">📋 <strong>Cargá la caja de ayer antes de arrancar el día.</strong> Los datos que se muestran son del viernes 25/4 — llevan 3 días sin cargarse.</div>
 
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Hasta julio: ganar 2.000 USD de utilidad mensual con LANCER</div>
+  <!-- 1. META DEL AÑO -->
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Si no cierran los números de Lancer hasta mayo, abandonar — es el momento de evaluar con frialdad</div>
 
-  <div class="grid">
+  <!-- 2. TAREAS TRELLO -->
+  <div class="sec-title">Tareas</div>
+  <div class="grid-2">
     <div class="card">
-      <h2>Próximo en la agenda</h2>
-      <div class="big" style="font-size:18px;">Hoy (todo el día)</div>
-      <div class="sub">🎂 Cumpleaño cuchu · tentativo</div>
-      <div class="sub" style="margin-top:6px;">Mañana: sin eventos agendados</div>
-    </div>
-    <div class="card">
-      <h2>Dólar hoy · 24/04</h2>
-      <div class="dolar-grid">
-        <div class="dolar-item"><div class="label">Oficial</div><div class="value">$1.395</div></div>
-        <div class="dolar-item"><div class="label">Blue</div><div class="value">$1.420</div></div>
-        <div class="dolar-item"><div class="label">MEP</div><div class="value">$1.429</div></div>
-        <div class="dolar-item"><div class="label">CCL</div><div class="value">$1.478</div></div>
-      </div>
-    </div>
-    <div class="card">
-      <h2>Caja 22/4 (anteayer)</h2>
-      <div class="big">$2.268.956</div>
-      <div class="sub">~3 cels est. (tarjeta $2.508.840) · gasto del día: n/d</div>
-    </div>
-    <div class="card">
-      <h2>Hábitos — abril</h2>
-      <div class="big">50%</div>
-      <div class="sub">🔥 Días 20-21-22: 100% tres seguidos · XP 1370 Nv.4</div>
-    </div>
-  </div>
-
-  <div class="card wide" style="margin-bottom:24px;">
-    <h2>Progreso mes — Abril 2026</h2>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:8px;">
-      <span style="font-size:18px;font-weight:600;">~8 est. / 50 iPhones</span>
-      <span style="color:var(--muted);font-size:13px;">Faltan 6 días</span>
-    </div>
-    <div class="progress"><div class="progress-fill" style="width:16%"></div></div>
-    <div class="sub" style="margin-top:8px;">Punto de equilibrio: 33 iPhones/mes — <span style="color:var(--danger)">Muy por debajo. Necesitás acelerar ventas esta semana.</span></div>
-    <div class="sub" style="margin-top:6px;">Ventas acumuladas mes (suma TOTAL PESOS): ~$9.800.000 ARS · EFECTIVO IP neto: $1.618.600</div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h2>Ventas — Abril 2026</h2>
-      <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
-    </div>
-    <div class="card">
-      <h2>Margen / utilidad diaria (est.)</h2>
-      <div class="chart-container"><canvas id="chart-margen"></canvas></div>
-    </div>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h2>Tareas hoy</h2>
-      <ul>
+      <h2>Hoy</h2>
+      <ul class="task-list">
+        <li>Buscar iPhone 17 Pro Max</li>
         <li>Cómo vender en Mercado Libre</li>
         <li>Buzo Farías</li>
-        <li>Ver si conviene comprar o vender LANCER</li>
-        <li>Ver de armar app con productos importados de China</li>
+        <li>Ver si conviene comprar o vender Lancer</li>
+        <li>Ver de armar la app con productos importados de China</li>
         <li>Armar agentes financieros y de noticias con Claude</li>
         <li>Terminar curso de Claude y de emprender</li>
         <li>Investigar black box</li>
+        <li>Agregar 13 Pro Max 256</li>
       </ul>
     </div>
     <div class="card">
-      <h2>Tareas mañana</h2>
-      <ul>
+      <h2>Mañana</h2>
+      <ul class="task-list">
         <li>Regalo bocha</li>
         <li>Pagar multa suegra</li>
       </ul>
     </div>
   </div>
 
-  <div class="card wide" style="margin-bottom:24px;">
-    <h2>Mails para revisar</h2>
-    <ul>
-      <li>📚 <strong>[UES21]</strong> Tu pago se ha acreditado correctamente — <span style="color:var(--muted);font-size:12px;">23/4 · no-reply@ues21.edu.ar</span></li>
-      <li>🔐 <strong>[Google]</strong> Alerta de seguridad para pionik2001@gmail.com — <span style="color:var(--muted);font-size:12px;">22/4 · revisar si fue vos</span></li>
-      <li>🔧 <strong>[Trello]</strong> Nueva aplicación autorizada en tu cuenta — <span style="color:var(--muted);font-size:12px;">23/4 · do-not-reply@trello.com</span></li>
-      <li>🎓 <strong>[UES21]</strong> Santiago, tu opinión nos ayuda a mejorar — <span style="color:var(--muted);font-size:12px;">23/4 · no-reply@soysiglo.edu.ar</span></li>
-      <li>✈️ <strong>[LATAM]</strong> Es momento de planear tu próximo viaje — <span style="color:var(--muted);font-size:12px;">23/4 · promo</span></li>
-    </ul>
+  <!-- 3. CALENDARIO -->
+  <div class="sec-title">Agenda</div>
+  <div class="card">
+    <h2>Próximo evento</h2>
+    <div class="cal-cuando">En 6 días — lunes 4/5</div>
+    <div class="cal-titulo">Último día para rendir — Siglo 21</div>
+    <div class="cal-hora">Todo el día</div>
   </div>
 
-  <div class="card wide" style="margin-bottom:24px;">
-    <h2>Hábitos — insights</h2>
-    <ul>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">🔥 <strong>Racha:</strong> Días 20, 21 y 22 de abril — 100% los tres. Mejor racha del mes hasta ahora.</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">📚 <strong>Estudiar (41.9%):</strong> Tenés 6 días restantes. Para llegar al 60% (meta) necesitás estudiar los 6 días que quedan → llegarías a 19/30 = 63.3%. Es posible, pero cero margen de error.</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">🥊 <strong>Entrenar (38.7%):</strong> Subiste del 32% que tenías al 20/4 — vas mejorando. Seguí.</li>
-      <li style="padding:8px 0;">📉 <strong>Leer inversiones (25.8%):</strong> El más bajo del mes. Si no lo arrancás esta semana, cierra abajo del 30%.</li>
+  <!-- 4. HÁBITOS -->
+  <div class="sec-title">Hábitos — Abril 2026</div>
+  <div class="card">
+    <h2>Progreso mensual</h2>
+    <div class="hab-pct">55%</div>
+    <div class="sub" style="margin-top:4px;">172 de 310 posibles (10 hábitos × 31 días)</div>
+    <ul class="hab-insights">
+      <li>🔴 <strong>Leer de inversiones: 32%</strong> — el más bajo del mes. 21 días sin hacerlo.</li>
+      <li>🔴 <strong>Entrenar: 42%</strong> — meta del mes era volver a boxeo. Quedan 2 días para sumar.</li>
+      <li>🟡 <strong>Estudiar: 42%</strong> — meta 60% (18 días). Solo hiciste 13/26 días disponibles. No cierra.</li>
+      <li>🟢 <strong>Despertar 8:00 + Planificar: 77%</strong> — los más consistentes. Buena base.</li>
     </ul>
-    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:12px;font-size:13px;">
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Despertar 8:00 <span class="badge-verde">67.7%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Planificar <span class="badge-verde">67.7%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Desayuno sano <span class="badge-verde">54.8%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Trabajar 4h <span class="badge-rojo">48.4%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Estudiar <span class="badge-rojo">41.9% ⚠️</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Leer inversiones <span class="badge-rojo">25.8% ⚠️</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Entrenar <span class="badge-rojo">38.7% ⚠️</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Leer 10 págs <span class="badge-rojo">45.2%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Dejar celular 00:00 <span class="badge-verde">51.6%</span></div>
-      <div style="padding:8px;background:var(--card-2);border-radius:4px;">Pensar 5 min <span class="badge-verde">54.8%</span></div>
+    <div class="hab-grid">
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-g">77%</span></div>
+      <div class="hab-item"><span>Planificar el día</span><span class="badge-g">77%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-g">61%</span></div>
+      <div class="hab-item"><span>Trabajar 4 hs</span><span class="badge-w">58%</span></div>
+      <div class="hab-item"><span>Estudiar 2 hs</span><span class="badge-r">42%</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">32%</span></div>
+      <div class="hab-item"><span>Entrenar</span><span class="badge-r">42%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-w">45%</span></div>
+      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">58%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-g">61%</span></div>
     </div>
   </div>
 
-  <div class="card wide" style="margin-bottom:24px;">
-    <h2>Deudas y cobros pendientes</h2>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px;">
-      <div>
-        <div class="sub" style="margin-bottom:4px;">A pagar</div>
-        <div class="big" style="font-size:20px;">$293.400 ARS</div>
-        <div class="sub">+ USD 6.904</div>
+  <!-- 5. MAILS -->
+  <div class="sec-title">Mails</div>
+  <div class="card">
+    <h2>Sin leer</h2>
+    <ul class="mail-list">
+      <li>
+        <span class="mail-tag tag-imp">Seguridad</span>GitHub — Personal access token agregado a tu cuenta
+        <div class="mail-from">noreply@github.com · Vie 24/4</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-imp">Sistema</span>Fallo en Google Apps Script: Lancer (×2)
+        <div class="mail-from">noreply-apps-scripts@google.com · Lun 27/4 — tu automatización de Lancer está fallando</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-uni">IOL</span>¡IOL te lleva a alentar a la Selección!
+        <div class="mail-from">IOL Inversiones · Lun 27/4</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-sys">Promo</span>invitación (última oportunidad)
+        <div class="mail-from">Jaime Higuera — ecomgrowthpartners.com · Lun 27/4</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-sys">Promo</span>Menos de $9,90, lujo por menos — Alibaba
+        <div class="mail-from">noreply@service.alibaba.com · Lun 27/4</div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 6. LANCER -->
+  <div class="sec-title">LANCER</div>
+
+  <div class="card">
+    <h2>Caja viernes 25/4</h2>
+    <div class="lancer-grid">
+      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$2.371.408</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~0.5 (est.)</div></div>
+      <div class="lancer-stat"><div class="lbl">Gasto del día</div><div class="val">S/D</div></div>
+    </div>
+    <div class="sub" style="margin-top:4px;">Efectivo IP: $400.000 · ACC: $80.000 · UALA: $30.000 · USD billete: $1.500 (~$2.1M ARS) · Tarjeta: $2.157.120 (no incluido en total)</div>
+  </div>
+
+  <div class="card">
+    <h2>Progreso mensual — meta 50 iPhones</h2>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
+      <span style="font-size:18px;font-weight:700;">~31 / 50</span>
+      <span class="sub">Faltan 2 días</span>
+    </div>
+    <div class="progress"><div class="progress-fill" style="width:62%"></div></div>
+    <div class="sub">Punto de eq.: 33 iPhone/mes — estás en el límite (31 est. = just below breakeven)</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: ~$13.485.626 ARS (exc. tarjeta) · Tarjeta mes: ~$9.839.656 ARS</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>Ventas diarias</h2>
+      <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Margen estimado</h2>
+      <div class="chart-container"><canvas id="chart-margen"></canvas></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Deudas y cobros</h2>
+    <div class="deudas-grid">
+      <div class="deuda-bloque">
+        <div class="lbl">A pagar</div>
+        <div class="val">$293.400 ARS</div>
+        <div class="val-usd">+ USD 6.904</div>
       </div>
-      <div>
-        <div class="sub" style="margin-bottom:4px;">A cobrar</div>
-        <div class="big" style="font-size:20px;">$155.000 ARS</div>
-        <div class="sub">+ USD 122</div>
+      <div class="deuda-bloque">
+        <div class="lbl">A cobrar</div>
+        <div class="val">$155.000 ARS</div>
+        <div class="val-usd">+ USD 122</div>
       </div>
     </div>
-    <div class="sub" style="margin-top:8px;">⚠️ Datos de referencia del archivo contexto — verificar en hoja DEUDAS de Drive para valores actualizados.</div>
   </div>
 
-  <div class="section-title">📰 Negocios y mercado — Argentina</div>
-  <div class="card wide" style="margin-bottom:24px;">
-    <ul>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[El Cronista] Importación de ropa usada creció 190 veces en un año: el negocio de los fardos y de dónde vienen las "donaciones"</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[El Cronista] Por el boom de compras al exterior (courier de $239M a $894M en 2025), el e-commerce puede crecer dos dígitos en 2026</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[Infobae] Argentina abierta al mundo: importar, distribuir y competir en un mercado en transformación</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[El Cronista] Cómo cambió el negocio importador: las claves para operar "sin filtro" tras la desregulación</li>
-      <li style="padding:8px 0;">[Ámbito] El dólar oficial ya acumula una baja de 5,4% en 2026 y se mantiene lejos del techo de la banda cambiaria</li>
-    </ul>
+  <!-- 7. NOTICIAS -->
+  <div class="sec-title">📰 Argentina</div>
+  <div class="card">
+    <div class="noticia">
+      <div class="noticia-meta">Economía · Infobae · 27 abril 2026</div>
+      <div class="noticia-titulo">El dólar toca máximos desde febrero y el riesgo país roza los 600 puntos</div>
+      <div class="noticia-body">
+        <p>Argentina vivió el lunes una jornada financiera mixta que marcó el fin de la calma cambiaria que había reinado en el primer trimestre. El dólar mayorista avanzó $17.50 (+1.3%) y cerró en $1.417, su nivel más alto desde el 6 de febrero. El minorista llegó a $1.440 en el Banco Nación y el dólar blue tocó $1.430. Es la primera suba mensual del dólar en todo 2026, lo que representa un cambio de tendencia que el mercado está monitoreando.</p>
+        <p>Al mismo tiempo, el riesgo país avanzó hasta los 582 puntos básicos, acercándose de nuevo al umbral psicológico de los 600 puntos que preocupa a los analistas. Los bonos soberanos retrocedieron en la jornada, aunque el Merval logró subir 0.9%, impulsado por acciones del sector energético.</p>
+        <p>El Banco Central compró USD 54 millones en la jornada, acumulando $2.433 millones en abril y superando los $6.800 millones en lo que va de 2026 —más de la mitad de la meta anual de reservas. Este ritmo de compras es notable y da cierto colchón al frente externo. Sin embargo, el contexto global agrega presión: el petróleo Brent subió 2.8% a USD 108.20 por barril, y las tensiones geopolíticas en Medio Oriente generan volatilidad en mercados emergentes.</p>
+        <p><strong>Para LANCER:</strong> Cada suba del dólar impacta directamente en el costo de importación de iPhones y accesorios. Si comprás el próximo lote de stock hoy, pagás más pesos por el mismo precio en USD. Dos movimientos concretos: (1) Si tenés stock comprado a dólar más bajo, tu margen actual es mejor — es momento de vender antes que el cliente empiece a comparar precios actualizados. (2) Revisá tus precios de lista antes de fin de mes: si la competencia no actualizó todavía, tenés una ventana de 7-10 días para absorber margen extra sin perder ventas. El consenso de mercado proyecta $1.699/USD para diciembre — la tendencia es al alza.</p>
+      </div>
+    </div>
   </div>
 
-  <div class="section-title">🌎 Negocios y mercado — Internacional</div>
-  <div class="card wide" style="margin-bottom:24px;">
-    <ul>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[CNBC] S&amp;P 500 -0.41% y Nasdaq -0.89% el 23/4 — IBM y ServiceNow cayeron 8% y 18% post-earnings; incertidumbre por conflicto en Medio Oriente</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[TechCrunch] App Store boom: lanzamientos de apps +104% interanual en 2026, impulsado por herramientas de IA (Claude Code, Replit)</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[CNBC] Tim Cook pasa a ser Executive Chairman de Apple; John Ternus asume como nuevo CEO</li>
-      <li style="padding:8px 0;border-bottom:1px solid var(--border);">[CNBC] Texas Instruments guía Q2 por encima del consenso: revenue $5B–$5.4B vs $1.57 EPS estimado</li>
-      <li style="padding:8px 0;">[TechCrunch] AI está detrás del boom del App Store: más desarrolladores independientes lanzando apps propias con IA generativa</li>
-    </ul>
+  <div class="sec-title">🌎 Internacional</div>
+  <div class="card">
+    <div class="noticia">
+      <div class="noticia-meta">Tech · The Motley Fool · 27 abril 2026</div>
+      <div class="noticia-titulo">Tim Cook se retira: Apple le pasa el mando a John Ternus el 1 de septiembre</div>
+      <div class="noticia-body">
+        <p>Apple confirmó el lunes que Tim Cook dejará el cargo de CEO el 1 de septiembre de 2026. Lo reemplazará John Ternus, actual vicepresidente senior de hardware, quien fue responsable del chip M-series y de la ingeniería de los últimos iPhone y AirPods. El anuncio generó una caída de 2.5% en la acción (AAPL), que cotiza en USD 267.40, con un rendimiento de -0.64% en lo que va de 2026 vs. +4.67% del S&P 500.</p>
+        <p>Cook lleva 15 años como CEO y transformó Apple en la empresa más valiosa del mundo —capitalización actual de ~USD 4 billones. Su talón de Aquiles fue la inteligencia artificial: en 2025-2026, mientras Google Gemini y OpenAI redefinían los asistentes de voz, Apple Intelligence llegó tarde y con funciones limitadas. Ternus, por su lado, tiene un perfil más técnico y orientado a hardware, lo que el mercado interpreta como una posible apuesta por integrar IA directamente en el silicio Apple.</p>
+        <p>El timing del cambio no es casual: Apple reporta resultados del Q2 FY2026 el miércoles 30 de abril post-cierre. Goldman Sachs mantiene su precio objetivo en USD 330 (buy) y Bank of America reitera Buy con target USD 325. Ambos argumentan que los temores sobre márgenes y demanda están exagerados, y ven 23% de upside desde los niveles actuales. La temporada del iPhone 17 —presentado en septiembre 2025— sigue siendo el principal motor de ingresos del trimestre.</p>
+        <p><strong>Para Santiago:</strong> A nivel LANCER, el cambio de CEO no altera la cadena de suministro de iPhones ni los precios en el corto plazo. El iPhone 17 ya está en producción y distribución. Lo relevante es que los earnings del 30/4 pueden generar volatilidad en el CEDEAR de AAPL: si los resultados sorprenden positivamente (probable según analistas), el CEDEAR podría recuperar terreno. Si tenés posición o pensás abrir una, el jueves post-earnings es el momento de decisión. El múltiplo de 34x P/E es elevado para el crecimiento actual, pero el ecosistema Apple sigue siendo el más fidelizado del mercado premium.</p>
+      </div>
+    </div>
   </div>
 
-  <footer style="margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;">
-    Generado 08:00 hs · 24/04/2026 · Refrescá la página después de cargar la caja para ver los datos actualizados
-  </footer>
+  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
+  <div class="sec-title">💡 Idea de negocio — semana 18</div>
+  <div class="idea-card">
+    <h2>Idea de la semana</h2>
+    <div class="idea-titulo">Consignataria de hacienda — bróker de ganado en el NOA</div>
+    <div class="idea-body">
+
+      <h3>Qué es</h3>
+      <p>Crear una empresa consignataria que actúe como intermediaria entre productores ganaderos del NOA (Tucumán, Santiago del Estero, Salta) y frigoríficos o compradores mayoristas. La consignataria no compra el ganado: lo representa, facilita la venta, y cobra una comisión del 3-5% sobre el valor de la transacción. Modelo de capital casi nulo, escalable por reputación y red de contactos.</p>
+
+      <h3>Por qué ahora</h3>
+      <p>El negocio ganadero argentino está naturalmente dolarizado: el novillo cotiza en USD por kilo vivo. Con el dólar en $1.417 y proyectado a $1.699 para diciembre, cualquier transacción en USD genera un margen cambiario adicional al cobrar la comisión. Tucumán tiene tradición ganadera activa en el pedemonte y acceso a productores medianos (200-500 cabezas) que hoy dependen de consignatarias tradicionales con estructuras lentas. La digitalización del sector es bajísima: los remates siguen siendo por WhatsApp o presenciales. Quien llegue con transparencia, velocidad y tecnología tiene ventaja estructural sobre los incumbentes.</p>
+
+      <h3>Cómo arrancarla</h3>
+      <ul>
+        <li><strong>Habilitación:</strong> Inscribirse como consignatario ante el SENASA y el registro provincial (~$50K ARS, 30-60 días de trámite).</li>
+        <li><strong>Red inicial:</strong> Identificar 3-5 productores de conocidos o familia dispuestos a consignar. En este negocio, el capital social es el activo más valioso.</li>
+        <li><strong>Primera operación:</strong> Publicar en portales como Lotes y Hacienda o grupos de WhatsApp rurales. El primer remate puede ser virtual.</li>
+        <li><strong>Logística:</strong> Subcontratar el transporte a camioneros ganaderos establecidos — no asumir costo de flota propio en la etapa inicial.</li>
+        <li><strong>Escalado:</strong> Con 2-3 operaciones exitosas, construir reputación. Agregar una web/app simple con catálogo de hacienda disponible para diferenciarse.</li>
+      </ul>
+
+      <h3>Modelo de ingreso</h3>
+      <p>Comisión del 3-4% sobre el valor de cada venta. Ejemplo: lote de 50 novillos × 430 kg promedio × USD 2.10/kg = USD 45.150 bruto → comisión 3% = USD 1.354 ≈ $1.9M ARS por operación. Con 3-4 operaciones al mes: $5.7M–$7.5M ARS/mes. Sin inversión en hacienda propia, el riesgo de capital es mínimo.</p>
+
+      <h3>Riesgos principales</h3>
+      <ul>
+        <li><strong>Reputacional:</strong> Un lote con problemas sanitarios o un transporte que falla destruye la confianza en toda la red. El primer error cuesta caro.</li>
+        <li><strong>Regulatorio:</strong> El SENASA controla activos sanitarios, guías de traslado y el Documento de Tránsito Animal (DTA). Cualquier irregularidad genera multas importantes.</li>
+        <li><strong>Competencia instalada:</strong> Las consignatarias tradicionales tienen décadas de relaciones. Diferenciarse requiere velocidad, precio y tecnología — no solo contactos.</li>
+      </ul>
+
+      <h3>Esfuerzo e inversión inicial</h3>
+      <p>Capital necesario: ~$150K–$200K ARS (trámites, comunicación, primer evento). Tiempo: 3-6 meses hasta la primera operación formal. Requiere networking intenso en el sector y acceso a un referente ganadero que valide el primer negocio. Si tenés vínculos con el campo por tu contexto familiar en Tucumán, el costo de entrada es mucho menor que para alguien externo al sector.</p>
+
+    </div>
+  </div>
+
+  <footer>Generado 28/04/2026 · Cargá la caja de los días 26, 27 y 28 antes de revisar los datos de LANCER</footer>
 
   <script>
-    const ventasData = [
-      {"fecha":"01/04","total":1421486},
-      {"fecha":"02/04","total":0},
-      {"fecha":"03/04","total":0},
-      {"fecha":"04/04","total":674500},
-      {"fecha":"05/04","total":0},
-      {"fecha":"06/04","total":148500},
-      {"fecha":"07/04","total":667140},
-      {"fecha":"08/04","total":424598},
-      {"fecha":"09/04","total":78363},
-      {"fecha":"10/04","total":714833},
-      {"fecha":"11/04","total":920427},
-      {"fecha":"12/04","total":0},
-      {"fecha":"13/04","total":1252042},
-      {"fecha":"14/04","total":38900},
-      {"fecha":"15/04","total":32000},
-      {"fecha":"16/04","total":107000},
-      {"fecha":"17/04","total":0},
-      {"fecha":"18/04","total":1047150},
-      {"fecha":"19/04","total":0},
-      {"fecha":"20/04","total":0},
-      {"fecha":"21/04","total":0},
-      {"fecha":"22/04","total":2268956},
-      {"fecha":"23/04","total":0}
-    ];
-    const margenData = [
-      {"fecha":"01/04","margen":1421486},
-      {"fecha":"03/04","margen":-1250000},
-      {"fecha":"04/04","margen":574500},
-      {"fecha":"06/04","margen":-191500},
-      {"fecha":"07/04","margen":467140},
-      {"fecha":"08/04","margen":88598},
-      {"fecha":"09/04","margen":78363},
-      {"fecha":"10/04","margen":264833},
-      {"fecha":"11/04","margen":679427},
-      {"fecha":"12/04","margen":-23519},
-      {"fecha":"13/04","margen":1247042},
-      {"fecha":"14/04","margen":38900},
-      {"fecha":"15/04","margen":32000},
-      {"fecha":"16/04","margen":107000},
-      {"fecha":"18/04","margen":1047150},
-      {"fecha":"22/04","margen":2268956}
-    ];
+    const ventasData = [{"fecha":"01/04","total":1421485},{"fecha":"02/04","total":0},{"fecha":"03/04","total":0},{"fecha":"04/04","total":674500},{"fecha":"05/04","total":0},{"fecha":"06/04","total":148500},{"fecha":"07/04","total":667140},{"fecha":"08/04","total":424597},{"fecha":"09/04","total":78362},{"fecha":"10/04","total":714832},{"fecha":"11/04","total":920427},{"fecha":"12/04","total":0},{"fecha":"13/04","total":1252041},{"fecha":"14/04","total":38900},{"fecha":"15/04","total":32000},{"fecha":"16/04","total":107000},{"fecha":"17/04","total":0},{"fecha":"18/04","total":1047150},{"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},{"fecha":"22/04","total":2771681},{"fecha":"23/04","total":41000},{"fecha":"24/04","total":774600},{"fecha":"25/04","total":2371408},{"fecha":"26/04","total":0},{"fecha":"27/04","total":0},{"fecha":"28/04","total":0},{"fecha":"29/04","total":0},{"fecha":"30/04","total":0}];
+    const margenData = [{"fecha":"01/04","margen":213222},{"fecha":"02/04","margen":0},{"fecha":"03/04","margen":0},{"fecha":"04/04","margen":101175},{"fecha":"05/04","margen":0},{"fecha":"06/04","margen":22275},{"fecha":"07/04","margen":100071},{"fecha":"08/04","margen":63689},{"fecha":"09/04","margen":11754},{"fecha":"10/04","margen":107224},{"fecha":"11/04","margen":138064},{"fecha":"12/04","margen":0},{"fecha":"13/04","margen":187806},{"fecha":"14/04","margen":5835},{"fecha":"15/04","margen":4800},{"fecha":"16/04","margen":16050},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":157072},{"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},{"fecha":"22/04","margen":415752},{"fecha":"23/04","margen":6150},{"fecha":"24/04","margen":116190},{"fecha":"25/04","margen":355711},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":0},{"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0},{"fecha":"30/04","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
-      data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas (ARS)', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.1)', tension: 0.3, fill: true }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
     new Chart(document.getElementById('chart-margen'), {
       type: 'bar',
-      data: { labels: margenData.map(d => d.fecha), datasets: [{ label: 'Margen (ARS)', data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.7)' : 'rgba(248,113,113,0.7)'), borderColor: margenData.map(d => d.margen >= 0 ? '#4ade80' : '#f87171'), borderWidth: 1 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
   </script>
 </body>
