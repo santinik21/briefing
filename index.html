@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — 28 de abril de 2026</title>
+  <title>Briefing diario — 29 de abril de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -16,19 +16,28 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
+
+    .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
+
     .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
+
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
+    .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
+
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
+
     .cal-cuando{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:4px;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
+
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -38,6 +47,7 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
+
     .mail-list{list-style:none;font-size:14px;}
     .mail-list li{padding:7px 0;border-bottom:1px solid var(--border);}
     .mail-list li:last-child{border-bottom:none;}
@@ -46,6 +56,7 @@
     .tag-uni{background:rgba(96,165,250,0.15);color:var(--blue);}
     .tag-sys{background:rgba(139,143,155,0.15);color:var(--muted);}
     .mail-from{color:var(--muted);font-size:12px;margin-top:1px;}
+
     .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
     .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
     .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -57,6 +68,7 @@
     .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
     .deuda-bloque .val{font-size:18px;font-weight:700;}
     .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
+
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -65,6 +77,7 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
+
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -73,239 +86,290 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
+
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
-    @media(max-width:600px){body{padding:14px;}.grid-2{grid-template-columns:1fr;}.lancer-grid{grid-template-columns:repeat(2,1fr);}.hab-grid{grid-template-columns:1fr;}}
+    @media(max-width:600px){
+      body{padding:14px;}
+      .grid-2{grid-template-columns:1fr;}
+      .lancer-grid{grid-template-columns:repeat(2,1fr);}
+      .hab-grid{grid-template-columns:1fr;}
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Briefing diario</h1>
-  <div class="fecha">martes 28 de abril de 2026</div>
-</header>
+  <header>
+    <h1>Briefing diario</h1>
+    <div class="fecha">martes 29 de abril de 2026</div>
+  </header>
 
-<div class="meta-rotativa">🎯 <strong>Meta del año · semana 18:</strong> Regalo express para falsos influencers — trabajar con micro-influencers entregando producto a cambio de contenido real.</div>
+  <div class="alert">📋 <strong>Cargá la caja de ayer en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del ayer (28/4).</div>
 
-<div class="sec-title">Tareas</div>
-<div class="grid-2">
+  <!-- 1. META DEL AÑO -->
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Si no cierran los números de LANCER hasta mayo — tomar la decisión de seguir o abandonar. Mañana cierra abril: es el momento de hacer el balance real.</div>
+
+  <!-- 2. TAREAS TRELLO -->
+  <div class="sec-title">Tareas</div>
+  <div class="grid-2">
+    <div class="card">
+      <h2>Hoy</h2>
+      <ul class="task-list">
+        <li>Cambiar USD y depositar</li>
+        <li>Escribir a Rober</li>
+        <li>Ver de armar la app con productos importados de China</li>
+        <li>Terminar curso de Claude y de emprender</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h2>Mañana</h2>
+      <ul class="task-list">
+        <li>Buzo Farías</li>
+        <li>Regalo bocha</li>
+        <li>Pagar multa suegra</li>
+        <li>Buscar riendas de paquito</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 3. CALENDARIO -->
+  <div class="sec-title">Agenda</div>
   <div class="card">
-    <h2>Hoy</h2>
-    <ul class="task-list">
-      <li>Reunión hermano Nacho</li>
-      <li>Ver si conviene comprar o vender Lancer</li>
-      <li>Armar app con productos importados de China</li>
-      <li>Agentes financieros y de noticias con Claude</li>
-      <li>Terminar curso de Claude y de emprender</li>
-      <li>Investigar black box</li>
+    <h2>Próximo evento</h2>
+    <div class="cal-cuando" style="color:var(--muted);font-size:16px;">Sin datos</div>
+    <div class="cal-titulo">Google Calendar no disponible en esta sesión</div>
+    <div class="cal-hora">Conectar MCP de Calendar para ver eventos próximos</div>
+  </div>
+
+  <!-- 4. HÁBITOS -->
+  <div class="sec-title">Hábitos — Abril 2026</div>
+  <div class="card">
+    <h2>Progreso mensual</h2>
+    <div class="hab-pct">43%</div>
+    <div class="sub" style="margin-top:4px;">Datos al 20/04 · 3 hábitos en rojo que necesitan atención urgente</div>
+    <ul class="hab-insights">
+      <li>🔴 <strong>Leer inversiones (19%)</strong> — el hábito más bajo del mes, más de 40 puntos por debajo del promedio.</li>
+      <li>🔴 <strong>Entrenar (32%)</strong> y <strong>Estudiar 2 hs (35%)</strong> — ambos con meta explícita en abril, ambos en rojo. Quedan 2 días para sumar.</li>
+      <li>🟢 <strong>Despertar 8:00 y Planificar (61%)</strong> — únicos hábitos por encima del 60%. Son la base que sostiene el ritmo diario.</li>
+    </ul>
+    <div class="hab-grid">
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-g">61%</span></div>
+      <div class="hab-item"><span>Planificar el día</span><span class="badge-g">61%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-w">48%</span></div>
+      <div class="hab-item"><span>Trabajar 4 hs</span><span class="badge-w">42%</span></div>
+      <div class="hab-item"><span>Estudiar 2 hs</span><span class="badge-r">35%</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">19%</span></div>
+      <div class="hab-item"><span>Entrenar</span><span class="badge-r">32%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-w">38%</span></div>
+      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">45%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">48%</span></div>
+    </div>
+  </div>
+
+  <!-- 5. MAILS -->
+  <div class="sec-title">Mails</div>
+  <div class="card">
+    <h2>Sin leer</h2>
+    <ul class="mail-list">
+      <li>
+        <span class="mail-tag tag-imp">Seguridad</span>Alerta de seguridad — acceso desde dispositivo nuevo detectado en dos cuentas
+        <div class="mail-from">Google · no-reply@accounts.google.com · 28/04 · (santiagoniklison + pionik2001)</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-uni">Uni</span>Recordatorio: Siglo 21 quiere conocer tu opinión sobre la experiencia universitaria
+        <div class="mail-from">Siglo 21 · Experiencia@soysiglo.edu.ar · 28/04</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-uni">Inversiones</span>¡IOL te lleva a alentar a la Selección! 🇦🇷 — promoción de apertura de cuenta
+        <div class="mail-from">IOL Inversiones · info@email.iolinversiones.com · 27/04</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-sys">Alibaba</span>Lista de productos más vendidos de tendencia — productos importados destacados
+        <div class="mail-from">Alibaba · noreply@service.alibaba.com · 28/04 (pionik2001)</div>
+      </li>
+      <li>
+        <span class="mail-tag tag-sys">Mktg</span>"ya has hecho lo más difícil" — newsletter ecommerce growth partners
+        <div class="mail-from">Jaime Higuera · jaime@ecomgrowthpartners.com · 28/04</div>
+      </li>
     </ul>
   </div>
+
+  <!-- 6. LANCER -->
+  <div class="sec-title">LANCER</div>
+
   <div class="card">
-    <h2>Mañana</h2>
-    <ul class="task-list">
-      <li>Buzo Farías</li>
-      <li>Regalo bocha</li>
-      <li>Pagar multa suegra</li>
-    </ul>
+    <h2>Caja ayer (28/4)</h2>
+    <div class="lancer-grid">
+      <div class="lancer-stat">
+        <div class="lbl">Venta total</div>
+        <div class="val" style="font-size:15px;color:var(--muted)">Sin datos</div>
+      </div>
+      <div class="lancer-stat">
+        <div class="lbl">Cels estimados</div>
+        <div class="val" style="font-size:15px;color:var(--muted)">—</div>
+      </div>
+      <div class="lancer-stat">
+        <div class="lbl">Gasto día</div>
+        <div class="val" style="font-size:15px;color:var(--muted)">Sin datos</div>
+      </div>
+    </div>
+    <div class="sub">Drive no disponible en esta sesión. Cargá la caja para ver los datos reales.</div>
   </div>
-</div>
 
-<div class="sec-title">Agenda</div>
-<div class="card">
-  <h2>Próximo evento</h2>
-  <div class="cal-cuando">Lunes 4 de mayo (en 6 días)</div>
-  <div class="cal-titulo">Último día para rendir en Siglo 21</div>
-  <div class="cal-hora">Todo el día · ⚠️ Fecha límite de examen</div>
-</div>
-
-<div class="sec-title">Hábitos — Abril 2026</div>
-<div class="card">
-  <h2>Progreso mensual (datos al 27/4 · Nivel 5 · XP 1600)</h2>
-  <div class="hab-pct">58%</div>
-  <div class="sub" style="margin-top:4px;">Promedio general de los 10 hábitos en abril.</div>
-  <ul class="hab-insights">
-    <li>📈 Racha 100% los días 20, 21 y 22 — mejor tramo del mes. Ayer (27/4): 80%.</li>
-    <li>🔴 Leer inversiones: 35.5% — el más bajo. Solo 1 de cada 3 días. Es el único hábito que depende de tiempo dedicado a formación, no ejecutar.</li>
-    <li>⚠️ Estudiar (45.2%) no va a llegar al 60% este mes — con 3 días restantes el techo es ~47%. Ajustar expectativa y arrancar mayo desde el día 1.</li>
-  </ul>
-  <div class="hab-grid">
-    <div class="hab-item">Despertar 8:00 <span class="badge-g">77.4%</span></div>
-    <div class="hab-item">Planificar el día <span class="badge-g">80.6%</span></div>
-    <div class="hab-item">Desayuno sano <span class="badge-g">64.5%</span></div>
-    <div class="hab-item">Trabajar 4 horas <span class="badge-g">61.3%</span></div>
-    <div class="hab-item">Estudiar 2 horas <span class="badge-w">45.2%</span></div>
-    <div class="hab-item">Leer inversiones <span class="badge-r">35.5%</span></div>
-    <div class="hab-item">Entrenar <span class="badge-w">45.2%</span></div>
-    <div class="hab-item">Leer 10 páginas <span class="badge-w">48.4%</span></div>
-    <div class="hab-item">Dejar celular 00:00 <span class="badge-w">58.1%</span></div>
-    <div class="hab-item">Pensar 5 min <span class="badge-g">64.5%</span></div>
-  </div>
-</div>
-
-<div class="sec-title">Mails</div>
-<div class="card">
-  <h2>Sin leer (ambas cuentas)</h2>
-  <ul class="mail-list">
-    <li>
-      <span class="mail-tag tag-imp">ALERTA</span><strong>Alerta de seguridad — Google (ambas cuentas)</strong>
-      <div class="mail-from">no-reply@accounts.google.com · Hoy 15:05 · Revisá qué dispositivo/acceso disparó la alerta en santiagoniklison y pionik2001</div>
-    </li>
-    <li>
-      <span class="mail-tag tag-uni">INV</span><strong>¡IOL te lleva a alentar a la Selección!</strong>
-      <div class="mail-from">IOL Inversiones · Ayer 20:31 · Promo de marketing para clientes inversores</div>
-    </li>
-    <li>
-      <span class="mail-tag tag-uni">UNI</span><strong>Siglo 21 quiere conocer tu opinión</strong>
-      <div class="mail-from">Experiencia@soysiglo.edu.ar · Hoy 06:01 · Encuesta de experiencia estudiantil</div>
-    </li>
-    <li>
-      <span class="mail-tag tag-sys">MKT</span><strong>ya has hecho lo más difícil / invitación última oportunidad</strong>
-      <div class="mail-from">Ecom Growth Partners · x2 mails ayer y hoy · Marketing no solicitado, ignorar</div>
-    </li>
-    <li>
-      <span class="mail-tag tag-sys">MKT</span><strong>ChangoManía Smart TV / JBL / Luxon Pay</strong>
-      <div class="mail-from">Múltiples remitentes · Ofertas retail, sin relevancia directa para LANCER</div>
-    </li>
-  </ul>
-</div>
-
-<div class="sec-title">LANCER</div>
-
-<div class="card">
-  <h2>Caja ayer (27/4)</h2>
-  <div class="lancer-grid">
-    <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.466.820</div></div>
-    <div class="lancer-stat"><div class="lbl">Cels est. (cash)</div><div class="val">~1 est.</div></div>
-    <div class="lancer-stat"><div class="lbl">Gasto registrado</div><div class="val">$274.000</div></div>
-  </div>
-  <div class="sub">Desglose: Ef. IP $900.000 · UALA $26.550 · Tarjeta $600.300 · Gastos: $174k pauta UALA + $100k pauta BORMIDA. Cels estimados cash: $900k ÷ $778k ≈ 1.</div>
-</div>
-
-<div class="card">
-  <h2>Progreso mensual — meta 50 iPhones</h2>
-  <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-    <span style="font-size:18px;font-weight:700;">~19 est. / 50</span>
-    <span class="sub">Quedan 3 días (28, 29, 30/4)</span>
-  </div>
-  <div class="progress"><div class="progress-fill" style="width:38%"></div></div>
-  <div class="sub" style="color:var(--danger);">⚠️ Break-even: 33 iPhones/mes. Estimado actual: ~19. Por debajo del punto de equilibrio. Meta de 50 no es alcanzable este mes.</div>
-  <div class="sub" style="margin-top:6px;">Ventas acumuladas mes: $14.952.446 ARS (estimación: total pesos ÷ precio promedio $778k).</div>
-  <div class="sub" style="margin-top:4px;color:var(--warning);">Nota: cobro pendiente Flor Parra (tarjeta) $2.491.960 ARS aparece en cuentas a cobrar — verificar fecha de acreditación.</div>
-</div>
-
-<div class="grid-2">
   <div class="card">
-    <h2>Ventas diarias — Abril</h2>
-    <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
+    <h2>Progreso mensual — meta 50 iPhones</h2>
+    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
+      <span style="font-size:18px;font-weight:700;">— / 50</span>
+      <span class="sub">Queda 1 día · Último día del mes mañana (30/04)</span>
+    </div>
+    <div class="progress"><div class="progress-fill" style="width:0%"></div></div>
+    <div class="sub">Punto de equilibrio: 33 iPhones/mes (~12.100 USD). Cargá la caja para ver el progreso real.</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: Sin datos (Google Drive no disponible)</div>
   </div>
+
+  <div class="grid-2">
+    <div class="card">
+      <h2>Ventas diarias</h2>
+      <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>Margen estimado</h2>
+      <div class="chart-container"><canvas id="chart-margen"></canvas></div>
+    </div>
+  </div>
+
   <div class="card">
-    <h2>Margen estimado (~20% aprox.)</h2>
-    <div class="chart-container"><canvas id="chart-margen"></canvas></div>
-  </div>
-</div>
-
-<div class="card">
-  <h2>Deudas y cobros</h2>
-  <div class="deudas-grid">
-    <div class="deuda-bloque">
-      <div class="lbl">A pagar</div>
-      <div class="val">$293.400 ARS</div>
-      <div class="val-usd">+ USD 6.895</div>
-    </div>
-    <div class="deuda-bloque">
-      <div class="lbl">A cobrar</div>
-      <div class="val">$155.000 ARS</div>
-      <div class="val-usd">+ USD 122 · + $2.491.960 ARS (Flor Parra tarjeta)</div>
+    <h2>Deudas y cobros</h2>
+    <div class="deudas-grid">
+      <div class="deuda-bloque">
+        <div class="lbl">A pagar</div>
+        <div class="val">$293.400 ARS</div>
+        <div class="val-usd">+ USD 6.904</div>
+      </div>
+      <div class="deuda-bloque">
+        <div class="lbl">A cobrar</div>
+        <div class="val">$155.000 ARS</div>
+        <div class="val-usd">+ USD 122</div>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="sec-title">📰 Argentina</div>
-<div class="card">
-  <div class="noticia">
-    <div class="noticia-meta">Retail Tech · Cronista / Perfil / Inteligencia Argentina · Abril 2026</div>
-    <div class="noticia-titulo">Aranceles cero en celulares: iPhones bajaron hasta 17% y el mercado local se reconfigura</div>
-    <div class="noticia-body">
-      <p>Desde enero de 2026, el gobierno de Milei eliminó los aranceles de importación sobre teléfonos celulares, pasando del 16% al 0% en dos tramos (mayo 2025: 16% → 8%; enero 2026: 0%). Esto se sumó al levantamiento del cepo cambiario de abril 2025 y la apertura del mercado de cambios: los importadores ahora pueden pagar mercadería desde el momento de despacho en aduana, eliminando la espera de 30 días que encarecía el capital de trabajo.</p>
-      <p>El impacto en precios fue inmediato pero gradual. Los celulares acumulan una baja promedio del 17% en pesos desde el pico de finales de 2025. Las proyecciones más agresivas hablan de hasta 40% de reducción a medida que se normalice el flujo importador. El iPhone 17 Pro Max hoy cuesta aproximadamente USD 2.409 en Argentina, contra USD 1.549 en Chile y USD 1.600 en México — la brecha sigue existiendo por VAT y logística, pero pasó de ser el doble a un 25-30% más caro que países vecinos.</p>
-      <p>Para LANCER, esto es doble filo. El mercado de iPhones nuevos se agranda: más gente puede acceder a precios más competitivos, ampliando la base de clientes potenciales. Pero la presión de precios hacia abajo aprieta el margen en el negocio de celulares. La competencia de importadores grises y Mercado Libre se intensificó. El dato clave: las importaciones de celulares podrían duplicarse en 2026 según proyecciones sectoriales. Si LANCER no ajusta la propuesta de valor — servicio, garantía propia, financiación, atención local — el precio deja de ser ventaja defensiva.</p>
-      <p><strong>Implicancia concreta:</strong> Revisá los precios de tu lista frente al mercado esta semana. Si tus proveedores no bajaron, estás perdiendo competitividad. Apostar fuerte en accesorios (margen mayor, menos competencia importada) y servicio técnico/postventa es la respuesta correcta a este contexto.</p>
+  <!-- 7. NOTICIAS AR -->
+  <div class="sec-title">📰 Argentina</div>
+  <div class="card">
+    <div class="noticia">
+      <div class="noticia-meta">Infobae · 29 de abril 2026 · Economía · Tipo de cambio</div>
+      <div class="noticia-titulo">Dólar oficial a $1.430, reservas perforan USD 46.000M y riesgo país sube a 584 puntos</div>
+      <div class="noticia-body">
+        <p>El tipo de cambio oficial cerró el martes 29 de abril en $1.430 por dólar (tarjeta: $1.859), con una baja del 0,70% respecto a la jornada anterior. El movimiento se da dentro del esquema de flotación acotada vigente desde principios de año, donde el Banco Central interviene para estabilizar el mercado cambiario dentro de una banda establecida por el acuerdo con el FMI. El riesgo país se ubicó en 584 puntos básicos, una suba de 0,50% que mantiene la tensión en los mercados de deuda soberana, aunque lejos de los niveles de crisis de años anteriores.</p>
+        <p>El dato más preocupante del día fue la caída de las reservas internacionales brutas por debajo de los USD 46.000 millones. A pesar de que el BCRA reportó compras en el mercado cambiario, los pagos de vencimientos de deuda y obligaciones externas siguieron drenando los activos externos. Las reservas netas —la métrica más relevante para la capacidad real de intervención del Central— son considerablemente más bajas, en terreno negativo según estimaciones privadas. Esto es la principal limitación para el esquema: si hay un shock externo o una corrida cambiaria, el margen de respuesta es acotado.</p>
+        <p>El Tesoro pasó por un examen de deuda con resultado mixto: renovó todos los vencimientos y captó USD 700 millones adicionales, pero tuvo que pagar tasas más altas y el 60% de la colocación fue en instrumentos de corto plazo, señal de que los inversores no quieren asumir riesgo a largo. El carry trade sigue vigente: tasas en pesos atractivas para quien convierte dólares, invierte en pesos y gana rendimiento. Eso sostiene la demanda de pesos y la estabilidad cambiaria de corto plazo.</p>
+        <p>Para LANCER: con el oficial en $1.430 y dólar billete rondando valores similares o levemente superiores en el mercado informal, los costos de reposición de iPhones en dólares se mantienen estables por ahora. Cualquier salto del tipo de cambio en mayo requeriría ajuste inmediato de listas de precios. Tenerlo en radar para las compras de reposición de junio.</p>
+      </div>
+    </div>
+    <div class="noticia">
+      <div class="noticia-meta">Ámbito · 29 de abril 2026 · Inflación · Costos</div>
+      <div class="noticia-titulo">Inflación de mayo proyectada en 2,6%: aumentos en servicios, prepagas y transporte presionan los costos</div>
+      <div class="noticia-body">
+        <p>Las consultoras privadas proyectan un IPC de mayo en torno al 2,6% mensual, impulsado por una serie de aumentos ya confirmados en servicios públicos, medicina prepaga y transporte. El dato de inflación de abril todavía no se publicó (se espera para la primera semana de mayo), pero las estimaciones anticipadas apuntan a una cifra similar o levemente inferior. Argentina lleva varios meses de desinflación sostenida desde los picos de 2024-2025, pero el "piso" de 2-3% mensual implica una inflación anualizada de entre el 27% y el 35%.</p>
+        <p>Los aumentos confirmados para mayo incluyen: subas en electricidad y gas por ajuste regulatoria, medicina prepaga con cláusula de actualización trimestral, y transporte interurbano. Para negocios físicos como LANCER, esto presiona los costos operativos: electricidad del local, servicios de alarma, sistemas de gestión. Son rubros que en el contexto del estado de resultados de LANCER representan parte del costo fijo mensual (~$3,25M ARS estimado), y que se ajustan con la inflación.</p>
+        <p>Más relevante para la estrategia de precios: si la inflación de mayo es 2,6%, los iPhones que hoy se recompran en dólares pero se venden en pesos van a necesitar ajuste de lista en las primeras semanas del mes que entra. El precio promedio de referencia de $778k por celular puede quedar desactualizado si el costo de reposición sube o si el dólar se mueve aunque sea levemente. Revisar listas de precios al cierre de abril y ajustar de cara al 1 de mayo.</p>
+        <p>La tendencia de fondo sigue siendo positiva: la desinflación progresiva reduce la incertidumbre en la planificación de márgenes. Pero operar en un contexto de 2-3% mensual sigue requiriendo un monitoreo activo del spread entre el precio de venta en pesos y el costo de reposición en dólares. Una semana sin ajustar lista puede comerse 2-3 puntos de margen sin que se note en el momento.</p>
+      </div>
     </div>
   </div>
-  <div class="noticia">
-    <div class="noticia-meta">Economía · BCRA / Infobae · Abril 2026</div>
-    <div class="noticia-titulo">BCRA acumula USD 235M diarios: dólar en $1.400, inflación cede y el contexto importador se estabiliza</div>
-    <div class="noticia-body">
-      <p>El Banco Central sigue comprando divisas a ritmo récord en el esquema de bandas cambiarias (piso $1.000 / techo $1.400, con ajuste mensual del 1%). Al cierre de abril, el tipo de cambio oficial roza el techo de la banda en $1.400. El BCRA acumuló más de USD 2.000 millones de compras en los primeros dos meses del año, lo que le permite seguir reconstruyendo reservas luego del acuerdo con el FMI de USD 20.000 millones (EFF, 48 meses, firmado en abril 2025).</p>
-      <p>La inflación muestra señales de desaceleración confirmadas por el REM. Los analistas proyectan que el IPC de abril caería por debajo del 2.5% mensual — contra picos de 3-4% en el inicio del año. Si se mantiene esta tendencia, el dólar real se aprecia lentamente, lo que abarata el costo en pesos de la mercadería importada.</p>
-      <p><strong>Implicancia concreta para LANCER:</strong> Un dólar estabilizado cerca de $1.400 durante 30-60 días es una ventana de previsibilidad para planificar compras de stock. El riesgo está en si el BCRA deja de intervenir y el tipo de cambio sube hacia o más allá del techo — eso encarece todo el stock dolarizado. Para importar en mayo, cerrá precio ahora. Seguí el dólar MEP y el blue como indicadores tempranos de presión en el mercado.</p>
+
+  <!-- 8. NOTICIAS INT -->
+  <div class="sec-title">🌎 Internacional</div>
+  <div class="card">
+    <div class="noticia">
+      <div class="noticia-meta">Bloomberg / CNBC · 28-29 de abril 2026 · Tech · Mercados</div>
+      <div class="noticia-titulo">Big Tech pone USD 16 billones en juego: S&P 500 en récord histórico (7.173) y tech crece 41% en Q1</div>
+      <div class="noticia-body">
+        <p>La semana del 28 de abril es la más importante del año para los mercados financieros globales. Alphabet, Amazon, Meta Platforms y Microsoft reportan resultados del primer trimestre 2026 en los próximos días, con una capitalización bursátil combinada que supera los USD 16 billones. El S&P 500 cerró en 7.173,91 puntos (nuevo récord histórico) y el Nasdaq en 24.887,10 (también récord), señalando que el mercado ya anticipa resultados sólidos y está dispuesto a pagar múltiplos altos por las empresas tecnológicas.</p>
+        <p>El sector tecnológico lidera el crecimiento de ganancias del Q1 2026 con un 41% de aumento en utilidades —el mayor entre todos los sectores del S&P 500. El driver principal es el gasto masivo de Big Tech en infraestructura de IA: data centers, chips especializados, servidores. Los fabricantes de semiconductores son los grandes ganadores directos de este ciclo. Seagate Technology y NXP Semiconductors subieron 16% cada uno tras publicar resultados que superaron expectativas y guías de ingresos positivas. El denominador común es que el capex en IA se está convirtiendo en ingresos reales para los proveedores de infraestructura.</p>
+        <p>La pregunta central del mercado esta semana: ¿el gasto en IA genera retorno medible? Las empresas que muestren crecimiento de ingresos ligado a IA —cloud con copilots, publicidad mejorada, herramientas de productividad— van a ser recompensadas con múltiplos altos. Las que no puedan justificar el capex van a ser penalizadas. Es el momento bisagra donde el mercado distingue entre adopción real y hype.</p>
+        <p>Dato clave: <strong>Apple reporta este jueves 30/4</strong>. Los analistas están atentos a las ventas de iPhone en mercados emergentes, los márgenes de la división Servicios, y el roadmap de IA integrada en hardware. Si Apple muestra crecimiento sólido o anticipa nuevos modelos con IA, puede haber impulso global en la demanda de iPhones que eventualmente afecta disponibilidad y precios en Argentina.</p>
+      </div>
+    </div>
+    <div class="noticia">
+      <div class="noticia-meta">WSJ / CNBC · 29 de abril 2026 · IA · Startups</div>
+      <div class="noticia-titulo">OpenAI bajo presión: ingresos y usuarios nuevos por debajo de targets; CFO preocupada por pagos de cómputo</div>
+      <div class="noticia-body">
+        <p>The Wall Street Journal reportó que OpenAI está por debajo de sus propios objetivos de crecimiento de ingresos y nuevos usuarios para este período. La CFO Sarah Friar expresó preocupación interna sobre la capacidad de la compañía para pagar sus contratos de computación (principalmente con Microsoft Azure) si la línea de ingresos no se expande lo suficientemente rápido. La información fue filtrada desde reuniones internas, lo que generó revuelo en el ecosistema tech.</p>
+        <p>El contexto es el siguiente: OpenAI gasta en infraestructura de cómputo a una escala difícil de justificar sin un crecimiento de ingresos proporcional. Con más de 400 millones de usuarios activos semanales, el volumen es masivo, pero la monetización sigue siendo compleja. Una parte importante del uso es gratuito (ChatGPT free), y los planes de pago Premium ($20/mes) enfrentan competencia creciente de Google Gemini, Anthropic Claude y modelos open-source que cada mes son más capaces y más baratos. La presión competitiva baja precios y fragmenta el mercado.</p>
+        <p>Para el ecosistema de IA, esta noticia importa como señal: OpenAI es el "termómetro" del mercado de IA para consumidores y empresas. Si el líder del sector tiene problemas de crecimiento de ingresos, puede indicar que la adopción de IA de pago está tomando más tiempo de lo proyectado —o que la competencia está fragmentando el mercado más rápido de lo esperado. Esto favorece a los usuarios finales: más competencia = mejores herramientas a menor costo.</p>
+        <p>Para Santiago: el impacto directo es positivo. La competencia entre proveedores de IA (OpenAI, Anthropic, Google) baja precios y sube calidad de las herramientas de automatización que usás en el negocio y en tu sistema personal. El agente de briefing, las herramientas de contenido, los asistentes de gestión —todos se van a volver más capaces y más baratos en los próximos 12 meses. No cambia nada operativo hoy, pero confirma que invertir en dominar estas herramientas ahora te da ventaja competitiva frente a negocios que no las están adoptando.</p>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="sec-title">🌎 Internacional</div>
-<div class="card">
-  <div class="noticia">
-    <div class="noticia-meta">Tech · CNBC / Apple Insider / MacObserver · 28 abr 2026</div>
-    <div class="noticia-titulo">Apple reporta Q2 el 30 de abril: Tim Cook se va en septiembre, John Ternus asume y el iPhone 17 rompe todos los récords</div>
-    <div class="noticia-body">
-      <p>Apple publicará sus resultados del Q2 FY2026 el miércoles 30 de abril a las 17:00 ET (18:00 Argentina). El consenso de analistas proyecta ingresos de USD 109.690 millones (+15% YoY) y EPS de USD 1.95 (+18%). El contexto es muy favorable: el Q1 FY2026 fue el trimestre más fuerte en la historia de Apple con USD 143.760 millones en ingresos (+15.7% YoY), impulsado por el iPhone 17 con ingresos de USD 85.270 millones (+23.3%). Los Servicios (App Store, Apple TV+, iCloud, Apple Pay) alcanzaron un nuevo máximo histórico de USD 30.010 millones.</p>
-      <p>La noticia más grande de la semana fue el anuncio de sucesión: Tim Cook pasará a ser Executive Chairman y John Ternus — actual SVP de Hardware Engineering, el cerebro detrás del iPhone, iPad y Mac de los últimos años — asumirá como CEO el 1 de septiembre de 2026. Las acciones cayeron 2.5% en la sesión del anuncio pero recuperaron rápidamente. UBS subió su precio objetivo a USD 323 (desde ~USD 271 actual), implicando un 21% de upside con calificación compra. La lectura del mercado: la transición es ordenada, el negocio es sólido, y Cook deja en orden los dos pilares del crecimiento futuro — Apple Intelligence (IA) y Servicios.</p>
-      <p>Para el mercado de iPhones, el modelo 17 mostró demanda sin precedentes en China (+23% en las primeras 9 semanas de 2026, contra un mercado que cayó 4%) y récords en EE.UU. La mayor participación de China — USD 25.530 millones vs USD 18.510 millones un año atrás — es la señal más potente: el mercado chino volvió para Apple en serio.</p>
-      <p><strong>Implicancia para LANCER:</strong> El momentum de Apple es muy positivo para el ecosistema de reventa y accesorios. Un iPhone 17 fuerte implica que el mercado de seminuevos también se dinamiza (la gente actualiza). Seguí los earnings del miércoles — si Apple guía bien para Q3 y adelanta demanda fuerte del iPhone 17 Pro/Max, eso impacta en los precios de usados en Argentina desde el segundo semestre. También implica que Apple Intelligence se consolida: funcionalidades que van a empujar upgrades en el mercado local.</p>
+  <!-- 9. IDEA DE NEGOCIO SEMANAL -->
+  <div class="sec-title">💡 Idea de negocio — semana 18</div>
+  <div class="idea-card">
+    <h2>Idea de la semana</h2>
+    <div class="idea-titulo">Programa "Clientes Felices": reviews automatizadas + sistema de referidos para LANCER</div>
+    <div class="idea-body">
+      <h3>Qué es</h3>
+      <p>Un sistema simple (no requiere software caro) que convierte a cada cliente satisfecho en un generador de reviews en Google y de referidos nuevos. Tiene dos componentes: (1) un QR en el local y en la bolsa de entrega que lleva directamente a Google Maps para dejar reseña, y (2) un mensaje de WhatsApp post-venta que ofrece un descuento futuro a cambio de recomendar a un amigo que compre en LANCER.</p>
+      <h3>Por qué ahora</h3>
+      <p>En Tucumán 2026, las reseñas de Google son el primer filtro que usa un comprador nuevo cuando busca "comprar iPhone Yerba Buena" o "funda iPhone Tucumán". La mayoría de negocios físicos locales tienen entre 10-50 reseñas; superar las 100 con promedio 4.8+ da ventaja desproporcionada en búsquedas orgánicas. Un referido compra con menos fricción (ya viene recomendado) y el costo de adquisición es casi cero comparado con Meta Ads.</p>
+      <h3>Cómo arrancarla</h3>
+      <ul>
+        <li><strong>Paso 1:</strong> Crear el link directo a reseña en Google Maps de LANCER desde Google Business Profile. Imprimir en QR y pegar en el mostrador y dentro de cada bolsa de venta.</li>
+        <li><strong>Paso 2:</strong> 24-48hs después de cada venta, mandar por WhatsApp: "Hola [nombre], gracias por tu compra en LANCER. Si estás contento, nos ayudás mucho con una reseña 🙏 [link]. Y si traés a alguien a comprarnos, te damos $X de descuento en tu próxima compra." Puede hacerse manual al principio.</li>
+        <li><strong>Paso 3:</strong> Para referidos, llevar un registro simple en planilla: quién refirió a quién, y cuándo aplicar el descuento ($5.000-$10.000 en accesorios).</li>
+        <li><strong>Paso 4:</strong> Medir cada 2 semanas cuántas reseñas nuevas entran y cuántos referidos se convirtieron en compras.</li>
+      </ul>
+      <h3>Modelo de ingreso</h3>
+      <p>No genera ingreso directo, pero cada referido que compra un iPhone a $800k-$1,2M genera un margen neto de $100k-$200k. El costo del incentivo ($10k en accesorios) vs el ingreso generado ($100k+ de margen) es un ROI de 10x o más. Las reseñas mejoran el SEO local de Google Maps y reducen el costo por cliente de publicidad paga.</p>
+      <h3>Riesgos principales</h3>
+      <ul>
+        <li>Cliente promete la reseña pero nunca la deja → el QR físico en el local ayuda porque lo hace en el momento.</li>
+        <li>Referido no llega a concretar la compra → el descuento se entrega solo cuando el referido compra efectivamente.</li>
+        <li>Volumen bajo de clientes en esta etapa → arrancar igual, aunque sea con 5 mensajes por semana. El hábito vale más que la escala.</li>
+      </ul>
+      <h3>Esfuerzo / inversión inicial</h3>
+      <p>Tiempo: 1-2 horas para armar QR + plantilla de WhatsApp + planilla de referidos. Inversión: casi $0 (solo impresión del QR, $200-500 ARS). Podés arrancar esta semana.</p>
     </div>
   </div>
-</div>
 
-<div class="sec-title">💡 Idea de negocio — semana 18</div>
-<div class="idea-card">
-  <h2>Idea de la semana</h2>
-  <div class="idea-titulo">Programa de Trade-In en LANCER: recompra de iPhones usados y reventa como "certificados Lancer"</div>
-  <div class="idea-body">
-    <h3>Qué es</h3>
-    <p>Un sistema formalizado de recompra de iPhones usados en el local. El cliente trae su dispositivo actual, LANCER lo evalúa en el acto (5-10 minutos) y le ofrece un valor de canje que puede aplicar como descuento a la compra de un iPhone nuevo o seminuevo. LANCER recompra el dispositivo, lo recondicioná (limpieza, testeo, cambio de batería si aplica) y lo revende como "iPhone certificado Lancer" con garantía propia de 3 meses.</p>
+  <footer>Generado 29/04/2026 · Google Drive no disponible — cargá la caja para ver los datos actualizados de LANCER</footer>
 
-    <h3>Por qué ahora</h3>
-    <p>La baja de aranceles (0% desde enero 2026) está generando un ciclo de actualización masivo: quienes tienen iPhone 12/13 quieren pasarse al 15 o 16. Eso crea oferta de usados barata y demanda de acceso facilitado a modelos nuevos. Al mismo tiempo, el mercado gris de seminuevos está completamente desordenado — no hay garantía ni trazabilidad. LANCER puede ocupar el nicho de "reventa de confianza" en Tucumán, donde la reputación del local ya existe. Timing perfecto: Apple acaba de mostrar que el iPhone 17 tiene demanda récord, lo que presionará al alza el precio de los nuevos y empujará la demanda de usados.</p>
-
-    <h3>Cómo arrancarla</h3>
-    <ul>
-      <li><strong>Paso 1:</strong> Armar tabla de precios de recompra por modelo (iPhone 12 → 16) con criterios claros: pantalla, batería, estado chasis. Publicarla en Instagram como contenido de valor.</li>
-      <li><strong>Paso 2:</strong> Lanzar con 3-5 dispositivos propios reacondicionados como stock piloto. Foto profesional, descripción detallada del estado, precio con pequeño descuento vs. mercado.</li>
-      <li><strong>Paso 3:</strong> Contenido en redes mostrando el proceso de evaluación en cámara: "traé tu iPhone, te damos el precio en 5 minutos". Genera confianza y atrae tráfico al local.</li>
-      <li><strong>Paso 4:</strong> Garantía de 3 meses en todos los reacondicionados como diferenciador vs. Mercado Libre.</li>
-      <li><strong>Paso 5:</strong> Medir rotación: si un usado tarda más de 15 días en venderse, el precio de recompra fue alto. Ajustar tabla mensualmente.</li>
-    </ul>
-
-    <h3>Modelo de ingreso</h3>
-    <p>El margen surge del diferencial entre precio de recompra y precio de reventa. Ejemplo rough: iPhone 13 en buen estado → recompra a USD 200, venta certificada a USD 280-300 → margen USD 80-100 por unidad. Con 5-8 usados por mes: USD 400-800 de margen adicional. Es margen casi puro (sin costo de importación), más eficiente que vender iPhones nuevos.</p>
-
-    <h3>Riesgos principales</h3>
-    <ul>
-      <li><strong>Sobreestimar el valor de recompra:</strong> Si pagás de más, el margen se destruye. La tabla tiene que ser conservadora y revisarse cada 2 semanas.</li>
-      <li><strong>Tiempo de rotación alto:</strong> Un usado que no se vende en 30 días deprecia. Limitar el stock máximo a 5-7 dispositivos en simultáneo.</li>
-      <li><strong>Dispositivos robados:</strong> Verificar siempre IMEI antes de comprar. Un dispositivo con IMEI reportado es pérdida total. Hay bases de IMEI locales (RENABAP/operadoras).</li>
-    </ul>
-
-    <h3>Esfuerzo / inversión inicial</h3>
-    <p>Capital inicial: USD 600-1.000 para comprar los primeros 3-5 dispositivos. Tiempo de setup: 1-2 semanas para armar la tabla, fotografiar y publicar. Sin inversión en infraestructura. Si funciona, este sistema se convierte en un diferenciador que ningún otro local de Tucumán tiene formalizado — y además atrae clientes nuevos al local que después compran accesorios o iPhones nuevos.</p>
-  </div>
-</div>
-
-<footer>Generado 28/04/2026 · Datos de caja al 27/04 · Habitos al 27/04 · Semana 18</footer>
-
-<script>
-  const ventasData = [{"fecha":"01/04","total":1421485},{"fecha":"02/04","total":0},{"fecha":"03/04","total":0},{"fecha":"04/04","total":674500},{"fecha":"05/04","total":0},{"fecha":"06/04","total":148500},{"fecha":"07/04","total":667140},{"fecha":"08/04","total":424597},{"fecha":"09/04","total":78362},{"fecha":"10/04","total":714832},{"fecha":"11/04","total":920427},{"fecha":"12/04","total":0},{"fecha":"13/04","total":1252041},{"fecha":"14/04","total":38900},{"fecha":"15/04","total":32000},{"fecha":"16/04","total":107000},{"fecha":"17/04","total":0},{"fecha":"18/04","total":1047150},{"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},{"fecha":"22/04","total":2771681},{"fecha":"23/04","total":41000},{"fecha":"24/04","total":774600},{"fecha":"25/04","total":2371408},{"fecha":"26/04","total":0},{"fecha":"27/04","total":1466820},{"fecha":"28/04","total":0},{"fecha":"29/04","total":0},{"fecha":"30/04","total":0}];
-  const margenData = [{"fecha":"01/04","margen":284297},{"fecha":"02/04","margen":0},{"fecha":"03/04","margen":0},{"fecha":"04/04","margen":134900},{"fecha":"05/04","margen":0},{"fecha":"06/04","margen":29700},{"fecha":"07/04","margen":133428},{"fecha":"08/04","margen":84919},{"fecha":"09/04","margen":15672},{"fecha":"10/04","margen":142966},{"fecha":"11/04","margen":184085},{"fecha":"12/04","margen":0},{"fecha":"13/04","margen":250408},{"fecha":"14/04","margen":7780},{"fecha":"15/04","margen":6400},{"fecha":"16/04","margen":21400},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":209430},{"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},{"fecha":"22/04","margen":554336},{"fecha":"23/04","margen":8200},{"fecha":"24/04","margen":154920},{"fecha":"25/04","margen":474281},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":293364},{"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0},{"fecha":"30/04","margen":0}];
-  new Chart(document.getElementById('chart-ventas'), {
-    type: 'line',
-    data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-  });
-  new Chart(document.getElementById('chart-margen'), {
-    type: 'bar',
-    data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
-    options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-  });
-</script>
+  <script>
+    const ventasData = [
+      {"fecha":"01/04","total":0},{"fecha":"02/04","total":0},{"fecha":"03/04","total":0},
+      {"fecha":"04/04","total":0},{"fecha":"05/04","total":0},{"fecha":"06/04","total":0},
+      {"fecha":"07/04","total":0},{"fecha":"08/04","total":0},{"fecha":"09/04","total":0},
+      {"fecha":"10/04","total":0},{"fecha":"11/04","total":0},{"fecha":"12/04","total":0},
+      {"fecha":"13/04","total":0},{"fecha":"14/04","total":0},{"fecha":"15/04","total":0},
+      {"fecha":"16/04","total":0},{"fecha":"17/04","total":0},{"fecha":"18/04","total":0},
+      {"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},
+      {"fecha":"22/04","total":0},{"fecha":"23/04","total":0},{"fecha":"24/04","total":0},
+      {"fecha":"25/04","total":0},{"fecha":"26/04","total":0},{"fecha":"27/04","total":0},
+      {"fecha":"28/04","total":0},{"fecha":"29/04","total":0}
+    ];
+    const margenData = [
+      {"fecha":"01/04","margen":0},{"fecha":"02/04","margen":0},{"fecha":"03/04","margen":0},
+      {"fecha":"04/04","margen":0},{"fecha":"05/04","margen":0},{"fecha":"06/04","margen":0},
+      {"fecha":"07/04","margen":0},{"fecha":"08/04","margen":0},{"fecha":"09/04","margen":0},
+      {"fecha":"10/04","margen":0},{"fecha":"11/04","margen":0},{"fecha":"12/04","margen":0},
+      {"fecha":"13/04","margen":0},{"fecha":"14/04","margen":0},{"fecha":"15/04","margen":0},
+      {"fecha":"16/04","margen":0},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":0},
+      {"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},
+      {"fecha":"22/04","margen":0},{"fecha":"23/04","margen":0},{"fecha":"24/04","margen":0},
+      {"fecha":"25/04","margen":0},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":0},
+      {"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0}
+    ];
+    new Chart(document.getElementById('chart-ventas'), {
+      type: 'line',
+      data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+    });
+    new Chart(document.getElementById('chart-margen'), {
+      type: 'bar',
+      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+    });
+  </script>
 </body>
 </html>
