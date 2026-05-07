@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — 6 de mayo de 2026</title>
+  <title>Briefing diario — 2026-05-07</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -34,7 +34,10 @@
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
 
-    .cal-cuando{font-size:20px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+    .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
+    .evento-item:last-child{border-bottom:none;padding-bottom:0;}
+    .evento-item:first-child{padding-top:0;}
+    .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
 
@@ -91,13 +94,13 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">miércoles 6 de mayo de 2026</div>
+    <div class="fecha">jueves 7 de mayo de 2026</div>
   </header>
 
-  <div class="alert">📋 <strong>Cargá la caja de mayo en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del 5 de abril (último con datos).</div>
+  <div class="alert">📋 <strong>Cargá la caja de ayer en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (5/5).</div>
 
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Hasta julio: ganar 2.000 USD de utilidad con LANCER</div>
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Meta hasta julio: 60 ventas por mes promedio o más</div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -126,33 +129,45 @@
   <!-- 3. CALENDARIO -->
   <div class="sec-title">Agenda</div>
   <div class="card">
-    <h2>Próximo evento</h2>
-    <div class="cal-cuando">Mañana</div>
-    <div class="cal-titulo">Turno dentista</div>
-    <div class="cal-hora">Jueves 7/5 · 17:00 hs</div>
+    <h2>Próximos eventos</h2>
+    <div class="evento-item">
+      <div class="cal-cuando">Hoy — Jue 7/5</div>
+      <div class="cal-titulo">Turno dentista</div>
+      <div class="cal-hora">17:00 – 18:00</div>
+    </div>
+    <div class="evento-item">
+      <div class="cal-cuando">Mañana — Vie 8/5</div>
+      <div class="cal-titulo">Rendir Economía 1</div>
+      <div class="cal-hora">12:30 – 13:30</div>
+    </div>
+    <div class="evento-item">
+      <div class="cal-cuando">Sábado 9/5</div>
+      <div class="cal-titulo">Cumpleaños de Alurralde</div>
+      <div class="cal-hora">Todo el día</div>
+    </div>
   </div>
 
   <!-- 4. HÁBITOS -->
-  <div class="sec-title">Hábitos — mayo 2026</div>
+  <div class="sec-title">Hábitos — Mayo</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">56%</div>
-    <div class="sub" style="margin-top:4px;">5 días medidos — 25 hábitos cumplidos de 45 posibles</div>
+    <div class="hab-pct">10%</div>
+    <div class="sub" style="margin-top:4px;">Sobre 31 días. Días 4/5 y 5/5 fueron 100% y 89% — el resto cayó.</div>
     <ul class="hab-insights">
-      <li>🔥 Entrenar y Despertar: racha perfecta 5/5 — mejor arranque del año en ambos hábitos.</li>
-      <li>🔴 Estudiar (20%) y Leer libros (20%) en rojo — así no llegás al 60% mensual. Necesitás hacerlo hoy.</li>
-      <li>✅ Lunes 4/5 fue 100% completo (9/9 hábitos) — ese día fue el modelo, replicá la estructura.</li>
+      <li>🔴 <strong>Estudiar 2 hs (3.2%):</strong> solo 1 día de 7. Mañana rendís Economía — priorizá repaso hoy.</li>
+      <li>⚠️ <strong>Desayuno sano, trabajar 4hs, leer inversiones, leer páginas:</strong> todos por debajo del 7%. Mayo arranca muy por debajo de abril.</li>
+      <li>✅ <strong>Días 4 y 5 de mayo fueron perfectos:</strong> 100% y 89%. El arranque de semana fue sólido; la caída del 6/5 rompe la racha.</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-g">100%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-w">40%</span></div>
-      <div class="hab-item"><span>Trabajar 4 horas</span><span class="badge-w">60%</span></div>
-      <div class="hab-item"><span>Estudiar 2 horas</span><span class="badge-r">20%</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">40%</span></div>
-      <div class="hab-item"><span>Entrenar</span><span class="badge-g">100%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">20%</span></div>
-      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">60%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">60%</span></div>
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">16.1%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">6.5%</span></div>
+      <div class="hab-item"><span>Trabajar 4 horas</span><span class="badge-r">6.5%</span></div>
+      <div class="hab-item"><span>Estudiar 2 horas</span><span class="badge-r">3.2%</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">6.5%</span></div>
+      <div class="hab-item"><span>Entrenar</span><span class="badge-w">16.1%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">6.5%</span></div>
+      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">16.1%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">12.9%</span></div>
     </div>
   </div>
 
@@ -160,32 +175,33 @@
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja — 5 de abril (último con datos)</h2>
+    <h2>Caja anteayer (5/5)</h2>
     <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.080.436</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1.4 est.</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">Sin datos</div></div>
+      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.104.937</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1-2 est.</div></div>
+      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">$120.900</div></div>
     </div>
+    <div class="sub" style="font-size:12px;color:var(--muted);margin-top:4px;">Tarjeta: $1.200.485 · UALA: $14.500 · ACC efectivo: $10.000 · Sin efectivo IP registrado. Gastos: pauta $92.900 + sueldo $28.000.</div>
   </div>
 
   <div class="card">
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
       <span style="font-size:18px;font-weight:700;">Sin datos / 50</span>
-      <span class="sub">Faltan 25 días</span>
+      <span class="sub">Faltan 24 días</span>
     </div>
     <div class="progress"><div class="progress-fill" style="width:0%"></div></div>
-    <div class="sub">Mayo sin cargar — cargá la caja para ver el progreso real.</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: Sin datos ARS</div>
+    <div class="sub">Sin EFECTIVO IP en mayo — no hay forma de estimar iPhones vendidos. Break-even: 33 iPhones/mes.</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $1.679.726 ARS (días 2, 4 y 5 de mayo)</div>
   </div>
 
   <div class="grid-2">
     <div class="card">
-      <h2>Ventas diarias (abril)</h2>
+      <h2>Ventas diarias</h2>
       <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
     </div>
     <div class="card">
-      <h2>Margen estimado (abril)</h2>
+      <h2>Margen estimado</h2>
       <div class="chart-container"><canvas id="chart-margen"></canvas></div>
     </div>
   </div>
@@ -196,7 +212,7 @@
       <div class="deuda-bloque">
         <div class="lbl">A pagar</div>
         <div class="val">$293.400 ARS</div>
-        <div class="val-usd">+ USD 6.904</div>
+        <div class="val-usd">+ USD 5.049</div>
       </div>
       <div class="deuda-bloque">
         <div class="lbl">A cobrar</div>
@@ -210,22 +226,12 @@
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">Infobae · 19 de abril de 2026</div>
-      <div class="noticia-titulo">Economía en dos velocidades: 24.000 empresas cierran mientras llegan Mango, H&M y USD 85.000 M en inversiones</div>
+      <div class="noticia-meta">Infobae Economía · Marzo 2026</div>
+      <div class="noticia-titulo">Boom importador: en 2025 ingresaron casi 400.000 toneladas de ropa y textiles, un 71% más que el año anterior</div>
       <div class="noticia-body">
-        <p>Argentina vive una paradoja que define esta etapa económica: mientras 24.180 empresas desaparecieron desde diciembre de 2023 (pasando de 512.357 a 488.177 entidades productivas), simultáneamente el país recibe la mayor ola de inversión extranjera en años y el regreso de marcas internacionales que habían abandonado el mercado hace décadas.</p>
-        <p>La destrucción empresarial golpea sobre todo a pymes y microempresas del mercado interno: Fate cerró en San Fernando con 920 despidos, SanCor quebró con 300 empleados, y cerraron Ilva, Whirlpool y Newsan. Las provincias más afectadas son La Rioja (-16,1%), Chaco (-10,9%) y Tierra del Fuego (-10,5%). El patrón es claro: caen los sectores sin ventaja exportadora ni protección arancelaria previa.</p>
-        <p>Por el otro lado, Mango reabre su primer local en Argentina después de 20 años (vía Grimoldi, planea 5 tiendas en 5 años). H&M negocia locales en Alto Palermo, Dot y Abasto. Miniso invierte USD 50 millones para 100 locales, Bestseller USD 30 millones, y Decathlon reabrió con 3.300 metros cuadrados. El RIGI aprobó 35 proyectos: Tecpetrol invierte USD 2.400 millones en Vaca Muerta, Mega USD 360 millones, Nano Energy USD 230 millones en uranio.</p>
-        <p><strong>Implicancia para LANCER:</strong> El retail de electrónica y accesorios queda exactamente en el medio. Las marcas internacionales compiten más en moda/calzado, pero el canal de importación más barato (Shein, Temu: +274% interanual en envíos puerta a puerta en 2025) sí presiona sobre accesorios. El diferencial de LANCER tiene que ser la experiencia local, la urgencia del comprador tucumano y la garantía real — nadie en Shein te soluciona un problema en el día.</p>
-      </div>
-    </div>
-    <div class="noticia">
-      <div class="noticia-meta">Infobae · 3 de mayo de 2026</div>
-      <div class="noticia-titulo">Argentina batió el récord histórico de comercio exterior en 2025: USD 210.213 millones</div>
-      <div class="noticia-body">
-        <p>Argentina cerró 2025 con un comercio exterior total de USD 210.213 millones, superando el récord anterior de USD 206.050 millones de 2022. Es el quinto año consecutivo de expansión en comercio internacional, según la Bolsa de Comercio de Rosario. El dato más llamativo: las exportaciones de servicios llegaron a USD 18.039 millones, su máximo histórico en cinco años consecutivos de crecimiento, impulsadas por software, diseño y otros servicios digitales.</p>
-        <p>Las exportaciones de bienes alcanzaron USD 87.111 millones, levemente por debajo de 2022 pese a volúmenes récord, porque los precios agrícolas internacionales llevan tres años cayendo. Las importaciones de bienes saltaron USD 15.015 millones vs. 2024, señal de recuperación del consumo doméstico y mayor apertura comercial. El coeficiente de apertura comercial llegó a 54,2% del PBI — el más alto desde 2004.</p>
-        <p><strong>Por qué importa para LANCER y para emprender en Argentina:</strong> El boom importador es real y acelera. Los celulares y accesorios que antes tardaban meses en llegar o tenían aranceles prohibitivos, hoy entran con más facilidad. Eso baja el precio de reposición para LANCER (mejor margen potencial al importar más barato), pero también aumenta la competencia con quienes importan directo. La oportunidad para emprendedores está en los servicios: con el dólar más libre y la economía del conocimiento en auge, vender servicios digitales o armar un modelo de negocio escalable que exporte (aunque sea a Buenos Aires desde Tucumán) es hoy más viable que en cualquier momento de la última década.</p>
+        <p>En 2025, Argentina recibió 391.676 toneladas de productos textiles e indumentaria, un 71% más en volumen y un 52% más en valor (USD 1.702 millones) respecto a 2024. El driver principal fue el crecimiento de plataformas como Shein y Temu, cuyas importaciones puerta a puerta crecieron 274% interanual. Las prendas de vestir específicamente subieron 164%, las confecciones 205%.</p>
+        <p>El gobierno presentó esto como un logro de la apertura comercial: los precios de ropa en 2025 aumentaron apenas 15,3%, 16 puntos por debajo de la inflación general (31,5%). En términos reales, la indumentaria se abarató 30,6% desde noviembre de 2023. Para el consumidor es buena noticia a corto plazo. Para el sector productivo local, el panorama es opuesto: 18.333 empleos textiles perdidos, 558 establecimientos cerrados, utilización de capacidad instalada en 29,2% (7 de cada 10 máquinas paradas). En calzado, más de 100 fábricas cerradas y ~10.000 empleos perdidos.</p>
+        <p><strong>Implicancia para LANCER:</strong> Este contexto de apertura importadora es el mismo marco en el que operás. Los accesorios iPhone importados a bajo costo compiten directamente con tu stock. El riesgo es que el consumidor prefiera accesorios baratos importados (fundas, cables) sobre tus márgenes. La oportunidad está en diferenciarte por calidad, garantía y servicio — lo que el importador directo no puede ofrecer. También abre la pregunta: ¿tiene sentido explorar importación directa de accesorios para mejorar tus propios márgenes antes de que alguien más lo haga en Tucumán?</p>
       </div>
     </div>
   </div>
@@ -233,22 +239,21 @@
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">Bloomberg / CNBC · 30 de abril – 1 de mayo de 2026</div>
-      <div class="noticia-titulo">Apple Q2 2026: +17% de ingresos, iPhone bate estimaciones y China crece 28%</div>
+      <div class="noticia-meta">The Motley Fool · 4 mayo 2026</div>
+      <div class="noticia-titulo">Apple Q2 2026: ingresos +17%, iPhone ventas $57B (+22%) — bate expectativas en todos los frentes</div>
       <div class="noticia-body">
-        <p>Apple reportó resultados del segundo trimestre fiscal 2026 que superaron ampliamente las expectativas de Wall Street: ingresos totales crecieron 17% interanual, con el iPhone como motor principal. El margen bruto llegó a 49,3%, desde 48,2% el trimestre anterior, impulsado por el mix de productos de mayor precio y el crecimiento de la división de Servicios — que volvió a superar estimaciones y llevó el margen total hacia arriba.</p>
-        <p>El dato geográfico más relevante: China creció 28% en el trimestre, pasando de USD 16.000 millones a USD 20.500 millones. Esto revierte la tendencia de pérdida de participación que preocupaba a los analistas y refuerza el posicionamiento de Apple como la marca aspiracional preferida en el segmento premium chino, a pesar de la competencia de Huawei y Xiaomi. Greater China es ahora el segundo mercado de Apple por tamaño.</p>
-        <p>En el guidance para Q3 2026, Apple proyecta crecimiento de 14% a 17%, rango que triplica la expectativa promedio de los analistas (9,1%). El stock subió ~4% en premarket tras el anuncio. Sin embargo, Tim Cook advirtió dos riesgos concretos: el costo de los chips de memoria va a incrementarse (presión sobre márgenes de iPhone), y hay escasez de Mac que podría persistir. "We'll look at a range of options" fue su respuesta sobre la memoria.</p>
-        <p><strong>Implicancia para LANCER:</strong> Apple en forma significa demanda iPhone sostenida. Que China crezca 28% con precios premium implica que el iPhone no cede en aspiracionalidad, lo que es buena señal para el mercado argentino. La presión de costos de memoria (chips) podría impactar levemente en los precios de nuevos modelos hacia fin de año, pero en el corto plazo la demanda Argentina de iPhones nuevos y seminuevos sigue siendo robusta. A monitorear: si el costo de chips sube, el precio del iPhone 17 (esperado en sept/oct) podría ser más alto que el del 16 — lo que aumenta el valor de los 15 y 16 seminuevos que tiene LANCER en stock.</p>
+        <p>Apple reportó un Q2 fiscal 2026 excepcional: ingresos totales de USD 111.180 millones (+17% interanual), EPS de USD 2.01 (+22%), superando las estimaciones de consenso de USD 1.95 EPS sobre USD 109.660M de ingresos proyectados. El segmento iPhone fue la estrella con USD 57B en ventas (+22%), marcando un récord para el trimestre de marzo en ciclo de renovación.</p>
+        <p>Más allá del hardware: iPad, Mac y accesorios crecieron 5-8%; el segmento de servicios (el más rentable de Apple) creció 16% y llegó a USD 31B trimestrales. El margen bruto general fue 49.3%, por encima de las expectativas de 48.4%. El análisis resalta que Apple tiene "uno de los mejores modelos de negocio del planeta" gracias a su ecosistema integrado que genera retención robusta y flujos de caja recurrentes.</p>
+        <p><strong>Implicancia para LANCER:</strong> Un ciclo iPhone fuerte globalmente se traduce en mayor demanda de actualizaciones también en Argentina. Clientes con iPhone viejo que quieren el nuevo modelo son tu cliente más rentable. Este resultado confirma que el ciclo de renovación está activo — el timing para push de ventas de iPhone nuevo/seminuevo es ahora.</p>
       </div>
     </div>
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 5 de mayo de 2026</div>
-      <div class="noticia-titulo">Intel sube 13% tras reporte de conversaciones con Apple sobre chips personalizados</div>
+      <div class="noticia-meta">FX Leaders · 2 mayo 2026</div>
+      <div class="noticia-titulo">Apple en mayo 2026: ciclo iPhone y catalizador IA en WWDC definen el outlook de la acción</div>
       <div class="noticia-body">
-        <p>Las acciones de Intel subieron 13% el 5 de mayo — su mayor suba en meses — después de que Reuters reportara que Apple está explorando usar chips Intel de próxima generación en algunas líneas de Mac. El movimiento marca un potencial giro en la relación Apple–Intel, que se rompió en 2020 cuando Apple anunció la transición completa a sus chips Silicon propios (M1, M2, M3).</p>
-        <p>Los analistas interpretaron la noticia como un intento de Apple de diversificar proveedores ante la escasez y el aumento de costos de memoria (el mismo problema que Tim Cook mencionó en el earnings call del día anterior). Intel cerró en nuevo máximo histórico. El mercado leyó esto como validación de que el CEO de Intel, Pat Gelsimer, logró retomar la carrera tecnológica necesaria para volver a ser proveedor de Apple.</p>
-        <p><strong>Por qué importa globalmente:</strong> Si Apple diversifica su cadena de proveedores para Mac, el ciclo de actualización de hardware podría acelerarse — más modelos de Mac, más frecuentes. Para LANCER en el corto plazo no hay impacto directo (el foco es iPhone), pero es una señal de que el ecosistema Apple sigue expandiendo su oferta de hardware premium, lo que refuerza la marca y empuja ventas de todo el portafolio, incluyendo iPhone.</p>
+        <p>Después del reporte Q2, Apple cotiza entre USD 278-282. Los analistas identifican dos catalizadores principales para los próximos meses: el ciclo de renovación de iPhone (que genera patrones de demanda volátiles pero predecibles) y la Conferencia Mundial de Desarrolladores (WWDC 2026), donde Apple anunciará integraciones de IA, incluyendo modelos de terceros como potencialmente OpenAI junto con capacidades propias.</p>
+        <p>El mercado anticipa que la integración de IA en el ecosistema Apple (Siri mejorada, generación de imagen y texto en dispositivo, API para desarrolladores) puede ser el mayor catalizador de ventas desde el lanzamiento del iPhone original. La apuesta es que los modelos con IA integrada van a acelerar el ciclo de renovación — quienes tienen iPhone 14 o anterior van a querer actualizarse al modelo con capacidades de IA on-device.</p>
+        <p><strong>Implicancia para LANCER:</strong> Si el ciclo de renovación se acelera por IA, tu stock de iPhones seminuevos tiene mayor demanda (gente que deja el viejo para comprar el nuevo). También es argumento de venta: "Este modelo ya tiene IA integrada" es un pitch que funciona en Argentina. Preparate para tener bien abastecido stock de iPhone 15 y 16 en los próximos meses.</p>
       </div>
     </div>
   </div>
@@ -272,7 +277,7 @@
         <li><strong>Paso 5:</strong> Con 3–5 operaciones cerradas y testimonios, empezás a escalar con publicidad en Facebook para productores rurales del NOA.</li>
       </ul>
       <h3>Modelo de ingreso</h3>
-      <p>Un lote de 100 novillos de 400kg a $2.800/kg = $280.000.000 ARS → comisión 2,5% = $7.000.000 ARS por operación. Incluso con lotes chicos (20 animales a $1.500/kg) = $30.000.000 → comisión = $750.000 ARS. Si cerrás 4 operaciones por mes en el arranque, estás en $3M ARS de ingreso mensual bruto. El potencial a escala (20–30 operaciones/mes) pone el techo en $15M–$25M ARS mensuales con estructura mínima.</p>
+      <p>Un lote de 100 novillos de 400kg a $2.800/kg = $280.000.000 ARS → comisión 2.5% = $7.000.000 ARS por operación. Incluso con lotes chicos (20 animales a $1.500/kg) = $30.000.000 → comisión = $750.000 ARS. Si cerrás 4 operaciones por mes en el arranque, estás en $3M ARS de ingreso mensual bruto. El potencial a escala (20–30 operaciones/mes) pone el techo en $15M–$25M ARS mensuales con estructura mínima.</p>
       <h3>Riesgos principales</h3>
       <ul>
         <li>Resistencia cultural: los productores grandes manejan todo por teléfono con alguien de confianza. El MVP tiene que generar confianza rápido, o no pasan por la plataforma.</li>
@@ -285,11 +290,11 @@
     </div>
   </div>
 
-  <footer>Generado 06/05/2026 · Cargá la caja de mayo para ver los datos actualizados</footer>
+  <footer>Generado 07/05/2026 · Abrí el archivo después de cargar la caja para ver los datos actualizados</footer>
 
   <script>
-    const ventasData = [{"fecha":"01/04","total":0},{"fecha":"02/04","total":543789},{"fecha":"03/04","total":0},{"fecha":"04/04","total":0},{"fecha":"05/04","total":1080437},{"fecha":"06/04","total":0},{"fecha":"07/04","total":0},{"fecha":"08/04","total":0},{"fecha":"09/04","total":0},{"fecha":"10/04","total":0},{"fecha":"11/04","total":0},{"fecha":"12/04","total":0},{"fecha":"13/04","total":0},{"fecha":"14/04","total":0},{"fecha":"15/04","total":0},{"fecha":"16/04","total":0},{"fecha":"17/04","total":0},{"fecha":"18/04","total":0},{"fecha":"19/04","total":0},{"fecha":"20/04","total":0},{"fecha":"21/04","total":0},{"fecha":"22/04","total":0},{"fecha":"23/04","total":0},{"fecha":"24/04","total":0},{"fecha":"25/04","total":0},{"fecha":"26/04","total":0},{"fecha":"27/04","total":0},{"fecha":"28/04","total":0},{"fecha":"29/04","total":0},{"fecha":"30/04","total":0},{"fecha":"01/05","total":0},{"fecha":"02/05","total":0},{"fecha":"03/05","total":0},{"fecha":"04/05","total":0},{"fecha":"05/05","total":0}];
-    const margenData = [{"fecha":"01/04","margen":0},{"fecha":"02/04","margen":81568},{"fecha":"03/04","margen":0},{"fecha":"04/04","margen":0},{"fecha":"05/04","margen":162065},{"fecha":"06/04","margen":0},{"fecha":"07/04","margen":0},{"fecha":"08/04","margen":0},{"fecha":"09/04","margen":0},{"fecha":"10/04","margen":0},{"fecha":"11/04","margen":0},{"fecha":"12/04","margen":0},{"fecha":"13/04","margen":0},{"fecha":"14/04","margen":0},{"fecha":"15/04","margen":0},{"fecha":"16/04","margen":0},{"fecha":"17/04","margen":0},{"fecha":"18/04","margen":0},{"fecha":"19/04","margen":0},{"fecha":"20/04","margen":0},{"fecha":"21/04","margen":0},{"fecha":"22/04","margen":0},{"fecha":"23/04","margen":0},{"fecha":"24/04","margen":0},{"fecha":"25/04","margen":0},{"fecha":"26/04","margen":0},{"fecha":"27/04","margen":0},{"fecha":"28/04","margen":0},{"fecha":"29/04","margen":0},{"fecha":"30/04","margen":0},{"fecha":"01/05","margen":0},{"fecha":"02/05","margen":0},{"fecha":"03/05","margen":0},{"fecha":"04/05","margen":0},{"fecha":"05/05","margen":0}];
+    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":31000},{"fecha":"5/5","total":1104937},{"fecha":"6/5","total":0}];
+    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":543789},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":11000},{"fecha":"5/5","margen":984037},{"fecha":"6/5","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
