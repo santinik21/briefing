@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — 2026-05-08</title>
+  <title>Briefing diario — 2026-05-09</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -16,31 +16,24 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
-
     .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
-
     .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
-
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
     .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
-
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
-
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
-
     .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
-
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -50,7 +43,6 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
-
     .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
     .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
     .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -62,7 +54,6 @@
     .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
     .deuda-bloque .val{font-size:18px;font-weight:700;}
     .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
-
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -71,7 +62,6 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
-
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -80,7 +70,6 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
-
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
     @media(max-width:600px){
       body{padding:14px;}
@@ -94,11 +83,13 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">viernes 8 de mayo de 2026</div>
+    <div class="fecha">sábado 9 de mayo de 2026</div>
   </header>
 
+  <div class="alert">📋 <strong>Cargá la caja de ayer en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (7/5). Drive no disponible al generar.</div>
+
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Terminar el primer cuatrimestre de Admón. con todas las materias aprobadas — hoy rendís Economía 1</div>
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Hasta julio: ganar 2.000 USD de utilidad neta en LANCER</div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -106,11 +97,10 @@
     <div class="card">
       <h2>Hoy</h2>
       <ul class="task-list">
-        <li>Turno para el hombro</li>
         <li>Buscar remeras</li>
         <li>Comprar regalo Lela</li>
-        <li>Ver de armar la app con productos importados de china</li>
         <li>Terminar curso de Claude y de emprender</li>
+        <li>Anuncio tareas miércoles</li>
       </ul>
     </div>
     <div class="card">
@@ -129,19 +119,19 @@
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando">Hoy — Vie 8/5</div>
-      <div class="cal-titulo">Rendir Economía 1</div>
-      <div class="cal-hora">12:30 – 13:30</div>
-    </div>
-    <div class="evento-item">
-      <div class="cal-cuando">Mañana — Sáb 9/5</div>
+      <div class="cal-cuando">Hoy — Sáb 9/5</div>
       <div class="cal-titulo">Cumpleaños de Alurralde</div>
       <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Sáb 9/5</div>
+      <div class="cal-cuando">Hoy — Sáb 9/5</div>
       <div class="cal-titulo">Último día para rendir parcial</div>
       <div class="cal-hora">Fecha límite</div>
+    </div>
+    <div class="evento-item">
+      <div class="cal-cuando">Sin datos</div>
+      <div class="cal-titulo">Calendar no disponible</div>
+      <div class="cal-hora">Revisá la agenda manualmente</div>
     </div>
   </div>
 
@@ -150,11 +140,11 @@
   <div class="card">
     <h2>Progreso mensual</h2>
     <div class="hab-pct">15%</div>
-    <div class="sub" style="margin-top:4px;">7 días registrados de 31. Ayer (7/5): 78% — cuatro días seguidos por encima del 78%.</div>
+    <div class="sub" style="margin-top:4px;">Último dato: 7/5 (7 días registrados de 31). Drive no disponible — datos pueden estar desactualizados.</div>
     <ul class="hab-insights">
-      <li>✅ <strong>Racha positiva días 4–7/5:</strong> cuatro días seguidos con 78% o más. El patrón de la semana fue sólido — mantenerlo.</li>
-      <li>🔴 <strong>Estudiar 2 hs (3.2%):</strong> solo 1 día de 7 cumplido. Hoy rendís Economía 1 — que sea el arranque para sostenerlo.</li>
-      <li>⚠️ <strong>Entrenar (19.4%):</strong> por debajo del objetivo mayo. La meta era retomar boxeo — quedan 23 días para llegar al 50%.</li>
+      <li>✅ <strong>Racha sólida días 4–7/5:</strong> cuatro días consecutivos por encima del 78%. Buen patrón de semana.</li>
+      <li>🔴 <strong>Estudiar 2 hs (3.2%):</strong> el hábito más bajo del mes. Ayer rendiste Economía 1 — empezá a sostenerlo desde hoy.</li>
+      <li>⚠️ <strong>Entrenar (19.4%):</strong> meta mayo era volver al boxeo. Hoy es sábado — ideal para retomar si tenés turno.</li>
     </ul>
     <div class="hab-grid">
       <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">22.6%</span></div>
@@ -173,7 +163,7 @@
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja ayer (7/5)</h2>
+    <h2>Caja anteayer (7/5) — Drive no disponible, datos de 8/5 sin cargar</h2>
     <div class="lancer-grid">
       <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$495.000</div></div>
       <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~2</div></div>
@@ -185,11 +175,11 @@
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
       <span style="font-size:18px;font-weight:700;">— / 50</span>
-      <span class="sub">Faltan 23 días</span>
+      <span class="sub">Faltan 22 días</span>
     </div>
     <div class="progress"><div class="progress-fill" style="width:0%"></div></div>
-    <div class="sub">Unidades no registradas en caja — completar columna de cels vendidos</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $3.512.814 ARS</div>
+    <div class="sub">Unidades no disponibles — cargá la caja para ver progreso real</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes (al 7/5): $3.512.814 ARS</div>
   </div>
 
   <div class="grid-2">
@@ -223,12 +213,21 @@
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">Infobae · El Cronista — 8 may 2026</div>
-      <div class="noticia-titulo">Boom importador: las compras al exterior crecen 20–25% en 2026 y presionan al retail local</div>
+      <div class="noticia-meta">Ámbito · Infobae — 9 may 2026</div>
+      <div class="noticia-titulo">El gobierno flexibilizó el cepo para PyMEs importadoras: acceso a dólares desde los 30 días</div>
       <div class="noticia-body">
-        <p>Argentina está en pleno boom de importaciones. En 2025 ingresaron casi 400.000 toneladas de ropa y productos textiles, un 71% más que el año anterior, según datos de Infobae. El fenómeno se replica en electrónica y accesorios: la apertura del tipo de cambio y la mejora logística en courier internacional dispararon las compras por plataformas como Shein, AliExpress y Amazon. Para 2026, el sector proyecta un crecimiento de entre el 20% y el 25%, impulsado por la digitalización del consumo y la mayor oferta de servicios de puerta a puerta.</p>
-        <p>El dato más revelador es el del canal digital: mientras el consumo general cayó 0,3% interanual en diciembre de 2025, el e-commerce creció un 32,3% interanual. El consumidor argentino está comprando más online y cada vez más afuera. Esto tiene dos caras para LANCER: por un lado, competencia más fuerte de accesorios importados baratos que llegan directo al consumidor; por otro, una oportunidad concreta si se trabaja bien la diferenciación de producto (garantía, atención, servicio técnico) y se apunta a importar directamente productos que todavía no están disponibles en el mercado local a escala.</p>
-        <p>La clave para negocios como LANCER está en anticipar qué productos van a llegar masivamente vía courier en los próximos 6 meses y decidir si competir con precio o diferenciarse por servicio. La app de productos importados de China que tenés en la lista de tareas de hoy es exactamente el tipo de movida que va en la dirección correcta: conocer el canal antes de que se masifique.</p>
+        <p>El gobierno argentino dio un paso concreto hacia la normalización del comercio exterior: las personas físicas y empresas que califiquen como MiPyMEs ahora pueden acceder al Mercado Único de Cambios para cancelar pagos de importaciones a partir de los 30 días corridos desde el registro aduanero. La medida, publicada en el Boletín Oficial, representa una flexibilización significativa del esquema de restricciones cambiarias que venía operando desde la administración anterior.</p>
+        <p>En la práctica, esto significa que una PyME que importa mercadería hoy puede pagar a su proveedor externo en 30 días sin necesidad de esperar plazos más largos o acudir al dólar MEP o CCL para cubrir la operación. Para el sector importador, que durante años trabajó con plazos de 60 a 180 días o dependió de alternativas informales, esto acorta notablemente el costo financiero de cada operación.</p>
+        <p>Para LANCER, la medida abre una ventana concreta: si querés importar accesorios o productos desde China directamente (la app de productos importados que tenés en la lista de tareas), este esquema facilita la operatoria financiera. Ya no dependés únicamente de importadores intermediarios que te venden con markup. El costo de acceder al dólar oficial a 30 días desde el registro aduanero reduce sustancialmente el riesgo de cada operación. El siguiente paso sería ver si LANCER puede calificar como MiPyME importadora y qué productos tienen mejor margen de importación directa.</p>
+      </div>
+    </div>
+    <div class="noticia">
+      <div class="noticia-meta">Infobae · El Cronista — 8 may 2026</div>
+      <div class="noticia-titulo">Inflación de mayo proyectada en 2.3%: la tendencia desinflacionaria se sostiene, el dólar mayorista apunta a $1.410</div>
+      <div class="noticia-body">
+        <p>Las consultoras relevadas por el BCRA proyectan una inflación de 2.6% para abril y de alrededor de 2.3% para mayo de 2026. Si se confirma, sería el tercer mes consecutivo por debajo del 3%, lo que marcaría una tendencia desinflacionaria sostenida que no se veía desde hace años. Para 2026 completo, el consenso de analistas apunta a una inflación anual de 30.5%.</p>
+        <p>En paralelo, el tipo de cambio mayorista se proyecta en $1.410 para fin de mayo y en $1.676 para diciembre 2026. Eso implica una devaluación nominal del peso a lo largo del año, pero a un ritmo menor que la inflación, lo que significa una apreciación real del tipo de cambio. Para los importadores, esto es una señal mixta: el dólar oficial más caro en términos nominales encarece las importaciones en pesos, pero si la inflación supera al ritmo de devaluación, el poder de compra en pesos se erosiona menos de lo que uno esperaría.</p>
+        <p>Para LANCER, el contexto macroeconómico actual es el más estable de los últimos años: inflación desacelerando, tipo de cambio unificado, y cepo flexibilizándose para PyMEs. El riesgo es que la apreciación real del peso haga más baratos los productos importados para los consumidores finales, lo que puede intensificar la competencia de plataformas internacionales. La ventaja de LANCER sigue siendo el servicio, la garantía local y la atención inmediata.</p>
       </div>
     </div>
   </div>
@@ -236,21 +235,21 @@
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">CNBC — 1 may 2026</div>
-      <div class="noticia-titulo">Apple reporta resultados récord en Q2 FY2026: EPS $2.01, ingresos $111.18 B y guía que supera todas las expectativas</div>
+      <div class="noticia-meta">CNBC — may 2026</div>
+      <div class="noticia-titulo">Apple supera el 10% de I+D sobre ingresos por primera vez en 30 años: la urgencia de ponerse al día en IA</div>
       <div class="noticia-body">
-        <p>Apple cerró su segundo trimestre fiscal con números que dejaron al mercado sin palabras. Los ingresos llegaron a USD 111.180 millones — por encima de lo esperado por analistas — con ganancias por acción de USD 2.01. La acción subió más del 3% al día siguiente de la publicación. El board autorizó además un programa de recompra de acciones de USD 100.000 millones adicionales y elevó el dividendo trimestral a USD 0.27 por acción (+4% interanual).</p>
-        <p>Los drivers del trimestre fueron dos: el iPhone 17 y los servicios. Tim Cook definió al iPhone 17 como "la línea más popular de nuestra historia", con demanda que superó las proyecciones internas. Services, el segmento que Wall Street sigue de cerca porque es recurrente y de margen alto, creció un 16% interanual hasta alcanzar ingresos superiores a los USD 30.000 millones, sobre una base de más de 2.500 millones de dispositivos activos en el mundo.</p>
-        <p>La guía para Q3 FY2026 (que cierra en junio) fue la sorpresa real: Apple proyecta un crecimiento de ingresos de entre el 14% y el 17% interanual, cuando el consenso de analistas apuntaba al 9.5%. La única nota negativa en el call de resultados: la escasez global de memoria RAM —acelerada por la demanda de IA— está presionando los costos de producción. Cook admitió que están "evaluando un rango de opciones" para resolver el cuello de botella. Para LANCER, resultados sólidos de Apple implican que el ecosistema sigue creciendo y que los productos usados y reacondicionados mantienen valor en el mercado secundario.</p>
+        <p>Por primera vez en al menos tres décadas, Apple está destinando más del 10% de sus ingresos a investigación y desarrollo. En el trimestre de marzo 2026, el gasto en I+D alcanzó el 10.3% de los ingresos, un salto notable para una empresa que históricamente invirtió menos que sus pares en ese rubro (Google y Microsoft destinan entre el 14% y el 18%). La señal es clara: Apple siente la presión competitiva de la IA y está acelerando.</p>
+        <p>El contexto es que Apple quedó visiblemente rezagada en la primera ola de IA generativa. Mientras OpenAI, Google y Microsoft lanzaban modelos de lenguaje y asistentes de voz avanzados, Siri seguía siendo el asistente más limitado del ecosistema. Apple anunció en enero de 2026 que integraría la tecnología Gemini de Google para potenciar sus funciones de IA, incluyendo una versión renovada de Siri. Esta dependencia de un competidor habla de cuánto terreno perdió la compañía.</p>
+        <p>Para LANCER, el aumento de I+D en Apple es una buena señal de largo plazo: significa que el ecosistema seguirá creciendo, que vendrán nuevos productos con más valor agregado, y que los iPhones continuarán siendo el dispositivo premium de referencia. Cada nueva funcionalidad de IA que Apple lance va a ser un argumento de venta para actualizar de generación, lo que sostiene el mercado de reposición en el que opera LANCER.</p>
       </div>
     </div>
     <div class="noticia">
-      <div class="noticia-meta">CNBC — 5 may 2026</div>
-      <div class="noticia-titulo">Intel sube 13% en un día: Apple negocia con Intel y Samsung para producir chips en suelo americano</div>
+      <div class="noticia-meta">CNBC — 3 may 2026</div>
+      <div class="noticia-titulo">Big Tech: el mercado premia el gasto inteligente en IA — Apple, Microsoft y Alphabet subieron 3–5% en la semana post-earnings</div>
       <div class="noticia-body">
-        <p>El martes 5 de mayo Intel se disparó un 13% —su mayor suba en años— tras trascender que Apple está en conversaciones avanzadas tanto con Intel como con Samsung para que fabriquen los procesadores principales de sus dispositivos en territorio estadounidense. La información, que Bloomberg publicó citando fuentes directas, sacude el tablero de la industria de semiconductores.</p>
-        <p>El contexto es clave: la administración Trump 2.0 presionó fuerte a las grandes tecnológicas para traer producción de chips a EE.UU., y Apple —que hoy depende casi en un 100% de TSMC en Taiwán para fabricar sus chips A-series y M-series— sería el movimiento más simbólico posible para el gobierno. Intel, que perdió relevancia en el mercado de chips de alto rendimiento frente a TSMC, vería en este acuerdo una chance de reinserción en el segmento premium.</p>
-        <p>Si el acuerdo avanza, las implicancias son de largo plazo: potencialmente más resiliencia en la cadena de suministro de Apple (menos dependencia de Taiwán ante tensiones geopolíticas con China), pero también costos de producción más altos en el corto plazo que podrían trasladarse al precio final del hardware. Para LANCER, cualquier encarecimiento de los iPhones en el mercado global tiene efecto directo en el precio de importación y en los márgenes del negocio.</p>
+        <p>La semana de resultados del primer trimestre de 2026 para las grandes tecnológicas dejó un mensaje claro para el mercado: gastar en IA, cuando va acompañado de resultados concretos en ingresos y márgenes, es recompensado. Apple subió un 3.4% en la semana tras reportar ingresos de USD 111.18 miles de millones y una guía de crecimiento del 14–17% para Q3. Microsoft y Alphabet también tuvieron semanas positivas, impulsadas por sus segmentos de nube e IA.</p>
+        <p>El patrón es consistente con lo que el mercado viene señalando desde 2025: los inversores no penalizan el gasto en I+D ni en infraestructura de IA, siempre y cuando se traduzca en crecimiento de ingresos. Las empresas que mostraron crecer sus segmentos de servicios o nube (de mayor margen) por encima del 15% fueron premiadas; las que no pudieron mostrar tracción de IA en sus números de revenue fueron penalizadas.</p>
+        <p>Desde la perspectiva de LANCER, la solidez del ecosistema Apple (más de 2.500 millones de dispositivos activos, servicios creciendo al 16% anual) confirma que apostar al ecosistema Apple como eje de negocio tiene fundamento de largo plazo. Los usuarios de iPhone no cambian de ecosistema fácilmente, y eso protege el mercado de accesorios, reparaciones y upgrades en el que opera la tienda.</p>
       </div>
     </div>
   </div>
@@ -287,11 +286,11 @@
     </div>
   </div>
 
-  <footer>Generado 00:26 · Trello no disponible, se usaron tareas del día anterior</footer>
+  <footer>Generado 12:23 · Drive/Calendar no disponibles — caja y hábitos al 7/5 · Cargá los datos de ayer cuando puedas</footer>
 
   <script>
-    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":31000},{"fecha":"5/5","total":1107704},{"fecha":"6/5","total":1335321},{"fecha":"7/5","total":495000},{"fecha":"8/5","total":0}];
-    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":54000},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":3000},{"fecha":"5/5","margen":108000},{"fecha":"6/5","margen":133000},{"fecha":"7/5","margen":45000},{"fecha":"8/5","margen":0}];
+    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":31000},{"fecha":"5/5","total":1107704},{"fecha":"6/5","total":1335321},{"fecha":"7/5","total":495000},{"fecha":"8/5","total":0},{"fecha":"9/5","total":0}];
+    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":54000},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":3000},{"fecha":"5/5","margen":108000},{"fecha":"6/5","margen":133000},{"fecha":"7/5","margen":45000},{"fecha":"8/5","margen":0},{"fecha":"9/5","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
