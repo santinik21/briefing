@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — 2026-05-12</title>
+  <title>Briefing diario — miércoles 13 de mayo de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -16,24 +16,31 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
+
     .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
-    .meta-rotativa{background:rgba(248,113,113,0.08);border-left:3px solid var(--danger);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
-    .meta-rotativa strong{color:var(--danger);}
+
+    .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
+    .meta-rotativa strong{color:var(--accent);}
+
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
     .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
+
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
+
     .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
+
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -43,6 +50,7 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
+
     .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
     .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
     .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -54,6 +62,7 @@
     .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
     .deuda-bloque .val{font-size:18px;font-weight:700;}
     .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
+
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -62,6 +71,7 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
+
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -70,6 +80,7 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
+
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
     @media(max-width:600px){
       body{padding:14px;}
@@ -83,13 +94,15 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">martes 12 de mayo de 2026</div>
+    <div class="fecha">miércoles 13 de mayo de 2026</div>
   </header>
 
-  <!-- META DEL AÑO -->
-  <div class="meta-rotativa">⚠️ <strong>Meta del año (crítica):</strong> Si no cierran los números de LANCER hasta mayo → evaluar el futuro del negocio. <em>Mayo es el mes decisivo.</em></div>
+  <div class="alert">📋 <strong>Cargá la caja de ayer antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (11/5).</div>
 
-  <!-- TAREAS TRELLO -->
+  <!-- 1. META DEL AÑO -->
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Meta hasta julio: 60 ventas por mes promedio o más</div>
+
+  <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
   <div class="grid-2">
     <div class="card">
@@ -113,73 +126,72 @@
     </div>
   </div>
 
-  <!-- CALENDARIO -->
+  <!-- 3. CALENDARIO -->
   <div class="sec-title">Agenda</div>
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando">Lunes 1/6 — en 20 días</div>
-      <div class="cal-titulo">Cumpleaños Félix</div>
-      <div class="cal-hora">Todo el día</div>
+      <div class="cal-cuando">Lunes 1 de junio</div>
+      <div class="cal-titulo">Cumpleaños Felix</div>
+      <div class="cal-hora">Todo el día · en 19 días</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Jueves 4/6 — en 23 días</div>
+      <div class="cal-cuando">Jueves 4 de junio</div>
       <div class="cal-titulo">Mes</div>
-      <div class="cal-hora">Todo el día</div>
+      <div class="cal-hora">Todo el día · en 22 días</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Martes 16/6 — en 35 días</div>
+      <div class="cal-cuando">Martes 16 de junio</div>
       <div class="cal-titulo">Cumpleaños Hori</div>
-      <div class="cal-hora">Todo el día</div>
+      <div class="cal-hora">Todo el día · en 34 días</div>
     </div>
   </div>
 
-  <!-- HÁBITOS -->
-  <div class="sec-title">Hábitos — mayo 2026</div>
+  <!-- 4. HÁBITOS -->
+  <div class="sec-title">Hábitos — Mayo 2026</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">56%</div>
-    <div class="sub" style="margin-top:4px;">Promedio de cumplimiento en los 10 días trackeados (de 12 transcurridos)</div>
+    <div class="hab-pct">24%</div>
+    <div class="sub" style="margin-top:4px;">68% en días activos · Ayer (día 12): 0% en todo — rompé esa racha hoy</div>
     <ul class="hab-insights">
-      <li>🔴 <strong>Estudiar 2 hs:</strong> solo 2 de 10 días (20%) — para llegar al 60% mensual necesitás 16 días más en los próximos 19 días. Hay que ponerse.</li>
-      <li>🟡 <strong>Leer 10 páginas:</strong> 5 de 10 días (50%) — por debajo de los demás. Sin racha activa.</li>
-      <li>🟢 <strong>Dejar celular 00:00:</strong> el más constante (83%) — mantenerlo. Es la base del descanso.</li>
+      <li>📚 Estudiar: 9.7% — necesitás estudiar 15 de los 18 días restantes para llegar al 60%</li>
+      <li>🥊 Entrenar: 22.6% — 7 días en 12. Meta mínima: 16 días (50%). Te faltan 9 en 18 días</li>
+      <li>⚠️ Día 12 (ayer): 0 hábitos cumplidos. Cortar eso hoy es la prioridad número 1</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-g">75%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-w">50%</span></div>
-      <div class="hab-item"><span>Trabajar 4 hs</span><span class="badge-w">50%</span></div>
-      <div class="hab-item"><span>Estudiar 2 hs</span><span class="badge-r">20%</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">58%</span></div>
-      <div class="hab-item"><span>Entrenar</span><span class="badge-w">58%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-w">42%</span></div>
-      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-g">83%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-g">75%</span></div>
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">32.3%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">19.4%</span></div>
+      <div class="hab-item"><span>Trabajar 4h enfocadas</span><span class="badge-r">22.6%</span></div>
+      <div class="hab-item"><span>Estudiar 2hs</span><span class="badge-r">9.7%</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">25.8%</span></div>
+      <div class="hab-item"><span>Entrenar</span><span class="badge-r">22.6%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">19.4%</span></div>
+      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">35.5%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">32.3%</span></div>
     </div>
   </div>
 
-  <!-- LANCER -->
+  <!-- 5. LANCER -->
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja ayer (11/5)</h2>
+    <h2>Caja anteayer (11/5)</h2>
     <div class="lancer-grid">
       <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.093.000</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">—</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1 (est.)</div></div>
+      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">Sin datos</div></div>
     </div>
-    <div class="sub">Todo efectivo iPhone. Sin gastos registrados en pesos para el día.</div>
   </div>
 
   <div class="card">
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">~12 / 50</span>
-      <span class="sub">Faltan 19 días</span>
+      <span style="font-size:18px;font-weight:700;">~10 (est.) / 50</span>
+      <span class="sub">Faltan 18 días</span>
     </div>
-    <div class="progress"><div class="progress-fill" style="width:24%"></div></div>
-    <div class="sub">Punto de equilibrio: 33 cels/mes. Ritmo actual: ~1/día → proyectado ~31 al cierre. Estás por debajo del breakeven.</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mayo: <strong>$8.927.736 ARS</strong></div>
+    <div class="progress"><div class="progress-fill" style="width:20%"></div></div>
+    <div class="sub">Breakeven: 33 iPhones/mes. Ritmo actual proyecta ~26/mes — por debajo del punto de equilibrio</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $8.927.736 ARS</div>
   </div>
 
   <div class="grid-2">
@@ -188,13 +200,13 @@
       <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
     </div>
     <div class="card">
-      <h2>Distribución por canal</h2>
+      <h2>Margen estimado</h2>
       <div class="chart-container"><canvas id="chart-margen"></canvas></div>
     </div>
   </div>
 
   <div class="card">
-    <h2>Deudas y cobros</h2>
+    <h2>Deudas y cobros (ref. contexto)</h2>
     <div class="deudas-grid">
       <div class="deuda-bloque">
         <div class="lbl">A pagar</div>
@@ -207,64 +219,55 @@
         <div class="val-usd">+ USD 122</div>
       </div>
     </div>
-    <div class="sub" style="margin-top:10px;">Referencia de la hoja DEUDAS — verificar actualización.</div>
   </div>
 
-  <!-- NOTICIAS AR -->
+  <!-- 7. NOTICIAS -->
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
-
     <div class="noticia">
-      <div class="noticia-meta">El Cronista / Infobae · 12 may 2026 · Retail</div>
-      <div class="noticia-titulo">Retail en caída: tickets más chicos, segunda marcas y digital en alza en un abril sin reactivación</div>
+      <div class="noticia-meta">Infobae · Abril 2026 · Economía</div>
+      <div class="noticia-titulo">La economía de dos velocidades: empresas locales cierran mientras marcas internacionales invaden el país</div>
       <div class="noticia-body">
-        <p>A pesar de la desaceleración de la inflación y la estabilidad del tipo de cambio en torno a los $1.415/USD, el consumo minorista argentino no logra despegar. Según datos de cámaras comerciales relevados por Infobae y El Cronista, el 39,6% de los comerciantes PyME señaló que su situación empeoró respecto al año anterior. Solo el 53,3% reportó estabilidad y una porción mínima registró mejoras concretas en ventas.</p>
-        <p>El patrón de consumo sigue mostrando cambios estructurales que se afianzaron durante la crisis: los tickets promedio son más pequeños, los consumidores migran hacia segundas marcas y productos de menor costo, las compras se hacen de forma más frecuente y en menor volumen, y los canales digitales ganan cada vez más participación frente al comercio presencial. Shein y Temu consolidaron su presencia con un salto interanual del 274% en importaciones puerta a puerta durante 2025.</p>
-        <p><strong>Implicancia para LANCER:</strong> El cliente de hoy elige en base a precio y urgencia. Esto refuerza la necesidad de ofrecer opciones de acceso en cuotas, resaltar el valor del servicio post-venta local y trabajar con modelos de gama media del iPhone 17 (no solo el Pro Max). El diferenciador frente a los canales digitales es la experiencia, la garantía confiable y la atención personalizada en Yerba Buena. En este contexto, la propuesta de valor local se vuelve más importante, no menos.</p>
+        <p>Argentina vive una paradoja económica que impacta de lleno al retail local. Desde que Milei asumió en diciembre de 2023, más de 24.000 empresas cerraron —la mayor destrucción neta de unidades productivas en los primeros 26 meses de una administración desde que existen registros comparables. El número de entidades productivas cayó de 512.357 a 488.177, golpeando con más fuerza a PyMEs y microemprendimientos. Provincias como La Rioja perdieron el 16.1% de su base empresaria.</p>
+        <p>Sin embargo, simultáneamente, marcas internacionales están desembarcando o regresando al país con una agresividad inédita: Mango vuelve después de 22 años, Miniso planea 100 locales con USD 50 millones de inversión, Bestseller Group compromete USD 30 millones para Jack & Jones y otras marcas, Victoria's Secret proyecta 15-18 locales en cinco años. H&M y Dolce & Gabbana están en negociaciones.</p>
+        <p><strong>Qué implica para LANCER:</strong> La apertura importadora y la llegada de marcas internacionales comprimen los márgenes de los retailers locales que compiten con el mismo segmento. Pero también señalan que Argentina tiene consumidores con poder adquisitivo real, concentrado en segmentos altos. El riesgo para LANCER es el mismo: la entrada de iPhones via canales oficiales o marcas con financiamiento propio puede presionar tus precios. La oportunidad es diferenciarte en servicio técnico, postventa y personalización —cosas que las multinacionales no ofrecen.</p>
+        <p>El contexto macro: dólar oficial a $1.415, riesgo país en 496, inflación desacelerando pero consumo minorista PyME aún débil. El 39.6% de los comerciantes dice que su situación empeoró en el último año.</p>
       </div>
     </div>
-
     <div class="noticia">
-      <div class="noticia-meta">Infobae / La Nación / Cronista · Ene-May 2026 · Apple / Importación</div>
-      <div class="noticia-titulo">Aranceles 0% para celulares: iPhone 17 Pro Max cuesta USD 2.409 en Argentina vs USD 1.549 en Chile — la brecha persiste</div>
+      <div class="noticia-meta">Infobae · Marzo 2026 · Importaciones</div>
+      <div class="noticia-titulo">Boom importador puerta a puerta: envíos de Shein y Temu crecieron 274% interanual en 2025</div>
       <div class="noticia-body">
-        <p>Desde el 15 de enero de 2026, el arancel de importación para celulares en Argentina bajó al 0% (tras una reducción progresiva desde el 16% durante 2025). Era la medida más esperada por el sector tech local. Sin embargo, cuatro meses después, la brecha de precios con los países vecinos sigue siendo enorme: el iPhone 17 Pro Max se consigue en Argentina a través de distribuidores a USD 2.409, mientras que en Chile está a USD 1.549, en México a USD 1.600 y en Brasil a USD 2.074.</p>
-        <p>¿Por qué persiste la brecha? Los analistas apuntan a varios factores: los impuestos internos (que bajaron del 19% al 9,5% para importados, pero siguen siendo altos), los márgenes de la cadena de distribución local, los costos logísticos y el tiempo que lleva al mercado ajustarse. El arbitraje Chile→Argentina, que antes era prácticamente imposible, empieza a volverse más tentador para algunos compradores de alto poder adquisitivo.</p>
-        <p><strong>Implicancia directa para LANCER:</strong> El arancel 0% es una señal de largo plazo positiva para el mercado, pero genera presión inmediata de márgenes. Más importadores directos pueden entrar al mercado, achicando la diferencia entre costo y precio de venta. La respuesta correcta no es bajar precios a la par, sino fortalecer las ventajas competitivas que un canal digital o un distribuidor nacional no puede replicar: estás en Yerba Buena, hablás el idioma del cliente tucumano, tenés stock disponible hoy, ofrecés garantía y post-venta real. Eso vale diferencial.</p>
+        <p>El régimen de importación puerta a puerta ("courier") explotó en Argentina durante 2025: los volúmenes crecieron 274.2% interanual, con Shein y Temu como protagonistas centrales. Casi 400.000 toneladas de ropa y textiles ingresaron al país, un 71% más que el año anterior.</p>
+        <p>Este fenómeno refleja la apertura arancelaria de la gestión Milei: la reducción de barreras a las importaciones digitales de bajo valor permitió que plataformas chinas penetren el mercado con precios imposibles de competir para el productor local. El sector textil y calzado fue el más afectado.</p>
+        <p><strong>Implicancia para LANCER:</strong> El fenómeno puerta a puerta también toca el mercado de accesorios iPhone. Fundas, cargadores y cables importados directamente de China por plataformas como Shein, MercadoLibre o AliExpress compiten directamente con tu stock de accesorios. Tu diferenciador sigue siendo velocidad de entrega (mismo día), asesoramiento en persona y la confianza de comprar en un local físico. Pero el precio de los accesorios importados seguirá bajando —ajustá tu mix hacia productos con mayor margen o mayor valor percibido (magsafe, fundas premium, etc.).</p>
       </div>
     </div>
-
   </div>
 
-  <!-- NOTICIAS INT -->
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
-
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 1 may 2026 · Apple earnings</div>
-      <div class="noticia-titulo">Apple supera estimados en Q2 2026: guía 14-17% de crecimiento para Q3 y llama al iPhone 17 "el lineup más popular de su historia"</div>
+      <div class="noticia-meta">CNBC · 30 abril / 1 mayo 2026 · Tech / Mercados</div>
+      <div class="noticia-titulo">Apple Q2 2026: revenue +17%, iPhone +22%, guidance de +14-17% para Q3</div>
       <div class="noticia-body">
-        <p>Apple reportó resultados del segundo trimestre fiscal 2026 que superaron ampliamente las expectativas de Wall Street. La guía para Q3 (que cierra en junio 2026) proyecta un crecimiento de entre 14% y 17% interanual en ingresos, cuando los analistas esperaban solo el 9,5%. Las acciones de AAPL subieron más del 3% al día siguiente del reporte.</p>
-        <p>El CEO Tim Cook describió al iPhone 17 como "el lineup más popular en la historia de Apple". Los ingresos de Servicios subieron un 16% a USD 30.98 billones, representando casi el 28% del total de ingresos de la compañía. Este componente de alta rentabilidad sigue siendo el motor que le da estabilidad al múltiplo de valuación de Apple más allá del ciclo del hardware.</p>
-        <p>Cook también advirtió sobre un "memory crunch" que podría impactar el negocio en los próximos trimestres: la escasez de chips de memoria está generando restricciones de supply que podrían afectar la disponibilidad de ciertos modelos. Apple evaluará "un rango de opciones" para mitigarlo.</p>
-        <p><strong>Para LANCER:</strong> Demanda global por iPhone 17 es fuerte. Si la escasez de memoria genera restricciones de supply en los modelos nuevos, los precios en el mercado secundario no van a bajar tan rápido como algunos esperaban. Posición de stock actual cobra más valor en ese contexto.</p>
+        <p>Apple reportó resultados estelares para su segundo trimestre fiscal 2026: ingresos totales de USD 111.18 billion, superando el consenso de USD 109.66 billion. iPhone creció 22% interanual —el número más fuerte en varios trimestres. Servicios subió 16% respecto al año anterior. China fue sorpresa: Greater China creció 28%, con ventas de USD 20.5 billion.</p>
+        <p>La guidance para Q3 2026 es de crecimiento del 14-17%, muy por encima de las expectativas de los analistas. La acción subió ~3% en after-hours tras el anuncio. El CEO Tim Cook advirtió sobre una "memory crunch" en la cadena de suministro de memoria, aunque aclaró que están evaluando opciones. R&D llega al 10.3% de ingresos, reflejo de la aceleración en IA.</p>
+        <p><strong>Qué implica para el mercado Apple:</strong> Un iPhone que crece 22% globalmente confirma que el ciclo de upgrade sigue activo. El impulso de Apple Intelligence (la IA de Apple) está generando demanda para modelos más nuevos. En Argentina esto se traduce en sostenida demanda de iPhones 15/16 —las personas quieren acceder a las features de IA que solo corren en hardware reciente. Para LANCER: el ciclo de renovación está activo, y el iPhone 17 que se lanzará en septiembre generará un ciclo de upgrade adicional que podés capitalizar en el segundo semestre.</p>
       </div>
     </div>
-
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 5-8 may 2026 · Semiconductores / Apple</div>
-      <div class="noticia-titulo">Apple e Intel en negociaciones: posible acuerdo de chips que sería el mayor espaldarazo para la foundry de Intel</div>
+      <div class="noticia-meta">CNBC · 8 mayo 2026 · Tech / Semiconductores</div>
+      <div class="noticia-titulo">Apple e Intel acuerdan preliminarmente que Intel fabrique chips para dispositivos Apple</div>
       <div class="noticia-body">
-        <p>Apple e Intel estarían en negociaciones preliminares para que Intel fabrique algunos chips para dispositivos Apple bajo su modelo de foundry (manufactura por contrato). Si se concreta, sería el deal más significativo que Intel ha conseguido en su intento de competir con TSMC y Samsung en manufactura avanzada de semiconductores. Las acciones de Intel subieron un 13% ante la noticia, alcanzando un máximo histórico.</p>
-        <p>Para Apple, la motivación es clara: diversificar su cadena de suministro y reducir la dependencia exclusiva de TSMC, que concentra prácticamente toda la producción de chips Apple. La tensión geopolítica en torno a Taiwán hace de esta diversificación una prioridad estratégica. Para Intel, conseguir a Apple como cliente de foundry sería la validación definitiva de su proceso de fabricación de nueva generación.</p>
-        <p>El acuerdo todavía está en etapa preliminar y no hay garantías de cierre. Pero el simple hecho de que estén en conversaciones sugiere que Intel's Intel Foundry Services (IFS) alcanzó un nivel de madurez que Apple considera creíble.</p>
-        <p><strong>Para LANCER:</strong> A mediano plazo, más opciones de manufactura para Apple implica supply más estable y predecible, lo cual beneficia a los retailers. Los picos de escasez que históricamente generaron precios premium deberían reducirse si Apple diversifica proveedores.</p>
+        <p>Apple e Intel llegaron a un acuerdo preliminar para que Intel Foundry produzca algunos chips para dispositivos Apple. La noticia impulsó las acciones de Intel un 14% en un solo día, marcando un nuevo máximo histórico. Si se confirma, sería el mayor voto de confianza para Intel Foundry desde su relanzamiento estratégico.</p>
+        <p>El contexto: Apple lleva años fabricando sus propios chips (serie A y M) con TSMC como manufacturer exclusivo. Un acuerdo con Intel Foundry diversificaría su cadena de suministro y daría a Intel la validación que necesita para competir con TSMC y Samsung en el mercado de fundición de chips avanzados. El acuerdo no implica que Apple abandone TSMC, sino que agrega un segundo proveedor para ciertos componentes.</p>
+        <p><strong>Implicancia global:</strong> Este movimiento reshapea la industria de semiconductores: si Apple, el cliente de chips más exigente del mundo, confía en Intel Foundry, otros fabricantes seguirán. Para el mercado tech significa más competencia en foundry, lo que a mediano plazo puede reducir costos de manufactura de chips y presionar márgenes de TSMC. Para los precios de iPhones en Argentina: el impacto directo es mínimo en el corto plazo, pero a largo plazo más competencia en manufactura puede abaratar levemente los costos de producción de Apple.</p>
       </div>
     </div>
-
   </div>
 
-  <!-- IDEA DE NEGOCIO SEMANAL -->
+  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
   <div class="sec-title">💡 Idea de negocio — semana 20</div>
   <div class="idea-card">
     <h2>Idea de la semana</h2>
@@ -272,8 +275,10 @@
     <div class="idea-body">
       <h3>Qué es</h3>
       <p>Importar y distribuir equipamiento de agricultura de precisión — drones de fumigación, sensores de suelo IoT, estaciones meteorológicas compactas — para pequeños y medianos productores del NOA (Tucumán, Salta, Jujuy, Santiago del Estero). El modelo combina venta de hardware importado directamente de China (DJI, PYCNO, Davis Instruments) con soporte técnico local y, en una segunda etapa, suscripción a software de gestión agrícola.</p>
+
       <h3>Por qué ahora</h3>
       <p>Con arancel 0% en electrónica e insumos tecnológicos y el tipo de cambio estabilizándose alrededor de 1.400-1.420 ARS/USD, importar este hardware desde China nunca fue tan accesible en términos relativos. El agro argentino está en su mejor momento de los últimos 10 años: precios de commodities altos, mayor acceso al crédito agropecuario y productores que buscan herramientas para mejorar rendimiento después de las últimas sequías. El problema es que las empresas de agtech nacionales apuntan exclusivamente a grandes productores pampinos. El NOA tiene un nicho desatendido: más de 50.000 productores de caña, tabaco, frutales y granos chicos/medianos que nunca recibieron una demo de estas tecnologías en su zona. No existe un distribuidor local especializado en Tucumán para este segmento.</p>
+
       <h3>Cómo arrancarla</h3>
       <ul>
         <li><strong>Paso 1:</strong> Identificar los 3-5 productos de mayor demanda inicial: drone de fumigación DJI Agras T10 (USD ~1.500 importado), sensor de humedad de suelo PYCNO (USD ~120), estación meteorológica portátil (USD ~200). Importar una unidad de cada uno para demos: inversión ≈ USD 2.000–3.000.</li>
@@ -282,8 +287,10 @@
         <li><strong>Paso 4:</strong> Ofrecer financiamiento en 10-12 cuotas (el margen absorbe el costo financiero). El diferenciador clave frente a un ecommerce genérico: sos local, hablás el idioma del productor, hacés el seguimiento post-venta y tenés repuestos.</li>
         <li><strong>Paso 5:</strong> Generar contenido en YouTube e Instagram mostrando demos en campo real. Este contenido genera consultas orgánicas de productores de toda la región y posiciona la marca como referente local en agtech.</li>
       </ul>
+
       <h3>Modelo de ingreso</h3>
       <p>Venta directa con margen del 50-70% sobre costo importado. Drone DJI Agras T10 importado ≈ USD 1.500, precio de venta ≈ USD 3.500-4.000 → margen bruto USD 2.000-2.500 por unidad. Con 5 drones vendidos al mes = USD 10.000-12.500 brutos. Los sensores IoT tienen un componente de suscripción de datos: USD 20-50/mes por sensor, escalable a cientos de unidades. A 12 meses, con 30-40 clientes activos en sensores = USD 600-2.000/mes recurrente solo por software.</p>
+
       <h3>Riesgos principales</h3>
       <ul>
         <li>Ciclo de venta largo: un productor tarda 60-90 días en decidir una compra de USD 3.500. Necesitás capital de trabajo para aguantar.</li>
@@ -291,16 +298,17 @@
         <li>Riesgo regulatorio: los aranceles pueden cambiar. Hoy son 0% pero la estabilidad del esquema importador argentino es históricamente baja.</li>
         <li>Resistencia cultural: muchos productores mayores desconfían de la tecnología. Los primeros 3-6 meses son de educación de mercado, no solo venta.</li>
       </ul>
+
       <h3>Esfuerzo / inversión inicial</h3>
       <p>USD 5.000-10.000 para la primera importación de 10-15 unidades mixtas (drones + sensores + estaciones). 2-3 meses para conseguir los primeros 5 clientes. Requiere trabajo en campo, contacto directo con ingenieros agrónomos y disposición a viajar al interior de la provincia. Sin necesidad de local físico al arranque: se puede operar desde LANCER como base logística.</p>
     </div>
   </div>
 
-  <footer>Generado 12/5/2026, 00:20 ART · Abrí el archivo después de cargar la caja para ver los datos actualizados</footer>
+  <footer>Generado 08:00 hs · Cargá la caja de ayer para ver los datos actualizados</footer>
 
   <script>
-    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":658000},{"fecha":"8/5","total":2341646},{"fecha":"9/5","total":1829777},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1093000}];
-    const margenData = [{"fecha":"EF IP","margen":2093000},{"fecha":"BORMIDA","margen":995000},{"fecha":"UALA","margen":112500},{"fecha":"TARJETA","margen":5587236}];
+    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":658000},{"fecha":"8/5","total":2341645},{"fecha":"9/5","total":1829776},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1093000},{"fecha":"12/5","total":0}];
+    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":0},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":0},{"fecha":"5/5","margen":0},{"fecha":"6/5","margen":0},{"fecha":"7/5","margen":0},{"fecha":"8/5","margen":0},{"fecha":"9/5","margen":0},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":0},{"fecha":"12/5","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
@@ -308,8 +316,8 @@
     });
     new Chart(document.getElementById('chart-margen'), {
       type: 'bar',
-      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: ['rgba(74,222,128,0.6)','rgba(96,165,250,0.6)','rgba(251,191,36,0.6)','rgba(167,139,250,0.6)'], borderWidth: 0, borderRadius: 2 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b' }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
   </script>
 </body>
