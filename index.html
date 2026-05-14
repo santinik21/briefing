@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — miércoles 13 de mayo de 2026</title>
+  <title>Briefing diario — jueves 14 de mayo de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -16,31 +16,24 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
-
     .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
-
     .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
-
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
     .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
-
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
-
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
-
     .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
-
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -50,7 +43,6 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
-
     .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
     .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
     .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
@@ -62,7 +54,6 @@
     .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
     .deuda-bloque .val{font-size:18px;font-weight:700;}
     .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
-
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -71,7 +62,6 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
-
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -80,7 +70,6 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
-
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
     @media(max-width:600px){
       body{padding:14px;}
@@ -94,13 +83,11 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">miércoles 13 de mayo de 2026</div>
+    <div class="fecha">jueves 14 de mayo de 2026</div>
   </header>
 
-  <div class="alert">📋 <strong>Cargá la caja de ayer antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (11/5).</div>
-
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Meta hasta julio: 60 ventas por mes promedio o más</div>
+  <div class="meta-rotativa">⚠️ <strong>Meta:</strong> Si no cierran los números de LANCER hasta mayo → abandonar. <strong>Hoy es el 14.</strong></div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -108,11 +95,13 @@
     <div class="card">
       <h2>Hoy</h2>
       <ul class="task-list">
+        <li>Empezar trámite David</li>
+        <li>Llevar celular arreglados</li>
         <li>Buscar remeras</li>
         <li>Comprar regalo Lela</li>
         <li>Terminar curso de Claude y de emprender</li>
-        <li>Revisar publicidad y armar mensaje pasadas las 24hs</li>
         <li>Que Claude me haga una auditoría</li>
+        <li>Conseguir proveedores de golf y pádel en Paraguay</li>
       </ul>
     </div>
     <div class="card">
@@ -131,43 +120,43 @@
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando">Lunes 1 de junio</div>
+      <div class="cal-cuando">En 18 días · Lunes 1/6</div>
       <div class="cal-titulo">Cumpleaños Felix</div>
-      <div class="cal-hora">Todo el día · en 19 días</div>
+      <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Jueves 4 de junio</div>
+      <div class="cal-cuando">En 21 días · Jueves 4/6</div>
       <div class="cal-titulo">Mes</div>
-      <div class="cal-hora">Todo el día · en 22 días</div>
+      <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Martes 16 de junio</div>
+      <div class="cal-cuando">En 33 días · Martes 16/6</div>
       <div class="cal-titulo">Cumpleaños Hori</div>
-      <div class="cal-hora">Todo el día · en 34 días</div>
+      <div class="cal-hora">Todo el día</div>
     </div>
   </div>
 
   <!-- 4. HÁBITOS -->
-  <div class="sec-title">Hábitos — Mayo 2026</div>
+  <div class="sec-title">Hábitos — Mayo</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">24%</div>
-    <div class="sub" style="margin-top:4px;">68% en días activos · Ayer (día 12): 0% en todo — rompé esa racha hoy</div>
+    <div class="hab-pct">29%</div>
+    <div class="sub" style="margin-top:4px;">Mes lento. Ayer 67% · Anteayer 78% — los últimos 2 días mejoraron.</div>
     <ul class="hab-insights">
-      <li>📚 Estudiar: 9.7% — necesitás estudiar 15 de los 18 días restantes para llegar al 60%</li>
-      <li>🥊 Entrenar: 22.6% — 7 días en 12. Meta mínima: 16 días (50%). Te faltan 9 en 18 días</li>
-      <li>⚠️ Día 12 (ayer): 0 hábitos cumplidos. Cortar eso hoy es la prioridad número 1</li>
+      <li>Estudiar 2h al 9.7% — el más crítico. Solo 3 días cumplidos de 13 transcurridos.</li>
+      <li>Racha positiva: los últimos 2 días por encima del 60%. Sostenelo hoy.</li>
+      <li>Dejar el celular (41.9%) y Despertar 8:00 (38.7%) son los más consistentes del mes.</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">32.3%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">19.4%</span></div>
-      <div class="hab-item"><span>Trabajar 4h enfocadas</span><span class="badge-r">22.6%</span></div>
-      <div class="hab-item"><span>Estudiar 2hs</span><span class="badge-r">9.7%</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">25.8%</span></div>
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">38.7%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">22.6%</span></div>
+      <div class="hab-item"><span>Trabajar 4h</span><span class="badge-r">29.0%</span></div>
+      <div class="hab-item"><span>Estudiar 2h</span><span class="badge-r">9.7%</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">32.3%</span></div>
       <div class="hab-item"><span>Entrenar</span><span class="badge-r">22.6%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">19.4%</span></div>
-      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">35.5%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">32.3%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">25.8%</span></div>
+      <div class="hab-item"><span>Dejar celular</span><span class="badge-w">41.9%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">38.7%</span></div>
     </div>
   </div>
 
@@ -175,23 +164,23 @@
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja anteayer (11/5)</h2>
+    <h2>Caja ayer (12/5)</h2>
     <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.093.000</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1 (est.)</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">Sin datos</div></div>
+      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$117.000</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">0</div></div>
+      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">—</div></div>
     </div>
   </div>
 
   <div class="card">
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">~10 (est.) / 50</span>
-      <span class="sub">Faltan 18 días</span>
+      <span style="font-size:18px;font-weight:700;">11 / 50</span>
+      <span class="sub">Faltan 17 días</span>
     </div>
-    <div class="progress"><div class="progress-fill" style="width:20%"></div></div>
-    <div class="sub">Breakeven: 33 iPhones/mes. Ritmo actual proyecta ~26/mes — por debajo del punto de equilibrio</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $8.927.736 ARS</div>
+    <div class="progress"><div class="progress-fill" style="width:22%"></div></div>
+    <div class="sub">Ritmo actual: 0.85 cel/día · Necesitás 2.3/día en los próximos 17 días para llegar a 50</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $9.175.236 ARS</div>
   </div>
 
   <div class="grid-2">
@@ -206,7 +195,7 @@
   </div>
 
   <div class="card">
-    <h2>Deudas y cobros (ref. contexto)</h2>
+    <h2>Deudas y cobros</h2>
     <div class="deudas-grid">
       <div class="deuda-bloque">
         <div class="lbl">A pagar</div>
@@ -225,22 +214,21 @@
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">Infobae · Abril 2026 · Economía</div>
-      <div class="noticia-titulo">La economía de dos velocidades: empresas locales cierran mientras marcas internacionales invaden el país</div>
+      <div class="noticia-meta">Argentina · Entorno de negocios</div>
+      <div class="noticia-titulo">Argentina en el puesto 9 del Global Business Complexity Index 2026</div>
       <div class="noticia-body">
-        <p>Argentina vive una paradoja económica que impacta de lleno al retail local. Desde que Milei asumió en diciembre de 2023, más de 24.000 empresas cerraron —la mayor destrucción neta de unidades productivas en los primeros 26 meses de una administración desde que existen registros comparables. El número de entidades productivas cayó de 512.357 a 488.177, golpeando con más fuerza a PyMEs y microemprendimientos. Provincias como La Rioja perdieron el 16.1% de su base empresaria.</p>
-        <p>Sin embargo, simultáneamente, marcas internacionales están desembarcando o regresando al país con una agresividad inédita: Mango vuelve después de 22 años, Miniso planea 100 locales con USD 50 millones de inversión, Bestseller Group compromete USD 30 millones para Jack & Jones y otras marcas, Victoria's Secret proyecta 15-18 locales en cinco años. H&M y Dolce & Gabbana están en negociaciones.</p>
-        <p><strong>Qué implica para LANCER:</strong> La apertura importadora y la llegada de marcas internacionales comprimen los márgenes de los retailers locales que compiten con el mismo segmento. Pero también señalan que Argentina tiene consumidores con poder adquisitivo real, concentrado en segmentos altos. El riesgo para LANCER es el mismo: la entrada de iPhones via canales oficiales o marcas con financiamiento propio puede presionar tus precios. La oportunidad es diferenciarte en servicio técnico, postventa y personalización —cosas que las multinacionales no ofrecen.</p>
-        <p>El contexto macro: dólar oficial a $1.415, riesgo país en 496, inflación desacelerando pero consumo minorista PyME aún débil. El 39.6% de los comerciantes dice que su situación empeoró en el último año.</p>
+        <p>El grupo TMF publicó el Global Business Complexity Index 2026, que mide la dificultad de operar formalmente en 79 países. Argentina ocupa el puesto 9, entre los mercados más complejos del mundo. El índice pondera carga administrativa, inestabilidad normativa, complejidad tributaria y requisitos de compliance laboral y contable.</p>
+        <p>El resultado no sorprende. Argentina combina un sistema impositivo de múltiples capas (IVA, IIBB, sellos, cargas patronales), cambios normativos frecuentes y una regulación cambiaria que todavía no terminó de estabilizarse. Cada actualización de AFIP, cada cambio en las alícuotas del IIBB tucumano o en los requisitos de importación suma fricción operativa concreta. Para LANCER, que vende producto importado, esto se traduce en tiempo de gestión administrativa que no genera valor directo.</p>
+        <p>El dato positivo: Argentina mejoró 4 puestos frente al índice de 2025. El proceso de simplificación normativa del gobierno actual está teniendo algún efecto. Si la tendencia continúa, el costo de compliance debería bajar hacia 2027. La estrategia práctica por ahora: facturación simple, sin estructuras societarias innecesarias, y tercerizar el compliance contable en alguien que ya tenga el sistema armado.</p>
       </div>
     </div>
     <div class="noticia">
-      <div class="noticia-meta">Infobae · Marzo 2026 · Importaciones</div>
-      <div class="noticia-titulo">Boom importador puerta a puerta: envíos de Shein y Temu crecieron 274% interanual en 2025</div>
+      <div class="noticia-meta">Argentina · Economía</div>
+      <div class="noticia-titulo">EPU sube 9.7% en mayo; actividad creció apenas 0.03% en el primer trimestre</div>
       <div class="noticia-body">
-        <p>El régimen de importación puerta a puerta ("courier") explotó en Argentina durante 2025: los volúmenes crecieron 274.2% interanual, con Shein y Temu como protagonistas centrales. Casi 400.000 toneladas de ropa y textiles ingresaron al país, un 71% más que el año anterior.</p>
-        <p>Este fenómeno refleja la apertura arancelaria de la gestión Milei: la reducción de barreras a las importaciones digitales de bajo valor permitió que plataformas chinas penetren el mercado con precios imposibles de competir para el productor local. El sector textil y calzado fue el más afectado.</p>
-        <p><strong>Implicancia para LANCER:</strong> El fenómeno puerta a puerta también toca el mercado de accesorios iPhone. Fundas, cargadores y cables importados directamente de China por plataformas como Shein, MercadoLibre o AliExpress compiten directamente con tu stock de accesorios. Tu diferenciador sigue siendo velocidad de entrega (mismo día), asesoramiento en persona y la confianza de comprar en un local físico. Pero el precio de los accesorios importados seguirá bajando —ajustá tu mix hacia productos con mayor margen o mayor valor percibido (magsafe, fundas premium, etc.).</p>
+        <p>El índice de Incertidumbre de Política Económica (EPU) de Argentina subió 9.7% en las primeras semanas de mayo frente a abril. Al mismo tiempo, los datos de actividad económica del primer trimestre mostraron un crecimiento de solo 0.03%, prácticamente estancamiento. El alza del EPU se explica por la discusión legislativa del presupuesto 2027 y la negociación con el FMI sobre las metas del segundo semestre.</p>
+        <p>Para LANCER, el EPU tiene correlación directa con el comportamiento del consumidor. Cuando sube la incertidumbre, la gente posterga compras grandes. Un iPhone de $1.5M ARS es una compra que muchos clientes potenciales dejan "para cuando se aclare el panorama". Esto puede explicar en parte por qué mayo está siendo más lento que marzo y abril en ventas de celulares.</p>
+        <p>El dato de actividad (+0.03% Q1) refuerza la señal: la economía real todavía no arrancó con fuerza. El consumo en electrónica de consumo masivo cayó en el primer trimestre, aunque los segmentos premium aguantaron algo mejor. La segunda quincena de mayo, históricamente más activa por cobros de sueldo, debería dar más oxígeno al ticket promedio.</p>
       </div>
     </div>
   </div>
@@ -248,21 +236,21 @@
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 30 abril / 1 mayo 2026 · Tech / Mercados</div>
-      <div class="noticia-titulo">Apple Q2 2026: revenue +17%, iPhone +22%, guidance de +14-17% para Q3</div>
+      <div class="noticia-meta">Internacional · Tecnología / IA</div>
+      <div class="noticia-titulo">Nvidia supera $40.000 millones en inversiones estratégicas en 2026</div>
       <div class="noticia-body">
-        <p>Apple reportó resultados estelares para su segundo trimestre fiscal 2026: ingresos totales de USD 111.18 billion, superando el consenso de USD 109.66 billion. iPhone creció 22% interanual —el número más fuerte en varios trimestres. Servicios subió 16% respecto al año anterior. China fue sorpresa: Greater China creció 28%, con ventas de USD 20.5 billion.</p>
-        <p>La guidance para Q3 2026 es de crecimiento del 14-17%, muy por encima de las expectativas de los analistas. La acción subió ~3% en after-hours tras el anuncio. El CEO Tim Cook advirtió sobre una "memory crunch" en la cadena de suministro de memoria, aunque aclaró que están evaluando opciones. R&D llega al 10.3% de ingresos, reflejo de la aceleración en IA.</p>
-        <p><strong>Qué implica para el mercado Apple:</strong> Un iPhone que crece 22% globalmente confirma que el ciclo de upgrade sigue activo. El impulso de Apple Intelligence (la IA de Apple) está generando demanda para modelos más nuevos. En Argentina esto se traduce en sostenida demanda de iPhones 15/16 —las personas quieren acceder a las features de IA que solo corren en hardware reciente. Para LANCER: el ciclo de renovación está activo, y el iPhone 17 que se lanzará en septiembre generará un ciclo de upgrade adicional que podés capitalizar en el segundo semestre.</p>
+        <p>Nvidia comprometió inversiones equity por más de $40.000 millones de dólares en lo que va de 2026, convirtiéndose en uno de los inversores estratégicos más activos del ecosistema global de IA. Los acuerdos más resonantes: $2.100 millones en IREN (infraestructura de data centers para IA) y $3.200 millones en Corning (materiales ópticos y fibra para redes). Los VCs globales invirtieron $18.800 millones en startups de IA en el mismo período — Nvidia sola supera esa cifra con comodidad.</p>
+        <p>Nvidia ya no es solo una empresa de chips: es la pick-and-shovel de la fiebre del oro de la inteligencia artificial. Cada vez que los grandes hyperscalers (Google, Amazon, Microsoft, Meta) escalan capacidad de entrenamiento, necesitan más GPUs de Nvidia. Al invertir en la infraestructura que rodea a sus chips, Nvidia se asegura de que su hardware sea el estándar de facto del próximo ciclo tecnológico, dificultando que competidores como AMD ganen terreno.</p>
+        <p>Dos implicancias indirectas para Argentina: el precio de las GPUs consumer (RTX) se mantendrá alto porque la capacidad de fabricación va prioritariamente a data centers. Y el ecosistema de startups de IA latinoamericanas tendrá acceso en 2-3 años a infraestructura en nube más barata y potente, abriendo oportunidades para servicios digitales basados en IA que hoy son caros de implementar.</p>
       </div>
     </div>
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 8 mayo 2026 · Tech / Semiconductores</div>
-      <div class="noticia-titulo">Apple e Intel acuerdan preliminarmente que Intel fabrique chips para dispositivos Apple</div>
+      <div class="noticia-meta">Internacional · Mercados</div>
+      <div class="noticia-titulo">S&P 500 en nuevo récord histórico; hyperscalers proyectan $725B en capex de IA para 2026</div>
       <div class="noticia-body">
-        <p>Apple e Intel llegaron a un acuerdo preliminar para que Intel Foundry produzca algunos chips para dispositivos Apple. La noticia impulsó las acciones de Intel un 14% en un solo día, marcando un nuevo máximo histórico. Si se confirma, sería el mayor voto de confianza para Intel Foundry desde su relanzamiento estratégico.</p>
-        <p>El contexto: Apple lleva años fabricando sus propios chips (serie A y M) con TSMC como manufacturer exclusivo. Un acuerdo con Intel Foundry diversificaría su cadena de suministro y daría a Intel la validación que necesita para competir con TSMC y Samsung en el mercado de fundición de chips avanzados. El acuerdo no implica que Apple abandone TSMC, sino que agrega un segundo proveedor para ciertos componentes.</p>
-        <p><strong>Implicancia global:</strong> Este movimiento reshapea la industria de semiconductores: si Apple, el cliente de chips más exigente del mundo, confía en Intel Foundry, otros fabricantes seguirán. Para el mercado tech significa más competencia en foundry, lo que a mediano plazo puede reducir costos de manufactura de chips y presionar márgenes de TSMC. Para los precios de iPhones en Argentina: el impacto directo es mínimo en el corto plazo, pero a largo plazo más competencia en manufactura puede abaratar levemente los costos de producción de Apple.</p>
+        <p>El S&P 500 cerró esta semana en 7.444 puntos, nuevo máximo histórico (ATH), mientras el Nasdaq avanzó 1.2% hasta los 26.402 puntos. El rally está liderado por el sector tecnológico, particularmente las empresas de infraestructura de IA. Las proyecciones actuales indican que los cuatro grandes hyperscalers (AWS, Azure, Google Cloud, Meta) gastarán conjuntamente $725.000 millones en infraestructura de IA durante 2026 — más que el PBI completo de Argentina.</p>
+        <p>Un dato que ilustra la magnitud del momento: Nebius, una empresa de cloud especializada en IA, reportó un crecimiento de ingresos del 684% interanual y sus acciones subieron 16% en una sola sesión. El mercado está en modo risk-on y los fondos están rotando hacia tecnología con claridad.</p>
+        <p>Para vos: si tenés CEDEARs de empresas tech (MSFT, GOOG, AMZN, NVDA), el contexto internacional es muy favorable. El rally del S&P tiende a generar estabilidad relativa en mercados emergentes y reduce la presión sobre el tipo de cambio en el corto plazo — lo que impacta directamente en el costo de tu inventario importado. Nada para hacer hoy, pero es contexto útil si estás pensando en ajustar posiciones.</p>
       </div>
     </div>
   </div>
@@ -304,11 +292,11 @@
     </div>
   </div>
 
-  <footer>Generado 08:00 hs · Cargá la caja de ayer para ver los datos actualizados</footer>
+  <footer>Generado 08:55 · Abrí el archivo después de cargar la caja para ver los datos actualizados</footer>
 
   <script>
-    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":658000},{"fecha":"8/5","total":2341645},{"fecha":"9/5","total":1829776},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1093000},{"fecha":"12/5","total":0}];
-    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":0},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":0},{"fecha":"5/5","margen":0},{"fecha":"6/5","margen":0},{"fecha":"7/5","margen":0},{"fecha":"8/5","margen":0},{"fecha":"9/5","margen":0},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":0},{"fecha":"12/5","margen":0}];
+    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":537000},{"fecha":"8/5","total":2358145},{"fecha":"9/5","total":1876276},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1281500},{"fecha":"12/5","total":117000},{"fecha":"13/5","total":0}];
+    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":108758},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":4600},{"fecha":"5/5","margen":218641},{"fecha":"6/5","margen":269064},{"fecha":"7/5","margen":107400},{"fecha":"8/5","margen":471629},{"fecha":"9/5","margen":375255},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":256300},{"fecha":"12/5","margen":23400},{"fecha":"13/5","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
