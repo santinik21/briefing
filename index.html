@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — jueves 14 de mayo de 2026</title>
+  <title>Briefing diario — viernes 15 de mayo de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -32,6 +32,7 @@
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
+    .cal-cuando.hoy{color:var(--warning);}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
@@ -70,6 +71,9 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
+    .tag-sube{color:var(--danger);font-weight:700;font-size:11px;background:rgba(248,113,113,0.1);padding:1px 6px;border-radius:3px;}
+    .tag-baja{color:var(--accent);font-weight:700;font-size:11px;background:rgba(74,222,128,0.1);padding:1px 6px;border-radius:3px;}
+    .tag-neutral{color:var(--muted);font-weight:700;font-size:11px;background:rgba(139,143,155,0.1);padding:1px 6px;border-radius:3px;}
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
     @media(max-width:600px){
       body{padding:14px;}
@@ -83,11 +87,13 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">jueves 14 de mayo de 2026</div>
+    <div class="fecha">viernes 15 de mayo de 2026</div>
   </header>
 
+  <div class="alert">📋 <strong>Cargá la caja de ayer en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (13/5).</div>
+
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">⚠️ <strong>Meta:</strong> Si no cierran los números de LANCER hasta mayo → abandonar. <strong>Hoy es el 14.</strong></div>
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Estudiar — hoy tenés el parcial de Economía 1. Aprovechalo.</div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -95,12 +101,12 @@
     <div class="card">
       <h2>Hoy</h2>
       <ul class="task-list">
+        <li>Pasar lista de iPhone a Mili</li>
+        <li>Comprar regalo Lela</li>
         <li>Empezar trámite David</li>
         <li>Llevar celular arreglados</li>
         <li>Buscar remeras</li>
-        <li>Comprar regalo Lela</li>
         <li>Terminar curso de Claude y de emprender</li>
-        <li>Que Claude me haga una auditoría</li>
         <li>Conseguir proveedores de golf y pádel en Paraguay</li>
       </ul>
     </div>
@@ -120,18 +126,18 @@
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando">En 18 días · Lunes 1/6</div>
+      <div class="cal-cuando hoy">⚠️ HOY — Viernes 15/5</div>
+      <div class="cal-titulo">Recuperación parcial Economía 1</div>
+      <div class="cal-hora">Todo el día</div>
+    </div>
+    <div class="evento-item">
+      <div class="cal-cuando">En 17 días · Lunes 1/6</div>
       <div class="cal-titulo">Cumpleaños Felix</div>
       <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">En 21 días · Jueves 4/6</div>
+      <div class="cal-cuando">En 20 días · Jueves 4/6</div>
       <div class="cal-titulo">Mes</div>
-      <div class="cal-hora">Todo el día</div>
-    </div>
-    <div class="evento-item">
-      <div class="cal-cuando">En 33 días · Martes 16/6</div>
-      <div class="cal-titulo">Cumpleaños Hori</div>
       <div class="cal-hora">Todo el día</div>
     </div>
   </div>
@@ -140,16 +146,16 @@
   <div class="sec-title">Hábitos — Mayo</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">29%</div>
-    <div class="sub" style="margin-top:4px;">Mes lento. Ayer 67% · Anteayer 78% — los últimos 2 días mejoraron.</div>
+    <div class="hab-pct">30%</div>
+    <div class="sub" style="margin-top:4px;">Promedio mes (sobre 31 días). Ayer 22% — día flojo. Anteayer 67%.</div>
     <ul class="hab-insights">
-      <li>Estudiar 2h al 9.7% — el más crítico. Solo 3 días cumplidos de 13 transcurridos.</li>
-      <li>Racha positiva: los últimos 2 días por encima del 60%. Sostenelo hoy.</li>
-      <li>Dejar el celular (41.9%) y Despertar 8:00 (38.7%) son los más consistentes del mes.</li>
+      <li>Estudiar 2h al 9.7% — el peor del mes y hoy tenés parcial. Crítico.</li>
+      <li>Ayer (14/5) solo 2 de 9 hábitos cumplidos. Encarar el fin de semana con más estructura.</li>
+      <li>Dejar celular y Despertar 8:00 son los más consistentes (41.9% cada uno).</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">38.7%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">22.6%</span></div>
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">41.9%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">25.8%</span></div>
       <div class="hab-item"><span>Trabajar 4h</span><span class="badge-r">29.0%</span></div>
       <div class="hab-item"><span>Estudiar 2h</span><span class="badge-r">9.7%</span></div>
       <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">32.3%</span></div>
@@ -164,10 +170,10 @@
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja ayer (12/5)</h2>
+    <h2>Caja anteayer (13/5)</h2>
     <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$117.000</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">0</div></div>
+      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$882.663</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1</div></div>
       <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">—</div></div>
     </div>
   </div>
@@ -175,12 +181,12 @@
   <div class="card">
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">11 / 50</span>
-      <span class="sub">Faltan 17 días</span>
+      <span style="font-size:18px;font-weight:700;">~12 / 50</span>
+      <span class="sub">Faltan 16 días</span>
     </div>
-    <div class="progress"><div class="progress-fill" style="width:22%"></div></div>
-    <div class="sub">Ritmo actual: 0.85 cel/día · Necesitás 2.3/día en los próximos 17 días para llegar a 50</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $9.175.236 ARS</div>
+    <div class="progress"><div class="progress-fill" style="width:24%"></div></div>
+    <div class="sub">Ritmo actual: 0.86 cel/día · Necesitás 2.4/día en los próximos 16 días para llegar a 50</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $10.057.900 ARS</div>
   </div>
 
   <div class="grid-2">
@@ -210,25 +216,73 @@
     </div>
   </div>
 
-  <!-- 7. NOTICIAS -->
-  <div class="sec-title">📰 Argentina</div>
+  <!-- 7. FINANCIERA -->
+  <div class="sec-title">💵 Financiera</div>
   <div class="card">
     <div class="noticia">
-      <div class="noticia-meta">Argentina · Entorno de negocios</div>
-      <div class="noticia-titulo">Argentina en el puesto 9 del Global Business Complexity Index 2026</div>
+      <div class="noticia-meta">Cotizaciones · 15 mayo 2026</div>
+      <div class="noticia-titulo">Dólar: el oficial y el blue casi sin brecha — CCL con spread del 5%</div>
       <div class="noticia-body">
-        <p>El grupo TMF publicó el Global Business Complexity Index 2026, que mide la dificultad de operar formalmente en 79 países. Argentina ocupa el puesto 9, entre los mercados más complejos del mundo. El índice pondera carga administrativa, inestabilidad normativa, complejidad tributaria y requisitos de compliance laboral y contable.</p>
-        <p>El resultado no sorprende. Argentina combina un sistema impositivo de múltiples capas (IVA, IIBB, sellos, cargas patronales), cambios normativos frecuentes y una regulación cambiaria que todavía no terminó de estabilizarse. Cada actualización de AFIP, cada cambio en las alícuotas del IIBB tucumano o en los requisitos de importación suma fricción operativa concreta. Para LANCER, que vende producto importado, esto se traduce en tiempo de gestión administrativa que no genera valor directo.</p>
-        <p>El dato positivo: Argentina mejoró 4 puestos frente al índice de 2025. El proceso de simplificación normativa del gobierno actual está teniendo algún efecto. Si la tendencia continúa, el costo de compliance debería bajar hacia 2027. La estrategia práctica por ahora: facturación simple, sin estructuras societarias innecesarias, y tercerizar el compliance contable en alguien que ya tenga el sistema armado.</p>
+        <div class="lancer-grid" style="margin-bottom:16px;">
+          <div class="lancer-stat"><div class="lbl">Oficial (BNA)</div><div class="val">$1.415</div></div>
+          <div class="lancer-stat"><div class="lbl">Blue</div><div class="val">$1.420</div></div>
+          <div class="lancer-stat"><div class="lbl">MEP</div><div class="val">$1.421</div></div>
+          <div class="lancer-stat"><div class="lbl">CCL</div><div class="val">$1.484</div></div>
+          <div class="lancer-stat"><div class="lbl">Brecha blue/oficial</div><div class="val" style="color:#4ade80">+0.4%</div></div>
+          <div class="lancer-stat"><div class="lbl">Brecha CCL/oficial</div><div class="val" style="color:#fbbf24">+4.9%</div></div>
+        </div>
+        <p>El BCRA acumuló más de USD 7.900 millones en compras en 2026. Reservas en USD 46.500 millones (máximo desde febrero). En mayo el ritmo bajó: USD 721 millones en 8 días hábiles vs USD 1.336 millones en el mismo período de abril. Aun así, el Secretario Daza dijo esta semana que <strong>"se viene una avalancha de dólares"</strong> — anticipando mayor liquidación de cosecha gruesa en junio.</p>
+        <p><strong>Noticias del gobierno que mueven el dólar:</strong></p>
+        <p>• BCRA mantiene proyecciones de inflación a la baja + dólar estable para 2026 → <span class="tag-baja">BAJA</span><br>
+        • Gobierno anticipa ingreso masivo de divisas por cosecha gruesa en junio → <span class="tag-baja">BAJA</span><br>
+        • Emisiones de deuda corporativa en exterior proyectadas en USD 3.200M adicionales → <span class="tag-baja">BAJA</span><br>
+        • Negociación con FMI sobre metas segundo semestre aún abierta (EPU subió 9.7% en mayo) → <span class="tag-neutral">NEUTRAL / RIESGO LATENTE</span></p>
+        <p><strong>Recomendación:</strong> No es buen momento para dolarizarse. El dólar tiene presión a la baja de corto plazo (cosecha, BCRA comprador, reservas en alza). Si tenés pesos, el carry trade en pesos sigue ganando: la tasa nominal supera la devaluación esperada con comodidad. El único riesgo es un salto cambiario abrupto ligado a la negociación FMI — monitorear.</p>
       </div>
     </div>
     <div class="noticia">
-      <div class="noticia-meta">Argentina · Economía</div>
-      <div class="noticia-titulo">EPU sube 9.7% en mayo; actividad creció apenas 0.03% en el primer trimestre</div>
+      <div class="noticia-meta">Rulos del día</div>
+      <div class="noticia-titulo">Carry trade en pesos + diferencial MEP/CCL</div>
       <div class="noticia-body">
-        <p>El índice de Incertidumbre de Política Económica (EPU) de Argentina subió 9.7% en las primeras semanas de mayo frente a abril. Al mismo tiempo, los datos de actividad económica del primer trimestre mostraron un crecimiento de solo 0.03%, prácticamente estancamiento. El alza del EPU se explica por la discusión legislativa del presupuesto 2027 y la negociación con el FMI sobre las metas del segundo semestre.</p>
-        <p>Para LANCER, el EPU tiene correlación directa con el comportamiento del consumidor. Cuando sube la incertidumbre, la gente posterga compras grandes. Un iPhone de $1.5M ARS es una compra que muchos clientes potenciales dejan "para cuando se aclare el panorama". Esto puede explicar en parte por qué mayo está siendo más lento que marzo y abril en ventas de celulares.</p>
-        <p>El dato de actividad (+0.03% Q1) refuerza la señal: la economía real todavía no arrancó con fuerza. El consumo en electrónica de consumo masivo cayó en el primer trimestre, aunque los segmentos premium aguantaron algo mejor. La segunda quincena de mayo, históricamente más activa por cobros de sueldo, debería dar más oxígeno al ticket promedio.</p>
+        <p><strong>1. Carry trade en pesos (el más seguro hoy)</strong><br>
+        Qué es: tomás pesos, los invertís en BONCAP o FCI money market (~30% TNA), y apostás a que el dólar no suba más del 20% anual.<br>
+        Rendimiento estimado: ~10% de ganancia en dólares anualizados si el dólar se queda quieto.<br>
+        Riesgo: si hay salto cambiario, el carry se revierte y perdés en USD terms.<br>
+        Legalidad: 100% regulado y legal. JP Morgan dijo esta semana que "el carry trade sigue vivo".<br>
+        Cómo entrás: Desde tu home banking o broker, FCI money market o BONCAP en el mercado secundario.</p>
+        <p><strong>2. Diferencial MEP / CCL</strong><br>
+        Qué es: el MEP cotiza a $1.421 y el CCL a $1.484 — hay una brecha de $63 entre los dos tipos de dólar bursátil.<br>
+        Rendimiento estimado: ~4.4% si podés comprar al MEP y vender al CCL operando con bonos (ej. AL30).<br>
+        Riesgo: operatoria más compleja, requiere cuenta comitente, y la brecha puede comprimirse rápidamente si entra mucho volumen.<br>
+        Legalidad: legal si se opera con los tiempos de parking reglamentarios (72hs mínimo entre compra y venta).</p>
+        <p><strong>3. Cauciones bursátiles (opción conservadora)</strong><br>
+        Qué es: prestás tus pesos al mercado con garantía de bonos/acciones, a plazos cortos (1-7 días).<br>
+        Rendimiento: ~28-30% TNA anualizados. Si ponés $1.000.000 por 7 días → ganás aproximadamente $5.400.<br>
+        Riesgo: mínimo. Garantía real de bonos.<br>
+        Legalidad: 100% regulado. Operás desde cualquier broker (IOL, Balanz, etc.).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8. NOTICIAS -->
+  <div class="sec-title">📰 Argentina</div>
+  <div class="card">
+    <div class="noticia">
+      <div class="noticia-meta">Argentina · Importación / Retail</div>
+      <div class="noticia-titulo">El boom de importaciones redefine el mapa empresarial argentino en 2026</div>
+      <div class="noticia-body">
+        <p>Las compras externas de bienes de consumo alcanzaron cifras históricas cercanas a los USD 11.400 millones en 2025, con Brasil y China explicando el 48% del total. El boom continuó en 2026, aunque el ritmo está comenzando a moderarse: los comercios están altamente stockeados producto del bajo consumo del primer trimestre, y muchos importadores frenaron nuevos pedidos mientras esperan que el inventario rote.</p>
+        <p>El contexto para LANCER es ambivalente. Por un lado, el acceso a importaciones más baratas (arancel 0% en electrónica) permitió renovar stock de accesorios a mejor costo. Por otro, la misma apertura importadora trajo más competencia al mercado de electrónica: distribuidores nacionales y tiendas de e-commerce que antes no podían traer producto ahora sí pueden, lo que presiona los márgenes hacia abajo en el segmento de accesorios genéricos.</p>
+        <p>La noticia tiene también una dimensión positiva para el ecosistema emprendedor: Mercado Libre confirmó una inversión de USD 3.400 millones durante 2026 y la creación de 1.900 empleos. Miniso anunció la apertura de hasta 100 locales en los próximos cinco años (8 este año). Esto indica que los grandes retailers ven un consumo que se recupera, aunque de forma gradual y despareja según el segmento. Para LANCER, el segmento premium (iPhones usados y nuevos) debería aguantar mejor que el consumo masivo en los próximos meses.</p>
+      </div>
+    </div>
+    <div class="noticia">
+      <div class="noticia-meta">Argentina · Política económica</div>
+      <div class="noticia-titulo">El gobierno abraza inversiones ligadas a importación, logística y plataformas digitales</div>
+      <div class="noticia-body">
+        <p>El gobierno nacional aceleró en mayo la aprobación de proyectos de inversión vinculados a importación, logística y plataformas digitales, en línea con la estrategia de desregulación del comercio exterior. La señal es clara: el régimen de importación seguirá siendo amigable, y las empresas que operen dentro del esquema formal (con inscripción en AFIP/ARCA, RG correspondientes y cumplimiento aduanero) tienen vía libre para escalar.</p>
+        <p>Para LANCER, esto tiene una implicancia directa: si en algún momento se plantea formalizar importaciones directas (en lugar de comprar a distribuidores locales), el contexto regulatorio es el más favorable de los últimos 10 años. Los aranceles en 0% para electrónica y la simplificación de los trámites de importación abaratan el costo de traer stock directamente de China o Estados Unidos.</p>
+        <p>El riesgo es la velocidad del cambio regulatorio argentino: lo que hoy es 0% puede subir si el gobierno necesita proteger industrias locales o generar recaudación. Tenerlo en cuenta si se planifica una importación grande con horizonte de más de 6 meses.</p>
       </div>
     </div>
   </div>
@@ -237,25 +291,25 @@
   <div class="card">
     <div class="noticia">
       <div class="noticia-meta">Internacional · Tecnología / IA</div>
-      <div class="noticia-titulo">Nvidia supera $40.000 millones en inversiones estratégicas en 2026</div>
+      <div class="noticia-titulo">Cerebras Systems cotiza a $185 en su IPO: la mayor salida a bolsa de chips de IA del año</div>
       <div class="noticia-body">
-        <p>Nvidia comprometió inversiones equity por más de $40.000 millones de dólares en lo que va de 2026, convirtiéndose en uno de los inversores estratégicos más activos del ecosistema global de IA. Los acuerdos más resonantes: $2.100 millones en IREN (infraestructura de data centers para IA) y $3.200 millones en Corning (materiales ópticos y fibra para redes). Los VCs globales invirtieron $18.800 millones en startups de IA en el mismo período — Nvidia sola supera esa cifra con comodidad.</p>
-        <p>Nvidia ya no es solo una empresa de chips: es la pick-and-shovel de la fiebre del oro de la inteligencia artificial. Cada vez que los grandes hyperscalers (Google, Amazon, Microsoft, Meta) escalan capacidad de entrenamiento, necesitan más GPUs de Nvidia. Al invertir en la infraestructura que rodea a sus chips, Nvidia se asegura de que su hardware sea el estándar de facto del próximo ciclo tecnológico, dificultando que competidores como AMD ganen terreno.</p>
-        <p>Dos implicancias indirectas para Argentina: el precio de las GPUs consumer (RTX) se mantendrá alto porque la capacidad de fabricación va prioritariamente a data centers. Y el ecosistema de startups de IA latinoamericanas tendrá acceso en 2-3 años a infraestructura en nube más barata y potente, abriendo oportunidades para servicios digitales basados en IA que hoy son caros de implementar.</p>
+        <p>Cerebras Systems, fabricante de chips de inteligencia artificial, fijó el precio de su IPO en $185 por acción, por encima del rango esperado, recaudando USD 5.550 millones. Es la mayor salida a bolsa del sector de chips de IA en lo que va de 2026, y su valuación implica que el mercado está dispuesto a pagar múltiplos extremadamente altos por compañías en el ecosistema de infraestructura de IA.</p>
+        <p>Cerebras compite directamente con Nvidia en el segmento de chips para entrenamiento de modelos de IA, con la diferencia de que sus chips son monolíticos (un solo chip gigante en lugar de múltiples GPUs conectadas), lo que los hace más eficientes para ciertas cargas de trabajo. El éxito del IPO es una señal de que los inversores todavía tienen apetito por el sector de semiconductores de IA a pesar de las altas valuaciones.</p>
+        <p>El contexto más amplio es relevante: el IPO de Cerebras podría abrir la puerta para otras salidas a bolsa esperadas en la segunda mitad de 2026 — SpaceX/xAI, OpenAI y Anthropic están evaluando sus propias salidas. Si el mercado sigue receptivo, 2026 podría ser el año de los grandes IPOs de IA. Para inversiones en CEDEARs, esto consolida la narrativa tech como el sector dominante del año.</p>
       </div>
     </div>
     <div class="noticia">
       <div class="noticia-meta">Internacional · Mercados</div>
-      <div class="noticia-titulo">S&P 500 en nuevo récord histórico; hyperscalers proyectan $725B en capex de IA para 2026</div>
+      <div class="noticia-titulo">S&P 500 en 7.501 y Dow retoma los 50.000: Cisco +13% lidera el rally</div>
       <div class="noticia-body">
-        <p>El S&P 500 cerró esta semana en 7.444 puntos, nuevo máximo histórico (ATH), mientras el Nasdaq avanzó 1.2% hasta los 26.402 puntos. El rally está liderado por el sector tecnológico, particularmente las empresas de infraestructura de IA. Las proyecciones actuales indican que los cuatro grandes hyperscalers (AWS, Azure, Google Cloud, Meta) gastarán conjuntamente $725.000 millones en infraestructura de IA durante 2026 — más que el PBI completo de Argentina.</p>
-        <p>Un dato que ilustra la magnitud del momento: Nebius, una empresa de cloud especializada en IA, reportó un crecimiento de ingresos del 684% interanual y sus acciones subieron 16% en una sola sesión. El mercado está en modo risk-on y los fondos están rotando hacia tecnología con claridad.</p>
-        <p>Para vos: si tenés CEDEARs de empresas tech (MSFT, GOOG, AMZN, NVDA), el contexto internacional es muy favorable. El rally del S&P tiende a generar estabilidad relativa en mercados emergentes y reduce la presión sobre el tipo de cambio en el corto plazo — lo que impacta directamente en el costo de tu inventario importado. Nada para hacer hoy, pero es contexto útil si estás pensando en ajustar posiciones.</p>
+        <p>El jueves 14 de mayo los mercados cerraron en nuevos máximos: S&P 500 en 7.501 (+0.77%), Nasdaq en 26.635 (+0.88%) y el Dow Jones retomó la barrera de los 50.000 puntos por primera vez en semanas. El rally fue liderado por Cisco, cuyas acciones subieron 13% tras reportar resultados del tercer trimestre y guidance que superaron ampliamente las expectativas de Wall Street. La empresa también anunció recortes de casi 4.000 empleos, que el mercado interpretó como positivo para la eficiencia operativa.</p>
+        <p>En paralelo, Ford subió casi 20% en dos días por el entusiasmo de los inversores con su negocio de almacenamiento de energía ligado a IA — Morgan Stanley publicó un informe bullish sobre la división de baterías. Este tipo de rally en empresas "adyacentes a la IA" (energy storage, semiconductores, infraestructura de datos) muestra que el mercado está apostando fuerte al ecosistema completo de la IA, no solo a las empresas de software.</p>
+        <p>El dato macro que complica el cuadro: el PPI (inflación mayorista) de abril subió 6% interanual en EE.UU., en gran medida por costos energéticos relacionados con la Guerra de Irán. Es una señal de que la Fed podría no bajar tasas tan pronto como el mercado espera, lo que en algún punto podría ponerle un techo al rally. Por ahora el mercado lo ignora. Para CEDEARs tech, el contexto sigue siendo positivo a corto plazo.</p>
       </div>
     </div>
   </div>
 
-  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
+  <!-- 9. IDEA DE NEGOCIO SEMANAL -->
   <div class="sec-title">💡 Idea de negocio — semana 20</div>
   <div class="idea-card">
     <h2>Idea de la semana</h2>
@@ -295,17 +349,17 @@
   <footer>Generado 08:55 · Abrí el archivo después de cargar la caja para ver los datos actualizados</footer>
 
   <script>
-    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":537000},{"fecha":"8/5","total":2358145},{"fecha":"9/5","total":1876276},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1281500},{"fecha":"12/5","total":117000},{"fecha":"13/5","total":0}];
-    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":108758},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":4600},{"fecha":"5/5","margen":218641},{"fecha":"6/5","margen":269064},{"fecha":"7/5","margen":107400},{"fecha":"8/5","margen":471629},{"fecha":"9/5","margen":375255},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":256300},{"fecha":"12/5","margen":23400},{"fecha":"13/5","margen":0}];
+    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":537000},{"fecha":"8/5","total":2358145},{"fecha":"9/5","total":1876276},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1281500},{"fecha":"12/5","total":117000},{"fecha":"13/5","total":882663},{"fecha":"14/5","total":0},{"fecha":"15/5","total":0}];
+    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":108758},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":4600},{"fecha":"5/5","margen":218641},{"fecha":"6/5","margen":269064},{"fecha":"7/5","margen":107400},{"fecha":"8/5","margen":471629},{"fecha":"9/5","margen":375255},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":256300},{"fecha":"12/5","margen":23400},{"fecha":"13/5","margen":176533},{"fecha":"14/5","margen":0},{"fecha":"15/5","margen":0}];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
     new Chart(document.getElementById('chart-margen'), {
       type: 'bar',
       data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
   </script>
 </body>
