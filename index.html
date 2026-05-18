@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — viernes 15 de mayo de 2026</title>
+  <title>Briefing diario — lunes 18 de mayo de 2026</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     :root {
@@ -32,7 +32,6 @@
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
-    .cal-cuando.hoy{color:var(--warning);}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
@@ -71,10 +70,10 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
-    .tag-sube{color:var(--danger);font-weight:700;font-size:11px;background:rgba(248,113,113,0.1);padding:1px 6px;border-radius:3px;}
-    .tag-baja{color:var(--accent);font-weight:700;font-size:11px;background:rgba(74,222,128,0.1);padding:1px 6px;border-radius:3px;}
-    .tag-neutral{color:var(--muted);font-weight:700;font-size:11px;background:rgba(139,143,155,0.1);padding:1px 6px;border-radius:3px;}
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
+    .tag-sube{background:rgba(248,113,113,0.15);color:var(--danger);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
+    .tag-baja{background:rgba(74,222,128,0.15);color:var(--accent);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
+    .tag-neutral{background:rgba(96,165,250,0.15);color:var(--blue);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
     @media(max-width:600px){
       body{padding:14px;}
       .grid-2{grid-template-columns:1fr;}
@@ -87,13 +86,13 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">viernes 15 de mayo de 2026</div>
+    <div class="fecha">lunes 18 de mayo de 2026</div>
   </header>
 
-  <div class="alert">📋 <strong>Cargá la caja de ayer en la hoja antes de arrancar el día.</strong> Los datos que se muestran son del anteayer (13/5).</div>
+  <div class="alert">📋 <strong>Cargá la caja de los días pendientes antes de arrancar.</strong> Los datos que se muestran son del jueves 14/5 (viernes 15, sábado 16 y domingo 17 sin datos o mínimos).</div>
 
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Estudiar — hoy tenés el parcial de Economía 1. Aprovechalo.</div>
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Meta hasta julio: 60 ventas por mes promedio o más</div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -101,11 +100,9 @@
     <div class="card">
       <h2>Hoy</h2>
       <ul class="task-list">
+        <li>Llevar remera y campera</li>
         <li>Pasar lista de iPhone a Mili</li>
-        <li>Comprar regalo Lela</li>
         <li>Empezar trámite David</li>
-        <li>Llevar celular arreglados</li>
-        <li>Buscar remeras</li>
         <li>Terminar curso de Claude y de emprender</li>
         <li>Conseguir proveedores de golf y pádel en Paraguay</li>
       </ul>
@@ -126,17 +123,17 @@
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando hoy">⚠️ HOY — Viernes 15/5</div>
-      <div class="cal-titulo">Recuperación parcial Economía 1</div>
+      <div class="cal-cuando">Miércoles 20/5 — en 2 días</div>
+      <div class="cal-titulo">Cumple años Deca</div>
       <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">En 17 días · Lunes 1/6</div>
+      <div class="cal-cuando">Lunes 1/6</div>
       <div class="cal-titulo">Cumpleaños Felix</div>
       <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">En 20 días · Jueves 4/6</div>
+      <div class="cal-cuando">Jueves 4/6</div>
       <div class="cal-titulo">Mes</div>
       <div class="cal-hora">Todo el día</div>
     </div>
@@ -146,23 +143,23 @@
   <div class="sec-title">Hábitos — Mayo</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">30%</div>
-    <div class="sub" style="margin-top:4px;">Promedio mes (sobre 31 días). Ayer 22% — día flojo. Anteayer 67%.</div>
+    <div class="hab-pct">35%</div>
+    <div class="sub" style="margin-top:4px;">9 hábitos trackeados — semana 20 cerró en caída (dom 17/5 = 0%)</div>
     <ul class="hab-insights">
-      <li>Estudiar 2h al 9.7% — el peor del mes y hoy tenés parcial. Crítico.</li>
-      <li>Ayer (14/5) solo 2 de 9 hábitos cumplidos. Encarar el fin de semana con más estructura.</li>
-      <li>Dejar celular y Despertar 8:00 son los más consistentes (41.9% cada uno).</li>
+      <li>⚠️ <strong>Estudiar (9.7%)</strong> — solo 3 de 17 días cumplidos. Para llegar al 60% necesitás 15+ días más en los 13 restantes. Imposible sin empezar hoy.</li>
+      <li>⚠️ <strong>Entrenar (25.8%)</strong> — meta del mes es 50% (16 días). Llevás 8/17. Necesitás 8 días más en los próximos 13 para llegar.</li>
+      <li>📉 <strong>Semana pasada</strong> — los días 16 (33%) y 17 (0%) fueron los peores de la semana. Arrancar la semana 21 con fuerza para revertir.</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">41.9%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">25.8%</span></div>
-      <div class="hab-item"><span>Trabajar 4h</span><span class="badge-r">29.0%</span></div>
-      <div class="hab-item"><span>Estudiar 2h</span><span class="badge-r">9.7%</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">32.3%</span></div>
-      <div class="hab-item"><span>Entrenar</span><span class="badge-r">22.6%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">25.8%</span></div>
-      <div class="hab-item"><span>Dejar celular</span><span class="badge-w">41.9%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">38.7%</span></div>
+      <div class="hab-item">Despertar 8:00 <span class="badge-w">48%</span></div>
+      <div class="hab-item">Desayuno sano <span class="badge-r">32%</span></div>
+      <div class="hab-item">Trabajar 4hs <span class="badge-r">39%</span></div>
+      <div class="hab-item">Estudiar 2hs <span class="badge-r">10%</span></div>
+      <div class="hab-item">Leer inversiones <span class="badge-r">39%</span></div>
+      <div class="hab-item">Entrenar <span class="badge-r">26%</span></div>
+      <div class="hab-item">Leer 10 págs <span class="badge-r">29%</span></div>
+      <div class="hab-item">Celular 00:00 <span class="badge-w">45%</span></div>
+      <div class="hab-item">Pensar 5min <span class="badge-w">45%</span></div>
     </div>
   </div>
 
@@ -170,23 +167,23 @@
   <div class="sec-title">LANCER</div>
 
   <div class="card">
-    <h2>Caja anteayer (13/5)</h2>
+    <h2>Caja jueves 14/5 (últimos datos completos)</h2>
     <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$882.663</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~1</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">—</div></div>
+      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.421.313</div></div>
+      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~2 est.</div></div>
+      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">$52.000</div></div>
     </div>
   </div>
 
   <div class="card">
     <h2>Progreso mensual — meta 50 iPhones</h2>
     <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">~12 / 50</span>
-      <span class="sub">Faltan 16 días</span>
+      <span style="font-size:18px;font-weight:700;">13 / 50</span>
+      <span class="sub">Faltan 13 días</span>
     </div>
-    <div class="progress"><div class="progress-fill" style="width:24%"></div></div>
-    <div class="sub">Ritmo actual: 0.86 cel/día · Necesitás 2.4/día en los próximos 16 días para llegar a 50</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $10.057.900 ARS</div>
+    <div class="progress"><div class="progress-fill" style="width:26%"></div></div>
+    <div class="sub">Ritmo actual: 0.72/día. Necesitás 2.85/día en los 13 días restantes para llegar a 50. El mes está complicado.</div>
+    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $10.485.714 ARS</div>
   </div>
 
   <div class="grid-2">
@@ -206,160 +203,197 @@
       <div class="deuda-bloque">
         <div class="lbl">A pagar</div>
         <div class="val">$293.400 ARS</div>
-        <div class="val-usd">+ USD 6.904</div>
+        <div class="val-usd">+ USD 8.749</div>
       </div>
       <div class="deuda-bloque">
         <div class="lbl">A cobrar</div>
-        <div class="val">$155.000 ARS</div>
+        <div class="val">$235.000 ARS</div>
         <div class="val-usd">+ USD 122</div>
       </div>
     </div>
   </div>
 
-  <!-- 7. FINANCIERA -->
+  <!-- 6. FINANCIERA -->
   <div class="sec-title">💵 Financiera</div>
   <div class="card">
+
+    <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;color:var(--text);">Cotizaciones — lunes 18/5</div>
+    <div class="lancer-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px;">
+      <div class="lancer-stat"><div class="lbl">Oficial BNA</div><div class="val">$1.427</div><div class="lbl" style="margin-top:4px;">referencia</div></div>
+      <div class="lancer-stat"><div class="lbl">Blue</div><div class="val" style="color:var(--warning)">$1.432</div><div class="lbl" style="margin-top:4px;">brecha +0.4%</div></div>
+      <div class="lancer-stat"><div class="lbl">MEP</div><div class="val" style="color:var(--blue)">$1.440</div><div class="lbl" style="margin-top:4px;">brecha +0.9%</div></div>
+      <div class="lancer-stat"><div class="lbl">CCL</div><div class="val" style="color:var(--danger)">$1.505</div><div class="lbl" style="margin-top:4px;">brecha +5.5%</div></div>
+    </div>
+
     <div class="noticia">
-      <div class="noticia-meta">Cotizaciones · 15 mayo 2026</div>
-      <div class="noticia-titulo">Dólar: el oficial y el blue casi sin brecha — CCL con spread del 5%</div>
+      <div class="noticia-meta">BCRA · RESERVAS · GOBIERNO</div>
+      <div class="noticia-titulo" style="font-size:14px;">BCRA acumuló +USD 7.900M en 2026 · Reservas ~USD 46.500M</div>
       <div class="noticia-body">
-        <div class="lancer-grid" style="margin-bottom:16px;">
-          <div class="lancer-stat"><div class="lbl">Oficial (BNA)</div><div class="val">$1.415</div></div>
-          <div class="lancer-stat"><div class="lbl">Blue</div><div class="val">$1.420</div></div>
-          <div class="lancer-stat"><div class="lbl">MEP</div><div class="val">$1.421</div></div>
-          <div class="lancer-stat"><div class="lbl">CCL</div><div class="val">$1.484</div></div>
-          <div class="lancer-stat"><div class="lbl">Brecha blue/oficial</div><div class="val" style="color:#4ade80">+0.4%</div></div>
-          <div class="lancer-stat"><div class="lbl">Brecha CCL/oficial</div><div class="val" style="color:#fbbf24">+4.9%</div></div>
+        <p><span class="tag-baja">▼ BAJA</span> BCRA sigue siendo comprador neto fuerte — USD 7.900M acumulados en el año (79% de la meta anual). Reservas brutas en máximos del año, superaron los USD 46.500M.</p>
+        <p><span class="tag-baja">▼ BAJA</span> La cosecha gruesa (soja/maíz del NOA y la pampa húmeda) todavía no liquidó el grueso de sus dólares. La oferta de divisas al BCRA debería aumentar en las próximas semanas, presionando el tipo de cambio libre hacia abajo.</p>
+        <p><span class="tag-neutral">→ NEUTRAL</span> Milei ratificó el rumbo económico. Sin novedades del FMI esta semana. Mayo sigue siendo el mes clave para demostrar que el programa puede mantener simultáneamente dólar calmo, inflación bajando y reservas acumulándose.</p>
+      </div>
+    </div>
+
+    <div style="padding-top:14px;border-top:1px solid var(--border);margin-bottom:14px;">
+      <div class="noticia-meta">RECOMENDACIÓN DEL DÍA</div>
+      <div class="noticia-body">
+        <p><strong>No dolarizarse.</strong> El dólar tiene viento en contra de corto plazo: BCRA comprador fuerte, reservas en máximos y cosecha todavía por liquidarse. El carry trade en pesos sigue vigente — la tasa supera la devaluación mensual con comodidad. Si tenés pesos disponibles, cauciones o Lecap cortas rinden más que el dólar parado. El único riesgo real es un salto cambiario por condicionalidades del FMI — monitorear.</p>
+      </div>
+    </div>
+
+    <div style="padding-top:14px;border-top:1px solid var(--border);">
+      <div class="noticia-meta" style="margin-bottom:10px;">RULOS DEL DÍA</div>
+
+      <div class="noticia" style="margin-bottom:12px;padding-bottom:12px;">
+        <div class="noticia-titulo" style="font-size:14px;">1. Carry trade · Caución bursátil 7 días</div>
+        <div class="noticia-body">
+          <p><strong>Operación:</strong> Invertís pesos en caución bursátil a 7 días. Tasa: ~29% TNA (≈2.4% mensual). Con la devaluación en 1.5-2%/mes, ganás 0.4-0.9% mensual medido en USD.</p>
+          <p><strong>Concreto:</strong> $1.000.000 en caución 7 días → $1.005.577 al vencer (~$5.577 de ganancia). <strong>Legal y regulado.</strong> Disponible en Rava, IOL, Bull Market.</p>
+          <p><strong>Riesgo:</strong> Bajo de corto plazo. Único riesgo real: salto cambiario brusco no anticipado.</p>
         </div>
-        <p>El BCRA acumuló más de USD 7.900 millones en compras en 2026. Reservas en USD 46.500 millones (máximo desde febrero). En mayo el ritmo bajó: USD 721 millones en 8 días hábiles vs USD 1.336 millones en el mismo período de abril. Aun así, el Secretario Daza dijo esta semana que <strong>"se viene una avalancha de dólares"</strong> — anticipando mayor liquidación de cosecha gruesa en junio.</p>
-        <p><strong>Noticias del gobierno que mueven el dólar:</strong></p>
-        <p>• BCRA mantiene proyecciones de inflación a la baja + dólar estable para 2026 → <span class="tag-baja">BAJA</span><br>
-        • Gobierno anticipa ingreso masivo de divisas por cosecha gruesa en junio → <span class="tag-baja">BAJA</span><br>
-        • Emisiones de deuda corporativa en exterior proyectadas en USD 3.200M adicionales → <span class="tag-baja">BAJA</span><br>
-        • Negociación con FMI sobre metas segundo semestre aún abierta (EPU subió 9.7% en mayo) → <span class="tag-neutral">NEUTRAL / RIESGO LATENTE</span></p>
-        <p><strong>Recomendación:</strong> No es buen momento para dolarizarse. El dólar tiene presión a la baja de corto plazo (cosecha, BCRA comprador, reservas en alza). Si tenés pesos, el carry trade en pesos sigue ganando: la tasa nominal supera la devaluación esperada con comodidad. El único riesgo es un salto cambiario abrupto ligado a la negociación FMI — monitorear.</p>
+      </div>
+
+      <div class="noticia" style="margin-bottom:12px;padding-bottom:12px;">
+        <div class="noticia-titulo" style="font-size:14px;">2. Lecap / Boncap cortos (T+1)</div>
+        <div class="noticia-body">
+          <p><strong>Operación:</strong> Comprar Lecap o Boncap de vencimiento corto (1-3 meses). Rinden 30-33% TNA. Liquidez T+1: salís en un día hábil si el dólar se mueve.</p>
+          <p><strong>Concreto:</strong> $1.000.000 en Lecap a 90 días → ~$1.075.000 al vencer (7.5% en 3 meses). <strong>Legal, regulado.</strong></p>
+          <p><strong>Riesgo:</strong> Bajo. La ventaja es la liquidez — si el tipo de cambio salta, vendés y comprás dólares antes de que suba más.</p>
+        </div>
+      </div>
+
+      <div class="noticia" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
+        <div class="noticia-titulo" style="font-size:14px;">3. Diferencial MEP / CCL — spread ~$65</div>
+        <div class="noticia-body">
+          <p><strong>Operación:</strong> Comprar AL30 en pesos al precio MEP (~$1.440) y vender en USD al precio CCL (~$1.505). Diferencial: ~$65 por dólar (4.5% de spread).</p>
+          <p><strong>Concreto:</strong> Con $1.440.000 comprás 1.000 nominales AL30 en pesos y los vendés en USD: obtenés ~USD 1.045. Ganás 4.5% en la operación. <strong>Zona gris — legal pero requiere parking de 72hs.</strong> Disponible en Rava, Bull Market.</p>
+          <p><strong>Riesgo:</strong> Medio. El spread puede achicarse rápido si mucha gente hace el mismo arbitraje. Requiere cuenta comitente y conocimiento del mercado.</p>
+        </div>
       </div>
     </div>
-    <div class="noticia">
-      <div class="noticia-meta">Rulos del día</div>
-      <div class="noticia-titulo">Carry trade en pesos + diferencial MEP/CCL</div>
-      <div class="noticia-body">
-        <p><strong>1. Carry trade en pesos (el más seguro hoy)</strong><br>
-        Qué es: tomás pesos, los invertís en BONCAP o FCI money market (~30% TNA), y apostás a que el dólar no suba más del 20% anual.<br>
-        Rendimiento estimado: ~10% de ganancia en dólares anualizados si el dólar se queda quieto.<br>
-        Riesgo: si hay salto cambiario, el carry se revierte y perdés en USD terms.<br>
-        Legalidad: 100% regulado y legal. JP Morgan dijo esta semana que "el carry trade sigue vivo".<br>
-        Cómo entrás: Desde tu home banking o broker, FCI money market o BONCAP en el mercado secundario.</p>
-        <p><strong>2. Diferencial MEP / CCL</strong><br>
-        Qué es: el MEP cotiza a $1.421 y el CCL a $1.484 — hay una brecha de $63 entre los dos tipos de dólar bursátil.<br>
-        Rendimiento estimado: ~4.4% si podés comprar al MEP y vender al CCL operando con bonos (ej. AL30).<br>
-        Riesgo: operatoria más compleja, requiere cuenta comitente, y la brecha puede comprimirse rápidamente si entra mucho volumen.<br>
-        Legalidad: legal si se opera con los tiempos de parking reglamentarios (72hs mínimo entre compra y venta).</p>
-        <p><strong>3. Cauciones bursátiles (opción conservadora)</strong><br>
-        Qué es: prestás tus pesos al mercado con garantía de bonos/acciones, a plazos cortos (1-7 días).<br>
-        Rendimiento: ~28-30% TNA anualizados. Si ponés $1.000.000 por 7 días → ganás aproximadamente $5.400.<br>
-        Riesgo: mínimo. Garantía real de bonos.<br>
-        Legalidad: 100% regulado. Operás desde cualquier broker (IOL, Balanz, etc.).</p>
-      </div>
-    </div>
+
   </div>
 
-  <!-- 8. NOTICIAS -->
+  <!-- 7. NOTICIAS AR -->
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
+
     <div class="noticia">
-      <div class="noticia-meta">Argentina · Importación / Retail</div>
-      <div class="noticia-titulo">El boom de importaciones redefine el mapa empresarial argentino en 2026</div>
+      <div class="noticia-meta">Infobae · La Nación · Abril–Mayo 2026</div>
+      <div class="noticia-titulo">Miniso desembarca en Argentina con 100 locales y USD 50M: qué implica para el retail</div>
       <div class="noticia-body">
-        <p>Las compras externas de bienes de consumo alcanzaron cifras históricas cercanas a los USD 11.400 millones en 2025, con Brasil y China explicando el 48% del total. El boom continuó en 2026, aunque el ritmo está comenzando a moderarse: los comercios están altamente stockeados producto del bajo consumo del primer trimestre, y muchos importadores frenaron nuevos pedidos mientras esperan que el inventario rote.</p>
-        <p>El contexto para LANCER es ambivalente. Por un lado, el acceso a importaciones más baratas (arancel 0% en electrónica) permitió renovar stock de accesorios a mejor costo. Por otro, la misma apertura importadora trajo más competencia al mercado de electrónica: distribuidores nacionales y tiendas de e-commerce que antes no podían traer producto ahora sí pueden, lo que presiona los márgenes hacia abajo en el segmento de accesorios genéricos.</p>
-        <p>La noticia tiene también una dimensión positiva para el ecosistema emprendedor: Mercado Libre confirmó una inversión de USD 3.400 millones durante 2026 y la creación de 1.900 empleos. Miniso anunció la apertura de hasta 100 locales en los próximos cinco años (8 este año). Esto indica que los grandes retailers ven un consumo que se recupera, aunque de forma gradual y despareja según el segmento. Para LANCER, el segmento premium (iPhones usados y nuevos) debería aguantar mejor que el consumo masivo en los próximos meses.</p>
+        <p>La cadena china Miniso —conocida por vender gadgets, accesorios, papelería y productos de estética a precios bajos con estética "japonesa"— abrió su primer local en Argentina en el DOT Shopping (más de 600 m²) y anunció un plan de expansión de 100 tiendas en cinco años, con una inversión total de USD 50 millones. El plan incluye presencia en malls, locales a la calle y ciudades del interior. Proyecta crear entre 800 y 1.000 empleos directos.</p>
+        <p>La llegada se da en el contexto de un gobierno que abraza activamente las inversiones extranjeras vinculadas a importación, logística y plataformas. En simultáneo, Uber anunció USD 500 millones de inversión en tres años con el lanzamiento de Uber Eats en Argentina. Ambas apuestas marcan una tendencia clara: las marcas globales ven a Argentina como un mercado viable y en crecimiento, al menos en el segmento medio-bajo de consumo.</p>
+        <p><strong>Implicancia para LANCER:</strong> Miniso compite directamente en el segmento de accesorios baratos para smartphone (fundas, cables, auriculares genéricos). Si abre locales en Tucumán, va a capturar la demanda del cliente que busca precio sin importarle la marca. LANCER tiene que diferenciarse en calidad, garantía y atención: el cliente que compra una funda en Miniso no es el mismo que compra un iPhone o un accesorio Apple premium. Pero hay que monitorear la expansión al interior del país.</p>
       </div>
     </div>
+
     <div class="noticia">
-      <div class="noticia-meta">Argentina · Política económica</div>
-      <div class="noticia-titulo">El gobierno abraza inversiones ligadas a importación, logística y plataformas digitales</div>
+      <div class="noticia-meta">America Retail · Infobae Economía · Mayo 2026</div>
+      <div class="noticia-titulo">El boom de importaciones redefine el mapa empresarial: récord histórico y cambio de estrategia</div>
       <div class="noticia-body">
-        <p>El gobierno nacional aceleró en mayo la aprobación de proyectos de inversión vinculados a importación, logística y plataformas digitales, en línea con la estrategia de desregulación del comercio exterior. La señal es clara: el régimen de importación seguirá siendo amigable, y las empresas que operen dentro del esquema formal (con inscripción en AFIP/ARCA, RG correspondientes y cumplimiento aduanero) tienen vía libre para escalar.</p>
-        <p>Para LANCER, esto tiene una implicancia directa: si en algún momento se plantea formalizar importaciones directas (en lugar de comprar a distribuidores locales), el contexto regulatorio es el más favorable de los últimos 10 años. Los aranceles en 0% para electrónica y la simplificación de los trámites de importación abaratan el costo de traer stock directamente de China o Estados Unidos.</p>
-        <p>El riesgo es la velocidad del cambio regulatorio argentino: lo que hoy es 0% puede subir si el gobierno necesita proteger industrias locales o generar recaudación. Tenerlo en cuenta si se planifica una importación grande con horizonte de más de 6 meses.</p>
+        <p>Las compras externas de bienes de consumo alcanzaron casi USD 11.400 millones en 2025, estableciendo un nuevo récord anual. Brasil y China explicaron el 48% del total importado. En 2026, el mercado está en una fase de maduración: el boom inicial de "importar todo" está dando paso a un análisis más cuidadoso de márgenes, exceso de oferta y posicionamiento. En ferretería, repuestos industriales y maquinaria hay una demanda sostenida; en electrónica de consumo y textil, algunos segmentos ya tienen sobreoferta.</p>
+        <p>El cambio clave: muchos importadores que en 2024-2025 compraban por volumen hoy se están quemando con stock parado. Los que analizan bien el timing, el canal y el margen son los que ganan. Los que simplemente "traen cosas de China" están empezando a perder.</p>
+        <p><strong>Implicancia para LANCER:</strong> El mercado de iPhones importados es diferente — hay demanda sostenida, precio en dólares y margen real. El riesgo no es exceso de oferta, sino competencia de precios en el canal informal (Mercado Libre, grupos de WhatsApp). La estrategia correcta es diferenciar por servicio, garantía y velocidad de entrega. En accesorios, sí hay riesgo de sobreoferta en fundas genéricas — migrar hacia accesorios Apple originales o de alta gama tiene más sentido de cara al segundo semestre.</p>
       </div>
     </div>
+
   </div>
 
+  <!-- 8. NOTICIAS INT -->
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
+
     <div class="noticia">
-      <div class="noticia-meta">Internacional · Tecnología / IA</div>
-      <div class="noticia-titulo">Cerebras Systems cotiza a $185 en su IPO: la mayor salida a bolsa de chips de IA del año</div>
+      <div class="noticia-meta">Yahoo Finance · The Street · 15–17 mayo 2026</div>
+      <div class="noticia-titulo">Dow Jones cruza 50.000 por primera vez desde febrero — AppLovin y Arista lideran la ola de earnings de IA</div>
       <div class="noticia-body">
-        <p>Cerebras Systems, fabricante de chips de inteligencia artificial, fijó el precio de su IPO en $185 por acción, por encima del rango esperado, recaudando USD 5.550 millones. Es la mayor salida a bolsa del sector de chips de IA en lo que va de 2026, y su valuación implica que el mercado está dispuesto a pagar múltiplos extremadamente altos por compañías en el ecosistema de infraestructura de IA.</p>
-        <p>Cerebras compite directamente con Nvidia en el segmento de chips para entrenamiento de modelos de IA, con la diferencia de que sus chips son monolíticos (un solo chip gigante en lugar de múltiples GPUs conectadas), lo que los hace más eficientes para ciertas cargas de trabajo. El éxito del IPO es una señal de que los inversores todavía tienen apetito por el sector de semiconductores de IA a pesar de las altas valuaciones.</p>
-        <p>El contexto más amplio es relevante: el IPO de Cerebras podría abrir la puerta para otras salidas a bolsa esperadas en la segunda mitad de 2026 — SpaceX/xAI, OpenAI y Anthropic están evaluando sus propias salidas. Si el mercado sigue receptivo, 2026 podría ser el año de los grandes IPOs de IA. Para inversiones en CEDEARs, esto consolida la narrativa tech como el sector dominante del año.</p>
+        <p>El Dow Jones Industrial Average cerró la semana pasada en 50.063 puntos, superando el umbral psicológico de 50.000 por primera vez desde febrero. El Nasdaq registró un nuevo cierre récord. Los drivers: resultados corporativos del Q1 2026 ampliamente superiores a las expectativas y señales positivas de la cumbre bilateral entre Estados Unidos y China.</p>
+        <p>Dos empresas lideraron la narrativa de la semana: <strong>AppLovin</strong> reportó ingresos de USD 1.840 millones en el Q1 2026 (+58% interanual) con ganancias netas que superaron los USD 1.200 millones — más del doble que un año antes. La empresa de tecnología publicitaria basada en IA se convirtió en uno de los mayores generadores de ganancias del sector tech. <strong>Arista Networks</strong>, proveedor de infraestructura de redes para data centers de IA, reportó ingresos de USD 2.710 millones (+35% YoY) con beneficios netos de USD 1.020 millones.</p>
+        <p>El patrón es claro: las empresas que venden infraestructura o habilitadores de IA (no necesariamente los modelos de IA en sí) son las que están generando los resultados más explosivos. La demanda de compute, redes y herramientas de monetización de IA sigue acelerando sin señales de desaceleración en el gasto corporativo.</p>
+        <p><strong>Qué implica globalmente:</strong> El rally de los mercados estadounidenses tiene efecto derrame sobre los CEDEARs de estas empresas. Para Santiago: AppLovin y Arista no tienen CEDEAR disponible fácilmente, pero el momentum positivo del sector tech americano impulsa el precio de los CEDEARs de Nvidia, Microsoft y similares que sí cotizan en Argentina.</p>
       </div>
     </div>
+
     <div class="noticia">
-      <div class="noticia-meta">Internacional · Mercados</div>
-      <div class="noticia-titulo">S&P 500 en 7.501 y Dow retoma los 50.000: Cisco +13% lidera el rally</div>
+      <div class="noticia-meta">CNBC · Goldman Sachs · Mayo 2026</div>
+      <div class="noticia-titulo">Corea del Sur +80% en lo que va del año: la IA está disparando los mercados asiáticos al extremo</div>
       <div class="noticia-body">
-        <p>El jueves 14 de mayo los mercados cerraron en nuevos máximos: S&P 500 en 7.501 (+0.77%), Nasdaq en 26.635 (+0.88%) y el Dow Jones retomó la barrera de los 50.000 puntos por primera vez en semanas. El rally fue liderado por Cisco, cuyas acciones subieron 13% tras reportar resultados del tercer trimestre y guidance que superaron ampliamente las expectativas de Wall Street. La empresa también anunció recortes de casi 4.000 empleos, que el mercado interpretó como positivo para la eficiencia operativa.</p>
-        <p>En paralelo, Ford subió casi 20% en dos días por el entusiasmo de los inversores con su negocio de almacenamiento de energía ligado a IA — Morgan Stanley publicó un informe bullish sobre la división de baterías. Este tipo de rally en empresas "adyacentes a la IA" (energy storage, semiconductores, infraestructura de datos) muestra que el mercado está apostando fuerte al ecosistema completo de la IA, no solo a las empresas de software.</p>
-        <p>El dato macro que complica el cuadro: el PPI (inflación mayorista) de abril subió 6% interanual en EE.UU., en gran medida por costos energéticos relacionados con la Guerra de Irán. Es una señal de que la Fed podría no bajar tasas tan pronto como el mercado espera, lo que en algún punto podría ponerle un techo al rally. Por ahora el mercado lo ignora. Para CEDEARs tech, el contexto sigue siendo positivo a corto plazo.</p>
+        <p>Goldman Sachs estima que el crecimiento de ganancias corporativas en Corea del Sur podría llegar al 300% en 2026 impulsado por la demanda de chips para IA. El índice Kospi lleva un +80% en lo que va del año, con sucesivos máximos históricos. Taiwan —donde cotiza TSMC— también está registrando récords consecutivos en su índice Taiex.</p>
+        <p>La explicación es la misma en ambos países: TSMC, Samsung y SK Hynix son los fabricantes indispensables de los chips de memoria (HBM) y de proceso avanzado (3nm, 2nm) que alimentan los modelos de IA de OpenAI, Google, Meta, Microsoft y Amazon. La demanda de estos chips es tan alta que las plantas trabajan a máxima capacidad y los precios siguen subiendo.</p>
+        <p>El riesgo que señala CNBC es la concentración: si dos o tres empresas explican el 70-80% de la ganancia de un mercado, cualquier problema operativo, geopolítico o de demanda en esas compañías puede hundir todo el índice en pocas sesiones. El mercado asiático tech es un rally de altísimo rendimiento y altísimo riesgo de concentración.</p>
+        <p><strong>Qué implica para el mercado global:</strong> La ola de ganancias de chips y semiconductores está redefiniendo qué significa "mercado desarrollado" — Corea y Taiwan hoy tienen retornos que duplican a los de EE.UU. Para Santiago: los CEDEARs de TSMC y Samsung no están disponibles en Argentina, pero la tendencia afecta el precio de Nvidia (sí disponible como CEDEAR) que provee los GPU que usan todos estos clientes.</p>
       </div>
     </div>
+
   </div>
 
   <!-- 9. IDEA DE NEGOCIO SEMANAL -->
-  <div class="sec-title">💡 Idea de negocio — semana 20</div>
+  <div class="sec-title">💡 Idea de negocio — semana 21</div>
   <div class="idea-card">
     <h2>Idea de la semana</h2>
-    <div class="idea-titulo">Tecnología de Precisión para el Agro del NOA: importación y distribución para pequeños productores</div>
+    <div class="idea-titulo">Cosignataria Digital de Hacienda y Campo en el NOA</div>
     <div class="idea-body">
       <h3>Qué es</h3>
-      <p>Importar y distribuir equipamiento de agricultura de precisión — drones de fumigación, sensores de suelo IoT, estaciones meteorológicas compactas — para pequeños y medianos productores del NOA (Tucumán, Salta, Jujuy, Santiago del Estero). El modelo combina venta de hardware importado directamente de China (DJI, PYCNO, Davis Instruments) con soporte técnico local y, en una segunda etapa, suscripción a software de gestión agrícola.</p>
+      <p>Una agencia de compraventa, arrendamiento y remate de propiedades rurales (campos de caña, soja, frutales, citrus) y hacienda (tropas bovinas, ovinos, caballos) en Tucumán y el NOA, con un proceso completamente digitalizado: publicación en redes sociales, tours en video con drone, tasación ágil y cierre de operaciones en semanas en lugar de meses. Actuás como intermediario entre vendedores/arrendadores rurales y compradores/inversores, cobrando comisión sobre cada operación cerrada.</p>
 
       <h3>Por qué ahora</h3>
-      <p>Con arancel 0% en electrónica e insumos tecnológicos y el tipo de cambio estabilizándose alrededor de 1.400-1.420 ARS/USD, importar este hardware desde China nunca fue tan accesible en términos relativos. El agro argentino está en su mejor momento de los últimos 10 años: precios de commodities altos, mayor acceso al crédito agropecuario y productores que buscan herramientas para mejorar rendimiento después de las últimas sequías. El problema es que las empresas de agtech nacionales apuntan exclusivamente a grandes productores pampinos. El NOA tiene un nicho desatendido: más de 50.000 productores de caña, tabaco, frutales y granos chicos/medianos que nunca recibieron una demo de estas tecnologías en su zona. No existe un distribuidor local especializado en Tucumán para este segmento.</p>
+      <p>Los precios de commodities están en niveles históricamente altos — caña, soja y citrus en sus mejores valuaciones en años — lo que empuja el valor de las tierras rurales del NOA al alza. Hay liquidez en el sector agropecuario y muchos productores quieren comprar campo adicional o arrendar lotes ociosos, pero el mercado sigue siendo 100% informal y de boca en boca. Ninguna cosignataria tradicional de Tucumán tiene presencia digital real. El boom de inversiones en el sector genera demanda genuina de intermediarios confiables que puedan mostrar propiedades sin que el comprador tenga que viajar.</p>
 
       <h3>Cómo arrancarla</h3>
       <ul>
-        <li><strong>Paso 1:</strong> Identificar los 3-5 productos de mayor demanda inicial: drone de fumigación DJI Agras T10 (USD ~1.500 importado), sensor de humedad de suelo PYCNO (USD ~120), estación meteorológica portátil (USD ~200). Importar una unidad de cada uno para demos: inversión ≈ USD 2.000–3.000.</li>
-        <li><strong>Paso 2:</strong> Aliarse con 2-3 ingenieros agrónomos de la zona (INTA, UNT, ejercicio privado) que puedan hacer las demostraciones en campo y actuar como fuerza de venta técnica a cambio de comisión del 15-20% por venta.</li>
-        <li><strong>Paso 3:</strong> Presentar los productos en jornadas técnicas organizadas con la Federación de Cañeros de Tucumán, la Cámara de Tabacaleros o cooperativas de la región. Una demo en campo con 20 productores puede cerrar 3-5 ventas.</li>
-        <li><strong>Paso 4:</strong> Ofrecer financiamiento en 10-12 cuotas (el margen absorbe el costo financiero). El diferenciador clave frente a un ecommerce genérico: sos local, hablás el idioma del productor, hacés el seguimiento post-venta y tenés repuestos.</li>
-        <li><strong>Paso 5:</strong> Generar contenido en YouTube e Instagram mostrando demos en campo real. Este contenido genera consultas orgánicas de productores de toda la región y posiciona la marca como referente local en agtech.</li>
+        <li><strong>Paso 1:</strong> Asociarse con un corredor inmobiliario matriculado (necesario por ley para cobrar comisión). Podés empezar como socio comercial mientras tramitás la tuya.</li>
+        <li><strong>Paso 2:</strong> Generar red inicial: contadores agropecuarios, escribanos rurales, ingenieros agrónomos, veterinarios — todos refieren clientes. 10 reuniones presenciales en 2 semanas.</li>
+        <li><strong>Paso 3:</strong> Publicar en Instagram y crear web simple con los primeros 3–5 campos disponibles. Grabar con drone. El contenido visual de campo performa muy bien orgánicamente en Argentina.</li>
+        <li><strong>Paso 4:</strong> Cobrar comisión del 3–5% sobre la transacción. En arrendamiento: 10% del valor del alquiler anual.</li>
+        <li><strong>Paso 5:</strong> Expandir a hacienda: inscribirse como consignatario ante SENASA (costo mínimo) y participar de remates mensuales cobrando 2–3% sobre el valor de la tropa.</li>
       </ul>
 
       <h3>Modelo de ingreso</h3>
-      <p>Venta directa con margen del 50-70% sobre costo importado. Drone DJI Agras T10 importado ≈ USD 1.500, precio de venta ≈ USD 3.500-4.000 → margen bruto USD 2.000-2.500 por unidad. Con 5 drones vendidos al mes = USD 10.000-12.500 brutos. Los sensores IoT tienen un componente de suscripción de datos: USD 20-50/mes por sensor, escalable a cientos de unidades. A 12 meses, con 30-40 clientes activos en sensores = USD 600-2.000/mes recurrente solo por software.</p>
+      <p>Un campo de 50 ha en Tucumán puede valer USD 100.000–500.000. Con 3% de comisión: USD 3.000–15.000 por operación. Con 2 operaciones al mes: USD 6.000–30.000 brutos. El arrendamiento es más rápido y recurrente: contratos anuales de USD 100–300/ha; con 5 contratos activos generás USD 500–1.500/mes pasivos. Hacienda: 2–3% sobre tropa de 100 vacas a USD 800 = USD 1.600–2.400 por remate.</p>
 
       <h3>Riesgos principales</h3>
       <ul>
-        <li>Ciclo de venta largo: un productor tarda 60-90 días en decidir una compra de USD 3.500. Necesitás capital de trabajo para aguantar.</li>
-        <li>Soporte técnico: si el drone falla en temporada de fumigación, el productor pierde confianza y te hace mala fama en el pueblo. Necesitás repuestos y alguien que sepa reparar.</li>
-        <li>Riesgo regulatorio: los aranceles pueden cambiar. Hoy son 0% pero la estabilidad del esquema importador argentino es históricamente baja.</li>
-        <li>Resistencia cultural: muchos productores mayores desconfían de la tecnología. Los primeros 3-6 meses son de educación de mercado, no solo venta.</li>
+        <li>Ciclo de cierre largo: 30–90 días entre primer contacto y escritura. Necesitás aguantar el primer trimestre sin ingresos.</li>
+        <li>Requiere habilitación legal o socio matriculado — sin esto no podés cobrar comisión legalmente.</li>
+        <li>Las cosignatarias tradicionales tienen relaciones de décadas con los productores. Entrar requiere tiempo y credibilidad.</li>
+        <li>Si bajan precios de commodities o hay sequía, las transacciones se congelan.</li>
       </ul>
 
       <h3>Esfuerzo / inversión inicial</h3>
-      <p>USD 5.000-10.000 para la primera importación de 10-15 unidades mixtas (drones + sensores + estaciones). 2-3 meses para conseguir los primeros 5 clientes. Requiere trabajo en campo, contacto directo con ingenieros agrónomos y disposición a viajar al interior de la provincia. Sin necesidad de local físico al arranque: se puede operar desde LANCER como base logística.</p>
+      <p>USD 2.000–5.000 para web, drone (o alquilarlo por operación), viáticos al interior y gastos de habilitación. El capital principal es tiempo y network. 3–6 meses hasta la primera operación cerrada. Compatible con manejar LANCER en paralelo los primeros meses.</p>
     </div>
   </div>
 
-  <footer>Generado 08:55 · Abrí el archivo después de cargar la caja para ver los datos actualizados</footer>
+  <footer>Generado 08:00 hs · Datos de caja: jueves 14/5 (últimos disponibles) — cargá los días pendientes para actualizar el progreso</footer>
 
   <script>
-    const ventasData = [{"fecha":"1/5","total":0},{"fecha":"2/5","total":543789},{"fecha":"3/5","total":0},{"fecha":"4/5","total":23000},{"fecha":"5/5","total":1093204},{"fecha":"6/5","total":1345321},{"fecha":"7/5","total":537000},{"fecha":"8/5","total":2358145},{"fecha":"9/5","total":1876276},{"fecha":"10/5","total":0},{"fecha":"11/5","total":1281500},{"fecha":"12/5","total":117000},{"fecha":"13/5","total":882663},{"fecha":"14/5","total":0},{"fecha":"15/5","total":0}];
-    const margenData = [{"fecha":"1/5","margen":0},{"fecha":"2/5","margen":108758},{"fecha":"3/5","margen":0},{"fecha":"4/5","margen":4600},{"fecha":"5/5","margen":218641},{"fecha":"6/5","margen":269064},{"fecha":"7/5","margen":107400},{"fecha":"8/5","margen":471629},{"fecha":"9/5","margen":375255},{"fecha":"10/5","margen":0},{"fecha":"11/5","margen":256300},{"fecha":"12/5","margen":23400},{"fecha":"13/5","margen":176533},{"fecha":"14/5","margen":0},{"fecha":"15/5","margen":0}];
+    const ventasData = [
+      {fecha:"1/5",total:0},{fecha:"2/5",total:543789},{fecha:"3/5",total:0},
+      {fecha:"4/5",total:23000},{fecha:"5/5",total:1093204},{fecha:"6/5",total:1345321},
+      {fecha:"7/5",total:537000},{fecha:"8/5",total:2358145},{fecha:"9/5",total:1876276},
+      {fecha:"10/5",total:0},{fecha:"11/5",total:1281500},{fecha:"12/5",total:117000},
+      {fecha:"13/5",total:882663},{fecha:"14/5",total:1421313},{fecha:"15/5",total:22250},
+      {fecha:"16/5",total:0},{fecha:"17/5",total:0},{fecha:"18/5",total:0}
+    ];
+    const margenData = [
+      {fecha:"1/5",margen:0},{fecha:"2/5",margen:82000},{fecha:"3/5",margen:0},
+      {fecha:"4/5",margen:9200},{fecha:"5/5",margen:164000},{fecha:"6/5",margen:202000},
+      {fecha:"7/5",margen:81000},{fecha:"8/5",margen:354000},{fecha:"9/5",margen:282000},
+      {fecha:"10/5",margen:0},{fecha:"11/5",margen:192000},{fecha:"12/5",margen:47000},
+      {fecha:"13/5",margen:132000},{fecha:"14/5",margen:214000},{fecha:"15/5",margen:9000},
+      {fecha:"16/5",margen:0},{fecha:"17/5",margen:0},{fecha:"18/5",margen:0}
+    ];
     new Chart(document.getElementById('chart-ventas'), {
       type: 'line',
       data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
     new Chart(document.getElementById('chart-margen'), {
       type: 'bar',
       data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 8 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
     });
   </script>
 </body>
