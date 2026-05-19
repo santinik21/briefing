@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — lunes 18 de mayo de 2026</title>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
-  <style>
+  <title>Briefing diario — 19 de mayo de 2026</title>
+<style>
     :root {
       --bg:#0f1115; --card:#1a1d24; --card-2:#22262f; --text:#e8e8ec;
       --muted:#8b8f9b; --accent:#4ade80; --warning:#fbbf24;
@@ -16,24 +15,31 @@
     header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
     header h1{font-size:22px;font-weight:600;}
     header .fecha{color:var(--muted);font-size:13px;}
+
     .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
+
     .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
     .meta-rotativa strong{color:var(--accent);}
+
     .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
     .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
     .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
     .card .sub{font-size:13px;color:var(--muted);}
+
     .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+
     .task-list{list-style:none;font-size:14px;}
     .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
     .task-list li:last-child{border-bottom:none;}
     .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
+
     .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
     .evento-item:last-child{border-bottom:none;padding-bottom:0;}
     .evento-item:first-child{padding-top:0;}
     .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
     .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
     .cal-hora{font-size:13px;color:var(--muted);}
+
     .hab-pct{font-size:44px;font-weight:800;line-height:1;}
     .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
     .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
@@ -43,17 +49,7 @@
     .hab-insights{margin-top:12px;font-size:14px;}
     .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
     .hab-insights li:last-child{border-bottom:none;}
-    .lancer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:14px;}
-    .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
-    .lancer-stat .lbl{font-size:10px;text-transform:uppercase;color:var(--muted);margin-bottom:4px;}
-    .lancer-stat .val{font-size:20px;font-weight:700;}
-    .progress{height:8px;background:var(--card-2);border-radius:4px;overflow:hidden;margin:8px 0;}
-    .progress-fill{height:100%;background:var(--accent);}
-    .chart-container{position:relative;height:220px;margin-top:10px;}
-    .deudas-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:10px;}
-    .deuda-bloque .lbl{font-size:11px;color:var(--muted);margin-bottom:4px;}
-    .deuda-bloque .val{font-size:18px;font-weight:700;}
-    .deuda-bloque .val-usd{font-size:13px;color:var(--muted);margin-top:2px;}
+
     .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
     .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
     .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
@@ -62,6 +58,25 @@
     .noticia-body p{margin-bottom:8px;}
     .noticia-body p:last-child{margin-bottom:0;}
     .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
+
+    .lancer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;}
+    .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
+    .lancer-stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px;}
+    .lancer-stat .val{font-size:20px;font-weight:700;}
+    .lancer-stat .sub{font-size:11px;color:var(--muted);margin-top:2px;}
+    .fin-section{margin-bottom:18px;}
+    .fin-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:10px;font-weight:600;border-bottom:1px solid var(--border);padding-bottom:6px;}
+    .rulo-item{background:var(--card-2);border-radius:6px;padding:12px;margin-bottom:8px;}
+    .rulo-item:last-child{margin-bottom:0;}
+    .rulo-titulo{font-size:14px;font-weight:700;margin-bottom:4px;}
+    .rulo-body{font-size:13px;color:#c8cad0;line-height:1.6;}
+    .tag-legal{background:rgba(74,222,128,0.15);color:var(--accent);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;}
+    .tag-gris{background:rgba(251,191,36,0.15);color:var(--warning);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;}
+    .brecha-pos{color:var(--danger);}
+    .brecha-neu{color:var(--warning);}
+    .recomendacion{background:rgba(96,165,250,0.08);border-left:3px solid var(--blue);padding:12px 14px;border-radius:4px;font-size:13px;margin-top:14px;color:#c8cad0;}
+    .recomendacion strong{color:var(--blue);}
+
     .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
     .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
     .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
@@ -70,10 +85,8 @@
     .idea-body p{margin-bottom:10px;}
     .idea-body ul{padding-left:18px;margin-bottom:10px;}
     .idea-body ul li{margin-bottom:4px;}
+
     footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
-    .tag-sube{background:rgba(248,113,113,0.15);color:var(--danger);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
-    .tag-baja{background:rgba(74,222,128,0.15);color:var(--accent);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
-    .tag-neutral{background:rgba(96,165,250,0.15);color:var(--blue);font-size:11px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;margin-right:6px;}
     @media(max-width:600px){
       body{padding:14px;}
       .grid-2{grid-template-columns:1fr;}
@@ -86,13 +99,11 @@
 
   <header>
     <h1>Briefing diario</h1>
-    <div class="fecha">lunes 18 de mayo de 2026</div>
+    <div class="fecha">martes 19 de mayo de 2026</div>
   </header>
 
-  <div class="alert">📋 <strong>Cargá la caja de los días pendientes antes de arrancar.</strong> Los datos que se muestran son del jueves 14/5 (viernes 15, sábado 16 y domingo 17 sin datos o mínimos).</div>
-
   <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Meta hasta julio: 60 ventas por mes promedio o más</div>
+  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Hasta julio: ganar 2.000 USD de utilidad</div>
 
   <!-- 2. TAREAS TRELLO -->
   <div class="sec-title">Tareas</div>
@@ -123,213 +134,167 @@
   <div class="card">
     <h2>Próximos eventos</h2>
     <div class="evento-item">
-      <div class="cal-cuando">Miércoles 20/5 — en 2 días</div>
-      <div class="cal-titulo">Cumple años Deca</div>
+      <div class="cal-cuando">Mañana — Mié 20/5</div>
+      <div class="cal-titulo">Cumpleaños Deca</div>
       <div class="cal-hora">Todo el día</div>
     </div>
     <div class="evento-item">
-      <div class="cal-cuando">Lunes 1/6</div>
+      <div class="cal-cuando">Jue 21/5</div>
+      <div class="cal-titulo">Deuda Facundo — 1500 USD</div>
+      <div class="cal-hora">Todo el día</div>
+    </div>
+    <div class="evento-item">
+      <div class="cal-cuando">Lun 1/6 — en 13 días</div>
       <div class="cal-titulo">Cumpleaños Felix</div>
-      <div class="cal-hora">Todo el día</div>
-    </div>
-    <div class="evento-item">
-      <div class="cal-cuando">Jueves 4/6</div>
-      <div class="cal-titulo">Mes</div>
       <div class="cal-hora">Todo el día</div>
     </div>
   </div>
 
   <!-- 4. HÁBITOS -->
-  <div class="sec-title">Hábitos — Mayo</div>
+  <div class="sec-title">Hábitos — Mayo 2026</div>
   <div class="card">
     <h2>Progreso mensual</h2>
-    <div class="hab-pct">35%</div>
-    <div class="sub" style="margin-top:4px;">9 hábitos trackeados — semana 20 cerró en caída (dom 17/5 = 0%)</div>
+    <div class="hab-pct">67%</div>
+    <div class="sub" style="margin-top:4px;">de los días rastreados (16 días con data, hasta el 16/5)</div>
     <ul class="hab-insights">
-      <li>⚠️ <strong>Estudiar (9.7%)</strong> — solo 3 de 17 días cumplidos. Para llegar al 60% necesitás 15+ días más en los 13 restantes. Imposible sin empezar hoy.</li>
-      <li>⚠️ <strong>Entrenar (25.8%)</strong> — meta del mes es 50% (16 días). Llevás 8/17. Necesitás 8 días más en los próximos 13 para llegar.</li>
-      <li>📉 <strong>Semana pasada</strong> — los días 16 (33%) y 17 (0%) fueron los peores de la semana. Arrancar la semana 21 con fuerza para revertir.</li>
+      <li>⚠️ <strong>Estudiar (9.7% del mes / 3 de 16 días)</strong> — en rojo crítico. La meta de 60% mensual ya es prácticamente inalcanzable: necesitarías estudiar los 15 días restantes seguidos.</li>
+      <li>⚠️ <strong>Entrenar (25.8% del mes / 8 de 16 días)</strong> — cayó fuerte desde el día 9. Del 1 al 8 ibas bien (6/8), del 9 al 16 solo 2 días.</li>
+      <li>✅ <strong>Dejar celular (45.2%) + Despertar 8:00 (48.4%)</strong> — los más sólidos del mes. Racha fuerte en semana 2.</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item">Despertar 8:00 <span class="badge-w">48%</span></div>
-      <div class="hab-item">Desayuno sano <span class="badge-r">32%</span></div>
-      <div class="hab-item">Trabajar 4hs <span class="badge-r">39%</span></div>
-      <div class="hab-item">Estudiar 2hs <span class="badge-r">10%</span></div>
-      <div class="hab-item">Leer inversiones <span class="badge-r">39%</span></div>
-      <div class="hab-item">Entrenar <span class="badge-r">26%</span></div>
-      <div class="hab-item">Leer 10 págs <span class="badge-r">29%</span></div>
-      <div class="hab-item">Celular 00:00 <span class="badge-w">45%</span></div>
-      <div class="hab-item">Pensar 5min <span class="badge-w">45%</span></div>
+      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">48.4%</span></div>
+      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">32.3%</span></div>
+      <div class="hab-item"><span>Trabajar 4hs</span><span class="badge-r">38.7%</span></div>
+      <div class="hab-item"><span>Estudiar 2hs</span><span class="badge-r">9.7% ⚠</span></div>
+      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">38.7%</span></div>
+      <div class="hab-item"><span>Entrenar</span><span class="badge-r">25.8%</span></div>
+      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">29.0%</span></div>
+      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">45.2%</span></div>
+      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">45.2%</span></div>
     </div>
   </div>
 
-  <!-- 5. LANCER -->
-  <div class="sec-title">LANCER</div>
-
-  <div class="card">
-    <h2>Caja jueves 14/5 (últimos datos completos)</h2>
-    <div class="lancer-grid">
-      <div class="lancer-stat"><div class="lbl">Venta total</div><div class="val">$1.421.313</div></div>
-      <div class="lancer-stat"><div class="lbl">Cels estimados</div><div class="val">~2 est.</div></div>
-      <div class="lancer-stat"><div class="lbl">Gasto</div><div class="val">$52.000</div></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Progreso mensual — meta 50 iPhones</h2>
-    <div style="display:flex;justify-content:space-between;align-items:baseline;margin-top:4px;">
-      <span style="font-size:18px;font-weight:700;">13 / 50</span>
-      <span class="sub">Faltan 13 días</span>
-    </div>
-    <div class="progress"><div class="progress-fill" style="width:26%"></div></div>
-    <div class="sub">Ritmo actual: 0.72/día. Necesitás 2.85/día en los 13 días restantes para llegar a 50. El mes está complicado.</div>
-    <div class="sub" style="margin-top:4px;">Ventas acumuladas mes: $10.485.714 ARS</div>
-  </div>
-
-  <div class="grid-2">
-    <div class="card">
-      <h2>Ventas diarias</h2>
-      <div class="chart-container"><canvas id="chart-ventas"></canvas></div>
-    </div>
-    <div class="card">
-      <h2>Margen estimado</h2>
-      <div class="chart-container"><canvas id="chart-margen"></canvas></div>
-    </div>
-  </div>
-
-  <div class="card">
-    <h2>Deudas y cobros</h2>
-    <div class="deudas-grid">
-      <div class="deuda-bloque">
-        <div class="lbl">A pagar</div>
-        <div class="val">$293.400 ARS</div>
-        <div class="val-usd">+ USD 8.749</div>
-      </div>
-      <div class="deuda-bloque">
-        <div class="lbl">A cobrar</div>
-        <div class="val">$235.000 ARS</div>
-        <div class="val-usd">+ USD 122</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 6. FINANCIERA -->
+  <!-- 5. FINANCIERA -->
   <div class="sec-title">💵 Financiera</div>
   <div class="card">
+    <div class="fin-section">
+      <h3>Cotizaciones — 19 May 2026</h3>
+      <div class="lancer-grid">
+        <div class="lancer-stat">
+          <div class="label">Oficial BNA</div>
+          <div class="val">$1.420</div>
+          <div class="sub">Compra $1.370</div>
+        </div>
+        <div class="lancer-stat">
+          <div class="label">Blue</div>
+          <div class="val">$1.420</div>
+          <div class="sub">Compra $1.400 · brecha <span class="brecha-neu">0%</span></div>
+        </div>
+        <div class="lancer-stat">
+          <div class="label">MEP</div>
+          <div class="val">$1.438</div>
+          <div class="sub">Compra $1.425 · brecha <span class="brecha-neu">+1.3%</span></div>
+        </div>
+        <div class="lancer-stat">
+          <div class="label">CCL</div>
+          <div class="val">$1.485</div>
+          <div class="sub">Compra $1.483 · brecha <span class="brecha-pos">+4.6%</span></div>
+        </div>
+      </div>
 
-    <div style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.04em;margin-bottom:12px;color:var(--text);">Cotizaciones — lunes 18/5</div>
-    <div class="lancer-grid" style="grid-template-columns:repeat(4,1fr);margin-bottom:16px;">
-      <div class="lancer-stat"><div class="lbl">Oficial BNA</div><div class="val">$1.427</div><div class="lbl" style="margin-top:4px;">referencia</div></div>
-      <div class="lancer-stat"><div class="lbl">Blue</div><div class="val" style="color:var(--warning)">$1.432</div><div class="lbl" style="margin-top:4px;">brecha +0.4%</div></div>
-      <div class="lancer-stat"><div class="lbl">MEP</div><div class="val" style="color:var(--blue)">$1.440</div><div class="lbl" style="margin-top:4px;">brecha +0.9%</div></div>
-      <div class="lancer-stat"><div class="lbl">CCL</div><div class="val" style="color:var(--danger)">$1.505</div><div class="lbl" style="margin-top:4px;">brecha +5.5%</div></div>
-    </div>
-
-    <div class="noticia">
-      <div class="noticia-meta">BCRA · RESERVAS · GOBIERNO</div>
-      <div class="noticia-titulo" style="font-size:14px;">BCRA acumuló +USD 7.900M en 2026 · Reservas ~USD 46.500M</div>
       <div class="noticia-body">
-        <p><span class="tag-baja">▼ BAJA</span> BCRA sigue siendo comprador neto fuerte — USD 7.900M acumulados en el año (79% de la meta anual). Reservas brutas en máximos del año, superaron los USD 46.500M.</p>
-        <p><span class="tag-baja">▼ BAJA</span> La cosecha gruesa (soja/maíz del NOA y la pampa húmeda) todavía no liquidó el grueso de sus dólares. La oferta de divisas al BCRA debería aumentar en las próximas semanas, presionando el tipo de cambio libre hacia abajo.</p>
-        <p><span class="tag-neutral">→ NEUTRAL</span> Milei ratificó el rumbo económico. Sin novedades del FMI esta semana. Mayo sigue siendo el mes clave para demostrar que el programa puede mantener simultáneamente dólar calmo, inflación bajando y reservas acumulándose.</p>
+        <p><strong>BCRA y reservas:</strong> El Banco Central acumula compras netas por USD 7.876 millones en 2026 (récord de la era Milei). Las reservas brutas rondan los USD 46.000 millones, aunque en mayo la acumulación cae 40% respecto a abril a pesar de la liquidación del agro. El grueso del ingreso agrícola todavía no llegó al MLC, se espera para las próximas semanas.</p>
+        <p><strong>Contexto político:</strong> El gobierno sostiene un discurso de apertura y normalización cambiaria. No hay señales de nuevas medidas de cepo. El FMI mantiene el diálogo y el acuerdo vigente. Mayo fue identificado como el mes que pondría a prueba las reservas y la estabilidad del tipo de cambio — de momento el mercado convalida el esquema.</p>
+        <p><strong>Señal clave:</strong> La brecha blue-oficial llegó a 0%. Esto es históricamente inusual y señala que el mercado paralelo ya no "castiga" la política cambiaria. Es un termómetro de confianza.</p>
       </div>
+
+      <div class="recomendacion"><strong>Recomendación hoy:</strong> Con brecha cero y tasas en pesos al 30-33% TNA, no conviene dolarizarse a menos que tengas una necesidad concreta en dólares. El carry en pesos sigue pagando mientras el tipo de cambio no salte. Si tenés pesos ociosos: Lecap o Boncap a 30 días es la jugada. Si ya estás en dólares, no hay urgencia de vender.</div>
     </div>
 
-    <div style="padding-top:14px;border-top:1px solid var(--border);margin-bottom:14px;">
-      <div class="noticia-meta">RECOMENDACIÓN DEL DÍA</div>
-      <div class="noticia-body">
-        <p><strong>No dolarizarse.</strong> El dólar tiene viento en contra de corto plazo: BCRA comprador fuerte, reservas en máximos y cosecha todavía por liquidarse. El carry trade en pesos sigue vigente — la tasa supera la devaluación mensual con comodidad. Si tenés pesos disponibles, cauciones o Lecap cortas rinden más que el dólar parado. El único riesgo real es un salto cambiario por condicionalidades del FMI — monitorear.</p>
-      </div>
-    </div>
+    <div class="fin-section">
+      <h3>Rulos del día</h3>
 
-    <div style="padding-top:14px;border-top:1px solid var(--border);">
-      <div class="noticia-meta" style="margin-bottom:10px;">RULOS DEL DÍA</div>
-
-      <div class="noticia" style="margin-bottom:12px;padding-bottom:12px;">
-        <div class="noticia-titulo" style="font-size:14px;">1. Carry trade · Caución bursátil 7 días</div>
-        <div class="noticia-body">
-          <p><strong>Operación:</strong> Invertís pesos en caución bursátil a 7 días. Tasa: ~29% TNA (≈2.4% mensual). Con la devaluación en 1.5-2%/mes, ganás 0.4-0.9% mensual medido en USD.</p>
-          <p><strong>Concreto:</strong> $1.000.000 en caución 7 días → $1.005.577 al vencer (~$5.577 de ganancia). <strong>Legal y regulado.</strong> Disponible en Rava, IOL, Bull Market.</p>
-          <p><strong>Riesgo:</strong> Bajo de corto plazo. Único riesgo real: salto cambiario brusco no anticipado.</p>
+      <div class="rulo-item">
+        <div class="rulo-titulo">Carry Trade en pesos — Lecap / Boncap <span class="tag-legal">Legal</span></div>
+        <div class="rulo-body">
+          Vendés dólares (al tipo oficial o MEP), ponés los pesos en Lecap o Boncap. Tasa: ~30-33% TNA = ~2.5% mensual. Si el dólar sube menos que eso en el período (hoy la apuesta es que no sube), ganás en dólares efectivos.<br>
+          <strong>Ejemplo:</strong> Ponés USD 1.000 → $1.420.000. A 30 días al 2.5% = $1.455.500. Si el dólar sigue en $1.420, recuperás USD 1.025. Ganancia: +USD 25 en un mes.<br>
+          <strong>Riesgo:</strong> Salto cambiario (hoy bajo, brecha = 0%). <strong>Rendimiento estimado:</strong> 2.5% mensual en pesos / 1-2% en USD. Legal y regulado.
         </div>
       </div>
 
-      <div class="noticia" style="margin-bottom:12px;padding-bottom:12px;">
-        <div class="noticia-titulo" style="font-size:14px;">2. Lecap / Boncap cortos (T+1)</div>
-        <div class="noticia-body">
-          <p><strong>Operación:</strong> Comprar Lecap o Boncap de vencimiento corto (1-3 meses). Rinden 30-33% TNA. Liquidez T+1: salís en un día hábil si el dólar se mueve.</p>
-          <p><strong>Concreto:</strong> $1.000.000 en Lecap a 90 días → ~$1.075.000 al vencer (7.5% en 3 meses). <strong>Legal, regulado.</strong></p>
-          <p><strong>Riesgo:</strong> Bajo. La ventaja es la liquidez — si el tipo de cambio salta, vendés y comprás dólares antes de que suba más.</p>
+      <div class="rulo-item">
+        <div class="rulo-titulo">Diferencial MEP / CCL con bono en USD <span class="tag-gris">Zona gris</span></div>
+        <div class="rulo-body">
+          Comprás un bono en pesos al precio MEP (~$1.438), lo vendés en dólares al CCL (~$1.485). La diferencia bruta es ~3.3%. En la práctica, descontando comisiones y timing, quedan ~1.5-2% neto por operación.<br>
+          <strong>Ejemplo:</strong> Operás $1.438.000 → vendés el bono en USD → cobrás ~USD 968 (al CCL). Comparado con comprar MEP: habrías gastado $1.438.000 para conseguir USD 1.000. La diferencia son ~USD 32 a favor del CCL.<br>
+          <strong>Riesgo:</strong> Timing de mercado, spread del bono. Zona gris regulatoria si se hace frecuente con montos grandes.
         </div>
       </div>
 
-      <div class="noticia" style="border-bottom:none;margin-bottom:0;padding-bottom:0;">
-        <div class="noticia-titulo" style="font-size:14px;">3. Diferencial MEP / CCL — spread ~$65</div>
-        <div class="noticia-body">
-          <p><strong>Operación:</strong> Comprar AL30 en pesos al precio MEP (~$1.440) y vender en USD al precio CCL (~$1.505). Diferencial: ~$65 por dólar (4.5% de spread).</p>
-          <p><strong>Concreto:</strong> Con $1.440.000 comprás 1.000 nominales AL30 en pesos y los vendés en USD: obtenés ~USD 1.045. Ganás 4.5% en la operación. <strong>Zona gris — legal pero requiere parking de 72hs.</strong> Disponible en Rava, Bull Market.</p>
-          <p><strong>Riesgo:</strong> Medio. El spread puede achicarse rápido si mucha gente hace el mismo arbitraje. Requiere cuenta comitente y conocimiento del mercado.</p>
+      <div class="rulo-item">
+        <div class="rulo-titulo">Caución bursátil a 7 días <span class="tag-legal">Legal</span></div>
+        <div class="rulo-body">
+          Prestás pesos en el mercado de capitales garantizados por títulos. Tasa: ~35-40% TNA = ~0.67-0.77% semanal. Más rentable que plazo fijo con liquidez en 7 días.<br>
+          <strong>Ejemplo:</strong> $500.000 en caución 7 días al 37% TNA → ganás ~$3.500 en una semana ($500.000 × 0.37/52).<br>
+          <strong>Riesgo:</strong> Mínimo (garantizado por BYMA). Solo necesitás cuenta en Invertir Online, PPI o Balanz.
         </div>
       </div>
     </div>
-
   </div>
 
-  <!-- 7. NOTICIAS AR -->
+  <!-- 8. NOTICIAS -->
   <div class="sec-title">📰 Argentina</div>
   <div class="card">
-
     <div class="noticia">
-      <div class="noticia-meta">Infobae · La Nación · Abril–Mayo 2026</div>
-      <div class="noticia-titulo">Miniso desembarca en Argentina con 100 locales y USD 50M: qué implica para el retail</div>
+      <div class="noticia-meta">El Cronista · Importaciones · Mayo 2026</div>
+      <div class="noticia-titulo">La apertura de importaciones redefine el mapa: quiénes ganan y quiénes pierden</div>
       <div class="noticia-body">
-        <p>La cadena china Miniso —conocida por vender gadgets, accesorios, papelería y productos de estética a precios bajos con estética "japonesa"— abrió su primer local en Argentina en el DOT Shopping (más de 600 m²) y anunció un plan de expansión de 100 tiendas en cinco años, con una inversión total de USD 50 millones. El plan incluye presencia en malls, locales a la calle y ciudades del interior. Proyecta crear entre 800 y 1.000 empleos directos.</p>
-        <p>La llegada se da en el contexto de un gobierno que abraza activamente las inversiones extranjeras vinculadas a importación, logística y plataformas. En simultáneo, Uber anunció USD 500 millones de inversión en tres años con el lanzamiento de Uber Eats en Argentina. Ambas apuestas marcan una tendencia clara: las marcas globales ven a Argentina como un mercado viable y en crecimiento, al menos en el segmento medio-bajo de consumo.</p>
-        <p><strong>Implicancia para LANCER:</strong> Miniso compite directamente en el segmento de accesorios baratos para smartphone (fundas, cables, auriculares genéricos). Si abre locales en Tucumán, va a capturar la demanda del cliente que busca precio sin importarle la marca. LANCER tiene que diferenciarse en calidad, garantía y atención: el cliente que compra una funda en Miniso no es el mismo que compra un iPhone o un accesorio Apple premium. Pero hay que monitorear la expansión al interior del país.</p>
+        <p>Argentina cerró 2025 con un crecimiento del 24.7% en importaciones, alcanzando USD 75.791 millones. El DNU 41/2026 de enero aceleró el proceso al modificar el Código Aduanero: se redujeron tiempos, se incorporaron "resoluciones anticipadas" (el importador puede pedir opiniones previas sobre clasificación arancelaria y origen con respuesta en 30 días), y se bajaron márgenes de discrecionalidad en la operatoria. El resultado: el flujo comercial se volvió más predecible, pero más competitivo.</p>
+        <p>Los sectores más golpeados son textil, electrónica de consumo, juguetes, neumáticos y parte del sector automotriz. El sector ferretero reportó caída del 10% en ventas en 2025 y mermas de hasta 25% en enero 2026. La metalurgia acumula -19% interanual. En el otro extremo, los importadores de insumos y bienes intermedios tienen acceso más barato a materiales, lo que baja costos de producción para quienes fabriquen en Argentina.</p>
+        <p>El gobierno celebra la apertura como señal de normalización. La contrapartida es que las PyMEs industriales que competían con producción local enfrentan una presión sin transición. Sectores con margen de adaptación: maquinaria agrícola, farmacéutica de alto valor, agro-insumos.</p>
+        <p><strong>Implicancia para Santiago:</strong> La apertura crea oportunidades concretas de importación (electrónica, artículos deportivos, insumos de nicho). Quien identifique un producto con demanda local y lo importe antes de que el mercado se sature, gana margen. Los proveedores de Paraguay en golf y pádel que tenés en tareas son exactamente este tipo de oportunidad. El timing es ahora.</p>
       </div>
     </div>
 
     <div class="noticia">
-      <div class="noticia-meta">America Retail · Infobae Economía · Mayo 2026</div>
-      <div class="noticia-titulo">El boom de importaciones redefine el mapa empresarial: récord histórico y cambio de estrategia</div>
+      <div class="noticia-meta">El Cronista · Inversiones · Mayo 2026</div>
+      <div class="noticia-titulo">Mercado Libre, Uber y Miniso: el gobierno abraza USD 615 millones en inversiones ligadas a plataformas y logística</div>
       <div class="noticia-body">
-        <p>Las compras externas de bienes de consumo alcanzaron casi USD 11.400 millones en 2025, estableciendo un nuevo récord anual. Brasil y China explicaron el 48% del total importado. En 2026, el mercado está en una fase de maduración: el boom inicial de "importar todo" está dando paso a un análisis más cuidadoso de márgenes, exceso de oferta y posicionamiento. En ferretería, repuestos industriales y maquinaria hay una demanda sostenida; en electrónica de consumo y textil, algunos segmentos ya tienen sobreoferta.</p>
-        <p>El cambio clave: muchos importadores que en 2024-2025 compraban por volumen hoy se están quemando con stock parado. Los que analizan bien el timing, el canal y el margen son los que ganan. Los que simplemente "traen cosas de China" están empezando a perder.</p>
-        <p><strong>Implicancia para LANCER:</strong> El mercado de iPhones importados es diferente — hay demanda sostenida, precio en dólares y margen real. El riesgo no es exceso de oferta, sino competencia de precios en el canal informal (Mercado Libre, grupos de WhatsApp). La estrategia correcta es diferenciar por servicio, garantía y velocidad de entrega. En accesorios, sí hay riesgo de sobreoferta en fundas genéricas — migrar hacia accesorios Apple originales o de alta gama tiene más sentido de cara al segundo semestre.</p>
+        <p>Tres anuncios relevantes de inversión entraron esta semana en el radar del gobierno de Milei, que los celebró como confirmación del modelo aperturista. Mercado Libre invertirá USD 115 millones en un centro de almacenamiento en Escobar (Buenos Aires) que generará ~1.300 empleos logísticos. Uber anunció USD 500 millones para tres años, incluido el lanzamiento de Uber Eats en Argentina. Miniso, la cadena china de retail de bajo costo, planea abrir hasta 100 locales en 5 años con entre 800 y 1.000 empleos.</p>
+        <p>El patrón es claro: el dinero extranjero entra en distribución, última milla y plataformas de marketplace, no en manufactura local. Economistas advierten que los empleos generados son mayormente informales o por cuenta propia (repartidores, vendedores freelance), no empleos formales registrados. El desempleo formal llegó a 7.5% a fines de 2025, con 17% en menores de 29 años.</p>
+        <p>La inversión de Mercado Libre es la más relevante para el sector comercio: su expansión logística baja costos de fulfillment para vendedores de su plataforma, lo que incentiva más comercio electrónico. El crecimiento del e-commerce en Argentina lleva cuatro años de expansión ininterrumpida.</p>
+        <p><strong>Implicancia para Santiago:</strong> Si estás importando artículos de deporte (golf, pádel), el canal Mercado Libre es cada vez más eficiente y accesible. Investigar fulfillment de MeLi puede ser más rentable que manejar logística propia. La inversión de Miniso es una señal de que productos importados de bajo costo con marca tienen espacio real en el mercado argentino.</p>
       </div>
     </div>
-
   </div>
 
-  <!-- 8. NOTICIAS INT -->
   <div class="sec-title">🌎 Internacional</div>
   <div class="card">
-
     <div class="noticia">
-      <div class="noticia-meta">Yahoo Finance · The Street · 15–17 mayo 2026</div>
-      <div class="noticia-titulo">Dow Jones cruza 50.000 por primera vez desde febrero — AppLovin y Arista lideran la ola de earnings de IA</div>
+      <div class="noticia-meta">CNBC · IPO · 14 Mayo 2026</div>
+      <div class="noticia-titulo">Cerebras Systems debuta en Nasdaq con +68%: la mayor IPO de IA de 2026 y un rival directo de Nvidia</div>
       <div class="noticia-body">
-        <p>El Dow Jones Industrial Average cerró la semana pasada en 50.063 puntos, superando el umbral psicológico de 50.000 por primera vez desde febrero. El Nasdaq registró un nuevo cierre récord. Los drivers: resultados corporativos del Q1 2026 ampliamente superiores a las expectativas y señales positivas de la cumbre bilateral entre Estados Unidos y China.</p>
-        <p>Dos empresas lideraron la narrativa de la semana: <strong>AppLovin</strong> reportó ingresos de USD 1.840 millones en el Q1 2026 (+58% interanual) con ganancias netas que superaron los USD 1.200 millones — más del doble que un año antes. La empresa de tecnología publicitaria basada en IA se convirtió en uno de los mayores generadores de ganancias del sector tech. <strong>Arista Networks</strong>, proveedor de infraestructura de redes para data centers de IA, reportó ingresos de USD 2.710 millones (+35% YoY) con beneficios netos de USD 1.020 millones.</p>
-        <p>El patrón es claro: las empresas que venden infraestructura o habilitadores de IA (no necesariamente los modelos de IA en sí) son las que están generando los resultados más explosivos. La demanda de compute, redes y herramientas de monetización de IA sigue acelerando sin señales de desaceleración en el gasto corporativo.</p>
-        <p><strong>Qué implica globalmente:</strong> El rally de los mercados estadounidenses tiene efecto derrame sobre los CEDEARs de estas empresas. Para Santiago: AppLovin y Arista no tienen CEDEAR disponible fácilmente, pero el momentum positivo del sector tech americano impulsa el precio de los CEDEARs de Nvidia, Microsoft y similares que sí cotizan en Argentina.</p>
+        <p>Cerebras Systems, fabricante de chips para inteligencia artificial, salió a bolsa el 14 de mayo en el Nasdaq y saltó 68.2% en su primer día, llevando su capitalización de mercado a USD 95.000 millones. Es la mayor IPO del año. La empresa recaudó USD 3.500 millones en la colocación. Los ingresos de 2025 fueron de USD 510 millones, un crecimiento del 76% interanual (hardware +69%, servicios cloud +99%).</p>
+        <p>El contexto: Cerebras tiene una arquitectura diferente a Nvidia. En lugar de miles de chips pequeños (GPU), fabrica un único chip monolítico gigante (el WSE-3, el más grande del mundo) que puede entrenar modelos de IA con menos latencia y comunicación entre chips. Esto la hace más eficiente para ciertos tipos de inferencia. Su principal cliente es G42 de los Emiratos Árabes, lo que le dio escala antes de la IPO.</p>
+        <p>El debut ocurrió el mismo día en que el Nasdaq tocó un nuevo máximo histórico de 26.635 puntos, impulsado también por resultados de ganancias corporativas por encima de estimaciones (Monday.com, Cisco) y el progreso diplomático de la cumbre Trump-Xi en Beijing.</p>
+        <p><strong>Por qué importa globalmente:</strong> Cerebras valida que hay espacio para competidores de Nvidia en el mercado de chips de IA. El mercado de infraestructura de IA sigue creciendo sin señales de enfriamiento. Para inversores de CEDEARs o acciones tech: el ecosistema AI continúa siendo el driver número uno de los mercados globales en 2026.</p>
       </div>
     </div>
 
     <div class="noticia">
-      <div class="noticia-meta">CNBC · Goldman Sachs · Mayo 2026</div>
-      <div class="noticia-titulo">Corea del Sur +80% en lo que va del año: la IA está disparando los mercados asiáticos al extremo</div>
+      <div class="noticia-meta">CNBC · Resultados · Mayo 2026</div>
+      <div class="noticia-titulo">Monday.com sube 26%: la plataforma de trabajo con IA crece 24% y convierte sus usuarios en clientes premium</div>
       <div class="noticia-body">
-        <p>Goldman Sachs estima que el crecimiento de ganancias corporativas en Corea del Sur podría llegar al 300% en 2026 impulsado por la demanda de chips para IA. El índice Kospi lleva un +80% en lo que va del año, con sucesivos máximos históricos. Taiwan —donde cotiza TSMC— también está registrando récords consecutivos en su índice Taiex.</p>
-        <p>La explicación es la misma en ambos países: TSMC, Samsung y SK Hynix son los fabricantes indispensables de los chips de memoria (HBM) y de proceso avanzado (3nm, 2nm) que alimentan los modelos de IA de OpenAI, Google, Meta, Microsoft y Amazon. La demanda de estos chips es tan alta que las plantas trabajan a máxima capacidad y los precios siguen subiendo.</p>
-        <p>El riesgo que señala CNBC es la concentración: si dos o tres empresas explican el 70-80% de la ganancia de un mercado, cualquier problema operativo, geopolítico o de demanda en esas compañías puede hundir todo el índice en pocas sesiones. El mercado asiático tech es un rally de altísimo rendimiento y altísimo riesgo de concentración.</p>
-        <p><strong>Qué implica para el mercado global:</strong> La ola de ganancias de chips y semiconductores está redefiniendo qué significa "mercado desarrollado" — Corea y Taiwan hoy tienen retornos que duplican a los de EE.UU. Para Santiago: los CEDEARs de TSMC y Samsung no están disponibles en Argentina, pero la tendencia afecta el precio de Nvidia (sí disponible como CEDEAR) que provee los GPU que usan todos estos clientes.</p>
+        <p>Monday.com reportó ingresos de Q1 2026 por USD 351.3 millones, un crecimiento del 24% interanual, superando ampliamente las estimaciones de Wall Street. La acción saltó 26% en una jornada. La clave del crecimiento fue el lanzamiento de su "AI Work Platform" con agentes de IA nativos y un nuevo modelo de precios que combina asientos (seats) con créditos de uso de IA.</p>
+        <p>La estrategia es relevante porque ilustra cómo las plataformas SaaS están convirtiendo el AI en un motor de monetización. Los usuarios que adoptaron las funciones de IA tienen tasas de expansión de gasto 3 veces mayor que los que no. Esto indica que el AI no solo retiene clientes sino que los escala hacia planes más caros.</p>
+        <p>Bill Ackman (Pershing Square) aprovechó la caída previa de la acción para construir una posición importante en la compañía, lo que impulsó el interés institucional en el papel.</p>
+        <p><strong>Por qué importa:</strong> El modelo de Monday.com es el mismo que están aplicando Salesforce, HubSpot y SAP: paquetizar IA dentro del software existente para justificar subas de precio. Para cualquier emprendimiento digital, la lección es que el valor percibido de la IA permite cobrar más. Para el mercado: los resultados de Monday refuerzan que el ciclo de ganancias por IA en software empresarial recién empieza.</p>
       </div>
     </div>
-
   </div>
 
-  <!-- 9. IDEA DE NEGOCIO SEMANAL -->
+  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
   <div class="sec-title">💡 Idea de negocio — semana 21</div>
   <div class="idea-card">
     <h2>Idea de la semana</h2>
@@ -339,62 +304,34 @@
       <p>Una agencia de compraventa, arrendamiento y remate de propiedades rurales (campos de caña, soja, frutales, citrus) y hacienda (tropas bovinas, ovinos, caballos) en Tucumán y el NOA, con un proceso completamente digitalizado: publicación en redes sociales, tours en video con drone, tasación ágil y cierre de operaciones en semanas en lugar de meses. Actuás como intermediario entre vendedores/arrendadores rurales y compradores/inversores, cobrando comisión sobre cada operación cerrada.</p>
 
       <h3>Por qué ahora</h3>
-      <p>Los precios de commodities están en niveles históricamente altos — caña, soja y citrus en sus mejores valuaciones en años — lo que empuja el valor de las tierras rurales del NOA al alza. Hay liquidez en el sector agropecuario y muchos productores quieren comprar campo adicional o arrendar lotes ociosos, pero el mercado sigue siendo 100% informal y de boca en boca. Ninguna cosignataria tradicional de Tucumán tiene presencia digital real. El boom de inversiones en el sector genera demanda genuina de intermediarios confiables que puedan mostrar propiedades sin que el comprador tenga que viajar.</p>
+      <p>Los precios de commodities están en niveles históricamente altos — caña, soja y citrus en sus mejores valuaciones en años — lo que empuja el valor de las tierras rurales del NOA al alza. Hay liquidez en el sector agropecuario y muchos productores quieren comprar campo adicional o arrendar lotes ociosos, pero el mercado sigue siendo 100% informal y de boca en boca. Ninguna cosignataria tradicional de Tucumán tiene presencia digital real. El boom de inversiones en el sector (crédito agropecuario del Banco Nación, fondos de inversión buscando tierra argentina) genera demanda genuina de intermediarios confiables y eficientes que puedan mostrar propiedades sin que el comprador tenga que viajar.</p>
 
       <h3>Cómo arrancarla</h3>
       <ul>
-        <li><strong>Paso 1:</strong> Asociarse con un corredor inmobiliario matriculado (necesario por ley para cobrar comisión). Podés empezar como socio comercial mientras tramitás la tuya.</li>
-        <li><strong>Paso 2:</strong> Generar red inicial: contadores agropecuarios, escribanos rurales, ingenieros agrónomos, veterinarios — todos refieren clientes. 10 reuniones presenciales en 2 semanas.</li>
-        <li><strong>Paso 3:</strong> Publicar en Instagram y crear web simple con los primeros 3–5 campos disponibles. Grabar con drone. El contenido visual de campo performa muy bien orgánicamente en Argentina.</li>
+        <li><strong>Paso 1:</strong> Asociarse con un corredor inmobiliario matriculado (necesario por ley para cobrar comisión). La matrícula tiene proceso, pero podés empezar como socio comercial de alguien ya habilitado mientras tramitás la tuya.</li>
+        <li><strong>Paso 2:</strong> Generar red inicial de proveedores: contadores agropecuarios, escribanos rurales, ingenieros agrónomos, veterinarios — todos refieren clientes. 10 reuniones presenciales en 2 semanas.</li>
+        <li><strong>Paso 3:</strong> Publicar en Instagram y crear web simple con los primeros 3–5 campos disponibles. Grabar con drone. El contenido visual de campo en Argentina performa muy bien orgánicamente.</li>
         <li><strong>Paso 4:</strong> Cobrar comisión del 3–5% sobre la transacción. En arrendamiento: 10% del valor del alquiler anual.</li>
         <li><strong>Paso 5:</strong> Expandir a hacienda: inscribirse como consignatario ante SENASA (costo mínimo) y participar de remates mensuales cobrando 2–3% sobre el valor de la tropa.</li>
       </ul>
 
       <h3>Modelo de ingreso</h3>
-      <p>Un campo de 50 ha en Tucumán puede valer USD 100.000–500.000. Con 3% de comisión: USD 3.000–15.000 por operación. Con 2 operaciones al mes: USD 6.000–30.000 brutos. El arrendamiento es más rápido y recurrente: contratos anuales de USD 100–300/ha; con 5 contratos activos generás USD 500–1.500/mes pasivos. Hacienda: 2–3% sobre tropa de 100 vacas a USD 800 = USD 1.600–2.400 por remate.</p>
+      <p>Un campo de 50 ha en Tucumán puede valer USD 100.000–500.000. Con 3% de comisión: USD 3.000–15.000 por operación. Si cerrás 2 operaciones al mes: USD 6.000–30.000 brutos. El arrendamiento es más rápido de cerrar y más recurrente: contratos anuales de USD 100–300/ha; con 5 contratos activos generás USD 500–1.500/mes en comisiones pasivas. Hacienda: 2–3% sobre tropa de 100 vacas a USD 800/cabeza = USD 1.600–2.400 por remate.</p>
 
       <h3>Riesgos principales</h3>
       <ul>
         <li>Ciclo de cierre largo: 30–90 días entre primer contacto y escritura. Necesitás aguantar el primer trimestre sin ingresos.</li>
-        <li>Requiere habilitación legal o socio matriculado — sin esto no podés cobrar comisión legalmente.</li>
-        <li>Las cosignatarias tradicionales tienen relaciones de décadas con los productores. Entrar requiere tiempo y credibilidad.</li>
-        <li>Si bajan precios de commodities o hay sequía, las transacciones se congelan.</li>
+        <li>Requiere habilitación legal o socio matriculado. Sin esto no podés cobrar comisión legalmente.</li>
+        <li>Las cosignatarias tradicionales tienen relaciones de décadas con productores. Entrar requiere tiempo y credibilidad.</li>
+        <li>Riesgo de mercado: si bajan precios de commodities o hay sequía, las transacciones se congelan.</li>
       </ul>
 
       <h3>Esfuerzo / inversión inicial</h3>
-      <p>USD 2.000–5.000 para web, drone (o alquilarlo por operación), viáticos al interior y gastos de habilitación. El capital principal es tiempo y network. 3–6 meses hasta la primera operación cerrada. Compatible con manejar LANCER en paralelo los primeros meses.</p>
+      <p>USD 2.000–5.000 para web, drone (o alquilarlo por operación), viáticos al interior y gastos de habilitación. El capital principal es tiempo y network. 3–6 meses hasta la primera operación cerrada. Compatible con seguir manejando otros proyectos en paralelo los primeros meses — la mayor parte del trabajo es reuniones y publicación de contenido desde el teléfono.</p>
     </div>
   </div>
 
-  <footer>Generado 08:00 hs · Datos de caja: jueves 14/5 (últimos disponibles) — cargá los días pendientes para actualizar el progreso</footer>
+  <footer>Generado 19/05/2026 · Semana 21</footer>
 
-  <script>
-    const ventasData = [
-      {fecha:"1/5",total:0},{fecha:"2/5",total:543789},{fecha:"3/5",total:0},
-      {fecha:"4/5",total:23000},{fecha:"5/5",total:1093204},{fecha:"6/5",total:1345321},
-      {fecha:"7/5",total:537000},{fecha:"8/5",total:2358145},{fecha:"9/5",total:1876276},
-      {fecha:"10/5",total:0},{fecha:"11/5",total:1281500},{fecha:"12/5",total:117000},
-      {fecha:"13/5",total:882663},{fecha:"14/5",total:1421313},{fecha:"15/5",total:22250},
-      {fecha:"16/5",total:0},{fecha:"17/5",total:0},{fecha:"18/5",total:0}
-    ];
-    const margenData = [
-      {fecha:"1/5",margen:0},{fecha:"2/5",margen:82000},{fecha:"3/5",margen:0},
-      {fecha:"4/5",margen:9200},{fecha:"5/5",margen:164000},{fecha:"6/5",margen:202000},
-      {fecha:"7/5",margen:81000},{fecha:"8/5",margen:354000},{fecha:"9/5",margen:282000},
-      {fecha:"10/5",margen:0},{fecha:"11/5",margen:192000},{fecha:"12/5",margen:47000},
-      {fecha:"13/5",margen:132000},{fecha:"14/5",margen:214000},{fecha:"15/5",margen:9000},
-      {fecha:"16/5",margen:0},{fecha:"17/5",margen:0},{fecha:"18/5",margen:0}
-    ];
-    new Chart(document.getElementById('chart-ventas'), {
-      type: 'line',
-      data: { labels: ventasData.map(d => d.fecha), datasets: [{ label: 'Ventas', data: ventasData.map(d => d.total), borderColor: '#4ade80', backgroundColor: 'rgba(74,222,128,0.08)', tension: 0.3, fill: true, pointRadius: 3 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-    });
-    new Chart(document.getElementById('chart-margen'), {
-      type: 'bar',
-      data: { labels: margenData.map(d => d.fecha), datasets: [{ data: margenData.map(d => d.margen), backgroundColor: margenData.map(d => d.margen >= 0 ? 'rgba(74,222,128,0.6)' : 'rgba(248,113,113,0.6)'), borderWidth: 0, borderRadius: 2 }] },
-      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false } }, scales: { x: { ticks: { color: '#8b8f9b', maxTicksLimit: 7 }, grid: { color: '#2a2e38' } }, y: { ticks: { color: '#8b8f9b', callback: v => '$' + (v/1000000).toFixed(1) + 'M' }, grid: { color: '#2a2e38' } } } }
-    });
-  </script>
 </body>
 </html>
