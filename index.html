@@ -3,335 +3,723 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing diario — 19 de mayo de 2026</title>
+  <title>Briefing — 2026-05-20</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-    :root {
-      --bg:#0f1115; --card:#1a1d24; --card-2:#22262f; --text:#e8e8ec;
-      --muted:#8b8f9b; --accent:#4ade80; --warning:#fbbf24;
-      --danger:#f87171; --border:#2a2e38; --blue:#60a5fa;
-    }
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;line-height:1.6;padding:24px;max-width:960px;margin:0 auto;}
-    header{display:flex;justify-content:space-between;align-items:baseline;padding-bottom:16px;border-bottom:1px solid var(--border);margin-bottom:24px;}
-    header h1{font-size:22px;font-weight:600;}
-    header .fecha{color:var(--muted);font-size:13px;}
+  :root {
+    --bg:       #0d1117;
+    --bg2:      #111827;
+    --card:     #161d2e;
+    --card2:    #1e2740;
+    --card3:    #222d39;
+    --text:     #f0f2f6;
+    --muted:    #7a8499;
+    --border:   #1e2a3a;
+    --blue:     #0066a0;
+    --blue-lt:  #2d8fc4;
+    --purple:   #8e6cbc;
+    --magenta:  #bc1b88;
+    --danger:   #f87171;
+    --warning:  #fbbf24;
+    --success:  #34d399;
+    --grad:     linear-gradient(135deg, #0066a0 0%, #8e3e8a 100%);
+    --grad-s:   linear-gradient(135deg, #0d1117 0%, #1a1f3a 50%, #1a0d2e 100%);
+  }
 
-    .alert{background:rgba(251,191,36,0.1);border-left:3px solid var(--warning);padding:12px 16px;margin-bottom:20px;border-radius:4px;font-size:14px;}
+  * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    .meta-rotativa{background:rgba(74,222,128,0.08);border-left:3px solid var(--accent);padding:12px 16px;border-radius:4px;margin-bottom:24px;font-size:14px;}
-    .meta-rotativa strong{color:var(--accent);}
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    padding: 0;
+    max-width: 980px;
+    margin: 0 auto;
+  }
 
-    .card{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:16px;}
-    .card h2{font-size:11px;text-transform:uppercase;letter-spacing:0.06em;color:var(--muted);margin-bottom:10px;font-weight:600;}
-    .card .big{font-size:26px;font-weight:700;margin-bottom:4px;}
-    .card .sub{font-size:13px;color:var(--muted);}
+  /* ── HEADER ── */
+  .site-header {
+    background: var(--grad-s);
+    border-bottom: 1px solid var(--border);
+    padding: 28px 32px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 240px; height: 240px;
+    background: radial-gradient(circle, rgba(0,102,160,0.25) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: -40px; left: 30%;
+    width: 180px; height: 180px;
+    background: radial-gradient(circle, rgba(142,60,138,0.2) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+  .header-brand { font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 6px; }
+  .header-title { font-size: 26px; font-weight: 800; color: var(--text); letter-spacing: -.01em; }
+  .header-date  { font-size: 13px; font-weight: 400; color: var(--muted); text-align: right; }
+  .header-week  { font-size: 11px; font-weight: 600; color: var(--blue-lt); letter-spacing: .06em; text-transform: uppercase; }
+  .header-bar   { height: 3px; background: var(--grad); margin-top: 20px; border-radius: 2px; }
 
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px;}
+  /* ── BODY WRAPPER ── */
+  .body-wrap { padding: 28px 32px 40px; }
 
-    .task-list{list-style:none;font-size:14px;}
-    .task-list li{padding:5px 0;border-bottom:1px solid var(--border);display:flex;gap:8px;align-items:baseline;}
-    .task-list li:last-child{border-bottom:none;}
-    .task-list li::before{content:"→";color:var(--muted);font-size:11px;flex-shrink:0;}
+  /* ── META ROTATIVA ── */
+  .meta-rotativa {
+    background: linear-gradient(135deg, rgba(0,102,160,0.12) 0%, rgba(142,60,138,0.12) 100%);
+    border: 1px solid rgba(0,102,160,0.3);
+    border-left: 3px solid var(--blue);
+    border-radius: 8px;
+    padding: 13px 18px;
+    margin-bottom: 28px;
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .meta-rotativa strong { color: var(--blue-lt); font-weight: 700; }
 
-    .evento-item{padding:10px 0;border-bottom:1px solid var(--border);}
-    .evento-item:last-child{border-bottom:none;padding-bottom:0;}
-    .evento-item:first-child{padding-top:0;}
-    .cal-cuando{font-size:13px;font-weight:700;color:var(--accent);margin-bottom:2px;text-transform:uppercase;letter-spacing:.04em;}
-    .cal-titulo{font-size:15px;font-weight:600;margin-bottom:2px;}
-    .cal-hora{font-size:13px;color:var(--muted);}
+  /* ── SECTION TITLES ── */
+  .sec-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--muted);
+    margin: 28px 0 14px;
+    padding-bottom: 10px;
+    position: relative;
+  }
+  .sec-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 32px; height: 2px;
+    background: var(--grad);
+    border-radius: 2px;
+  }
 
-    .hab-pct{font-size:44px;font-weight:800;line-height:1;}
-    .hab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:6px;margin-top:12px;}
-    .hab-item{padding:7px 10px;background:var(--card-2);border-radius:5px;font-size:13px;display:flex;justify-content:space-between;}
-    .badge-r{color:var(--danger);font-weight:700;font-size:12px;}
-    .badge-g{color:var(--accent);font-weight:700;font-size:12px;}
-    .badge-w{color:var(--warning);font-weight:700;font-size:12px;}
-    .hab-insights{margin-top:12px;font-size:14px;}
-    .hab-insights li{padding:5px 0;border-bottom:1px solid var(--border);list-style:none;}
-    .hab-insights li:last-child{border-bottom:none;}
+  /* ── CARDS ── */
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 14px;
+  }
+  .card-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
 
-    .noticia{margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--border);}
-    .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-    .noticia-meta{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px;font-weight:600;}
-    .noticia-titulo{font-size:16px;font-weight:700;margin-bottom:8px;line-height:1.3;}
-    .noticia-body{font-size:14px;color:#c8cad0;line-height:1.7;}
-    .noticia-body p{margin-bottom:8px;}
-    .noticia-body p:last-child{margin-bottom:0;}
-    .sec-title{font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:24px 0 10px;font-weight:600;padding-bottom:6px;border-bottom:1px solid var(--border);}
+  /* ── GRID 2 ── */
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 
-    .lancer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:16px;}
-    .lancer-stat{background:var(--card-2);border-radius:6px;padding:12px;text-align:center;}
-    .lancer-stat .label{font-size:10px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:4px;}
-    .lancer-stat .val{font-size:20px;font-weight:700;}
-    .lancer-stat .sub{font-size:11px;color:var(--muted);margin-top:2px;}
-    .fin-section{margin-bottom:18px;}
-    .fin-section h3{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:10px;font-weight:600;border-bottom:1px solid var(--border);padding-bottom:6px;}
-    .rulo-item{background:var(--card-2);border-radius:6px;padding:12px;margin-bottom:8px;}
-    .rulo-item:last-child{margin-bottom:0;}
-    .rulo-titulo{font-size:14px;font-weight:700;margin-bottom:4px;}
-    .rulo-body{font-size:13px;color:#c8cad0;line-height:1.6;}
-    .tag-legal{background:rgba(74,222,128,0.15);color:var(--accent);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;}
-    .tag-gris{background:rgba(251,191,36,0.15);color:var(--warning);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;text-transform:uppercase;letter-spacing:.04em;}
-    .brecha-pos{color:var(--danger);}
-    .brecha-neu{color:var(--warning);}
-    .recomendacion{background:rgba(96,165,250,0.08);border-left:3px solid var(--blue);padding:12px 14px;border-radius:4px;font-size:13px;margin-top:14px;color:#c8cad0;}
-    .recomendacion strong{color:var(--blue);}
+  /* ── TAREAS ── */
+  .task-list { list-style: none; }
+  .task-list li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    font-weight: 400;
+    color: #c8d0df;
+  }
+  .task-list li:last-child { border-bottom: none; }
+  .task-list li::before {
+    content: "›";
+    color: var(--blue-lt);
+    font-size: 16px;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1.3;
+  }
 
-    .idea-card{background:rgba(74,222,128,0.05);border:1px solid rgba(74,222,128,0.2);border-radius:8px;padding:20px;margin-bottom:16px;}
-    .idea-card h2{color:var(--accent);font-size:11px;text-transform:uppercase;letter-spacing:.06em;margin-bottom:6px;font-weight:600;}
-    .idea-titulo{font-size:18px;font-weight:700;margin-bottom:14px;}
-    .idea-body{font-size:14px;color:#c8cad0;line-height:1.75;}
-    .idea-body h3{font-size:13px;font-weight:700;color:var(--text);margin:12px 0 4px;text-transform:uppercase;letter-spacing:.04em;}
-    .idea-body p{margin-bottom:10px;}
-    .idea-body ul{padding-left:18px;margin-bottom:10px;}
-    .idea-body ul li{margin-bottom:4px;}
+  /* ── CALENDARIO ── */
+  .evento-item { padding: 12px 0; border-bottom: 1px solid var(--border); }
+  .evento-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .evento-item:first-child { padding-top: 0; }
+  .cal-cuando {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--blue-lt);
+    text-transform: uppercase;
+    letter-spacing: .07em;
+    margin-bottom: 3px;
+  }
+  .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 2px; }
+  .cal-hora   { font-size: 12px; color: var(--muted); }
 
-    footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:12px;}
-    @media(max-width:600px){
-      body{padding:14px;}
-      .grid-2{grid-template-columns:1fr;}
-      .lancer-grid{grid-template-columns:repeat(2,1fr);}
-      .hab-grid{grid-template-columns:1fr;}
-    }
-  </style>
+  /* ── HÁBITOS ── */
+  .hab-pct { font-size: 52px; font-weight: 800; line-height: 1; background: var(--grad); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hab-sub  { font-size: 12px; color: var(--muted); margin-top: 4px; margin-bottom: 14px; }
+  .hab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 7px; margin-top: 14px; }
+  .hab-item {
+    padding: 9px 12px;
+    background: var(--card2);
+    border-radius: 7px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+  }
+  .badge-g { color: var(--success);  font-weight: 700; font-size: 12px; }
+  .badge-w { color: var(--warning);  font-weight: 700; font-size: 12px; }
+  .badge-r { color: var(--danger);   font-weight: 700; font-size: 12px; }
+  .hab-insights { margin-top: 10px; margin-bottom: 0; }
+  .hab-insights li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    list-style: none;
+    font-size: 13px;
+    color: #c0c8d8;
+  }
+  .hab-insights li:last-child { border-bottom: none; }
+
+  /* ── FINANCIERA — Cotizaciones ── */
+  .lancer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 18px; }
+  .lancer-stat {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 5px; }
+  .lancer-stat .val   { font-size: 18px; font-weight: 800; color: var(--text); }
+  .lancer-stat .sub   { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* ── FINANCIERA — ROFEX ── */
+  .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+  .rofex-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 14px;
+    text-align: center;
+  }
+  .rofex-item .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 4px; }
+  .rofex-item .val   { font-size: 17px; font-weight: 800; }
+  .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* ── FINANCIERA — Tasas ── */
+  .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
+  .tasa-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 11px 14px;
+  }
+  .tasa-item .t-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 4px; }
+  .tasa-item .t-val   { font-size: 16px; font-weight: 800; }
+  .tasa-item .t-sub   { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  /* ── FINANCIERA — Riesgo País ── */
+  .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .rp-row:last-child { border-bottom: none; }
+  .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
+  .rp-val   { font-size: 20px; font-weight: 800; }
+  .rp-delta { font-size: 12px; margin-left: 6px; font-weight: 600; }
+  .rp-up    { color: var(--danger); }
+  .rp-down  { color: var(--success); }
+  .rp-neu   { color: var(--warning); }
+
+  /* ── FINANCIERA — Flujo del día ── */
+  .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
+  .flujo-compra  { background: rgba(0,102,160,0.1);  border-left: 3px solid var(--blue); }
+  .flujo-venta   { background: rgba(248,113,113,0.1); border-left: 3px solid var(--danger); }
+  .flujo-neutral { background: rgba(251,191,36,0.1);  border-left: 3px solid var(--warning); }
+  .flujo-titulo  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 5px; }
+  .flujo-body    { font-size: 13px; color: #c0c8d8; line-height: 1.6; }
+  .flujo-compra  .flujo-titulo { color: var(--blue-lt); }
+  .flujo-venta   .flujo-titulo { color: var(--danger); }
+  .flujo-neutral .flujo-titulo { color: var(--warning); }
+
+  /* ── FINANCIERA — Sección labels ── */
+  .fin-section { margin-bottom: 22px; }
+  .fin-section:last-child { margin-bottom: 0; }
+  .fin-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--blue-lt);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 7px;
+    margin-bottom: 12px;
+  }
+
+  /* ── FINANCIERA — Recomendación ── */
+  .recomendacion {
+    background: rgba(0,102,160,0.08);
+    border: 1px solid rgba(0,102,160,0.2);
+    border-left: 3px solid var(--blue);
+    border-radius: 6px;
+    padding: 13px 16px;
+    font-size: 13px;
+    margin-top: 14px;
+    color: #c0c8d8;
+    line-height: 1.65;
+  }
+  .recomendacion strong { color: var(--blue-lt); }
+
+  /* ── FINANCIERA — Tags ── */
+  .tag-legal { background: rgba(52,211,153,0.15);  color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .tag-gris  { background: rgba(251,191,36,0.15);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
+
+  /* ── FINANCIERA — Rulos ── */
+  .rulo-item { background: var(--card2); border: 1px solid var(--border); border-radius: 8px; padding: 13px 16px; margin-bottom: 8px; }
+  .rulo-item:last-child { margin-bottom: 0; }
+  .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 5px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .rulo-body   { font-size: 13px; color: #b8c4d4; line-height: 1.65; }
+
+  /* ── BRECHAS ── */
+  .brecha-pos { color: var(--danger); }
+  .brecha-neu { color: var(--warning); }
+  .brecha-ok  { color: var(--success); }
+
+  /* ── NOTICIAS ── */
+  .noticia { margin-bottom: 22px; padding-bottom: 22px; border-bottom: 1px solid var(--border); }
+  .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .noticia-meta {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--blue-lt);
+    margin-bottom: 7px;
+  }
+  .noticia-titulo { font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.35; color: var(--text); }
+  .noticia-body   { font-size: 13px; color: #b0bcd0; line-height: 1.75; }
+  .noticia-body p { margin-bottom: 9px; }
+  .noticia-body p:last-child { margin-bottom: 0; }
+  .noticia-body strong { color: #d0d8e8; font-weight: 600; }
+
+  /* ── IDEA DE NEGOCIO ── */
+  .idea-card {
+    background: linear-gradient(135deg, rgba(0,102,160,0.08) 0%, rgba(142,60,138,0.08) 100%);
+    border: 1px solid rgba(0,102,160,0.25);
+    border-radius: 10px;
+    padding: 22px;
+    margin-bottom: 14px;
+    position: relative;
+    overflow: hidden;
+  }
+  .idea-card::before {
+    content: '';
+    position: absolute;
+    top: -50px; right: -50px;
+    width: 160px; height: 160px;
+    background: radial-gradient(circle, rgba(142,60,138,0.15) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .idea-tag {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--blue-lt);
+    margin-bottom: 6px;
+  }
+  .idea-titulo { font-size: 20px; font-weight: 800; margin-bottom: 18px; color: var(--text); line-height: 1.25; }
+  .idea-body   { font-size: 13px; color: #b0bcd0; line-height: 1.75; position: relative; z-index: 1; }
+  .idea-body h3 {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: var(--blue-lt);
+    margin: 16px 0 5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--border);
+  }
+  .idea-body p  { margin-bottom: 10px; }
+  .idea-body ul { padding-left: 16px; margin-bottom: 10px; }
+  .idea-body ul li { margin-bottom: 5px; }
+  .idea-body strong { color: #d0d8e8; font-weight: 600; }
+
+  /* ── FOOTER ── */
+  footer {
+    margin: 32px 32px 0;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .03em;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    .body-wrap { padding: 20px 16px 32px; }
+    .site-header { padding: 20px 16px 18px; }
+    footer { margin: 24px 16px 0; }
+    .grid-2, .lancer-grid, .rofex-grid, .tasas-grid { grid-template-columns: 1fr 1fr; }
+    .lancer-grid { grid-template-columns: repeat(2, 1fr); }
+    .hab-grid { grid-template-columns: 1fr; }
+  }
+</style>
 </head>
 <body>
 
-  <header>
-    <h1>Briefing diario</h1>
-    <div class="fecha">martes 19 de mayo de 2026</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div>
+        <div class="header-brand">Briefing personal</div>
+        <div class="header-title">miércoles 20 de mayo de 2026</div>
+      </div>
+      <div>
+        <div class="header-week">Semana 21</div>
+        <div class="header-date">Mayo 2026</div>
+      </div>
+    </div>
+    <div class="header-bar"></div>
   </header>
 
-  <!-- 1. META DEL AÑO -->
-  <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Hasta julio: ganar 2.000 USD de utilidad</div>
+  <div class="body-wrap">
 
-  <!-- 2. TAREAS TRELLO -->
-  <div class="sec-title">Tareas</div>
-  <div class="grid-2">
+    <!-- META DEL AÑO -->
+    <div class="meta-rotativa">🎯 <strong>Meta del año:</strong> Estudiar — llegar al 60% mensual de estudio. Hoy estás en 9.7%.</div>
+
+    <!-- TAREAS -->
+    <div class="sec-title">Tareas</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-label">Hoy</div>
+        <ul class="task-list">
+          <li>Llevar remera y campera</li>
+          <li>Pasar lista de iPhone a Mili</li>
+          <li>Empezar trámite David</li>
+          <li>Terminar curso de Claude y de emprender</li>
+          <li>Conseguir proveedores de golf y pádel en Paraguay</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Mañana</div>
+        <ul class="task-list">
+          <li>Buzo Farías</li>
+          <li>Regalo bocha</li>
+          <li>Pagar multa suegra</li>
+          <li>Buscar riendas de paquito</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CALENDARIO -->
+    <div class="sec-title">Agenda</div>
     <div class="card">
-      <h2>Hoy</h2>
-      <ul class="task-list">
-        <li>Llevar remera y campera</li>
-        <li>Pasar lista de iPhone a Mili</li>
-        <li>Empezar trámite David</li>
-        <li>Terminar curso de Claude y de emprender</li>
-        <li>Conseguir proveedores de golf y pádel en Paraguay</li>
-      </ul>
+      <div class="card-label">Próximos eventos</div>
+      <div class="evento-item">
+        <div class="cal-cuando">Hoy · mié 20/5</div>
+        <div class="cal-titulo">Cumple Deca</div>
+        <div class="cal-hora">Todo el día</div>
+      </div>
+      <div class="evento-item">
+        <div class="cal-cuando">Mañana · jue 21/5</div>
+        <div class="cal-titulo">Deuda Facundo 1500 USD</div>
+        <div class="cal-hora">Todo el día — revisar estado</div>
+      </div>
+      <div class="evento-item">
+        <div class="cal-cuando">Lun 1/6</div>
+        <div class="cal-titulo">Cumpleaños Felix</div>
+        <div class="cal-hora">Todo el día</div>
+      </div>
     </div>
+
+    <!-- HÁBITOS -->
+    <div class="sec-title">Hábitos — Mayo 2026</div>
     <div class="card">
-      <h2>Mañana</h2>
-      <ul class="task-list">
-        <li>Buzo Farías</li>
-        <li>Regalo bocha</li>
-        <li>Pagar multa suegra</li>
-        <li>Buscar riendas de paquito</li>
+      <div class="card-label">Progreso mensual</div>
+      <div class="hab-pct">39%</div>
+      <div class="hab-sub">9 hábitos · datos hasta día 19/5 · promedio mensual sobre 31 días</div>
+      <ul class="hab-insights">
+        <li>🔴 <strong>Estudiar 2h al 9.7%</strong> — solo 3 días en 19. Meta mensual: 60% (18 días). Prácticamente irrecuperable: necesitás estudiar 15 de los 12 días restantes. Hay que redefinir la meta o atacar con urgencia esta semana.</li>
+        <li>🔴 <strong>Entrenar al 29%</strong> — 9 días en 19. Meta: 50% (16 días). Todavía alcanzable: necesitás 7 días de los 12 restantes. Foco esta semana.</li>
+        <li>📈 <strong>Planificar y Despertar 8:00</strong> son los más consistentes. La rutina matutina está instalada. El problema es tarde: el estudio y el entrenamiento se caen.</li>
       </ul>
+      <div class="hab-grid">
+        <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">54.8%</span></div>
+        <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">38.7%</span></div>
+        <div class="hab-item"><span>Trabajar 4 horas</span><span class="badge-w">45.2%</span></div>
+        <div class="hab-item"><span>Estudiar 2 horas</span><span class="badge-r">9.7%</span></div>
+        <div class="hab-item"><span>Leer inversiones</span><span class="badge-w">45.2%</span></div>
+        <div class="hab-item"><span>Entrenar</span><span class="badge-r">29.0%</span></div>
+        <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">35.5%</span></div>
+        <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">48.4%</span></div>
+        <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">48.4%</span></div>
+      </div>
     </div>
-  </div>
 
-  <!-- 3. CALENDARIO -->
-  <div class="sec-title">Agenda</div>
-  <div class="card">
-    <h2>Próximos eventos</h2>
-    <div class="evento-item">
-      <div class="cal-cuando">Mañana — Mié 20/5</div>
-      <div class="cal-titulo">Cumpleaños Deca</div>
-      <div class="cal-hora">Todo el día</div>
-    </div>
-    <div class="evento-item">
-      <div class="cal-cuando">Jue 21/5</div>
-      <div class="cal-titulo">Deuda Facundo — 1500 USD</div>
-      <div class="cal-hora">Todo el día</div>
-    </div>
-    <div class="evento-item">
-      <div class="cal-cuando">Lun 1/6 — en 13 días</div>
-      <div class="cal-titulo">Cumpleaños Felix</div>
-      <div class="cal-hora">Todo el día</div>
-    </div>
-  </div>
+    <!-- FINANCIERA -->
+    <div class="sec-title">Financiera</div>
+    <div class="card">
 
-  <!-- 4. HÁBITOS -->
-  <div class="sec-title">Hábitos — Mayo 2026</div>
-  <div class="card">
-    <h2>Progreso mensual</h2>
-    <div class="hab-pct">67%</div>
-    <div class="sub" style="margin-top:4px;">de los días rastreados (16 días con data, hasta el 16/5)</div>
-    <ul class="hab-insights">
-      <li>⚠️ <strong>Estudiar (9.7% del mes / 3 de 16 días)</strong> — en rojo crítico. La meta de 60% mensual ya es prácticamente inalcanzable: necesitarías estudiar los 15 días restantes seguidos.</li>
-      <li>⚠️ <strong>Entrenar (25.8% del mes / 8 de 16 días)</strong> — cayó fuerte desde el día 9. Del 1 al 8 ibas bien (6/8), del 9 al 16 solo 2 días.</li>
-      <li>✅ <strong>Dejar celular (45.2%) + Despertar 8:00 (48.4%)</strong> — los más sólidos del mes. Racha fuerte en semana 2.</li>
-    </ul>
-    <div class="hab-grid">
-      <div class="hab-item"><span>Despertar 8:00</span><span class="badge-w">48.4%</span></div>
-      <div class="hab-item"><span>Desayuno sano</span><span class="badge-r">32.3%</span></div>
-      <div class="hab-item"><span>Trabajar 4hs</span><span class="badge-r">38.7%</span></div>
-      <div class="hab-item"><span>Estudiar 2hs</span><span class="badge-r">9.7% ⚠</span></div>
-      <div class="hab-item"><span>Leer inversiones</span><span class="badge-r">38.7%</span></div>
-      <div class="hab-item"><span>Entrenar</span><span class="badge-r">25.8%</span></div>
-      <div class="hab-item"><span>Leer 10 páginas</span><span class="badge-r">29.0%</span></div>
-      <div class="hab-item"><span>Dejar celular 00:00</span><span class="badge-w">45.2%</span></div>
-      <div class="hab-item"><span>Pensar 5 min</span><span class="badge-w">45.2%</span></div>
-    </div>
-  </div>
-
-  <!-- 5. FINANCIERA -->
-  <div class="sec-title">💵 Financiera</div>
-  <div class="card">
-    <div class="fin-section">
-      <h3>Cotizaciones — 19 May 2026</h3>
-      <div class="lancer-grid">
-        <div class="lancer-stat">
-          <div class="label">Oficial BNA</div>
-          <div class="val">$1.420</div>
-          <div class="sub">Compra $1.370</div>
+      <!-- A. Cotizaciones -->
+      <div class="fin-section">
+        <div class="fin-label">A · Cotizaciones del dólar</div>
+        <div class="lancer-grid">
+          <div class="lancer-stat">
+            <div class="label">Oficial BNA</div>
+            <div class="val">$1.420</div>
+            <div class="sub">Base — referencia</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">Blue</div>
+            <div class="val">$1.435</div>
+            <div class="sub brecha-pos">Brecha +1.1%</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">MEP</div>
+            <div class="val">$1.432</div>
+            <div class="sub brecha-pos">Brecha +0.8%</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">CCL</div>
+            <div class="val">$1.490</div>
+            <div class="sub brecha-pos">Brecha +4.9%</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">USDT / P2P</div>
+            <div class="val">$1.485</div>
+            <div class="sub brecha-pos">Brecha +4.6%</div>
+          </div>
         </div>
-        <div class="lancer-stat">
-          <div class="label">Blue</div>
-          <div class="val">$1.420</div>
-          <div class="sub">Compra $1.400 · brecha <span class="brecha-neu">0%</span></div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">MEP</div>
-          <div class="val">$1.438</div>
-          <div class="sub">Compra $1.425 · brecha <span class="brecha-neu">+1.3%</span></div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">CCL</div>
-          <div class="val">$1.485</div>
-          <div class="sub">Compra $1.483 · brecha <span class="brecha-pos">+4.6%</span></div>
-        </div>
+        <p style="font-size:13px;color:#b0bcd0;margin-bottom:10px;"><strong style="color:#2d8fc4;">BCRA:</strong> 90 jornadas consecutivas de compras. Acumuló USD 8.300 M en 2026 (83.8% de la meta anual). Reservas brutas: USD 46.190 M. Mayorista: $1.398 — cerca del piso de la banda cambiaria.</p>
+        <p style="font-size:12px;color:#b0bcd0;margin-bottom:5px;"><span style="color:#f87171;">▲</span> <strong style="color:#c8d0df;">Moody's rebajó EE.UU. (AAA → Aa1):</strong> tensión global, salida hacia refugios. Presiona dólar financiero ↑</p>
+        <p style="font-size:12px;color:#b0bcd0;margin-bottom:5px;"><span style="color:#34d399;">▼</span> <strong style="color:#c8d0df;">BCRA comprador + ingreso de cosecha agrícola:</strong> fuerte oferta de divisas. Presiona oficial ↓</p>
+        <p style="font-size:12px;color:#b0bcd0;margin-bottom:10px;"><span style="color:#f87171;">▲</span> <strong style="color:#c8d0df;">Riesgo país ~539 pts + acciones ARG -6% en Wall Street (19/5):</strong> tensión financiera local. Presiona CCL/blue ↑</p>
+        <div class="recomendacion"><strong>Recomendación:</strong> No hay urgencia de moverse hoy. La brecha blue/MEP está en 1%, prácticamente sin diferencial. El carry en pesos al 30% TNA sigue ganando frente a una devaluación implícita menor al 3% TNA. Para excedentes de pesos: caución o LECAP antes que comprar dólares. Si tenés dólares y necesitás pesos para operaciones de corto plazo, este es un buen momento para vender (brecha mínima).</div>
       </div>
 
-      <div class="noticia-body">
-        <p><strong>BCRA y reservas:</strong> El Banco Central acumula compras netas por USD 7.876 millones en 2026 (récord de la era Milei). Las reservas brutas rondan los USD 46.000 millones, aunque en mayo la acumulación cae 40% respecto a abril a pesar de la liquidación del agro. El grueso del ingreso agrícola todavía no llegó al MLC, se espera para las próximas semanas.</p>
-        <p><strong>Contexto político:</strong> El gobierno sostiene un discurso de apertura y normalización cambiaria. No hay señales de nuevas medidas de cepo. El FMI mantiene el diálogo y el acuerdo vigente. Mayo fue identificado como el mes que pondría a prueba las reservas y la estabilidad del tipo de cambio — de momento el mercado convalida el esquema.</p>
-        <p><strong>Señal clave:</strong> La brecha blue-oficial llegó a 0%. Esto es históricamente inusual y señala que el mercado paralelo ya no "castiga" la política cambiaria. Es un termómetro de confianza.</p>
-      </div>
-
-      <div class="recomendacion"><strong>Recomendación hoy:</strong> Con brecha cero y tasas en pesos al 30-33% TNA, no conviene dolarizarse a menos que tengas una necesidad concreta en dólares. El carry en pesos sigue pagando mientras el tipo de cambio no salte. Si tenés pesos ociosos: Lecap o Boncap a 30 días es la jugada. Si ya estás en dólares, no hay urgencia de vender.</div>
-    </div>
-
-    <div class="fin-section">
-      <h3>Rulos del día</h3>
-
-      <div class="rulo-item">
-        <div class="rulo-titulo">Carry Trade en pesos — Lecap / Boncap <span class="tag-legal">Legal</span></div>
-        <div class="rulo-body">
-          Vendés dólares (al tipo oficial o MEP), ponés los pesos en Lecap o Boncap. Tasa: ~30-33% TNA = ~2.5% mensual. Si el dólar sube menos que eso en el período (hoy la apuesta es que no sube), ganás en dólares efectivos.<br>
-          <strong>Ejemplo:</strong> Ponés USD 1.000 → $1.420.000. A 30 días al 2.5% = $1.455.500. Si el dólar sigue en $1.420, recuperás USD 1.025. Ganancia: +USD 25 en un mes.<br>
-          <strong>Riesgo:</strong> Salto cambiario (hoy bajo, brecha = 0%). <strong>Rendimiento estimado:</strong> 2.5% mensual en pesos / 1-2% en USD. Legal y regulado.
+      <!-- B. ROFEX -->
+      <div class="fin-section">
+        <div class="fin-label">B · Futuros ROFEX</div>
+        <div class="rofex-grid">
+          <div class="rofex-item">
+            <div class="label">30 días · Jun</div>
+            <div class="val">~$1.420</div>
+            <div class="tna">TNA implícita ~2% est.</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">60 días · Jul</div>
+            <div class="val">~$1.440</div>
+            <div class="tna">TNA implícita ~3% est.</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">90 días · Ago</div>
+            <div class="val">~$1.460</div>
+            <div class="tna">TNA implícita ~3% est.</div>
+          </div>
         </div>
+        <p style="font-size:12px;color:#7a8499;margin-top:8px;">⚠ Estimación referencial — para datos en tiempo real: Rava.com o Ambito.com. El mercado no espera movimientos bruscos del oficial: con el BCRA en la banda y comprando, las expectativas de devaluación a 90 días son muy bajas (menor al 3% TNA).</p>
       </div>
 
-      <div class="rulo-item">
-        <div class="rulo-titulo">Diferencial MEP / CCL con bono en USD <span class="tag-gris">Zona gris</span></div>
-        <div class="rulo-body">
-          Comprás un bono en pesos al precio MEP (~$1.438), lo vendés en dólares al CCL (~$1.485). La diferencia bruta es ~3.3%. En la práctica, descontando comisiones y timing, quedan ~1.5-2% neto por operación.<br>
-          <strong>Ejemplo:</strong> Operás $1.438.000 → vendés el bono en USD → cobrás ~USD 968 (al CCL). Comparado con comprar MEP: habrías gastado $1.438.000 para conseguir USD 1.000. La diferencia son ~USD 32 a favor del CCL.<br>
-          <strong>Riesgo:</strong> Timing de mercado, spread del bono. Zona gris regulatoria si se hace frecuente con montos grandes.
+      <!-- C. Tasas -->
+      <div class="fin-section">
+        <div class="fin-label">C · Tasas de referencia</div>
+        <div class="tasas-grid">
+          <div class="tasa-item">
+            <div class="t-label">Plazo fijo BNA</div>
+            <div class="t-val">17.5% TNA</div>
+            <div class="t-sub">~1.46%/mes · en baja</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">PF privados (mejor)</div>
+            <div class="t-val">19.5% TNA</div>
+            <div class="t-sub">Bco Prov. BA · ~1.63%/mes</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Caución bursátil 7d</div>
+            <div class="t-val">~35% TNA</div>
+            <div class="t-sub">~0.65%/semana · sin riesgo</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Lecap / Boncap</div>
+            <div class="t-val">~30% TNA</div>
+            <div class="t-sub">Referencia mayo 2026</div>
+          </div>
         </div>
       </div>
 
-      <div class="rulo-item">
-        <div class="rulo-titulo">Caución bursátil a 7 días <span class="tag-legal">Legal</span></div>
-        <div class="rulo-body">
-          Prestás pesos en el mercado de capitales garantizados por títulos. Tasa: ~35-40% TNA = ~0.67-0.77% semanal. Más rentable que plazo fijo con liquidez en 7 días.<br>
-          <strong>Ejemplo:</strong> $500.000 en caución 7 días al 37% TNA → ganás ~$3.500 en una semana ($500.000 × 0.37/52).<br>
-          <strong>Riesgo:</strong> Mínimo (garantizado por BYMA). Solo necesitás cuenta en Invertir Online, PPI o Balanz.
+      <!-- D. CPD -->
+      <div class="fin-section">
+        <div class="fin-label">D · Cheques de pago diferido (CPD)</div>
+        <p style="font-size:13px;color:#b0bcd0;margin-bottom:10px;">Tasa promedio mercado secundario MAV (referencia):</p>
+        <div class="rofex-grid">
+          <div class="rofex-item">
+            <div class="label">30 días</div>
+            <div class="val">~38% TNA</div>
+            <div class="tna">~3.2%/mes</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">60 días</div>
+            <div class="val">~40% TNA</div>
+            <div class="tna">~6.7% bimestral</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">90 días</div>
+            <div class="val">~43% TNA</div>
+            <div class="tna">~10.7% trimestral</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:#7a8499;margin-top:8px;">Las tasas CPD se mantienen ~20 pp por encima del plazo fijo bancario, señal de prima de riesgo pyme estable. Sin deterioro brusco en el riesgo de crédito. Para la financiera: el CPD sigue siendo atractivo frente a las tasas pasivas del sistema bancario.</p>
+      </div>
+
+      <!-- E. EMBI+ -->
+      <div class="fin-section">
+        <div class="fin-label">E · Riesgo país (EMBI+ JP Morgan)</div>
+        <div class="rp-row">
+          <span class="rp-label">EMBI+ Argentina</span>
+          <span class="rp-val rp-up">539 pts</span>
+          <span class="rp-delta rp-up">▲ zona de tensión</span>
+        </div>
+        <p style="font-size:12px;color:#7a8499;margin-top:8px;">En 539 pts el mercado sigue cauteloso con la deuda soberana argentina. Cayó desde los picos de 2024 pero no baja del umbral 500. En este nivel los clientes de la financiera con pesos libres tienden a dolarizarse como precaución. Si bajara hacia 400, el carry trade en pesos se volvería mucho más agresivo para fondos institucionales. Por ahora: nivel de alerta moderada.</p>
+      </div>
+
+      <!-- F. Flujo del día -->
+      <div class="fin-section">
+        <div class="fin-label">F · Flujo del día</div>
+        <div class="flujo-card flujo-neutral">
+          <div class="flujo-titulo">JORNADA NEUTRAL</div>
+          <div class="flujo-body">La brecha blue/MEP está en apenas 1%, lo que elimina urgencia operativa. El BCRA lleva 90 jornadas comprando y sostiene el piso del tipo de cambio. Sin embargo, la tensión post-Moody's (EE.UU. perdió la AAA), el riesgo país en 539 pts y la caída del 6% de acciones ARG en Wall Street el martes generan cautela. Estamos a 5 días del pago de sueldos (25/5): los próximos días pueden traer mayor demanda de pesos, lo que favorece el carry. Sin señal clara de compra ni venta masiva: monitorear durante la jornada.</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- 8. NOTICIAS -->
-  <div class="sec-title">📰 Argentina</div>
-  <div class="card">
-    <div class="noticia">
-      <div class="noticia-meta">El Cronista · Importaciones · Mayo 2026</div>
-      <div class="noticia-titulo">La apertura de importaciones redefine el mapa: quiénes ganan y quiénes pierden</div>
-      <div class="noticia-body">
-        <p>Argentina cerró 2025 con un crecimiento del 24.7% en importaciones, alcanzando USD 75.791 millones. El DNU 41/2026 de enero aceleró el proceso al modificar el Código Aduanero: se redujeron tiempos, se incorporaron "resoluciones anticipadas" (el importador puede pedir opiniones previas sobre clasificación arancelaria y origen con respuesta en 30 días), y se bajaron márgenes de discrecionalidad en la operatoria. El resultado: el flujo comercial se volvió más predecible, pero más competitivo.</p>
-        <p>Los sectores más golpeados son textil, electrónica de consumo, juguetes, neumáticos y parte del sector automotriz. El sector ferretero reportó caída del 10% en ventas en 2025 y mermas de hasta 25% en enero 2026. La metalurgia acumula -19% interanual. En el otro extremo, los importadores de insumos y bienes intermedios tienen acceso más barato a materiales, lo que baja costos de producción para quienes fabriquen en Argentina.</p>
-        <p>El gobierno celebra la apertura como señal de normalización. La contrapartida es que las PyMEs industriales que competían con producción local enfrentan una presión sin transición. Sectores con margen de adaptación: maquinaria agrícola, farmacéutica de alto valor, agro-insumos.</p>
-        <p><strong>Implicancia para Santiago:</strong> La apertura crea oportunidades concretas de importación (electrónica, artículos deportivos, insumos de nicho). Quien identifique un producto con demanda local y lo importe antes de que el mercado se sature, gana margen. Los proveedores de Paraguay en golf y pádel que tenés en tareas son exactamente este tipo de oportunidad. El timing es ahora.</p>
+      <!-- G. Rulos -->
+      <div class="fin-section">
+        <div class="fin-label">G · Rulos financieros</div>
+        <div class="rulo-item">
+          <div class="rulo-titulo">Carry trade LECAP / BONCAP <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">Vendés USD a MEP ($1.432), comprás LECAP o BONCAP al ~30% TNA (2.5%/mes). En 30 días recomprás dólares. Si el MEP sube menos de $36 (~2.5%), ganás en dólares. Con BCRA comprador y brecha mínima, el escenario de suba brusca del MEP es poco probable a corto plazo. <strong>Riesgo:</strong> evento externo (shock de confianza, cepo, escándalo político) que empuje el CCL/blue bruscamente arriba.</div>
+        </div>
+        <div class="rulo-item">
+          <div class="rulo-titulo">Diferencial MEP / CCL <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">Comprás activo en pesos por MEP ($1.432) y vendés en dólares cable CCL ($1.490). Spread bruto: $58 = ~4%. Comisiones: ~0.5-1%. Ganancia neta estimada: 3-3.5% por operación. Requiere cuenta comitente habilitada y 48-72 hs para liquidar. <strong>Ideal para</strong> quien tiene pesos ociosos y no necesita liquidez inmediata.</div>
+        </div>
+        <div class="rulo-item">
+          <div class="rulo-titulo">Caución bursátil 7 días <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">Prestás pesos garantizados por el mercado a 7 días al ~35% TNA (~0.65%/semana). Si ponés $1.000.000 en caución hoy, en 7 días tenés ~$6.500 de ganancia garantizada por el mercado. Rendimiento 2x por encima del plazo fijo BNA (17.5% TNA) con la misma liquidez a 7 días. <strong>El instrumento ideal</strong> para excedentes de caja en la financiera: sin riesgo de contraparte, sin plazos forzosos.</div>
+        </div>
+      </div>
+
+    </div><!-- /card financiera -->
+
+    <!-- NOTICIAS AR -->
+    <div class="sec-title">Argentina</div>
+    <div class="card">
+
+      <div class="noticia">
+        <div class="noticia-meta">Infobae · 19 mayo 2026 · BCRA / Reservas</div>
+        <div class="noticia-titulo">BCRA acumula 90 jornadas consecutivas de compras y ya sumó USD 8.300 M en 2026</div>
+        <div class="noticia-body">
+          <p>El Banco Central completó este martes su <strong>90ª jornada consecutiva de compras de dólares en el mercado oficial</strong>, acumulando más de USD 8.300 millones desde el inicio del nuevo esquema monetario en enero. Con esto, el BCRA ya alcanzó el 83,78% de su meta anual de compras. Las reservas brutas se ubican en USD 46.190 millones, un nivel que no se veía desde mediados de 2019.</p>
+          <p>La semana del 12 al 16 de mayo el BCRA compró USD 596 millones netos, llevando el total de mayo a USD 1.223 millones. El tipo de cambio mayorista cerró la jornada del martes en $1.398, en la zona del <strong>piso de la banda cambiaria</strong>. Este nivel no es casual: el BCRA interviene activamente para evitar que el dólar caiga aún más, absorbiendo el exceso de oferta que llega tanto por la liquidación de la cosecha gruesa (soja, maíz) como por las inversiones externas.</p>
+          <p>Lo que el dato no dice pero importa: el BCRA compra porque hay <strong>demasiada oferta de dólares</strong> en relación a la demanda. Esto es señal de estabilidad a corto plazo, pero también de que los importadores y el sector privado todavía no están demandando divisas con fuerza. El flujo de liquidaciones agrarias debería continuar en junio y julio, lo que podría mantener al oficial cerca del piso por al menos 60 días más.</p>
+          <p><strong>Para la financiera:</strong> mayor certeza de tipo de cambio a corto plazo. El carry trade en pesos sigue siendo viable. Para operaciones de importación: conviene avanzar en los próximos 30 días antes de que el escenario externo (Moody's, elecciones 2027) genere volatilidad.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-meta">El Cronista · mayo 2026 · Importaciones / Economía</div>
+        <div class="noticia-titulo">Las importaciones caen 7.3% en el año y golpean la recaudación — pero el Gobierno abraza las inversiones ligadas al comercio exterior</div>
+        <div class="noticia-body">
+          <p>Las importaciones acumulan una caída del <strong>7.3% en el primer trimestre de 2026</strong> respecto al mismo período del año anterior, según datos del INDEC. El impacto directo es una caída en tres impuestos clave: IVA importaciones, tasa estadística y aranceles, que representan una porción significativa de la recaudación de AFIP. En paralelo, algunos sectores —automotriz, textil, bienes de capital— informan presión creciente de la competencia extranjera, al tiempo que <strong>los ingresos por retenciones agrícolas cayeron 38.2% real interanual</strong> en el primer semestre.</p>
+          <p>Sin embargo, el Gobierno de Milei muestra una posición ambivalente frente a este número. Mientras las importaciones de bienes de consumo cayeron, <strong>el Gobierno está activamente atrayendo inversiones de empresas cuyo modelo de negocio está ligado a importaciones, logística y plataformas digitales</strong>: e-commerce, fintech, operadores de almacenes y distribución. La Argentina Week 2026 en Nueva York fue el escenario donde Milei presentó una agenda pro-apertura para atraer estos capitales.</p>
+          <p>La paradoja es clara: la apertura comercial del gobierno aún no generó el boom importador esperado. Esto puede explicarse por el dólar oficial todavía relativamente caro para algunos sectores, la caída del consumo en segmentos medios, y la incertidumbre sobre la sostenibilidad del tipo de cambio a mediano plazo.</p>
+          <p><strong>Para Santiago:</strong> la caída de importaciones es una señal ambigua pero con oportunidades concretas. Hay menos competencia de importados en el mercado local para quien sepa moverse rápido. Y el proyecto de conseguir proveedores en Paraguay (está en Trello) encaja justo con esta ventana: las barreras regulatorias son menores hoy que en 2024, y el tipo de cambio oficial a $1.420 hace que los precios internacionales sean competitivos para importar desde países como Paraguay, Brasil o China con precio CIF razonable.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOTICIAS INT -->
+    <div class="sec-title">Internacional</div>
+    <div class="card">
+
+      <div class="noticia">
+        <div class="noticia-meta">Bloomberg / CNBC · mayo 2026 · Cloud / Tech</div>
+        <div class="noticia-titulo">Snowflake crece 29% y alcanza USD 4.500 M en revenue: el gasto en infraestructura de datos no frena</div>
+        <div class="noticia-body">
+          <p>Snowflake, la plataforma de cloud data analytics, reportó ingresos por productos de casi <strong>USD 4.500 millones en su año fiscal 2026</strong>, un crecimiento del 29% respecto al año anterior. El resultado fue impulsado por la incorporación de nuevos clientes enterprise y por una mayor profundización del consumo de los ya existentes (net revenue retention por encima del 130%). Las acciones subieron un 8% en after-hours tras el reporte.</p>
+          <p>El dato de fondo es más relevante que el número en sí: Snowflake compite directamente con AWS Redshift, Google BigQuery y Azure Synapse en el mercado de data warehousing en la nube. Un crecimiento del 29% a este tamaño indica que el <strong>gasto en infraestructura de datos empresariales sigue creciendo a ritmo acelerado</strong>, impulsado por la necesidad de las empresas de manejar los volúmenes de datos que genera la IA generativa. Cada empresa que adopta ChatGPT, Gemini o modelos propios necesita un lugar donde guardar, procesar y consultar esos datos — ese lugar es Snowflake.</p>
+          <p>El resultado también valida la tesis de los "picos y palas" en el ciclo de IA: no todas las empresas de IA van a sobrevivir, pero las que venden infraestructura de datos, cómputo y almacenamiento cobran independientemente de quién gane la carrera de los modelos. <strong>Para inversores en CEDEARs de tech:</strong> el sector cloud infrastructure (Snowflake, Databricks, MongoDB) muestra fundamentos sólidos y crecimiento de doble dígito alto, con menor volatilidad que las empresas puramente de modelos de IA.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-meta">CNBC / TechCrunch · mayo 2026 · Ciberseguridad</div>
+        <div class="noticia-titulo">CrowdStrike: ARR crece 24% hasta USD 5.300 M — la ciberseguridad es el gasto tecnológico que no se recorta</div>
+        <div class="noticia-body">
+          <p>CrowdStrike reportó que su <strong>Annual Recurring Revenue (ARR) creció 24% hasta USD 5.300 millones</strong> en el cuarto trimestre de su año fiscal 2026. El crecimiento es notable porque se da casi dos años después del incidente del "blue screen of death" de julio 2024, cuando una actualización defectuosa del software dejó sin funcionar millones de computadoras en todo el mundo. La recuperación fue total: los clientes no se fueron.</p>
+          <p>¿Por qué los clientes no se fueron? Porque <strong>no hay alternativa de nivel enterprise comparable</strong> en endpoint security. Las empresas que usan CrowdStrike —aerolíneas, bancos, gobiernos, hospitales— no pueden simplemente cambiar de proveedor. El lock-in es estructural: migrar un sistema de ciberseguridad de nivel enterprise tarda entre 12 y 24 meses y tiene un costo enorme en tiempo de ingeniería interna.</p>
+          <p>El sector de ciberseguridad sigue siendo <strong>el gasto tecnológico más difícil de recortar</strong> en cualquier empresa. Con la expansión del uso de IA generativa para crear ataques más sofisticados (phishing con voz sintética, malware autogenerado), los riesgos cibernéticos aumentan y el presupuesto de seguridad también. CrowdStrike, Palo Alto Networks y SentinelOne son los tres grandes ganadores de esta tendencia estructural que no tiene señales de desaceleración a corto plazo.</p>
+          <p><strong>Para Santiago:</strong> el sector de ciberseguridad global es uno de los más defensivos del mercado tech. Crece con recesión y sin recesión porque los ataques no paran. Si estás buscando ideas para invertir en CEDEARs con horizonte de 2-3 años, este sector tiene fundamentos claros.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- IDEA SEMANAL -->
+    <div class="sec-title">Idea de negocio — semana 21</div>
+    <div class="idea-card">
+      <div class="idea-tag">Idea de la semana</div>
+      <div class="idea-titulo">Cosignataria Digital de Hacienda y Campo en el NOA</div>
+      <div class="idea-body">
+        <h3>Qué es</h3>
+        <p>Una agencia de compraventa, arrendamiento y remate de propiedades rurales (campos de caña, soja, frutales, citrus) y hacienda (tropas bovinas, ovinos, caballos) en Tucumán y el NOA, con un proceso completamente digitalizado: publicación en redes sociales, tours en video con drone, tasación ágil y cierre de operaciones en semanas en lugar de meses. Actuás como intermediario entre vendedores/arrendadores rurales y compradores/inversores, cobrando comisión sobre cada operación cerrada.</p>
+
+        <h3>Por qué ahora</h3>
+        <p>Los precios de commodities están en niveles históricamente altos — caña, soja y citrus en sus mejores valuaciones en años — lo que empuja el valor de las tierras rurales del NOA al alza. Hay liquidez en el sector agropecuario y muchos productores quieren comprar campo adicional o arrendar lotes ociosos, pero el mercado sigue siendo 100% informal y de boca en boca. Ninguna cosignataria tradicional de Tucumán tiene presencia digital real. El boom de inversiones en el sector (crédito agropecuario del Banco Nación, fondos de inversión buscando tierra argentina) genera demanda genuina de intermediarios confiables y eficientes que puedan mostrar propiedades sin que el comprador tenga que viajar.</p>
+
+        <h3>Cómo arrancarla</h3>
+        <ul>
+          <li><strong>Paso 1:</strong> Asociarse con un corredor inmobiliario matriculado (necesario por ley para cobrar comisión). La matrícula tiene proceso, pero podés empezar como socio comercial de alguien ya habilitado mientras tramitás la tuya.</li>
+          <li><strong>Paso 2:</strong> Generar red inicial de proveedores: contadores agropecuarios, escribanos rurales, ingenieros agrónomos, veterinarios — todos refieren clientes. 10 reuniones presenciales en 2 semanas.</li>
+          <li><strong>Paso 3:</strong> Publicar en Instagram y crear web simple con los primeros 3–5 campos disponibles. Grabar con drone. El contenido visual de campo en Argentina performa muy bien orgánicamente.</li>
+          <li><strong>Paso 4:</strong> Cobrar comisión del 3–5% sobre la transacción. En arrendamiento: 10% del valor del alquiler anual.</li>
+          <li><strong>Paso 5:</strong> Expandir a hacienda: inscribirse como consignatario ante SENASA (costo mínimo) y participar de remates mensuales cobrando 2–3% sobre el valor de la tropa.</li>
+        </ul>
+
+        <h3>Modelo de ingreso</h3>
+        <p>Un campo de 50 ha en Tucumán puede valer USD 100.000–500.000. Con 3% de comisión: USD 3.000–15.000 por operación. Si cerrás 2 operaciones al mes: USD 6.000–30.000 brutos. El arrendamiento es más rápido de cerrar y más recurrente: contratos anuales de USD 100–300/ha; con 5 contratos activos generás USD 500–1.500/mes en comisiones pasivas. Hacienda: 2–3% sobre tropa de 100 vacas a USD 800/cabeza = USD 1.600–2.400 por remate.</p>
+
+        <h3>Riesgos principales</h3>
+        <ul>
+          <li>Ciclo de cierre largo: 30–90 días entre primer contacto y escritura. Necesitás aguantar el primer trimestre sin ingresos.</li>
+          <li>Requiere habilitación legal o socio matriculado. Sin esto no podés cobrar comisión legalmente.</li>
+          <li>Las cosignatarias tradicionales tienen relaciones de décadas con productores. Entrar requiere tiempo y credibilidad.</li>
+          <li>Riesgo de mercado: si bajan precios de commodities o hay sequía, las transacciones se congelan.</li>
+        </ul>
+
+        <h3>Esfuerzo / inversión inicial</h3>
+        <p>USD 2.000–5.000 para web, drone (o alquilarlo por operación), viáticos al interior y gastos de habilitación. El capital principal es tiempo y network. 3–6 meses hasta la primera operación cerrada. Es compatible con trabajar en la financiera en paralelo los primeros meses — la mayor parte del trabajo es reuniones y publicación de contenido desde el teléfono.</p>
       </div>
     </div>
 
-    <div class="noticia">
-      <div class="noticia-meta">El Cronista · Inversiones · Mayo 2026</div>
-      <div class="noticia-titulo">Mercado Libre, Uber y Miniso: el gobierno abraza USD 615 millones en inversiones ligadas a plataformas y logística</div>
-      <div class="noticia-body">
-        <p>Tres anuncios relevantes de inversión entraron esta semana en el radar del gobierno de Milei, que los celebró como confirmación del modelo aperturista. Mercado Libre invertirá USD 115 millones en un centro de almacenamiento en Escobar (Buenos Aires) que generará ~1.300 empleos logísticos. Uber anunció USD 500 millones para tres años, incluido el lanzamiento de Uber Eats en Argentina. Miniso, la cadena china de retail de bajo costo, planea abrir hasta 100 locales en 5 años con entre 800 y 1.000 empleos.</p>
-        <p>El patrón es claro: el dinero extranjero entra en distribución, última milla y plataformas de marketplace, no en manufactura local. Economistas advierten que los empleos generados son mayormente informales o por cuenta propia (repartidores, vendedores freelance), no empleos formales registrados. El desempleo formal llegó a 7.5% a fines de 2025, con 17% en menores de 29 años.</p>
-        <p>La inversión de Mercado Libre es la más relevante para el sector comercio: su expansión logística baja costos de fulfillment para vendedores de su plataforma, lo que incentiva más comercio electrónico. El crecimiento del e-commerce en Argentina lleva cuatro años de expansión ininterrumpida.</p>
-        <p><strong>Implicancia para Santiago:</strong> Si estás importando artículos de deporte (golf, pádel), el canal Mercado Libre es cada vez más eficiente y accesible. Investigar fulfillment de MeLi puede ser más rentable que manejar logística propia. La inversión de Miniso es una señal de que productos importados de bajo costo con marca tienen espacio real en el mercado argentino.</p>
-      </div>
-    </div>
-  </div>
+  </div><!-- /body-wrap -->
 
-  <div class="sec-title">🌎 Internacional</div>
-  <div class="card">
-    <div class="noticia">
-      <div class="noticia-meta">CNBC · IPO · 14 Mayo 2026</div>
-      <div class="noticia-titulo">Cerebras Systems debuta en Nasdaq con +68%: la mayor IPO de IA de 2026 y un rival directo de Nvidia</div>
-      <div class="noticia-body">
-        <p>Cerebras Systems, fabricante de chips para inteligencia artificial, salió a bolsa el 14 de mayo en el Nasdaq y saltó 68.2% en su primer día, llevando su capitalización de mercado a USD 95.000 millones. Es la mayor IPO del año. La empresa recaudó USD 3.500 millones en la colocación. Los ingresos de 2025 fueron de USD 510 millones, un crecimiento del 76% interanual (hardware +69%, servicios cloud +99%).</p>
-        <p>El contexto: Cerebras tiene una arquitectura diferente a Nvidia. En lugar de miles de chips pequeños (GPU), fabrica un único chip monolítico gigante (el WSE-3, el más grande del mundo) que puede entrenar modelos de IA con menos latencia y comunicación entre chips. Esto la hace más eficiente para ciertos tipos de inferencia. Su principal cliente es G42 de los Emiratos Árabes, lo que le dio escala antes de la IPO.</p>
-        <p>El debut ocurrió el mismo día en que el Nasdaq tocó un nuevo máximo histórico de 26.635 puntos, impulsado también por resultados de ganancias corporativas por encima de estimaciones (Monday.com, Cisco) y el progreso diplomático de la cumbre Trump-Xi en Beijing.</p>
-        <p><strong>Por qué importa globalmente:</strong> Cerebras valida que hay espacio para competidores de Nvidia en el mercado de chips de IA. El mercado de infraestructura de IA sigue creciendo sin señales de enfriamiento. Para inversores de CEDEARs o acciones tech: el ecosistema AI continúa siendo el driver número uno de los mercados globales en 2026.</p>
-      </div>
-    </div>
-
-    <div class="noticia">
-      <div class="noticia-meta">CNBC · Resultados · Mayo 2026</div>
-      <div class="noticia-titulo">Monday.com sube 26%: la plataforma de trabajo con IA crece 24% y convierte sus usuarios en clientes premium</div>
-      <div class="noticia-body">
-        <p>Monday.com reportó ingresos de Q1 2026 por USD 351.3 millones, un crecimiento del 24% interanual, superando ampliamente las estimaciones de Wall Street. La acción saltó 26% en una jornada. La clave del crecimiento fue el lanzamiento de su "AI Work Platform" con agentes de IA nativos y un nuevo modelo de precios que combina asientos (seats) con créditos de uso de IA.</p>
-        <p>La estrategia es relevante porque ilustra cómo las plataformas SaaS están convirtiendo el AI en un motor de monetización. Los usuarios que adoptaron las funciones de IA tienen tasas de expansión de gasto 3 veces mayor que los que no. Esto indica que el AI no solo retiene clientes sino que los escala hacia planes más caros.</p>
-        <p>Bill Ackman (Pershing Square) aprovechó la caída previa de la acción para construir una posición importante en la compañía, lo que impulsó el interés institucional en el papel.</p>
-        <p><strong>Por qué importa:</strong> El modelo de Monday.com es el mismo que están aplicando Salesforce, HubSpot y SAP: paquetizar IA dentro del software existente para justificar subas de precio. Para cualquier emprendimiento digital, la lección es que el valor percibido de la IA permite cobrar más. Para el mercado: los resultados de Monday refuerzan que el ciclo de ganancias por IA en software empresarial recién empieza.</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- 8. IDEA DE NEGOCIO SEMANAL -->
-  <div class="sec-title">💡 Idea de negocio — semana 21</div>
-  <div class="idea-card">
-    <h2>Idea de la semana</h2>
-    <div class="idea-titulo">Cosignataria Digital de Hacienda y Campo en el NOA</div>
-    <div class="idea-body">
-      <h3>Qué es</h3>
-      <p>Una agencia de compraventa, arrendamiento y remate de propiedades rurales (campos de caña, soja, frutales, citrus) y hacienda (tropas bovinas, ovinos, caballos) en Tucumán y el NOA, con un proceso completamente digitalizado: publicación en redes sociales, tours en video con drone, tasación ágil y cierre de operaciones en semanas en lugar de meses. Actuás como intermediario entre vendedores/arrendadores rurales y compradores/inversores, cobrando comisión sobre cada operación cerrada.</p>
-
-      <h3>Por qué ahora</h3>
-      <p>Los precios de commodities están en niveles históricamente altos — caña, soja y citrus en sus mejores valuaciones en años — lo que empuja el valor de las tierras rurales del NOA al alza. Hay liquidez en el sector agropecuario y muchos productores quieren comprar campo adicional o arrendar lotes ociosos, pero el mercado sigue siendo 100% informal y de boca en boca. Ninguna cosignataria tradicional de Tucumán tiene presencia digital real. El boom de inversiones en el sector (crédito agropecuario del Banco Nación, fondos de inversión buscando tierra argentina) genera demanda genuina de intermediarios confiables y eficientes que puedan mostrar propiedades sin que el comprador tenga que viajar.</p>
-
-      <h3>Cómo arrancarla</h3>
-      <ul>
-        <li><strong>Paso 1:</strong> Asociarse con un corredor inmobiliario matriculado (necesario por ley para cobrar comisión). La matrícula tiene proceso, pero podés empezar como socio comercial de alguien ya habilitado mientras tramitás la tuya.</li>
-        <li><strong>Paso 2:</strong> Generar red inicial de proveedores: contadores agropecuarios, escribanos rurales, ingenieros agrónomos, veterinarios — todos refieren clientes. 10 reuniones presenciales en 2 semanas.</li>
-        <li><strong>Paso 3:</strong> Publicar en Instagram y crear web simple con los primeros 3–5 campos disponibles. Grabar con drone. El contenido visual de campo en Argentina performa muy bien orgánicamente.</li>
-        <li><strong>Paso 4:</strong> Cobrar comisión del 3–5% sobre la transacción. En arrendamiento: 10% del valor del alquiler anual.</li>
-        <li><strong>Paso 5:</strong> Expandir a hacienda: inscribirse como consignatario ante SENASA (costo mínimo) y participar de remates mensuales cobrando 2–3% sobre el valor de la tropa.</li>
-      </ul>
-
-      <h3>Modelo de ingreso</h3>
-      <p>Un campo de 50 ha en Tucumán puede valer USD 100.000–500.000. Con 3% de comisión: USD 3.000–15.000 por operación. Si cerrás 2 operaciones al mes: USD 6.000–30.000 brutos. El arrendamiento es más rápido de cerrar y más recurrente: contratos anuales de USD 100–300/ha; con 5 contratos activos generás USD 500–1.500/mes en comisiones pasivas. Hacienda: 2–3% sobre tropa de 100 vacas a USD 800/cabeza = USD 1.600–2.400 por remate.</p>
-
-      <h3>Riesgos principales</h3>
-      <ul>
-        <li>Ciclo de cierre largo: 30–90 días entre primer contacto y escritura. Necesitás aguantar el primer trimestre sin ingresos.</li>
-        <li>Requiere habilitación legal o socio matriculado. Sin esto no podés cobrar comisión legalmente.</li>
-        <li>Las cosignatarias tradicionales tienen relaciones de décadas con productores. Entrar requiere tiempo y credibilidad.</li>
-        <li>Riesgo de mercado: si bajan precios de commodities o hay sequía, las transacciones se congelan.</li>
-      </ul>
-
-      <h3>Esfuerzo / inversión inicial</h3>
-      <p>USD 2.000–5.000 para web, drone (o alquilarlo por operación), viáticos al interior y gastos de habilitación. El capital principal es tiempo y network. 3–6 meses hasta la primera operación cerrada. Compatible con seguir manejando otros proyectos en paralelo los primeros meses — la mayor parte del trabajo es reuniones y publicación de contenido desde el teléfono.</p>
-    </div>
-  </div>
-
-  <footer>Generado 19/05/2026 · Semana 21</footer>
+  <footer>Generado mié 20/05/2026 · Agente personal</footer>
 
 </body>
 </html>
