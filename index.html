@@ -3,511 +3,891 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — jueves 28 de mayo de 2026</title>
+  <title>Briefing — viernes 29 de mayo de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
   :root {
-    --bg:#edf1f7;--card:#ffffff;--card2:#f5f8fc;--card3:#edf1f7;--text:#0f1924;--muted:#6b7a8d;
-    --border:#dde5ee;--blue:#0066a0;--blue-lt:#1589c8;--blue-dk:#004d78;--purple:#7b5ea7;
-    --magenta:#bc1b88;--danger:#dc2626;--warning:#d97706;--success:#059669;
-    --grad:linear-gradient(135deg,#0066a0 0%,#8e3e8a 100%);
-    --grad-s:linear-gradient(150deg,#0a1628 0%,#0e2044 40%,#1e0d38 100%);
-    --shadow:0 1px 4px rgba(15,25,50,.07),0 1px 2px rgba(15,25,50,.04);
-    --shadow-md:0 4px 14px rgba(15,25,50,.10),0 2px 4px rgba(15,25,50,.05);
-    --shadow-lg:0 8px 30px rgba(15,25,50,.12),0 2px 8px rgba(15,25,50,.06);
+    --bg:        #edf1f7;
+    --card:      #ffffff;
+    --card2:     #f5f8fc;
+    --card3:     #edf1f7;
+    --text:      #0f1924;
+    --muted:     #6b7a8d;
+    --border:    #dde5ee;
+    --blue:      #0066a0;
+    --blue-lt:   #1589c8;
+    --blue-dk:   #004d78;
+    --purple:    #7b5ea7;
+    --magenta:   #bc1b88;
+    --danger:    #dc2626;
+    --warning:   #d97706;
+    --success:   #059669;
+    --grad:      linear-gradient(135deg, #0066a0 0%, #8e3e8a 100%);
+    --grad-s:    linear-gradient(150deg, #0a1628 0%, #0e2044 40%, #1e0d38 100%);
+    --shadow:    0 1px 4px rgba(15,25,50,.07), 0 1px 2px rgba(15,25,50,.04);
+    --shadow-md: 0 4px 14px rgba(15,25,50,.10), 0 2px 4px rgba(15,25,50,.05);
+    --shadow-lg: 0 8px 30px rgba(15,25,50,.12), 0 2px 8px rgba(15,25,50,.06);
   }
-  *{box-sizing:border-box;margin:0;padding:0;}
-  body{background:var(--bg);color:var(--text);font-family:'Poppins',-apple-system,sans-serif;font-size:14px;line-height:1.65;padding:0;max-width:1000px;margin:0 auto;}
-  .site-header{background:var(--grad-s);padding:28px 36px 22px;position:relative;overflow:hidden;}
-  .site-header::before{content:'';position:absolute;top:-80px;right:-40px;width:300px;height:300px;background:radial-gradient(circle,rgba(0,102,160,.22) 0%,transparent 65%);pointer-events:none;}
-  .site-header::after{content:'';position:absolute;bottom:-50px;left:25%;width:220px;height:220px;background:radial-gradient(circle,rgba(142,62,138,.18) 0%,transparent 65%);pointer-events:none;}
-  .header-inner{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:1;}
-  .header-left{display:flex;align-items:center;gap:18px;} .header-right{text-align:right;}
-  .sn-logo{flex-shrink:0;display:block;}
-  .header-brand{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:5px;}
-  .header-title{font-size:24px;font-weight:800;color:#fff;letter-spacing:-.01em;line-height:1.15;}
-  .header-date{font-size:12px;font-weight:400;color:rgba(255,255,255,.5);margin-top:4px;}
-  .header-week{font-size:10px;font-weight:700;color:#5db8e8;letter-spacing:.09em;text-transform:uppercase;margin-bottom:4px;}
-  .header-bar{height:3px;background:var(--grad);margin-top:22px;border-radius:999px;position:relative;z-index:1;}
-  .body-wrap{padding:32px 36px 48px;}
-  .meta-rotativa{background:var(--grad);border-radius:10px;padding:14px 20px;margin-bottom:30px;font-size:13px;font-weight:500;color:rgba(255,255,255,.9);box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;}
-  .meta-rotativa strong{color:#fff;font-weight:700;} .meta-icon{font-size:18px;flex-shrink:0;}
-  .sec-title{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);margin:34px 0 16px;padding-bottom:12px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:9px;}
-  .sec-title::before{content:'';display:inline-block;width:4px;height:14px;background:var(--grad);border-radius:2px;flex-shrink:0;}
-  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 22px;margin-bottom:14px;box-shadow:var(--shadow);}
-  .card-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);margin-bottom:14px;}
-  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:0;}
-  .task-list{list-style:none;}
-  .task-list li{padding:8px 0;border-bottom:1px solid var(--border);display:flex;gap:10px;align-items:flex-start;font-size:13px;font-weight:400;color:#2a3a4e;}
-  .task-list li:last-child{border-bottom:none;padding-bottom:0;}
-  .task-list li::before{content:"›";color:var(--blue-lt);font-size:17px;font-weight:700;flex-shrink:0;line-height:1.25;}
-  .evento-item{padding:12px 0;border-bottom:1px solid var(--border);display:flex;gap:14px;align-items:flex-start;}
-  .evento-item:last-child{border-bottom:none;padding-bottom:0;} .evento-item:first-child{padding-top:0;}
-  .evento-dot{width:8px;height:8px;border-radius:50%;background:var(--grad);flex-shrink:0;margin-top:6px;}
-  .evento-content{flex:1;}
-  .cal-cuando{font-size:9px;font-weight:700;color:var(--blue-lt);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;}
-  .cal-titulo{font-size:14px;font-weight:600;margin-bottom:1px;color:var(--text);}
-  .cal-hora{font-size:11px;color:var(--muted);}
-  .hab-summary{display:flex;align-items:flex-end;gap:20px;margin-bottom:18px;}
-  .hab-pct{font-size:60px;font-weight:900;line-height:1;background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
-  .hab-pct-right{flex:1;} .hab-sub{font-size:12px;color:var(--muted);margin-bottom:6px;}
-  .hab-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-bottom:18px;}
-  .hab-item{padding:9px 12px;background:var(--card2);border-radius:8px;font-size:12px;display:flex;justify-content:space-between;align-items:center;border:1px solid var(--border);}
-  .hab-name{color:#3a4a5e;font-weight:500;}
-  .badge-g{color:var(--success);font-weight:700;font-size:12px;}
-  .badge-w{color:var(--warning);font-weight:700;font-size:12px;}
-  .badge-r{color:var(--danger);font-weight:700;font-size:12px;}
-  .hab-insights{margin-bottom:14px;}
-  .hab-insights li{padding:7px 0;border-bottom:1px solid var(--border);list-style:none;font-size:13px;color:#344055;}
-  .hab-insights li:last-child{border-bottom:none;}
-  .chart-wrap{position:relative;height:200px;margin-top:16px;}
-  .lancer-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:16px;}
-  .lancer-stat{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:14px 10px;text-align:center;transition:box-shadow .2s;}
-  .lancer-stat:hover{box-shadow:var(--shadow-md);}
-  .lancer-stat .label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:6px;}
-  .lancer-stat .val{font-size:19px;font-weight:800;color:var(--text);}
-  .lancer-stat .sub{font-size:10px;margin-top:4px;}
-  .dolar-chart-wrap{position:relative;height:160px;margin-bottom:16px;}
-  .rofex-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:8px;}
-  .rofex-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;text-align:center;}
-  .rofex-item .label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px;}
-  .rofex-item .val{font-size:17px;font-weight:800;color:var(--text);}
-  .rofex-item .tna{font-size:10px;color:var(--muted);margin-top:3px;}
-  .tasas-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:8px;}
-  .tasa-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:12px 14px;}
-  .tasa-item .t-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:5px;}
-  .tasa-item .t-val{font-size:16px;font-weight:800;color:var(--text);}
-  .tasa-item .t-sub{font-size:10px;color:var(--muted);margin-top:3px;}
-  .rp-row{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);}
-  .rp-row:last-child{border-bottom:none;}
-  .rp-label{font-size:12px;color:var(--muted);width:150px;flex-shrink:0;}
-  .rp-val{font-size:22px;font-weight:800;} .rp-delta{font-size:12px;margin-left:6px;font-weight:600;}
-  .rp-up{color:var(--danger);} .rp-down{color:var(--success);} .rp-neu{color:var(--warning);}
-  .flujo-card{border-radius:8px;padding:14px 16px;margin-top:6px;}
-  .flujo-compra{background:#eff8ff;border-left:4px solid var(--blue);}
-  .flujo-venta{background:#fff5f5;border-left:4px solid var(--danger);}
-  .flujo-neutral{background:#fffbeb;border-left:4px solid var(--warning);}
-  .flujo-titulo{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:6px;}
-  .flujo-body{font-size:13px;color:#3a4a5e;line-height:1.65;}
-  .flujo-compra .flujo-titulo{color:var(--blue);} .flujo-venta .flujo-titulo{color:var(--danger);} .flujo-neutral .flujo-titulo{color:#b45309;}
-  .fin-section{margin-bottom:22px;} .fin-section:last-child{margin-bottom:0;}
-  .fin-label{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue-lt);border-bottom:1px solid var(--border);padding-bottom:7px;margin-bottom:12px;display:flex;align-items:center;gap:7px;}
-  .fin-label::before{content:'';display:inline-block;width:3px;height:10px;background:var(--grad);border-radius:2px;flex-shrink:0;}
-  .recomendacion{background:#eff8ff;border:1px solid #bde0f5;border-left:3px solid var(--blue);border-radius:8px;padding:13px 16px;font-size:13px;margin-top:14px;color:#2a3a50;line-height:1.65;}
-  .recomendacion strong{color:var(--blue);}
-  .tag-legal{background:rgba(5,150,105,.12);color:var(--success);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;}
-  .tag-gris{background:rgba(217,119,6,.12);color:var(--warning);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;}
-  .rulo-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:8px;}
-  .rulo-item:last-child{margin-bottom:0;}
-  .rulo-titulo{font-size:13px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--text);}
-  .rulo-body{font-size:13px;color:#3a4a5e;line-height:1.65;}
-  .brecha-pos{color:var(--danger);} .brecha-neu{color:var(--warning);} .brecha-ok{color:var(--success);}
-  .noticia{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);}
-  .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-  .noticia-meta{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue-lt);margin-bottom:7px;}
-  .noticia-titulo{font-size:15px;font-weight:700;margin-bottom:10px;line-height:1.35;color:var(--text);}
-  .noticia-body{font-size:13px;color:#3a4a5e;line-height:1.8;}
-  .noticia-body p{margin-bottom:10px;} .noticia-body p:last-child{margin-bottom:0;}
-  .noticia-body strong{color:var(--text);font-weight:600;}
-  .idea-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:26px;box-shadow:var(--shadow-md);position:relative;overflow:hidden;}
-  .idea-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--grad);}
-  .idea-card::after{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(123,94,167,.07) 0%,transparent 70%);pointer-events:none;}
-  .idea-tag{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;color:var(--blue-lt);margin-bottom:7px;display:flex;align-items:center;gap:6px;}
-  .idea-tag::before{content:'';display:inline-block;width:3px;height:10px;background:var(--grad);border-radius:2px;}
-  .idea-titulo{font-size:22px;font-weight:800;margin-bottom:20px;color:var(--text);line-height:1.2;}
-  .idea-body{font-size:13px;color:#3a4a5e;line-height:1.8;position:relative;z-index:1;}
-  .idea-body h3{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:var(--blue);margin:18px 0 6px;padding-bottom:5px;border-bottom:1px solid var(--border);}
-  .idea-body p{margin-bottom:10px;} .idea-body ul{padding-left:16px;margin-bottom:10px;} .idea-body ul li{margin-bottom:6px;}
-  .idea-body strong{color:var(--text);font-weight:600;}
-  footer{margin:0 36px;padding:16px 0 32px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:11px;letter-spacing:.03em;}
-  @media(max-width:640px){.body-wrap{padding:20px 16px 32px;}.site-header{padding:20px 16px 18px;}footer{margin:0 16px;}.grid-2{grid-template-columns:1fr;}.lancer-grid{grid-template-columns:repeat(2,1fr);}.rofex-grid{grid-template-columns:1fr 1fr 1fr;}.tasas-grid{grid-template-columns:1fr 1fr;}.hab-grid{grid-template-columns:1fr 1fr;}.header-title{font-size:18px;}}
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Poppins', -apple-system, sans-serif;
+    font-size: 14px;
+    line-height: 1.65;
+    padding: 0;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .site-header {
+    background: var(--grad-s);
+    padding: 28px 36px 22px;
+    position: relative;
+    overflow: hidden;
+  }
+  .site-header::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -40px;
+    width: 300px; height: 300px;
+    background: radial-gradient(circle, rgba(0,102,160,.22) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .site-header::after {
+    content: '';
+    position: absolute;
+    bottom: -50px; left: 25%;
+    width: 220px; height: 220px;
+    background: radial-gradient(circle, rgba(142,62,138,.18) 0%, transparent 65%);
+    pointer-events: none;
+  }
+  .header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .header-left  { display: flex; align-items: center; gap: 18px; }
+  .header-right { text-align: right; }
+  .sn-logo { flex-shrink: 0; display: block; }
+  .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
+  .header-title { font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -.01em; line-height: 1.15; }
+  .header-date  { font-size: 12px; font-weight: 400; color: rgba(255,255,255,.5); margin-top: 4px; }
+  .header-week  { font-size: 10px; font-weight: 700; color: #5db8e8; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 4px; }
+  .header-bar {
+    height: 3px;
+    background: var(--grad);
+    margin-top: 22px;
+    border-radius: 999px;
+    position: relative; z-index: 1;
+  }
+
+  .body-wrap { padding: 32px 36px 48px; }
+
+  .meta-rotativa {
+    background: var(--grad);
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin-bottom: 30px;
+    font-size: 13px;
+    font-weight: 500;
+    color: rgba(255,255,255,.9);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .meta-rotativa strong { color: #ffffff; font-weight: 700; }
+  .meta-icon { font-size: 18px; flex-shrink: 0; }
+
+  .sec-title {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .12em;
+    color: var(--blue);
+    margin: 34px 0 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 9px;
+  }
+  .sec-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px; height: 14px;
+    background: var(--grad);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin-bottom: 14px;
+    box-shadow: var(--shadow);
+  }
+  .card-label {
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+    color: var(--muted);
+    margin-bottom: 14px;
+  }
+
+  .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
+
+  .task-list { list-style: none; }
+  .task-list li {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    font-size: 13px;
+    font-weight: 400;
+    color: #2a3a4e;
+  }
+  .task-list li:last-child { border-bottom: none; padding-bottom: 0; }
+  .task-list li::before {
+    content: "›";
+    color: var(--blue-lt);
+    font-size: 17px;
+    font-weight: 700;
+    flex-shrink: 0;
+    line-height: 1.25;
+  }
+
+  .evento-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .evento-item:last-child { border-bottom: none; padding-bottom: 0; }
+  .evento-item:first-child { padding-top: 0; }
+  .evento-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--grad);
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .evento-content { flex: 1; }
+  .cal-cuando {
+    font-size: 9px; font-weight: 700;
+    color: var(--blue-lt); text-transform: uppercase;
+    letter-spacing: .08em; margin-bottom: 2px;
+  }
+  .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 1px; color: var(--text); }
+  .cal-hora   { font-size: 11px; color: var(--muted); }
+
+  .hab-summary {
+    display: flex;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 18px;
+  }
+  .hab-pct {
+    font-size: 60px; font-weight: 900; line-height: 1;
+    background: var(--grad);
+    -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hab-pct-right { flex: 1; }
+  .hab-sub  { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .hab-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 7px; margin-bottom: 18px; }
+  .hab-item {
+    padding: 9px 12px;
+    background: var(--card2);
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border);
+  }
+  .hab-name { color: #3a4a5e; font-weight: 500; }
+  .badge-g { color: var(--success); font-weight: 700; font-size: 12px; }
+  .badge-w { color: var(--warning); font-weight: 700; font-size: 12px; }
+  .badge-r { color: var(--danger);  font-weight: 700; font-size: 12px; }
+  .hab-insights { margin-bottom: 14px; }
+  .hab-insights li {
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    list-style: none;
+    font-size: 13px;
+    color: #344055;
+  }
+  .hab-insights li:last-child { border-bottom: none; }
+  .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
+
+  .lancer-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 8px; margin-bottom: 16px; }
+  .lancer-stat {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 10px;
+    text-align: center;
+    transition: box-shadow .2s;
+  }
+  .lancer-stat:hover { box-shadow: var(--shadow-md); }
+  .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
+  .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
+  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
+
+  .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
+  .rofex-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+    text-align: center;
+  }
+  .rofex-item .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 5px; }
+  .rofex-item .val   { font-size: 17px; font-weight: 800; color: var(--text); }
+  .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
+  .tasa-item {
+    background: var(--card2);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 12px 14px;
+  }
+  .tasa-item .t-label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 5px; }
+  .tasa-item .t-val   { font-size: 16px; font-weight: 800; color: var(--text); }
+  .tasa-item .t-sub   { font-size: 10px; color: var(--muted); margin-top: 3px; }
+
+  .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .rp-row:last-child { border-bottom: none; }
+  .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
+  .rp-val   { font-size: 22px; font-weight: 800; }
+  .rp-delta { font-size: 12px; margin-left: 6px; font-weight: 600; }
+  .rp-up    { color: var(--danger); }
+  .rp-down  { color: var(--success); }
+  .rp-neu   { color: var(--warning); }
+
+  .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
+  .flujo-compra  { background: #eff8ff; border-left: 4px solid var(--blue); }
+  .flujo-venta   { background: #fff5f5; border-left: 4px solid var(--danger); }
+  .flujo-neutral { background: #fffbeb; border-left: 4px solid var(--warning); }
+  .flujo-titulo  { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 6px; }
+  .flujo-body    { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
+  .flujo-compra  .flujo-titulo { color: var(--blue); }
+  .flujo-venta   .flujo-titulo { color: var(--danger); }
+  .flujo-neutral .flujo-titulo { color: #b45309; }
+
+  .fin-section { margin-bottom: 22px; }
+  .fin-section:last-child { margin-bottom: 0; }
+  .fin-label {
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .1em;
+    color: var(--blue-lt);
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 7px; margin-bottom: 12px;
+    display: flex; align-items: center; gap: 7px;
+  }
+  .fin-label::before {
+    content: '';
+    display: inline-block;
+    width: 3px; height: 10px;
+    background: var(--grad);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  .recomendacion {
+    background: #eff8ff;
+    border: 1px solid #bde0f5;
+    border-left: 3px solid var(--blue);
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-size: 13px;
+    margin-top: 14px;
+    color: #2a3a50;
+    line-height: 1.65;
+  }
+  .recomendacion strong { color: var(--blue); }
+
+  .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
+  .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
+
+  .rulo-item { background: var(--card2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
+  .rulo-item:last-child { margin-bottom: 0; }
+  .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
+  .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
+
+  .brecha-pos { color: var(--danger); }
+  .brecha-neu { color: var(--warning); }
+  .brecha-ok  { color: var(--success); }
+
+  .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+  .noticia-meta {
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .09em;
+    color: var(--blue-lt); margin-bottom: 7px;
+  }
+  .noticia-titulo { font-size: 15px; font-weight: 700; margin-bottom: 10px; line-height: 1.35; color: var(--text); }
+  .noticia-body   { font-size: 13px; color: #3a4a5e; line-height: 1.8; }
+  .noticia-body p { margin-bottom: 10px; }
+  .noticia-body p:last-child { margin-bottom: 0; }
+  .noticia-body strong { color: var(--text); font-weight: 600; }
+
+  .idea-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 26px;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+  }
+  .idea-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; height: 4px;
+    background: var(--grad);
+  }
+  .idea-card::after {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(123,94,167,.07) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .idea-tag {
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .12em;
+    color: var(--blue-lt); margin-bottom: 7px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .idea-tag::before {
+    content: '';
+    display: inline-block;
+    width: 3px; height: 10px;
+    background: var(--grad); border-radius: 2px;
+  }
+  .idea-titulo { font-size: 22px; font-weight: 800; margin-bottom: 20px; color: var(--text); line-height: 1.2; }
+  .idea-body   { font-size: 13px; color: #3a4a5e; line-height: 1.8; position: relative; z-index: 1; }
+  .idea-body h3 {
+    font-size: 9px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: .1em;
+    color: var(--blue); margin: 18px 0 6px;
+    padding-bottom: 5px; border-bottom: 1px solid var(--border);
+  }
+  .idea-body p  { margin-bottom: 10px; }
+  .idea-body ul { padding-left: 16px; margin-bottom: 10px; }
+  .idea-body ul li { margin-bottom: 6px; }
+  .idea-body strong { color: var(--text); font-weight: 600; }
+
+  footer {
+    margin: 0 36px;
+    padding: 16px 0 32px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+    letter-spacing: .03em;
+  }
+
+  @media (max-width: 640px) {
+    .body-wrap  { padding: 20px 16px 32px; }
+    .site-header { padding: 20px 16px 18px; }
+    footer { margin: 0 16px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .lancer-grid { grid-template-columns: repeat(2, 1fr); }
+    .rofex-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .tasas-grid { grid-template-columns: 1fr 1fr; }
+    .hab-grid { grid-template-columns: 1fr 1fr; }
+    .header-title { font-size: 18px; }
+  }
 </style>
 </head>
 <body>
 
-<header class="site-header">
-  <div class="header-inner">
-    <div class="header-left">
-      <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0066a0"/><stop offset="100%" stop-color="#8e3e8a"/></linearGradient>
-          <linearGradient id="sn-ring" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="rgba(255,255,255,0.3)"/><stop offset="100%" stop-color="rgba(255,255,255,0.05)"/></linearGradient>
-        </defs>
-        <circle cx="30" cy="30" r="29" fill="url(#sn-g)"/>
-        <circle cx="30" cy="30" r="29" fill="none" stroke="url(#sn-ring)" stroke-width="1.5"/>
-        <text x="30" y="38" text-anchor="middle" fill="white" font-family="Poppins,sans-serif" font-weight="800" font-size="20" letter-spacing="-1">SN</text>
-      </svg>
-      <div>
-        <div class="header-brand">Briefing personal</div>
-        <div class="header-title">jueves 28 de mayo de 2026</div>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-left">
+        <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0066a0"/>
+              <stop offset="100%" stop-color="#8e3e8a"/>
+            </linearGradient>
+            <linearGradient id="sn-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+              <stop offset="100%" stop-color="rgba(255,255,255,0.05)"/>
+            </linearGradient>
+          </defs>
+          <circle cx="30" cy="30" r="29" fill="url(#sn-g)"/>
+          <circle cx="30" cy="30" r="29" fill="none" stroke="url(#sn-ring)" stroke-width="1.5"/>
+          <text x="30" y="38" text-anchor="middle" fill="white" font-family="Poppins,sans-serif" font-weight="800" font-size="20" letter-spacing="-1">SN</text>
+        </svg>
+        <div>
+          <div class="header-brand">Briefing personal</div>
+          <div class="header-title">viernes 29 de mayo de 2026</div>
+        </div>
+      </div>
+      <div class="header-right">
+        <div class="header-week">Semana 22</div>
+        <div class="header-date">Mayo 2026</div>
       </div>
     </div>
-    <div class="header-right">
-      <div class="header-week">Semana 22</div>
-      <div class="header-date">Mayo 2026</div>
+    <div class="header-bar"></div>
+  </header>
+
+  <div class="body-wrap">
+
+    <!-- META DEL AÑO -->
+    <div class="meta-rotativa">
+      <span class="meta-icon">🎯</span>
+      <span><strong>Meta del año:</strong> Prepararme para una pelea de boxeo</span>
     </div>
-  </div>
-  <div class="header-bar"></div>
-</header>
 
-<div class="body-wrap">
+    <!-- TAREAS -->
+    <div class="sec-title">Tareas</div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-label">Hoy</div>
+        <ul class="task-list">
+          <li>Llevar remera y campera</li>
+          <li>Terminar curso de Claude y de emprender</li>
+          <li>Conseguir proveedores de golf y pádel en Paraguay</li>
+          <li>Averiguar n8n</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-label">Mañana</div>
+        <ul class="task-list">
+          <li>Buzo Farías</li>
+          <li>Regalo bocha</li>
+          <li>Pagar multa suegra</li>
+        </ul>
+      </div>
+    </div>
 
-  <div class="meta-rotativa">
-    <span class="meta-icon">🎯</span>
-    <span><strong>Meta del año:</strong> Ganar mucha plata</span>
-  </div>
-
-  <div class="sec-title">Tareas</div>
-  <div class="grid-2">
+    <!-- CALENDARIO -->
+    <div class="sec-title">Agenda</div>
     <div class="card">
-      <div class="card-label">Hoy</div>
-      <ul class="task-list">
-        <li>Llevar remera y campera</li>
-        <li>Terminar curso de Claude y de emprender</li>
-        <li>Conseguir proveedores de golf y pádel en Paraguay</li>
-        <li>Averiguar n8n</li>
-      </ul>
+      <div class="card-label">Próximos eventos</div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Lunes 1/6 · en 3 días</div>
+          <div class="cal-titulo">Cumpleaños Felix</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Lunes 15/6 · en 17 días</div>
+          <div class="cal-titulo">Fecha Límite TP 1 y 2</div>
+          <div class="cal-hora">13:30 – 14:30 hs</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Martes 16/6 · en 18 días</div>
+          <div class="cal-titulo">Cumpleaños Hori</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
     </div>
+
+    <!-- HÁBITOS -->
+    <div class="sec-title">Hábitos — Mayo 2026</div>
     <div class="card">
-      <div class="card-label">Mañana</div>
-      <ul class="task-list">
-        <li>Buzo Farías</li>
-        <li>Regalo Bocha</li>
-        <li>Pagar multa suegra</li>
+      <div class="card-label">Progreso mensual</div>
+      <div class="hab-summary">
+        <div class="hab-pct">54%</div>
+        <div class="hab-pct-right">
+          <div class="hab-sub">Promedio general de 9 hábitos · último registro: 27/5 (100%)</div>
+        </div>
+      </div>
+      <ul class="hab-insights">
+        <li>🔴 <strong>Estudiar 2 hs en 19.4%</strong> — la meta del mes (60%) ya no es alcanzable. Faltan 12 días de cumplimiento en 2 días restantes del mes. Revisar el porqué de la caída.</li>
+        <li>🔴 <strong>Entrenar en 35.5%</strong> — necesitás 5 días más para llegar al 50% (meta mínima). Solo quedan 2 días: imposible. Priorizarlo desde el 1° de junio.</li>
+        <li>✅ <strong>Racha del 26 y 27/5 al 100%</strong> — dos días perfectos. Mayo 28 sin registro. El momentum estaba, mantenerlo.</li>
       </ul>
-    </div>
-  </div>
-
-  <div class="sec-title">Agenda</div>
-  <div class="card">
-    <div class="card-label">Próximos eventos</div>
-    <div class="evento-item">
-      <div class="evento-dot"></div>
-      <div class="evento-content">
-        <div class="cal-cuando">Lunes 01/06 — en 4 días</div>
-        <div class="cal-titulo">Cumpleaños Felix</div>
-        <div class="cal-hora">Todo el día</div>
+      <div class="hab-grid">
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">74%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">58%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4hs</span><span class="badge-g">65%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2hs</span><span class="badge-r">19%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">61%</span></div>
+        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">36%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">42%</span></div>
+        <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-g">65%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">68%</span></div>
       </div>
-    </div>
-    <div class="evento-item">
-      <div class="evento-dot"></div>
-      <div class="evento-content">
-        <div class="cal-cuando">Jueves 04/06 — en 7 días</div>
-        <div class="cal-titulo">Mes</div>
-        <div class="cal-hora">Todo el día</div>
-      </div>
-    </div>
-    <div class="evento-item">
-      <div class="evento-dot"></div>
-      <div class="evento-content">
-        <div class="cal-cuando">Lunes 15/06 — en 18 días</div>
-        <div class="cal-titulo">Fecha Límite TP 1 y 2</div>
-        <div class="cal-hora">13:30 – 14:30</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="sec-title">Hábitos — Mayo 2026</div>
-  <div class="card">
-    <div class="card-label">Progreso mensual · día 28 de 31</div>
-    <div class="hab-summary">
-      <div class="hab-pct">54%</div>
-      <div class="hab-pct-right">
-        <div class="hab-sub">Mayo · 9 hábitos · días 26 y 27 al 100%</div>
-      </div>
-    </div>
-    <ul class="hab-insights">
-      <li><strong>Rebote en días 26 y 27:</strong> 100% ambos días — la mejor racha del mes. Cortó la sequía de ceros de los días previos.</li>
-      <li><strong>Estudiar en 19.4%</strong> — 6 días en 28. Con TP deadline el 15/06 (18 días), necesitás al menos 12 días más de estudio para acercarte a la meta del 60%.</li>
-      <li><strong>Entrenar en 35.5%</strong> — 11 de 28 días. La meta del mes es 16 días (50%): con 3 días restantes en mayo, matemáticamente imposible llegar. Enfocate en junio.</li>
-    </ul>
-    <div class="hab-grid">
-      <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">74.2%</span></div>
-      <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">58.1%</span></div>
-      <div class="hab-item"><span class="hab-name">Trabajar 4h</span><span class="badge-g">64.5%</span></div>
-      <div class="hab-item"><span class="hab-name">Estudiar 2h</span><span class="badge-r">19.4%</span></div>
-      <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">61.3%</span></div>
-      <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-w">35.5%</span></div>
-      <div class="hab-item"><span class="hab-name">Leer 10 págs</span><span class="badge-w">41.9%</span></div>
-      <div class="hab-item"><span class="hab-name">Dejar celular</span><span class="badge-g">64.5%</span></div>
-      <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">67.7%</span></div>
-    </div>
-    <div class="chart-wrap"><canvas id="habChart"></canvas></div>
-  </div>
-
-  <div class="sec-title">Financiera</div>
-  <div class="card">
-
-    <div class="fin-section">
-      <div class="fin-label">A · Cotizaciones del dólar</div>
-      <div class="lancer-grid">
-        <div class="lancer-stat">
-          <div class="label">Oficial BNA</div>
-          <div class="val">$1.430</div>
-          <div class="sub">Venta · referencia</div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">Blue</div>
-          <div class="val">$1.440</div>
-          <div class="sub brecha-neu">+0.7% vs oficial</div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">MEP</div>
-          <div class="val">$1.433</div>
-          <div class="sub brecha-neu">+0.2% vs oficial</div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">CCL</div>
-          <div class="val">$1.485</div>
-          <div class="sub brecha-pos">+3.8% vs oficial</div>
-        </div>
-        <div class="lancer-stat">
-          <div class="label">USDT / P2P</div>
-          <div class="val">$1.485</div>
-          <div class="sub brecha-pos">+3.8% vs oficial</div>
-        </div>
-      </div>
-      <div class="dolar-chart-wrap"><canvas id="dolarChart"></canvas></div>
-      <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
-        <strong style="color:var(--text);">BCRA:</strong> Reservas brutas superaron USD 47.000M — nuevo máximo era Milei, impulsadas por el desembolso de USD 1.000M del FMI (2da revisión aprobada). 94+ ruedas consecutivas comprando. Mayo acumula USD 1.947M; año: +USD 9.100M. Meta 2026: USD 10.000–17.000M.<br>
-        <strong style="color:var(--text);">Macro:</strong> Giro FMI confirmado → presiona dólar ↓. JPMorgan mantiene posición de carry en Argentina y elige bono clave. Reservas récord reducen riesgo de devaluación → ↓. Sin datos nuevos de inflación ni cepo hoy. Tipo de cambio planchado en banda.
-      </p>
-      <div class="recomendacion">
-        <strong>Recomendación:</strong> Quedate en pesos. Con reservas en récord, FMI desembolsando y BCRA comprando 94 ruedas seguidas, la devaluación está muy lejos del horizonte inmediato. El carry Boncap/Lecap (31–34% TNA) vs dólar planchado sigue siendo la posición ganadora. No es día de dolarización.
+      <div class="chart-wrap">
+        <canvas id="habChart"></canvas>
       </div>
     </div>
 
-    <div class="fin-section">
-      <div class="fin-label">B · Futuros ROFEX</div>
-      <div class="rofex-grid">
-        <div class="rofex-item">
-          <div class="label">Jun 2026 · 30d</div>
-          <div class="val">~$1.460</div>
-          <div class="tna">TNA impl. ~22%</div>
-        </div>
-        <div class="rofex-item">
-          <div class="label">Jul 2026 · 60d</div>
-          <div class="val">~$1.490</div>
-          <div class="tna">TNA impl. ~23%</div>
-        </div>
-        <div class="rofex-item">
-          <div class="label">Ago 2026 · 90d</div>
-          <div class="val">~$1.525</div>
-          <div class="tna">TNA impl. ~24%</div>
-        </div>
-      </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:6px;">El mercado espera devaluación de ~22–24% TNA anualizada — la mitad del carry en pesos. La brecha entre tasa y devaluación esperada es el motor del carry trade. <em>Datos aproximados — ROFEX sin feed en tiempo real.</em></p>
-    </div>
+    <!-- FINANCIERA -->
+    <div class="sec-title">Financiera</div>
+    <div class="card">
 
-    <div class="fin-section">
-      <div class="fin-label">C · Tasas de referencia</div>
-      <div class="tasas-grid">
-        <div class="tasa-item">
-          <div class="t-label">Plazo fijo BNA</div>
-          <div class="t-val">17.5% TNA</div>
-          <div class="t-sub">Home banking · ~1.46% mensual</div>
+      <!-- A. Cotizaciones del dólar -->
+      <div class="fin-section">
+        <div class="fin-label">A · Cotizaciones del dólar (datos 27–28/5)</div>
+        <div class="lancer-grid">
+          <div class="lancer-stat">
+            <div class="label">Oficial BNA</div>
+            <div class="val">$1.430</div>
+            <div class="sub">Venta · base</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">Blue</div>
+            <div class="val">$1.440</div>
+            <div class="sub brecha-neu">+0.7% brecha</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">MEP</div>
+            <div class="val">$1.430</div>
+            <div class="sub brecha-ok">≈ 0% brecha</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">CCL</div>
+            <div class="val">$1.484</div>
+            <div class="sub brecha-neu">+3.8% brecha</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">USDT P2P</div>
+            <div class="val">$1.485</div>
+            <div class="sub brecha-neu">+3.8% brecha</div>
+          </div>
         </div>
-        <div class="tasa-item">
-          <div class="t-label">PF privados (mejor)</div>
-          <div class="t-val">19.5% TNA</div>
-          <div class="t-sub">Banco Provincia · ~1.63% mensual</div>
-        </div>
-        <div class="tasa-item">
-          <div class="t-label">Caución bursátil 7d</div>
-          <div class="t-val">~22.9% TNA</div>
-          <div class="t-sub">~0.44% semanal · sin riesgo</div>
-        </div>
-        <div class="tasa-item">
-          <div class="t-label">Lecap / Boncap</div>
-          <div class="t-val">31–34% TNA</div>
-          <div class="t-sub">Mercado secundario</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fin-section">
-      <div class="fin-label">D · Cheques de pago diferido</div>
-      <p style="font-size:13px;color:#3a4a5e;line-height:1.7;">
-        Mercado secundario CPD: <strong>30d ~38–42% TNA · 60d ~41–46% TNA · 90d ~43–49% TNA</strong>. Con garantía SGR (avalado): 42–50% TNA. Sin garantía (patrocinado): hasta 65–70% TNA. Tasas estables — sin presiones de riesgo crediticio en el corto plazo. Tu operación informal sigue duplicando el rendimiento del mercado formal.
-      </p>
-    </div>
-
-    <div class="fin-section">
-      <div class="fin-label">E · Riesgo país EMBI+</div>
-      <div class="rp-row">
-        <span class="rp-label">EMBI+ Argentina</span>
-        <span class="rp-val rp-neu">~514 pb</span>
-        <span class="rp-delta rp-neu">→ estable</span>
-      </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Según Infobae, hay una licitación clave que podría llevar el EMBI por debajo de 500 pb y reabrir el acceso al mercado de capitales internacional. Si eso sucede, carry en pesos se vuelve aún más atractivo a corto plazo.</p>
-    </div>
-
-    <div class="fin-section">
-      <div class="fin-label">F · Flujo del día</div>
-      <div class="flujo-card flujo-neutral">
-        <div class="flujo-titulo">Jornada neutral</div>
-        <div class="flujo-body">
-          Reservas récord y FMI desembolsando son señales de solidez, pero no de urgencia para actuar. Blue normalizó a $1.440 (de vuelta por encima del oficial). No hay vencimientos impositivos ni pago de sueldos hoy. BCRA sigue comprador. El mercado está tranquilo esperando señales de la licitación de bonos que podría mover el EMBI. Posición: mantener pesos en instrumentos de corto plazo y esperar.
-        </div>
-      </div>
-    </div>
-
-    <div class="fin-section">
-      <div class="fin-label">G · Rulos financieros del día</div>
-
-      <div class="rulo-item">
-        <div class="rulo-titulo">Carry Boncap / Lecap <span class="tag-legal">legal</span></div>
-        <div class="rulo-body">
-          Vendés USD al CCL ($1.485), comprás Boncap/Lecap al 31–34% TNA. En 30 días ganás ~2.6–2.8% en pesos. Para que pierdas en dólares, el CCL debería subir a más de $1.527 este mes — ROFEX lo pone en $1.460. JPMorgan apostó formalmente a este trade en mayo. Rendimiento acumulado carry 2026: ~20% en USD. Riesgo principal: devaluación fuera de banda.
+        <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
+          <strong style="color:var(--success)">BCRA:</strong> compró USD 447 millones el 28/5 (segunda mayor compra del año). Racha de 96 jornadas compradoras — tercera más larga de la historia. Reservas brutas: <strong>USD 48.511 M</strong> (máximo en 7 años). Acumulado 2026: USD 9.681 M comprados.
+        </p>
+        <p style="font-size:12px;color:#3a4a5e;margin-bottom:6px;"><strong>Macro que puede mover el tipo de cambio:</strong></p>
+        <ul style="font-size:12px;color:#3a4a5e;padding-left:16px;margin-bottom:10px;">
+          <li>Liquidación de cosecha gruesa + vencimiento Bopreal → presiona dólar ↓ (más oferta)</li>
+          <li>FMI aprobó 2° revisión y giró USD 1.000M → presiona dólar ↓</li>
+          <li>Gobierno cancela letras intransferibles del BCRA (18.4 B ARS) → señal de solidez fiscal → dólar ↓</li>
+        </ul>
+        <div class="recomendacion">
+          <strong>Recomendación:</strong> No conviene comprar dólares hoy. El BCRA está comprador agresivo, las brechas son mínimas y el carry trade acumula 17% en dólares en lo que va del año. Si tenés pesos excedentes, metelos en caución o plazo fijo 30 días. Si ya tenés dólares, no vendas — el peso se fortalece pero el escenario cambia rápido post-elecciones. Observar.
         </div>
       </div>
 
-      <div class="rulo-item">
-        <div class="rulo-titulo">MEP → CCL (parking) <span class="tag-gris">zona gris</span></div>
-        <div class="rulo-body">
-          Comprás USD via MEP ($1.433), esperás 48h, vendés al CCL ($1.485). Spread bruto: ~$52 por dólar, ~3.6% en 2 días hábiles. Sobre USD 10.000: ganás ~$520.000 pesos. Comisiones broker: ~0.4% por punta → neto ~2.8%. Riesgo: movimiento del CCL durante el parking.
+      <!-- B. Futuros ROFEX -->
+      <div class="fin-section">
+        <div class="fin-label">B · Futuros ROFEX (datos estimados — mercado cerrado)</div>
+        <div class="rofex-grid">
+          <div class="rofex-item">
+            <div class="label">Junio 2026</div>
+            <div class="val">~$1.444</div>
+            <div class="tna">TNA implícita ~12%</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">Julio 2026</div>
+            <div class="val">~$1.459</div>
+            <div class="tna">TNA implícita ~12%</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">Agosto 2026</div>
+            <div class="val">~$1.474</div>
+            <div class="tna">TNA implícita ~12%</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);">El mercado espera devaluación muy moderada (1% mensual), en línea con la banda cambiaria vigente. El crawling implícito no asusta — el consenso es estabilidad cambiaria al menos hasta fin de año. <em>Nota: valores estimados en base al tipo de cambio spot y carry vigente; verificar en Rava o Matba antes de operar.</em></p>
+      </div>
+
+      <!-- C. Tasas de referencia -->
+      <div class="fin-section">
+        <div class="fin-label">C · Tasas de referencia</div>
+        <div class="tasas-grid">
+          <div class="tasa-item">
+            <div class="t-label">Plazo fijo BNA</div>
+            <div class="t-val">18.5% TNA</div>
+            <div class="t-sub">~$15.200 por millón/30 días</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">PF privados (mejor)</div>
+            <div class="t-val">19.5% TNA</div>
+            <div class="t-sub">Banco Provincia · mayo 2026</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Caución bursátil 7d</div>
+            <div class="t-val">~20% TNA</div>
+            <div class="t-sub">Mercado secundario BYMA</div>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Lecap / Boncap</div>
+            <div class="t-val">~28–30% TNA</div>
+            <div class="t-sub">Referencia carry trade pesos</div>
+          </div>
         </div>
       </div>
 
-      <div class="rulo-item">
-        <div class="rulo-titulo">Cauciones bursátiles <span class="tag-legal">legal</span></div>
-        <div class="rulo-body">
-          Prestás pesos a 7 días al ~22.9% TNA (~0.44% semanal). Sobre $10.000.000: ganás ~$44.000 en 7 días sin riesgo de mercado, disponible el día siguiente hábil. Supera ampliamente el plazo fijo BNA (17.5% TNA). Ideal para la liquidez de la semana.
+      <!-- D. CPD -->
+      <div class="fin-section">
+        <div class="fin-label">D · Cheques de pago diferido (CPD)</div>
+        <div class="rofex-grid">
+          <div class="rofex-item">
+            <div class="label">CPD 30 días</div>
+            <div class="val">~24% TNA</div>
+            <div class="tna">Avalados SGR</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">CPD 60 días</div>
+            <div class="val">~26% TNA</div>
+            <div class="tna">Mercado secundario</div>
+          </div>
+          <div class="rofex-item">
+            <div class="label">CPD 90 días</div>
+            <div class="val">~28% TNA</div>
+            <div class="tna">Mercado secundario</div>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px;">Tasas de CPD estables o levemente a la baja en mayo — señal de menor percepción de riesgo de crédito corporativo. Favorable para empresas que financian capital de trabajo vía cheques.</p>
+      </div>
+
+      <!-- E. Riesgo país -->
+      <div class="fin-section">
+        <div class="fin-label">E · Riesgo País EMBI+</div>
+        <div class="rp-row">
+          <div class="rp-label">EMBI+ Argentina</div>
+          <div class="rp-val rp-down">496 pbs</div>
+          <div class="rp-delta rp-down">▼ comprimiendo</div>
+        </div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px;">El riesgo país sigue comprimiendo desde los 700+ de comienzos del año. A estos niveles (496 pbs), el carry trade en pesos sigue siendo muy atractivo — los inversores no ven urgencia de dolarizarse. Si baja de 450 pbs, el acceso a deuda externa se abarata significativamente para Argentina.</p>
+      </div>
+
+      <!-- F. Flujo del día -->
+      <div class="fin-section">
+        <div class="fin-label">F · Flujo del día</div>
+        <div class="flujo-card flujo-neutral">
+          <div class="flujo-titulo">Jornada Neutral — carry trade dominante</div>
+          <div class="flujo-body">
+            Brecha mínima (blue +0.7%, MEP = oficial), BCRA comprador agresivo, reservas en máximos. No hay presión vendedora ni compradora de magnitud. El trade del día es carry pesos: rendimientos en ARS de 20–30% TNA superan ampliamente la devaluación implícita (~12%). Fin de quincena sin pagos de sueldos relevantes hoy (viernes 29). Vencimientos impositivos ya pasaron. Posición: mantener pesos en instrumentos de corto plazo.
+          </div>
         </div>
       </div>
 
-      <div class="rulo-item">
-        <div class="rulo-titulo">USDT → CCL <span class="tag-gris">zona gris</span></div>
-        <div class="rulo-body">
-          Comprás USDT P2P en Binance (~$1.485 venta), vendés al CCL ($1.485). Spread prácticamente nulo hoy — USDT y CCL convergieron. Rulo no atractivo en este momento. Mejor opción es el MEP→CCL que sí tiene spread.
+      <!-- G. Rulos financieros -->
+      <div class="fin-section">
+        <div class="fin-label">G · Rulos financieros</div>
+
+        <div class="rulo-item">
+          <div class="rulo-titulo">Carry Trade Pesos <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">
+            <strong>Operación:</strong> Convertís USD a pesos (MEP, $1.430), invertís en Lecap o caución (TNA ~28–30%). En 30 días reconvertís a USD. <strong>Rendimiento estimado:</strong> si el dólar no se mueve, ganás ~2.3% mensual en dólares. En lo que va del año, el carry acumuló +17% en USD. <strong>Riesgo:</strong> si el dólar sube más de lo esperado, la ecuación se rompe. Con BCRA comprador y reservas sólidas, el riesgo de salto cambiario es bajo hoy.
+          </div>
+        </div>
+
+        <div class="rulo-item">
+          <div class="rulo-titulo">Spread MEP / CCL <span class="tag-gris">Gris</span></div>
+          <div class="rulo-body">
+            <strong>Operación:</strong> Comprar bono en pesos (MEP, $1.430) y vender el mismo bono en dólares en el exterior (CCL, $1.484). Spread actual: ~3.8% en una operación. <strong>Condición:</strong> requiere cuenta comitente con acceso a ambos mercados, y respetar el parking de 24–48 hs según regulación BCRA. <strong>Riesgo:</strong> el spread puede cerrar si el CCL cae. Solo operar si ya tenés la operatoria habilitada.
+          </div>
+        </div>
+
+        <div class="rulo-item">
+          <div class="rulo-titulo">Caución Bursátil 7 días <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">
+            <strong>Operación:</strong> Prestás pesos en el mercado de cauciones a 7 días, garantizados por activos bursátiles. TNA ~20%. <strong>Rendimiento:</strong> si ponés $1.000.000, en 7 días cobrás ~$3.836 netos. Sin riesgo de contraparte (garantizado por BYMA). <strong>Ideal para:</strong> plata que no necesitás en la semana — mejor que el plazo fijo en corto plazo.
+          </div>
         </div>
       </div>
 
     </div>
-  </div>
 
-  <div class="sec-title">Argentina</div>
-  <div class="card">
+    <!-- NOTICIAS AR -->
+    <div class="sec-title">Argentina</div>
+    <div class="card">
 
-    <div class="noticia">
-      <div class="noticia-meta">Comercio exterior · Mayo 2026</div>
-      <div class="noticia-titulo">Argentina acumula 27 meses de superávit comercial y el boom de importaciones redefine el mapa empresarial</div>
-      <div class="noticia-body">
-        <p>El saldo comercial del primer bimestre 2026 alcanzó USD 2.977 millones, frente a apenas USD 438 millones en igual período de 2025 — un salto de casi 7x. El país encadena ya 27 meses consecutivos de balanza comercial positiva, impulsada por exportaciones agropecuarias récord (agro +17.9% en marzo según EMAE) y un perfil importador que cambió de estructura.</p>
-        <p><strong>El nuevo mapa de importaciones:</strong> en 2025, las compras externas de bienes de consumo superaron los USD 11.400 millones, cifra histórica. Los principales orígenes son Brasil (+USD 18.000M) y China (+USD 17.900M), que juntos explican el 48% del total importado. En 2026, el ritmo se desacelera pero se vuelve más selectivo: los sectores que importan son los que tienen demanda real, no los que aprovechaban el tipo de cambio artificialmente barato.</p>
-        <p><strong>Qué sectores están ganando:</strong> los afectados son textil, indumentaria y electrónica de consumo masivo — compiten directo con importaciones más baratas. Los que ganan son los que usan insumos importados para producir localmente (agroindustria, automotriz, alimentos procesados) y los revendedores de bienes premium que no tienen producción local equivalente.</p>
-        <p><strong>Para vos:</strong> El contexto de importaciones es el mejor de los últimos años para un negocio de reventa de artículos deportivos importados. El cliente final ya está acostumbrado a comprar productos importados (electrónica, ropa, accesorios). Tu ventaja competitiva es la velocidad en el NOA y el precio sin intermediario porteño. El superávit comercial sostenido también da señal de que el tipo de cambio no tiene presiones estructurales en el corto plazo.</p>
+      <div class="noticia">
+        <div class="noticia-meta">Infobae · 28 de mayo de 2026</div>
+        <div class="noticia-titulo">BCRA compró USD 447 millones en un día: reservas llegan a USD 48.511 M, el máximo en 7 años</div>
+        <div class="noticia-body">
+          <p>El jueves 28 de mayo, el Banco Central realizó la segunda mayor compra diaria de divisas del año: <strong>USD 447 millones</strong> en una sola jornada. Con esto, las reservas brutas treparon a <strong>USD 48.511 millones</strong>, el nivel más alto desde 2019 y el más alto bajo la gestión de Javier Milei. La racha de intervenciones compradoras alcanza las 96 jornadas consecutivas, la tercera más larga de la historia argentina. El acumulado de compras desde enero 2026 llegó a los USD 9.681 millones, representando el 96% de la meta anual acordada con el FMI.</p>
+          <p>El contexto que explica este desempeño es múltiple. Por un lado, la segunda revisión del acuerdo con el FMI fue aprobada y el organismo giró USD 1.000 millones adicionales. Por otro, el gobierno formalizó la cancelación de una parte significativa de las Letras Intransferibles (LI) que históricamente distorsionaban el balance del BCRA — en total, unos 18,4 billones de pesos en una operatoria compleja que mejoró los activos netos del Central. El ingreso de divisas del agro (liquidación de soja y maíz de la cosecha gruesa) también contribuyó.</p>
+          <p><strong>Qué implica para vos:</strong> el BCRA comprador en volúmenes de esta magnitud es la señal más clara de que el tipo de cambio no va a saltar en el corto plazo. El cepo sigue, la brecha está en mínimos, y el carry trade sigue siendo el trade favorecido por la política económica. Para la financiera, esto es contexto: los clientes que piden dólares "por las dudas" no tienen urgencia técnica. El riesgo no es cambiario hoy — es de tasas si la inflación no converge.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-meta">El Cronista · mayo 2026</div>
+        <div class="noticia-titulo">Miniso, MercadoLibre y Uber: el gobierno abraza inversiones en importación, logística y plataformas — pero el empleo sigue cayendo</div>
+        <div class="noticia-body">
+          <p>El gobierno de Milei exhibe como logro la llegada de grandes inversiones extranjeras, pero el perfil de esas inversiones revela una economía que se reconvierte hacia la importación, la logística y las plataformas digitales, en detrimento de la producción industrial local. Los anuncios más recientes: <strong>Miniso</strong> abrirá hasta 100 locales en Argentina en 5 años (800–1.000 empleos de retail, mayormente jóvenes); <strong>MercadoLibre</strong> invertirá USD 115 millones en un centro de almacenamiento logístico en Escobar (1.300 puestos); y <strong>Uber</strong> pondrá USD 500 millones para expandir transporte y delivery.</p>
+          <p>El problema estructural es que estas inversiones conviven con un desempleo que subió al 7.5% y, entre menores de 29 años, al 17%. Los economistas señalan que el "colchón" de informalidad que amortiguaba el desempleo en ciclos anteriores se está agotando. Las importaciones de consumo crecieron más del 20% interanual en lo que va de 2026, mientras que las industriales cayeron 10% — señal de que la apertura importadora está desplazando producción local en textil, electrónica y automotriz.</p>
+          <p><strong>Qué implica para vos:</strong> la apertura importadora y la llegada de logísticas internacionales crean oportunidades concretas de proveedor o distribuidor en cadenas como MercadoLibre o para riders/last mile. Si tu idea de importación de artículos deportivos desde Paraguay avanza, el ecosistema logístico que se está armando (Escobar, etc.) va a facilitar operaciones en el futuro. Además, Miniso validó el modelo de retail importado de bajo costo — indica que el consumidor argentino hoy prefiere precio sobre origen.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- NOTICIAS INT -->
+    <div class="sec-title">Internacional</div>
+    <div class="card">
+
+      <div class="noticia">
+        <div class="noticia-meta">CNBC / Bloomberg · 20–28 de mayo de 2026</div>
+        <div class="noticia-titulo">El verano de las mega-IPOs: SpaceX, OpenAI y Anthropic preparan flotaciones que podrían valer más de USD 3 billones combinados</div>
+        <div class="noticia-body">
+          <p>El mercado global está en modo de anticipación ante el mayor evento de emisión bursátil de la historia moderna. <strong>SpaceX</strong> presentó su S-1 ante la SEC y tiene fecha tentativa de debut en bolsa para el 12 de junio. <strong>OpenAI</strong> y <strong>Anthropic</strong> —el modelo sobre el que corre el agente que generó este briefing— planean salir a bolsa en el segundo semestre, probablemente en otoño boreal. Las valuaciones que maneja el mercado son astronómicas: OpenAI fue valorada en USD 852.000 millones en marzo; Anthropic en más de USD 965.000 millones. SpaceX, en base a transacciones privadas, se posiciona por encima del billón.</p>
+          <p>Analistas de BlueBox Asset Management advierten que un aluvión de mega-IPOs de compañías aún no rentables recuerda al techo del ciclo dot-com de 1999–2000. "Si OpenAI y Anthropic no pueden hacer dinero, todo esto se cae", sentenció William de Gale. Sin embargo, el mercado no parece escuchar: Cerebras —fabricante de chips para IA— ya debutó con resultado récord en mayo, lo que alimentó el apetito por las próximas flotaciones. El índice Nasdaq acumula subidas de doble dígito en lo que va del año, y 19 nuevos billonarios surgieron del boom de IA en 2026.</p>
+          <p><strong>Qué implica para vos:</strong> Si tenés CEDEARs o acceso a acciones tech (NVDA, MSFT, GOOG), el IPO de SpaceX el 12 de junio puede generar volatilidad tanto al alza como a la baja en el sector. La señal de alerta sobre el techo del ciclo es relevante — evaluar si tiene sentido rotar parte de posición tech hacia sectores más defensivos o hacia el real estate internacional que está volviendo. Para la financiera: clientes con dólares afuera que pregunten por tech, alertar sobre el riesgo de valuaciones extremas.</p>
+        </div>
+      </div>
+
+      <div class="noticia">
+        <div class="noticia-meta">Bloomberg / CNBC · mayo 2026</div>
+        <div class="noticia-titulo">IA redefine el real estate industrial: los data centers representan el 10% del leasing industrial en EE.UU. y el sector inmobiliario comercial crece 15–20% en 2026</div>
+        <div class="noticia-body">
+          <p>El boom de inteligencia artificial está transformando el mercado inmobiliario comercial de maneras inesperadas. Según Colliers International, los <strong>data centers</strong> ya representan el <strong>10% del leasing industrial</strong> en Estados Unidos, convirtiéndose en el segmento de mayor crecimiento dentro del sector manufacturero. La demanda de espacio industrial para albergar infraestructura de IA —servidores, refrigeración, subestaciones de energía— es tan intensa que en algunos mercados como Northern Virginia, Phoenix y Dallas no hay metros cuadrados disponibles con capacidad eléctrica suficiente.</p>
+          <p>El sector de real estate comercial en general entra a 2026 con el mejor momentum en tres años. Colliers proyecta un <strong>incremento del 15 al 20% en el volumen de transacciones</strong>, impulsado por el reingreso de capital institucional e inversores cross-border que habían salido durante el ciclo de suba de tasas. Las oficinas siguen débiles (trabajo híbrido), pero logística, industrial y data centers compensan con creces.</p>
+          <p><strong>Qué implica para vos:</strong> el auge de data centers como clase de activo inmobiliario es un dato relevante para quien piensa en real estate como vehículo de inversión escalable. En Argentina, aunque el mercado local no está en el mismo ciclo, el efecto derrame llega en forma de: a) CEDEARs de REITs que invierten en industrial/data centers (como AMT, PLD, EQIX); b) empresas de construcción que se benefician de la tendencia global. Como negocio: el modelo de desarrollar o gestionar espacios para nearshoring de tecnología en Argentina tiene potencial — el país tiene energía barata, profesionales IT y costos en dólares bajos.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- IDEA SEMANAL -->
+    <div class="sec-title">Idea de negocio — semana 22</div>
+    <div class="idea-card">
+      <div class="idea-tag">Idea de la semana</div>
+      <div class="idea-titulo">Importadora de Artículos Deportivos Premium desde Paraguay</div>
+      <div class="idea-body">
+        <h3>Qué es</h3>
+        <p>Una operación de importación triangulada de equipos deportivos de alto valor — palas de pádel, palos de golf, raquetas, accesorios fitness — desde Ciudad del Este, Paraguay, hacia el mercado argentino. Comprás al por mayor en Paraguay a precios de exportación asiáticos (sin los aranceles que encarecen la importación directa) y revendés en Tucumán y el NOA con margen del 80–150%. Sin local físico, sin stock grande: pedido a pedido o con lote inicial de USD 3.000–5.000.</p>
+
+        <h3>Por qué ahora</h3>
+        <p>El pádel es el deporte de mayor crecimiento en Argentina — entre 2023 y 2026 pasó de 500.000 a más de 3 millones de jugadores activos. Las palas premium de Bullpadel, Babolat y Head se consiguen en Paraguay al 40–60% del precio argentino. El golf también creció con el auge de las clases medias altas: un juego de palos básico en Argentina cuesta ARS 2–5 millones; en Paraguay se consigue por USD 300–600. El DNU 41/2026 simplificó la operatoria aduanera y el tipo de cambio estable hace predecible la operación. El momento es ahora.</p>
+
+        <h3>Cómo arrancarla</h3>
+        <ul>
+          <li><strong>Paso 1:</strong> Contactar 3–5 proveedores mayoristas en Ciudad del Este vía WhatsApp o grupos de importadores. Pedirles catálogo y precios de palas de pádel y palos de golf. No hace falta viajar para el primer acercamiento.</li>
+          <li><strong>Paso 2:</strong> Primer pedido test: USD 3.000–5.000 en palas de pádel (alta rotación, bajo bulto, fácil transporte). Ingresarlo con un gestor de frontera habilitado o como turista viajante dentro de los límites legales.</li>
+          <li><strong>Paso 3:</strong> Publicar en Instagram y grupos de WhatsApp de clubes de pádel y golf en Tucumán. Sin local físico, entrega a domicilio o en mano. Cobrar 50% adelantado.</li>
+          <li><strong>Paso 4:</strong> Recomprar con la ganancia. Con USD 3.000 en mercadería generás USD 5.400–6.000 en ventas al 80% de margen. Reinvertir para escalar.</li>
+          <li><strong>Paso 5:</strong> Abrir cuenta de MercadoLibre, formalizar relación con clubes para ventas recurrentes, y explorar kits completos (pala + grip + bolso).</li>
+        </ul>
+
+        <h3>Modelo de ingreso</h3>
+        <p>Pala de pádel premium: costo USD 40–70, venta ARS 280.000–380.000 (~USD 190–260 al CCL). Margen por unidad: USD 150–190. Juego de palos de golf: costo USD 400–600, venta ARS 1.800.000–2.500.000. Margen: USD 800–1.100 por juego. Con 10 palas/mes + 2 sets de golf: USD 2.100–3.700 de margen bruto. Neto tras costos (gestor, traslado, MercadoLibre): USD 1.500–2.500/mes desde el segundo mes.</p>
+
+        <h3>Riesgos principales</h3>
+        <ul>
+          <li>Control aduanero: si el volumen supera los límites del régimen turista, riesgo de retención. Mitigable con gestor habilitado o importación formal por tramos pequeños.</li>
+          <li>Tipo de cambio: si el peso se aprecia más (carry), el costo en USD sube en pesos. Mitigable poniendo precios en USD o ajustando quincenalmente.</li>
+          <li>Competencia de revendedores de Buenos Aires: tienen red establecida pero tu ventaja es precio y velocidad en el NOA sin intermediario porteño.</li>
+        </ul>
+
+        <h3>Esfuerzo / inversión inicial</h3>
+        <p>USD 5.000–8.000 para el primer pedido. USD 200–300 en comisiones a gestor de frontera. Tiempo: 2–3 semanas desde el primer contacto hasta tener stock en mano. Compatible con trabajo en la financiera — el modelo es comprar stock y vender vía redes sociales en horarios libres. Inversión total inicial muy por debajo del tope de USD 15.000 del plan.</p>
       </div>
     </div>
 
-    <div class="noticia">
-      <div class="noticia-meta">Economía real · Argentina · Mayo 2026</div>
-      <div class="noticia-titulo">Argentina proyecta crecimiento de 3.3% en 2026 con agro como motor y consumo masivo todavía rezagado</div>
-      <div class="noticia-body">
-        <p>Las proyecciones para 2026 ubican el crecimiento del PBI en 3.3% interanual, sobre una base de 4.4% de 2025. El motor principal sigue siendo el agro y la minería (EMAE marzo: agro +17.9%, minería +16.3%), mientras que la industria manufacturera crece más moderado (+4.6%) y el consumo masivo aún no recuperó el nivel de 2023.</p>
-        <p><strong>La grieta del consumo:</strong> tras el derrumbe del 16% en 2024, el consumo masivo apenas recuperó un 2% en 2025. Los salarios reales subieron pero no alcanzaron para compensar la pérdida acumulada. Empresas del sector alimentos reportan que el consumidor todavía está en modo ahorro, priorizando marcas propias y segundas marcas sobre las premium.</p>
-        <p><strong>La dualidad del mercado:</strong> por un lado, el segmento de consumo masivo (alimentos, higiene, limpieza) sigue deprimido. Por otro, el segmento premium y de servicios (gastronomía, turismo, tecnología, deportes) se está recuperando más rápido porque lo traccionan clases medias-altas con ingreso en dólares o con capacidad de ahorro preservada. Pádel, golf, fitness — todos crecen en este segmento.</p>
-        <p><strong>Para vos:</strong> El 3.3% de crecimiento es sólido y reduce el riesgo macroeconómico para cualquier negocio. Lo que importa para tu operación de importación de deportivos es que tu target (clase media-alta) es el segmento que está recuperando gasto antes que el promedio. No apostás al consumo masivo — apostás al segmento que ya rebotó.</p>
-      </div>
-    </div>
+  </div><!-- /body-wrap -->
 
-  </div>
+  <footer>Generado 08:45 hs · viernes 29/05/2026 · Agente personal SN</footer>
 
-  <div class="sec-title">Internacional</div>
-  <div class="card">
-
-    <div class="noticia">
-      <div class="noticia-meta">Tech · Mercados · Mayo 2026</div>
-      <div class="noticia-titulo">Alphabet reporta ingresos de USD 110.000M y ganancia neta +81% interanual: la IA es el gran driver de 2026</div>
-      <div class="noticia-body">
-        <p>Alphabet (Google) reportó resultados del Q1 2026 que superaron todas las expectativas: ingresos de USD 110.000 millones y ganancia neta de USD 62.600 millones, un salto del 81% interanual. El número es extraordinario: Alphabet prácticamente duplicó sus ganancias en un año. El motor principal es la integración de IA en su ecosistema — Google Search, YouTube, Google Cloud y los modelos Gemini están generando una monetización que el mercado no anticipó en esta magnitud.</p>
-        <p><strong>Por qué el número es tan grande:</strong> Google Cloud creció por encima del 30% interanual, impulsado por empresas que migran a infraestructura de IA. Los anunciantes en Search pagan más por los "AI Overviews" — los resultados generados por IA que aparecen antes de los links orgánicos. YouTube Shorts monetiza mejor. Y el costo marginal de los modelos Gemini bajó más de lo esperado, mejorando márgenes.</p>
-        <p><strong>Contexto de mercado:</strong> El S&P 500 y Nasdaq tocaron nuevos máximos históricos el martes. Chips y tecnología lideran el rally, con Micron arriba 19% el lunes. Los futuros del jueves apuntan a continuar la tendencia positiva, ayudados también por señales de avance en las negociaciones US-Irán que reducirían el precio del crudo y presionarían la inflación a la baja.</p>
-        <p><strong>Para CEDEARs:</strong> GOOGL tiene CEDEAR en Argentina. Con CCL estable en $1.485, la exposición en pesos al crecimiento de Alphabet es una tesis de largo plazo clara. Con un Q1 de +81% en ganancia neta, la acción ya descontó parte del upside. El próximo catalizador es el Q2 y la conferencia de desarrolladores de mayo donde Alphabet presenta novedades de Gemini.</p>
-      </div>
-    </div>
-
-    <div class="noticia">
-      <div class="noticia-meta">Geopolítica · Mercados · Mayo 2026</div>
-      <div class="noticia-titulo">US-Irán acuerdan los lineamientos de un acuerdo de paz: el mercado descuenta crudo más barato y menos inflación</div>
-      <div class="noticia-body">
-        <p>Estados Unidos e Irán habrían acordado los lineamientos generales de un acuerdo que podría desescalar las tensiones en Medio Oriente y habilitar el regreso parcial del crudo iraní al mercado global. La noticia impactó inmediatamente en los mercados: las acciones de semiconductores subieron con fuerza (el sector de chips es muy sensible a la estabilidad geopolítica porque depende de cadenas de suministro globales), el petróleo cayó y los futuros del S&P apuntan positivo para el jueves.</p>
-        <p><strong>El canal petróleo-inflación:</strong> si Irán vuelve a exportar crudo libremente, el mercado podría recibir entre 500.000 y 1.500.000 barriles diarios adicionales. Petróleo más barato → costos de transporte y producción más bajos → inflación de bienes más baja → la Fed tiene más margen para recortar tasas en septiembre. El mercado ya está comprando esa expectativa con acciones en máximos.</p>
-        <p><strong>Riesgos del escenario:</strong> los acuerdos US-Irán históricamente son frágiles. En 2015 se firmó el JCPOA, en 2018 Trump lo rompió unilateralmente, en 2022 falló la renogociación. El mercado está apostando a que esta vez se cierra, pero la ejecución lleva meses. Un fracaso de las negociaciones podría revertir el rally.</p>
-        <p><strong>Para tus inversiones:</strong> En Argentina, el efecto es indirecto pero real. Petróleo más barato reduce la inflación importada a nivel global, lo que a su vez da más tiempo al carry trade doméstico. Un mundo con menos inflación global y tasas a la baja en EE.UU. es favorable para activos de mercados emergentes como Argentina — reduce el riesgo país de fondo.</p>
-      </div>
-    </div>
-
-  </div>
-
-  <div class="sec-title">Idea de negocio — semana 22</div>
-  <div class="idea-card">
-    <div class="idea-tag">Idea de la semana</div>
-    <div class="idea-titulo">Importadora de Artículos Deportivos Premium desde Paraguay</div>
-    <div class="idea-body">
-      <h3>Qué es</h3>
-      <p>Una operación de importación triangulada de equipos deportivos de alto valor — palas de pádel, palos de golf, raquetas, accesorios fitness — desde Ciudad del Este, Paraguay, hacia el mercado argentino. Comprás al por mayor en Paraguay a precios de exportación asiáticos (sin los aranceles que encarecen la importación directa) y revendés en Tucumán y el NOA con margen del 80–150%. Sin local físico, sin stock grande: pedido a pedido o con lote inicial de USD 3.000–5.000.</p>
-      <h3>Por qué ahora</h3>
-      <p>El pádel es el deporte de mayor crecimiento en Argentina — entre 2023 y 2026 pasó de 500.000 a más de 3 millones de jugadores activos. Las palas premium de Bullpadel, Babolat y Head se consiguen en Paraguay al 40–60% del precio argentino. El golf también creció con el auge de las clases medias altas: un juego de palos básico en Argentina cuesta ARS 2–5 millones; en Paraguay se consigue por USD 300–600. El DNU 41/2026 simplificó la operatoria aduanera y el tipo de cambio estable hace predecible la operación. El momento es ahora.</p>
-      <h3>Cómo arrancarla</h3>
-      <ul>
-        <li><strong>Paso 1:</strong> Contactar 3–5 proveedores mayoristas en Ciudad del Este vía WhatsApp o grupos de importadores. Pedirles catálogo y precios de palas de pádel y palos de golf.</li>
-        <li><strong>Paso 2:</strong> Primer pedido test: USD 3.000–5.000 en palas de pádel. Ingresarlo con gestor de frontera habilitado o como turista viajante dentro de los límites legales.</li>
-        <li><strong>Paso 3:</strong> Publicar en Instagram y grupos de WhatsApp de clubes de pádel y golf en Tucumán. Sin local, entrega a domicilio. Cobrar 50% adelantado.</li>
-        <li><strong>Paso 4:</strong> Recomprar con la ganancia. Con USD 3.000 en mercadería generás USD 5.400–6.000 en ventas al 80% de margen.</li>
-        <li><strong>Paso 5:</strong> MercadoLibre, relación con clubes para ventas recurrentes, y kits completos (pala + grip + bolso).</li>
-      </ul>
-      <h3>Modelo de ingreso</h3>
-      <p>Pala premium: costo USD 40–70, venta ~USD 190–260 al CCL. Margen: USD 150–190/unidad. Set de golf: costo USD 400–600, venta USD 1.200–1.700. Con 10 palas/mes + 2 sets de golf: USD 2.100–3.700 margen bruto. Neto: USD 1.500–2.500/mes desde el segundo mes.</p>
-      <h3>Riesgos principales</h3>
-      <ul>
-        <li>Control aduanero: mitigable con gestor habilitado o lotes pequeños.</li>
-        <li>Tipo de cambio: mitigable poniendo precios en USD o ajustando quincenalmente.</li>
-        <li>Competencia de revendedores de Buenos Aires: tu ventaja es precio y velocidad en el NOA.</li>
-      </ul>
-      <h3>Esfuerzo / inversión inicial</h3>
-      <p>USD 5.000–8.000 para el primer pedido. USD 200–300 en comisiones a gestor. 2–3 semanas desde el primer contacto hasta tener stock. Compatible con trabajo en la financiera.</p>
-    </div>
-  </div>
-
-</div>
-
-<footer>Generado 28/05/2026 · Agente personal SN</footer>
-
-<script>
-(function(){
-  function init(){
-    var habEl=document.getElementById('habChart');
-    if(habEl){
-      var items=document.querySelectorAll('.hab-item'),labels=[],data=[],bg=[],bc=[];
-      items.forEach(function(item){
-        var spans=item.querySelectorAll('span');if(spans.length<2)return;
-        var name=spans[0].textContent.trim(),badge=spans[1];
-        var pct=parseFloat(badge.textContent.replace('%',''));if(isNaN(pct))return;
-        labels.push(name);data.push(pct);
-        var cls=badge.className||'';
-        if(cls.indexOf('badge-r')>=0){bg.push('rgba(220,38,38,0.75)');bc.push('rgba(220,38,38,1)');}
-        else if(cls.indexOf('badge-w')>=0){bg.push('rgba(217,119,6,0.75)');bc.push('rgba(217,119,6,1)');}
-        else{bg.push('rgba(5,150,105,0.75)');bc.push('rgba(5,150,105,1)');}
-      });
-      if(labels.length){new Chart(habEl,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:bg,borderColor:bc,borderWidth:1,borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return' '+c.raw+'%';}}}},scales:{x:{max:100,grid:{color:'rgba(0,0,0,0.05)'},border:{color:'rgba(0,0,0,0.08)'},ticks:{callback:function(v){return v+'%';},font:{size:10,family:'Poppins'},color:'#6b7a8d'}},y:{grid:{display:false},border:{display:false},ticks:{font:{size:11,family:'Poppins'},color:'#3a4a5e'}}}}});}
+  <script>
+  (function() {
+    function initCharts() {
+      var habEl = document.getElementById('habChart');
+      if (habEl) {
+        var items = document.querySelectorAll('.hab-item');
+        var labels = [], data = [], bgColors = [], borderColors = [];
+        items.forEach(function(item) {
+          var spans = item.querySelectorAll('span');
+          if (spans.length < 2) return;
+          var name = spans[0].textContent.trim();
+          var badge = spans[1];
+          var pct = parseFloat(badge.textContent.replace('%',''));
+          if (isNaN(pct)) return;
+          labels.push(name);
+          data.push(pct);
+          var cls = badge.className || '';
+          if (cls.indexOf('badge-r') >= 0) {
+            bgColors.push('rgba(220,38,38,0.75)');
+            borderColors.push('rgba(220,38,38,1)');
+          } else if (cls.indexOf('badge-w') >= 0) {
+            bgColors.push('rgba(217,119,6,0.75)');
+            borderColors.push('rgba(217,119,6,1)');
+          } else {
+            bgColors.push('rgba(5,150,105,0.75)');
+            borderColors.push('rgba(5,150,105,1)');
+          }
+        });
+        if (labels.length) {
+          new Chart(habEl, {
+            type: 'bar',
+            data: {
+              labels: labels,
+              datasets: [{
+                data: data,
+                backgroundColor: bgColors,
+                borderColor: borderColors,
+                borderWidth: 1,
+                borderRadius: 5,
+                borderSkipped: false
+              }]
+            },
+            options: {
+              indexAxis: 'y',
+              responsive: true,
+              maintainAspectRatio: false,
+              plugins: {
+                legend: { display: false },
+                tooltip: {
+                  callbacks: { label: function(c) { return ' ' + c.raw + '%'; } }
+                }
+              },
+              scales: {
+                x: {
+                  max: 100,
+                  grid: { color: 'rgba(0,0,0,0.05)' },
+                  border: { color: 'rgba(0,0,0,0.08)' },
+                  ticks: {
+                    callback: function(v) { return v + '%'; },
+                    font: { size: 10, family: 'Poppins' },
+                    color: '#6b7a8d'
+                  }
+                },
+                y: {
+                  grid: { display: false },
+                  border: { display: false },
+                  ticks: {
+                    font: { size: 11, family: 'Poppins' },
+                    color: '#3a4a5e'
+                  }
+                }
+              }
+            }
+          });
+        }
+      }
     }
-    var dEl=document.getElementById('dolarChart');
-    if(dEl){
-      var stats=document.querySelectorAll('.lancer-stat'),dl=[],dd=[],palette=['#0066a0','#dc2626','#7b5ea7','#bc1b88','#0891b2'];
-      stats.forEach(function(stat){
-        var le=stat.querySelector('.label'),ve=stat.querySelector('.val');if(!le||!ve)return;
-        var raw=ve.textContent.replace('$','').replace(/\./g,'').replace(',','.').trim();
-        var p=parseFloat(raw);if(isNaN(p)||p<100)return;
-        dl.push(le.textContent.trim());dd.push(p);
-      });
-      var dc=dl.map(function(_,i){return palette[i%palette.length];});
-      if(dl.length){new Chart(dEl,{type:'bar',data:{labels:dl,datasets:[{data:dd,backgroundColor:dc.map(function(c){return c+'cc';}),borderColor:dc,borderWidth:2,borderRadius:7,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return' $'+c.raw.toLocaleString('es-AR');}}}},scales:{y:{min:1360,grid:{color:'rgba(0,0,0,0.05)'},border:{color:'rgba(0,0,0,0.08)'},ticks:{callback:function(v){return'$'+v.toLocaleString('es-AR');},font:{size:10,family:'Poppins'},color:'#6b7a8d'}},x:{grid:{display:false},border:{display:false},ticks:{font:{size:11,family:'Poppins'},color:'#3a4a5e'}}}}});}
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCharts);
+    } else {
+      initCharts();
     }
-  }
-  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
-})();
-</script>
+  })();
+  </script>
+
 </body>
 </html>
