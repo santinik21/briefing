@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — sábado 31 de mayo de 2026</title>
+  <title>Briefing — lunes 1 de junio de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -17,7 +17,6 @@
     --grad-s:linear-gradient(150deg,#0a1628 0%,#0e2044 40%,#1e0d38 100%);
     --shadow:0 1px 4px rgba(15,25,50,.07),0 1px 2px rgba(15,25,50,.04);
     --shadow-md:0 4px 14px rgba(15,25,50,.10),0 2px 4px rgba(15,25,50,.05);
-    --shadow-lg:0 8px 30px rgba(15,25,50,.12),0 2px 8px rgba(15,25,50,.06);
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   body{background:var(--bg);color:var(--text);font-family:'Poppins',-apple-system,sans-serif;font-size:14px;line-height:1.65;max-width:1000px;margin:0 auto;}
@@ -50,9 +49,10 @@
   .evento-item:last-child{border-bottom:none;padding-bottom:0;}
   .evento-item:first-child{padding-top:0;}
   .evento-dot{width:8px;height:8px;border-radius:50%;background:var(--grad);flex-shrink:0;margin-top:6px;}
+  .evento-dot.hot{background:var(--magenta);}
   .evento-content{flex:1;}
   .cal-cuando{font-size:9px;font-weight:700;color:var(--blue-lt);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px;}
-  .cal-cuando.alert{color:var(--magenta);}
+  .cal-cuando.hot{color:var(--magenta);}
   .cal-titulo{font-size:14px;font-weight:600;margin-bottom:1px;color:var(--text);}
   .cal-hora{font-size:11px;color:var(--muted);}
   .hab-summary{display:flex;align-items:flex-end;gap:20px;margin-bottom:18px;}
@@ -65,6 +65,7 @@
   .badge-g{color:var(--success);font-weight:700;font-size:12px;}
   .badge-w{color:var(--warning);font-weight:700;font-size:12px;}
   .badge-r{color:var(--danger);font-weight:700;font-size:12px;}
+  .badge-new{color:var(--blue-lt);font-weight:700;font-size:12px;}
   .hab-insights{margin-bottom:14px;}
   .hab-insights li{padding:7px 0;border-bottom:1px solid var(--border);list-style:none;font-size:13px;color:#344055;}
   .hab-insights li:last-child{border-bottom:none;}
@@ -92,9 +93,7 @@
   .rp-label{font-size:12px;color:var(--muted);width:150px;flex-shrink:0;}
   .rp-val{font-size:22px;font-weight:800;}
   .rp-delta{font-size:12px;margin-left:6px;font-weight:600;}
-  .rp-up{color:var(--danger);}
-  .rp-down{color:var(--success);}
-  .rp-neu{color:var(--warning);}
+  .rp-up{color:var(--danger);}.rp-down{color:var(--success);}.rp-neu{color:var(--warning);}
   .flujo-card{border-radius:8px;padding:14px 16px;margin-top:6px;}
   .flujo-compra{background:#eff8ff;border-left:4px solid var(--blue);}
   .flujo-venta{background:#fff5f5;border-left:4px solid var(--danger);}
@@ -110,15 +109,13 @@
   .fin-label::before{content:'';display:inline-block;width:3px;height:10px;background:var(--grad);border-radius:2px;flex-shrink:0;}
   .recomendacion{background:#eff8ff;border:1px solid #bde0f5;border-left:3px solid var(--blue);border-radius:8px;padding:13px 16px;font-size:13px;margin-top:14px;color:#2a3a50;line-height:1.65;}
   .recomendacion strong{color:var(--blue);}
-  .tag-legal{background:rgba(5,150,105,.12);color:var(--success);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;}
-  .tag-gris{background:rgba(217,119,6,.12);color:var(--warning);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;letter-spacing:.05em;}
+  .tag-legal{background:rgba(5,150,105,.12);color:var(--success);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;}
+  .tag-gris{background:rgba(217,119,6,.12);color:var(--warning);font-size:9px;font-weight:700;padding:2px 7px;border-radius:4px;text-transform:uppercase;}
   .rulo-item{background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:14px 16px;margin-bottom:8px;}
   .rulo-item:last-child{margin-bottom:0;}
   .rulo-titulo{font-size:13px;font-weight:700;margin-bottom:6px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;color:var(--text);}
   .rulo-body{font-size:13px;color:#3a4a5e;line-height:1.65;}
-  .brecha-pos{color:var(--danger);}
-  .brecha-neu{color:var(--warning);}
-  .brecha-ok{color:var(--success);}
+  .brecha-pos{color:var(--danger);}.brecha-neu{color:var(--warning);}.brecha-ok{color:var(--success);}
   .noticia{margin-bottom:24px;padding-bottom:24px;border-bottom:1px solid var(--border);}
   .noticia:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
   .noticia-meta{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--blue-lt);margin-bottom:7px;}
@@ -139,7 +136,7 @@
   .idea-body ul{padding-left:16px;margin-bottom:10px;}
   .idea-body ul li{margin-bottom:6px;}
   .idea-body strong{color:var(--text);font-weight:600;}
-  footer{margin:0 36px;padding:16px 0 32px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:11px;letter-spacing:.03em;}
+  footer{margin:0 36px;padding:16px 0 32px;border-top:1px solid var(--border);text-align:center;color:var(--muted);font-size:11px;}
   @media(max-width:640px){
     .body-wrap{padding:20px 16px 32px;}.site-header{padding:20px 16px 18px;}footer{margin:0 16px;}
     .grid-2{grid-template-columns:1fr;}.lancer-grid{grid-template-columns:repeat(2,1fr);}
@@ -164,12 +161,12 @@
       </svg>
       <div>
         <div class="header-brand">Briefing personal</div>
-        <div class="header-title">sábado 31 de mayo de 2026</div>
+        <div class="header-title">lunes 1 de junio de 2026</div>
       </div>
     </div>
     <div class="header-right">
-      <div class="header-week">Semana 22 · Cierre de mes</div>
-      <div class="header-date">Mayo 2026</div>
+      <div class="header-week">Semana 23 · Inicio de Junio</div>
+      <div class="header-date">Junio 2026</div>
     </div>
   </div>
   <div class="header-bar"></div>
@@ -179,7 +176,7 @@
 
   <div class="meta-rotativa">
     <span class="meta-icon">🎯</span>
-    <span><strong>Meta del año:</strong> Ganar mucha plata</span>
+    <span><strong>Meta del año:</strong> Ver donde invertir la plata (moto, campo, etc)</span>
   </div>
 
   <div class="sec-title">Tareas</div>
@@ -207,17 +204,17 @@
   <div class="card">
     <div class="card-label">Próximos eventos</div>
     <div class="evento-item">
-      <div class="evento-dot"></div>
+      <div class="evento-dot hot"></div>
       <div class="evento-content">
-        <div class="cal-cuando alert">Mañana · Lun 1/6</div>
+        <div class="cal-cuando hot">Hoy · Lun 1/6</div>
         <div class="cal-titulo">Cumpleaños Felix</div>
-        <div class="cal-hora">Todo el día — no olvidar</div>
+        <div class="cal-hora">Todo el día — saludarlo</div>
       </div>
     </div>
     <div class="evento-item">
       <div class="evento-dot"></div>
       <div class="evento-content">
-        <div class="cal-cuando">Lun 15/6 · en 15 días</div>
+        <div class="cal-cuando">Lun 15/6 · en 14 días</div>
         <div class="cal-titulo">Fecha Límite TP 1 y 2</div>
         <div class="cal-hora">13:30 – 14:30 hs</div>
       </div>
@@ -225,48 +222,46 @@
     <div class="evento-item">
       <div class="evento-dot"></div>
       <div class="evento-content">
-        <div class="cal-cuando">Mar 16/6 · en 16 días</div>
+        <div class="cal-cuando">Mar 16/6 · en 15 días</div>
         <div class="cal-titulo">Cumpleaños Hori</div>
         <div class="cal-hora">Todo el día</div>
       </div>
     </div>
   </div>
 
-  <div class="sec-title">Hábitos — Cierre Mayo 2026</div>
+  <div class="sec-title">Hábitos — Junio 2026</div>
   <div class="card">
-    <div class="card-label">Progreso mensual final</div>
+    <div class="card-label">Día 1 de junio · cierre mayo como referencia</div>
     <div class="hab-summary">
-      <div class="hab-pct">57%</div>
+      <div class="hab-pct">—</div>
       <div class="hab-pct-right">
-        <div class="hab-sub">Promedio 9 hábitos · último registro 29/5 — hoy cierra el mes</div>
+        <div class="hab-sub">Primer día del mes — sin datos aún. Cierre mayo final: 63% promedio, XP 1540, Nivel 5.</div>
       </div>
     </div>
     <ul class="hab-insights">
-      <li>📅 <strong>Cierre de mayo:</strong> el mes termina hoy. Estudiar (22.6%) y Entrenar (38.7%) cerraron muy por debajo de sus metas. No se pueden recuperar — llevarlos como deuda a junio con objetivos más concretos desde el día 1.</li>
-      <li>✅ <strong>Racha del 25–28/5 al 100%</strong> (4 días perfectos consecutivos). El sistema funciona cuando lo priorizás — el problema no es capacidad sino consistencia.</li>
-      <li>📈 <strong>Mejora de abril a mayo:</strong> Despertar 8:00 subió de 87% → se mantiene en 77%. Leer inversiones subió de 42% → 65%. Los hábitos cognitivos están mejorando, los físicos cayeron.</li>
+      <li>📋 <strong>Junio arranca hoy:</strong> hoja nueva en el tracker. Registrá los hábitos de hoy a la noche para que el sistema arranque con datos reales desde el día 1.</li>
+      <li>📊 <strong>Mayo final (cierre real):</strong> Estudiar cerró en 25.8% — crítico para el TP que vence el 15/6. Entrenar en 45.2% — mejora vs mitad de mes (38%). Trabajar 4hs en 77.4% y Despertar 8:00 en 83.9% — muy sólidos.</li>
+      <li>🎯 <strong>Objetivos de junio:</strong> Estudiar ≥ 60% (18 días), Entrenar ≥ 16 días (50%). Arrancar hoy con ambos — el efecto de la primera semana define el mes.</li>
     </ul>
     <div class="hab-grid">
-      <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">77%</span></div>
-      <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">61%</span></div>
-      <div class="hab-item"><span class="hab-name">Trabajar 4hs</span><span class="badge-g">68%</span></div>
-      <div class="hab-item"><span class="hab-name">Estudiar 2hs</span><span class="badge-r">23%</span></div>
-      <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">65%</span></div>
-      <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">39%</span></div>
-      <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">45%</span></div>
-      <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-g">68%</span></div>
-      <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">71%</span></div>
+      <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-new">mayo 84%</span></div>
+      <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-new">mayo 68%</span></div>
+      <div class="hab-item"><span class="hab-name">Trabajar 4hs</span><span class="badge-new">mayo 77%</span></div>
+      <div class="hab-item"><span class="hab-name">Estudiar 2hs</span><span class="badge-new">mayo 26%</span></div>
+      <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-new">mayo 71%</span></div>
+      <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-new">mayo 45%</span></div>
+      <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-new">mayo 52%</span></div>
+      <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-new">mayo 74%</span></div>
+      <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-new">mayo 74%</span></div>
     </div>
-    <div class="chart-wrap">
-      <canvas id="habChart"></canvas>
-    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:4px;text-align:center;">Valores mayo final · el gráfico se activará cuando haya datos de junio</p>
   </div>
 
   <div class="sec-title">Financiera</div>
   <div class="card">
 
     <div class="fin-section">
-      <div class="fin-label">A · Cotizaciones del dólar — domingo 31/5</div>
+      <div class="fin-label">A · Cotizaciones del dólar — lunes 1/6</div>
       <div class="lancer-grid">
         <div class="lancer-stat">
           <div class="label">Oficial BNA</div>
@@ -280,13 +275,13 @@
         </div>
         <div class="lancer-stat">
           <div class="label">MEP</div>
-          <div class="val">$1.434</div>
+          <div class="val">$1.435</div>
           <div class="sub brecha-ok">+0.3% brecha</div>
         </div>
         <div class="lancer-stat">
           <div class="label">CCL</div>
-          <div class="val">$1.485</div>
-          <div class="sub brecha-neu">+3.8% brecha</div>
+          <div class="val">$1.481</div>
+          <div class="sub brecha-neu">+3.6% brecha</div>
         </div>
         <div class="lancer-stat">
           <div class="label">USDT P2P</div>
@@ -295,21 +290,21 @@
         </div>
       </div>
       <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">
-        <strong style="color:var(--success)">BCRA mayo:</strong> compró ~USD 2.596M en el mes. Acumulado 2026: USD 9.747M (97% de la meta anual). Reservas brutas: <strong>USD 48.511M</strong> — máximo desde 2019. Racha de 96 jornadas compradoras.
+        <strong style="color:var(--success)">BCRA:</strong> reservas brutas ~USD 48.500M. El FMI reconoció que el BCRA sobrecumple metas de reservas con meses de anticipación — ajustaron la meta de diciembre a la baja porque ya está casi cumplida. Caputo estima que sin el BCRA comprando >USD 100M/día el dólar ya valdría $1.100. Proyección Fitch: reservas podrían superar USD 52.000M a fin de año.
       </p>
       <p style="font-size:12px;color:#3a4a5e;margin-bottom:6px;"><strong>Macro:</strong></p>
       <ul style="font-size:12px;color:#3a4a5e;padding-left:16px;margin-bottom:10px;">
-        <li>Riesgo país cierra mayo en 493 pbs (mínimo gestión Milei, -90 pbs desde pico de abril) → carry atractivo ↓ dólar</li>
-        <li>Decreto 252/2026 RAF ampliado: insumos industriales sin aranceles → más oferta en cadenas de producción local ↓</li>
-        <li>Caputo confirma continuidad de la política cambiaria → dólar estable →</li>
+        <li>FMI sobrecumple metas → mayor confianza del mercado → presiona dólar ↓</li>
+        <li>Inicio de mes: pagos de importaciones corporativas pueden presionar leve demanda → →</li>
+        <li>Carry trade sigue siendo el trade dominante — posible aumento de demanda de pesos hoy ↓</li>
       </ul>
       <div class="recomendacion">
-        <strong>Recomendación:</strong> No comprar dólares. El blue = oficial, las brechas están en mínimos históricos y el BCRA cerró mayo como comprador récord. El carry en pesos acumuló 15–20% en USD en 2026. Si tenés pesos, Lecap o caución. Si tenés dólares propios, conservalos — el mes que viene puede traer más claridad post-elecciones.
+        <strong>Recomendación:</strong> No comprar dólares. Blue = oficial, brecha en mínimos, BCRA con potencia total. Si tenés pesos, aprovechar las tasas de Lecap o caución — el carry acumuló 20% en USD en 2026. Inicio de junio puede traer leve presión importadora, pero el BCRA tiene reservas más que suficientes para absorberla sin mover el tipo de cambio.
       </div>
     </div>
 
     <div class="fin-section">
-      <div class="fin-label">B · Futuros ROFEX (estimados — domingo, mercado cerrado)</div>
+      <div class="fin-label">B · Futuros ROFEX (estimados — datos al viernes 29/5)</div>
       <div class="rofex-grid">
         <div class="rofex-item">
           <div class="label">Junio 2026</div>
@@ -330,7 +325,7 @@
           <span class="t-mensual">~1.00%/mes</span>
         </div>
       </div>
-      <p style="font-size:12px;color:var(--muted);">El mercado espera devaluación de apenas 1% mensual en los próximos 3 meses — carry trade ampliamente positivo frente a esa devaluación implícita. El spread con las Lecaps (2.67%/mes) es de +1.67 puntos mensuales a favor de los pesos. <em>Verificar valores exactos en Rava/Matba antes de operar.</em></p>
+      <p style="font-size:12px;color:var(--muted);">El mercado sigue esperando devaluación de apenas 1%/mes — el carry trade tiene spread positivo de ~1.5–1.7 puntos mensuales sobre la devaluación implícita. Verificar valores de apertura hoy en Rava/Matba.</p>
     </div>
 
     <div class="fin-section">
@@ -345,20 +340,20 @@
         <div class="tasa-item">
           <div class="t-label">PF privados (mejor)</div>
           <div class="t-val">19.5% TNA</div>
-          <div class="t-sub">Banco Provincia · mayo 2026</div>
+          <div class="t-sub">Banco Provincia · referencia</div>
           <span class="t-mensual">1.63%/mes</span>
         </div>
         <div class="tasa-item">
           <div class="t-label">Caución bursátil 1d</div>
-          <div class="t-val">~22% TNA</div>
-          <div class="t-sub">BYMA · sin riesgo contraparte</div>
-          <span class="t-mensual">1.83%/mes</span>
+          <div class="t-val">~29% TNA</div>
+          <div class="t-sub">BYMA · mejor opción corto plazo</div>
+          <span class="t-mensual">2.42%/mes</span>
         </div>
         <div class="tasa-item">
           <div class="t-label">Lecap referencia</div>
-          <div class="t-val">~32% TNA</div>
-          <div class="t-sub">S30O6 y similares · vence oct 2026</div>
-          <span class="t-mensual">2.67%/mes</span>
+          <div class="t-val">~34% TNA</div>
+          <div class="t-sub">S30O6 y similares</div>
+          <span class="t-mensual">2.83%/mes</span>
         </div>
       </div>
     </div>
@@ -385,25 +380,25 @@
           <span class="t-mensual">2.33%/mes</span>
         </div>
       </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Tasas de CPD estables cerrando mayo. Que la tasa de CPD a 90d (2.33%/mes) sea menor que Lecap (2.67%/mes) indica percepción de riesgo crediticio corporativo moderado. Para la financiera: descuento de cheques sigue siendo negocio con spread atractivo sobre PF.</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px;">CPD mantiene tasas estables. Recordar: CPD 90d (2.33%/mes) vs Lecap (2.83%/mes) — el spread refleja el riesgo crediticio corporativo adicional. Para la financiera: el descuento de cheques sigue siendo un negocio con spread interesante sobre el costo de fondeo.</p>
     </div>
 
     <div class="fin-section">
       <div class="fin-label">E · Riesgo País EMBI+</div>
       <div class="rp-row">
         <div class="rp-label">EMBI+ Argentina</div>
-        <div class="rp-val rp-down">493 pbs</div>
+        <div class="rp-val rp-down">~493 pbs</div>
         <div class="rp-delta rp-down">▼ mínimo gestión Milei</div>
       </div>
-      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Cierra mayo perforando los 500 pbs por tercera jornada consecutiva. Caída de 94 pbs desde el pico de 587 en abril. A estos niveles el acceso a deuda externa se vuelve viable — si llega a 400 pbs Argentina podría volver a los mercados internacionales. El carry trade sigue siendo el trade preferido del mercado global sobre Argentina.</p>
+      <p style="font-size:12px;color:var(--muted);margin-top:8px;">Cierra mayo en mínimos históricos de la gestión. A 493 pbs, el carry trade es la posición preferida del mercado global sobre Argentina. Si perfora 450 pbs en junio, el acceso a financiamiento externo se vuelve viable para el Tesoro.</p>
     </div>
 
     <div class="fin-section">
       <div class="fin-label">F · Flujo del día</div>
       <div class="flujo-card flujo-neutral">
-        <div class="flujo-titulo">Jornada Neutral — mercado cerrado, cierre de mes</div>
+        <div class="flujo-titulo">Jornada Neutral — inicio de mes con demanda importadora latente</div>
         <div class="flujo-body">
-          Domingo y fin de mes: no hay operaciones cambiarias. Blue plano = oficial (brecha 0%), sin presión de ningún lado. El BCRA cerró mayo como su mejor mes comprador del año (USD 2.596M). Mañana lunes 1/6 arrancan los mercados de junio — posible aumento de demanda de dólares por pagos de importaciones y cierre de balance de empresas. Posición recomendada: mantener carry, esperar la apertura del lunes para ajustar.
+          Primer lunes de junio: los importadores suelen demandar divisas para pagos de mes. Sin embargo, el BCRA tiene artillería suficiente (USD 48.500M de reservas) para absorber esa demanda sin mover el tipo de cambio. Blue plano = oficial, brecha en mínimos. Carry sigue siendo la posición correcta. Monitorear si el BCRA compra o vende hoy — señal clave para el tono del mes.
         </div>
       </div>
     </div>
@@ -412,23 +407,23 @@
       <div class="fin-label">G · Rulos financieros</div>
 
       <div class="rulo-item">
-        <div class="rulo-titulo">Carry Trade Lecap <span class="tag-legal">Legal</span></div>
+        <div class="rulo-titulo">Carry Trade Lecap — "ganar 24% en dólares hasta junio" <span class="tag-legal">Legal</span></div>
         <div class="rulo-body">
-          <strong>Operación:</strong> Convertís USD a pesos (MEP ~$1.434), comprás Lecap S30O6 o similar (TNA ~32%). En 30 días reconvertís a USD. <strong>Rendimiento estimado:</strong> 2.67%/mes en pesos. Si el CCL no sube, ganás ~2.67% - ~1% devaluación implícita = ~1.67%/mes neto en USD. El carry acumuló hasta 20% en USD en lo que va del año (Boncer), 14% en instrumentos de tasa fija. Bank of America recomienda con hedge de devaluación. <strong>Riesgo:</strong> salto cambiario post-elecciones. Gestionar posición con stop.
+          <strong>Operación:</strong> Convertís USD a pesos (MEP ~$1.435), comprás Lecap S30O6 (TNA ~34%). En 30 días reconvertís a USD. <strong>Rendimiento estimado:</strong> 2.83%/mes en pesos − 1% devaluación implícita = ~1.83%/mes neto en USD. El carry acumuló entre 16% y 24% en USD en lo que va del año según el instrumento. El Cronista proyecta que el carry puede rendir hasta un 24% en dólares "hasta junio" en los instrumentos más agresivos. <strong>Riesgo:</strong> si el dólar salta post-elecciones legislativas, la ecuación se rompe. Gestionar con límite de exposición.
         </div>
       </div>
 
       <div class="rulo-item">
-        <div class="rulo-titulo">Caución Bursátil 7 días <span class="tag-legal">Legal</span></div>
+        <div class="rulo-titulo">Caución Bursátil 1 día — mayor tasa del mercado <span class="tag-legal">Legal</span></div>
         <div class="rulo-body">
-          <strong>Operación:</strong> Prestás pesos garantizados por activos bursátiles en BYMA a 7 días. TNA ~22%. <strong>Rendimiento:</strong> si ponés $1.000.000, en 7 días cobrás ~$4.219 netos (1.83% anualizado mensualmente). Sin riesgo de contraparte. <strong>Ideal para:</strong> plata que no necesitás en la semana. Mejor que el plazo fijo BNA (1.54%/mes) por 29 puntos básicos mensuales con mayor liquidez.
+          <strong>Operación:</strong> Prestás pesos en BYMA a 1 día garantizados por activos. TNA ~29% (mejor tasa disponible hoy, superando Lecap en corto plazo). <strong>Rendimiento:</strong> $1.000.000 en 7 días = $5.562 netos a 29% TNA (2.42%/mes). Sin riesgo de contraparte. <strong>Cuándo usar:</strong> plata que puede moverse en días, mayor flexibilidad que el plazo fijo. La diferencia vs PF BNA es +88 pbs mensuales (2.42% vs 1.54%).
         </div>
       </div>
 
       <div class="rulo-item">
-        <div class="rulo-titulo">Spread MEP / CCL <span class="tag-gris">Gris</span></div>
+        <div class="rulo-titulo">ONs (Obligaciones Negociables) — el carry del segmento corporativo <span class="tag-legal">Legal</span></div>
         <div class="rulo-body">
-          <strong>Operación:</strong> Comprar bono en pesos vía MEP ($1.434) y vender mismo bono en dólares vía CCL ($1.485). Spread hoy: $51 por dólar = <strong>3.5% por operación</strong>. Requiere parking 48hs por regulación BCRA. <strong>Riesgo:</strong> el spread puede cerrar si el CCL cae. Solo operar si tenés cuenta comitente habilitada para ambos mercados.
+          <strong>Operación:</strong> El Cronista reporta que empresas tomaron deuda vía ONs por USD 29.000M en lo que va del año — el "nuevo carry trade". Esto genera un mercado de ONs corporativas en pesos con tasas competitivas. <strong>Rendimiento:</strong> ONs en pesos de empresas sólidas (YPF, Tecpetrol, Banco Galicia) rinden TNA 28–32%, en dólares 4–6% anual. <strong>Acceso:</strong> desde cualquier broker con cuenta comitente, lote mínimo ARS 1.000 en mercado secundario.
         </div>
       </div>
 
@@ -439,24 +434,22 @@
   <div class="card">
 
     <div class="noticia">
-      <div class="noticia-meta">Segundo Enfoque · 31 de mayo de 2026</div>
-      <div class="noticia-titulo">Cierre de mayo récord: reservas en USD 48.511M, riesgo país en 493 pbs y dólar sin brecha</div>
+      <div class="noticia-meta">Ámbito · 1 de junio de 2026</div>
+      <div class="noticia-titulo">El FMI confirma: el BCRA recibió "ayuda" por u$s11.800M y ahora sobrecumple todas las metas de reservas</div>
       <div class="noticia-body">
-        <p>Argentina cierra mayo de 2026 con el mejor balance macroeconómico de la gestión Milei. Las reservas brutas del BCRA alcanzaron <strong>USD 48.511 millones</strong>, el nivel más alto desde 2019, luego de que el organismo comprara aproximadamente USD 2.596 millones solo en mayo — el mejor mes del año. El acumulado de compras en 2026 llegó a USD 9.747 millones, rozando el 97% de la meta anual fijada con el FMI.</p>
-        <p>El riesgo país EMBI+ cerró la semana en <strong>493 puntos básicos</strong>, perforando la barrera de 500 por tercera jornada consecutiva y marcando el nivel más bajo de toda la gestión. Esto representa una compresión de casi 100 puntos básicos desde el pico de 587 registrado en abril. En simultáneo, el tipo de cambio oficial operó plano: el dólar blue cotizó a $1.430 — igual que el oficial — con una brecha de 0% histórica. El MEP operó a $1.434 (+0.3%) y el CCL a $1.485 (+3.8%).</p>
-        <p>El combo reservas en máximos + riesgo país cayendo + brecha cero es la señal más clara de que la política económica de Milei está consolidando credibilidad internacional. El ministro Caputo confirmó que la política cambiaria no cambia en el corto plazo y que el gobierno no apura el levantamiento del cepo.</p>
-        <p><strong>Qué implica para vos:</strong> el carry trade en pesos cerró mayo siendo la estrategia dominante — hasta 20% en USD acumulado en el año para los más audaces. Para la financiera, este contexto sostiene la demanda de pesos y deprime la demanda de dólares físicos. Los clientes que piden dólares hoy no tienen urgencia técnica. Junio trae pagos de importaciones y vencimientos de deuda — estar atentos si el BCRA deja de comprar o empieza a vender.</p>
+        <p>El Fondo Monetario Internacional reconoció formalmente que el Banco Central argentino sobrecumple las metas de acumulación de reservas acordadas en el programa vigente. La "ayuda" del FMI fue de u$s11.800 millones en lo que va del acuerdo — incluyendo desembolsos, líneas de swap y asistencia técnica. El resultado: el BCRA ya está a punto de cumplir la meta de diciembre 2026 (USD 4.100M de reservas netas negativas) con seis meses de anticipación.</p>
+        <p>El ajuste de metas que comunicó el organismo es, en realidad, una señal de éxito: las metas originales eran muy conservadoras y el ritmo de acumulación superó ampliamente las expectativas. El ministro Caputo afirmó que "sin el BCRA comprando más de USD 100 millones por día, el dólar ya valdría $1.100" — lo que implica que la política de intervención activa está suprimiendo artificialmente el tipo de cambio. La calificadora Fitch proyecta reservas brutas de USD 52.000M a fin de año.</p>
+        <p><strong>Qué implica para vos:</strong> el sobrecumplimiento de metas del FMI es el ancla más sólida del programa económico actual. Para la financiera: contexto de dólar reprimido = carry trade sigue siendo la posición correcta. Para inversiones propias: los bonos soberanos en dólares (GD35, GD41) se benefician de esta dinámica — el riesgo país en 493 pbs ya los pone en zona de interés para inversores institucionales. El riesgo es que el tipo de cambio esté "atrasado" y haya corrección cuando se levante el cepo — todavía sin fecha.</p>
       </div>
     </div>
 
     <div class="noticia">
-      <div class="noticia-meta">El Cronista · mayo 2026</div>
-      <div class="noticia-titulo">Decreto 252/2026: el gobierno amplía el Régimen de Aduana en Factoría a todos los sectores productivos</div>
+      <div class="noticia-meta">El Cronista · junio 2026</div>
+      <div class="noticia-titulo">Los sectores que lideran y los que quedan afuera: Energía, Minería, Logística y Agro dominan el optimismo empresarial en Argentina</div>
       <div class="noticia-body">
-        <p>El gobierno publicó el Decreto 252/2026 que extiende el Régimen de Aduana en Factoría (RAF) — hasta ahora exclusivo de la industria automotriz — a <strong>todos los sectores productivos</strong> del país. El RAF permite importar partes, insumos y componentes sin pagar derechos de importación ni impuestos en el momento del ingreso. Los tributos se pagan solo si el producto terminado se vende en el mercado interno; si se exporta, quedan exentos.</p>
-        <p>Además de la extensión sectorial, el decreto simplifica requisitos: elimina la garantía global única, quita la obligación de firmar actas-convenio con cámaras sectoriales y otorga un plazo de un año para efectivizar los pagos de tributos sobre productos vendidos localmente. El gobierno lo justifica en la necesidad de "promover la incorporación de valor agregado local" y mejorar la competitividad exportadora en un contexto de peso apreciado.</p>
-        <p>La medida llega en un momento donde las importaciones totales de Argentina alcanzaron USD 87.077 millones en 2025 (+30% vs 2023), y las importaciones de consumo crecen al 20% interanual mientras la producción industrial local cae en varios sectores. El RAF busca que las empresas que sí producen localmente puedan importar insumos sin el costo financiero inmediato de los aranceles.</p>
-        <p><strong>Qué implica para vos:</strong> si avanzás con la importadora de artículos deportivos desde Paraguay, el RAF no aplica directamente (es para insumos de producción, no para reventa directa). Pero el contexto sí importa: el gobierno está activamente facilitando la logística de importación para todo tipo de sector. El ecosistema importador se está profesionalizando y el acceso a canales formales se amplía — el camino hacia una operación escalable es más claro que hace un año.</p>
+        <p>Un relevamiento de Randstad Workmonitor 2026 revela que el 60% de los trabajadores argentinos confía en las perspectivas de su industria — pero esa confianza no está distribuida uniformemente. <strong>Energía y Minería lidera con 88%</strong> de optimismo, seguido por Logística y Transporte (73%), Consumo Masivo (73%) y <strong>Agro (70%)</strong>. En el extremo opuesto: Servicios Profesionales (48%), Sector Público (46%) y Defensa (43%).</p>
+        <p>El dato de Energía y Minería no es casualidad: el régimen RIGI (Régimen de Incentivo a las Grandes Inversiones) atrajo compromisos por más de USD 30.000M en proyectos de litio, cobre, gas y petróleo desde su lanzamiento. El NOA y Patagonia son los principales destinos. Para startups y emprendimientos, los sectores con mayor optimismo son también los que más demandan proveeduría y servicios conexos.</p>
+        <p><strong>Qué implica para vos:</strong> el mapa de optimismo sectorial es una guía directa para donde poner tiempo y capital. Agro (70%) es exactamente el sector de la idea de negocio de esta semana — cosignataria de hacienda y granos. Energía y Minería (88%) abre oportunidades de proveeduría en el NOA. Logística (73%) es donde MercadoLibre está invirtiendo USD 115M — la apertura importadora va a necesitar más logistas locales en Tucumán y el NOA. Los sectores en caída (servicios profesionales, gobierno) son los que hay que evitar o salir.</p>
       </div>
     </div>
 
@@ -466,67 +459,65 @@
   <div class="card">
 
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 28 de mayo de 2026</div>
-      <div class="noticia-titulo">Anthropic supera a OpenAI como startup de IA más valiosa y se acerca al billón de dólares</div>
+      <div class="noticia-meta">CNBC · 1 de junio de 2026</div>
+      <div class="noticia-titulo">Berkshire bajo Greg Abel compra Taylor Morrison por $6.8B: el primer gran movimiento del sucesor de Buffett es real estate</div>
       <div class="noticia-body">
-        <p>En un giro inesperado, <strong>Anthropic</strong> — la empresa detrás de Claude — superó a OpenAI como la startup de inteligencia artificial más valiosa del mundo, acercándose a una valuación de <strong>USD 1 billón</strong> (trillion en inglés) en su última ronda de financiamiento. OpenAI había sido valorada en USD 852.000 millones en marzo, mientras que Anthropic ahora supera esa cifra. Ambas compañías se preparan para salir a bolsa en el segundo semestre de 2026.</p>
-        <p>El dato es relevante porque ambas compañías están en una carrera directa para definir quién lidera la próxima ola de IA empresarial. Anthropic apuesta por la seguridad y la confiabilidad de sus modelos (la familia Claude), mientras que OpenAI apuesta por la velocidad de adopción masiva (GPT, ChatGPT). El mercado parece empezar a premiar el enfoque de Anthropic: sus modelos se están convirtiendo en los preferidos para aplicaciones empresariales de alto riesgo — legal, salud, finanzas.</p>
-        <p>SpaceX mantiene su posición como empresa no cotizada de mayor valuación, con planes de IPO para el 12 de junio a una valuación target de USD 1.8 billones. Analistas advierten que el aluvión de mega-IPOs (SpaceX, OpenAI, Anthropic) podría señalar el techo del ciclo — similar al pico de 2000 — aunque el mercado, con el Nasdaq en máximos históricos (26.972), no parece escuchar esa señal todavía.</p>
-        <p><strong>Qué implica para vos:</strong> si tenés CEDEARs de empresas tech que se benefician de la adopción de IA (NVDA, MSFT, GOOG, AMZN), el IPO de SpaceX el 12 de junio puede generar volatilidad de corto plazo. La señal de "techo de ciclo" de los analistas amerita reducir exposición a tech de alta valuación si tenés ganancias acumuladas — rotar a sectores más defensivos o al bono soberano argentino que acumula carry. Para emprendedores: el auge de Claude/Anthropic valida que la IA generativa es la herramienta más disruptiva del próximo lustro — usarla activamente en tus operaciones es ventaja competitiva concreta.</p>
+        <p>Berkshire Hathaway anunció la adquisición de <strong>Taylor Morrison Home Corp.</strong>, uno de los principales homebuilders de Estados Unidos, por USD 6.800 millones en efectivo. Es la primera gran operación corporativa bajo Greg Abel, designado sucesor de Warren Buffett. La transacción se espera cierre en el segundo semestre de 2026. Taylor Morrison construye casas en el segmento medio-alto en estados del Sun Belt: Texas, Florida, Arizona, Georgia.</p>
+        <p>El movimiento tiene una lógica clara: el déficit de vivienda en EE.UU. sigue siendo estructural (faltan entre 3 y 4 millones de unidades habitacionales), las tasas de la Fed empezaron a bajar desde 2025 y el segmento de homebuilding tiene márgenes operativos sólidos. Abel, como Buffett, busca negocios simples con ventajas competitivas duraderas. El sector de construcción de viviendas encaja: es anti-cíclico en el largo plazo y se beneficia de la migración hacia el Sun Belt.</p>
+        <p><strong>Qué implica para vos:</strong> cuando Berkshire entra a un sector, es una señal de value fuerte. Los homebuilders cotizantes (DHI, LEN, PHM) podrían rally por el "Berkshire effect". Si tenés acceso a CEDEARs de constructoras de EE.UU., es una señal de compra en el sector. Para Argentina: el mercado inmobiliario local no está correlacionado directamente, pero el flujo de capital hacia real estate global confirma que los activos físicos siguen siendo preferidos frente a la incertidumbre de la IA en los mercados de renta variable de alta valuación.</p>
       </div>
     </div>
 
     <div class="noticia">
-      <div class="noticia-meta">CNBC · 29 de mayo de 2026</div>
-      <div class="noticia-titulo">Dell +33% en un día y Nasdaq en máximos históricos: la IA impulsa resultados corporativos récord</div>
+      <div class="noticia-meta">CNBC · 1 de junio de 2026</div>
+      <div class="noticia-titulo">SpaceX IPO el 12 de junio: el mayor debut bursátil de la historia apunta a recaudar $75B — y Nvidia suma otro chip de IA</div>
       <div class="noticia-body">
-        <p>Dell Technologies protagonizó el mayor salto diario de su historia bursátil: <strong>+33%</strong> en una jornada tras reportar resultados del primer trimestre que superaron ampliamente las expectativas y elevar su guidance anual. El driver: demanda explosiva de servidores de alta densidad para cargas de trabajo de IA. Micron Technology subió +5% y Qualcomm +3%. El Nasdaq cerró el viernes en <strong>26.972 puntos</strong>, nuevo récord histórico. El S&P 500 llegó a 7.580 y el Dow Jones a 51.032.</p>
-        <p>El rebote de Dell es emblemático de un fenómeno más amplio: las empresas de infraestructura física de IA (fabricantes de servidores, semiconductores, centros de datos) están capturando valor tan rápido como las empresas de software de IA. La demanda de chips de Nvidia sigue superando toda oferta disponible, y Dell —que ensambla servidores con GPUs Nvidia— se posiciona como el gran beneficiario de la expansión de data centers corporativos.</p>
-        <p>El real estate industrial, como se anticipó en briefings anteriores, sigue siendo uno de los sectores más calientes: los data centers representan el 10% del leasing industrial en EE.UU. y la ocupación en los principales mercados es del 95%+. Colliers proyecta un aumento del 15-20% en transacciones de real estate comercial en 2026.</p>
-        <p><strong>Qué implica para vos:</strong> el rally de Dell confirma que la apuesta de infraestructura IA sigue con fuerza — si tenés posición en NVDA o similares vía CEDEARs, los fundamentos todavía acompañan aunque las valuaciones exigen cautela. Para la estrategia de negocio: el boom de data centers no llega directo a Argentina, pero las empresas de infraestructura que se instalan en el país (Mercado Libre, Google, Meta) van a demandar más servicios locales — hay oportunidad en proveeduría, servicios logísticos y construcción especializada.</p>
+        <p>SpaceX confirmó que comienza el roadshow de su IPO esta semana con fecha de debut en bolsa el <strong>12 de junio</strong>. La empresa de Elon Musk apunta a recaudar hasta USD 75.000 millones, lo que lo convertiría en el mayor IPO de la historia de los mercados de capitales estadounidenses, superando el récord de Saudi Aramco (USD 25.600M en 2019). La valuación target es de USD 1,8 billones — menor a los USD 2 billones que habían buscado inicialmente tras consultar con inversores institucionales.</p>
+        <p>En simultáneo, <strong>Nvidia</strong> anunció un nuevo procesador específicamente diseñado para PCs personales, buscando extender el boom de IA desde los data centers hacia el hardware de consumo. Jensen Huang declaró que "la reinvención de la PC con IA es tan grande como la reinvención del smartphone" — una apuesta a que el hardware IA de consumo será el próximo gran mercado. Las acciones de Nvidia subieron 2.1% en premarket. El S&P 500 cerró mayo con su novena semana positiva consecutiva — el mejor racha desde diciembre 2023 — con el índice subiendo 5.2% en el mes.</p>
+        <p><strong>Qué implica para vos:</strong> el IPO de SpaceX el 12/6 es el evento bursátil del año. Si tenés exposición a tech vía CEDEARs, los próximos 11 días son de alta volatilidad — el mercado puede irse para ambos lados dependiendo de la recepción del IPO. El chip de Nvidia para PCs abre una oportunidad concreta: las PCs con IA local se van a vender masivamente en Argentina en 2027-2028 — si tu negocio involucra tecnología o electrónica, empezar a estudiar ese mercado ahora. Para la financiera: clientes que pregunten por SpaceX — es especulación pura en esta etapa, no hay CEDEARs disponibles hasta el debut.</p>
       </div>
     </div>
 
   </div>
 
-  <div class="sec-title">Idea de negocio — semana 22</div>
+  <div class="sec-title">Idea de negocio — semana 23</div>
   <div class="idea-card">
     <div class="idea-tag">Idea de la semana</div>
-    <div class="idea-titulo">Importadora de Artículos Deportivos Premium desde Paraguay</div>
+    <div class="idea-titulo">Cosignataria de Hacienda y Granos en el NOA</div>
     <div class="idea-body">
       <h3>Qué es</h3>
-      <p>Una operación de importación triangulada de equipos deportivos de alto valor — palas de pádel, palos de golf, raquetas, accesorios fitness — desde Ciudad del Este, Paraguay, hacia el mercado argentino. Comprás al por mayor en Paraguay a precios de exportación asiáticos (sin los aranceles que encarecen la importación directa) y revendés en Tucumán y el NOA con margen del 80–150%. Sin local físico, sin stock grande: pedido a pedido o con lote inicial de USD 3.000–5.000.</p>
+      <p>Una cosignataria es un intermediario profesional en la compra-venta de hacienda (bovinos, porcinos) y granos (soja, maíz, trigo) entre productores rurales y compradores finales (frigoríficos, feedlots, exportadoras). El modelo es simple: cobrás una comisión del 2–5% sobre el valor de cada transacción sin poner capital propio. No necesitás el producto ni el dinero — sos el puente entre quien vende y quien compra, y en Argentina ese servicio vale mucho porque los productores del interior no tienen acceso directo a los grandes compradores.</p>
 
       <h3>Por qué ahora</h3>
-      <p>El pádel es el deporte de mayor crecimiento en Argentina — entre 2023 y 2026 pasó de 500.000 a más de 3 millones de jugadores activos. Las palas premium de Bullpadel, Babolat y Head se consiguen en Paraguay al 40–60% del precio argentino. El golf también creció con el auge de las clases medias altas: un juego de palos básico en Argentina cuesta ARS 2–5 millones; en Paraguay se consigue por USD 300–600. El DNU 41/2026 simplificó la operatoria aduanera y el tipo de cambio estable hace predecible la operación. El momento es ahora.</p>
+      <p>El agro argentino cerró 2025 con exportaciones récord y 2026 sigue con el mismo viento. Tucumán y el NOA tienen economías agropecuarias activas: ganadería bovina en Monteros, Concepción y el este tucumano; granos en Santiago del Estero y Salta; cítricos y caña como cultivos dominantes. Con el tipo de cambio estable y el gobierno de Milei eliminando trabas a la intermediación privada, los productores necesitan acceder a más compradores. El 70% de los trabajadores del sector agropecuario son optimistas para 2026 — tercer sector más optimista del país. Y a diferencia de otros negocios, este no requiere capital: arrancás con un teléfono y una habilitación.</p>
 
       <h3>Cómo arrancarla</h3>
       <ul>
-        <li><strong>Paso 1:</strong> Contactar 3–5 proveedores mayoristas en Ciudad del Este vía WhatsApp o grupos de importadores. Pedirles catálogo y precios de palas de pádel y palos de golf. No hace falta viajar para el primer acercamiento.</li>
-        <li><strong>Paso 2:</strong> Primer pedido test: USD 3.000–5.000 en palas de pádel (alta rotación, bajo bulto, fácil transporte). Ingresarlo con un gestor de frontera habilitado o como turista viajante dentro de los límites legales.</li>
-        <li><strong>Paso 3:</strong> Publicar en Instagram y grupos de WhatsApp de clubes de pádel y golf en Tucumán. Sin local físico, entrega a domicilio o en mano. Cobrar 50% adelantado.</li>
-        <li><strong>Paso 4:</strong> Recomprar con la ganancia. Con USD 3.000 en mercadería generás USD 5.400–6.000 en ventas al 80% de margen. Reinvertir para escalar.</li>
-        <li><strong>Paso 5:</strong> Abrir cuenta de MercadoLibre, formalizar relación con clubes para ventas recurrentes, y explorar kits completos (pala + grip + bolso).</li>
+        <li><strong>Paso 1:</strong> Registrarte como corredor de hacienda en SENASA (trámite gratuito o de bajo costo online). Para granos, inscribirte en el registro de operadores del Ministerio de Agricultura.</li>
+        <li><strong>Paso 2:</strong> Mapear los remates ganaderos activos en Tucumán — Monteros, Concepción, Famaillá. Asistir a 2–3 ferias como observador para entender cómo se opera y quiénes son los actores clave.</li>
+        <li><strong>Paso 3:</strong> Buscar asociación temporal con una cosignataria establecida para las primeras operaciones — actuás de "subagente" y compartís comisión. Reducís el riesgo y aprendés el negocio real.</li>
+        <li><strong>Paso 4:</strong> Usar WhatsApp y grupos rurales para difundir disponibilidad. Muchos productores del interior aún cierran operaciones por teléfono — ser rápido y confiable es la ventaja.</li>
+        <li><strong>Paso 5:</strong> Primera operación propia: mediar la venta de 50–100 cabezas bovinas a un frigorífico o feedlot de Córdoba o Santa Fe. Con precio de $800.000 ARS/cabeza, 50 cabezas = $40M × 3% comisión = $1.2M en una sola operación.</li>
       </ul>
 
       <h3>Modelo de ingreso</h3>
-      <p>Pala de pádel premium: costo USD 40–70, venta ARS 280.000–380.000 (~USD 190–260 al CCL). Margen por unidad: USD 150–190. Juego de palos de golf: costo USD 400–600, venta ARS 1.800.000–2.500.000. Margen: USD 800–1.100 por juego. Con 10 palas/mes + 2 sets de golf: USD 2.100–3.700 de margen bruto. Neto tras costos (gestor, traslado, MercadoLibre): USD 1.500–2.500/mes desde el segundo mes.</p>
+      <p>Hacienda bovina: comisión 2–3% sobre valor operado. 50 cabezas a $800.000 c/u = $40M × 3% = $1.2M por operación. Con 3 operaciones/mes: ARS 3.6M netos (USD 2.500 al CCL). Granos: comisión 0.5–1.5%. 100 toneladas de soja a USD 400/ton = USD 40.000 × 1% = USD 400 por carga. Con volumen creciente, el objetivo realista en 6 meses es USD 3.000–5.000/mes trabajando part-time desde la financiera.</p>
 
       <h3>Riesgos principales</h3>
       <ul>
-        <li>Control aduanero: si el volumen supera los límites del régimen turista, riesgo de retención. Mitigable con gestor habilitado o importación formal por tramos pequeños.</li>
-        <li>Tipo de cambio: si el peso se aprecia más (carry), el costo en USD sube en pesos. Mitigable poniendo precios en USD o ajustando quincenalmente.</li>
-        <li>Competencia de revendedores de Buenos Aires: tienen red establecida pero tu ventaja es precio y velocidad en el NOA sin intermediario porteño.</li>
+        <li>Red de contactos: sin productores que te confíen sus ventas, no hay operaciones. Los primeros meses son de construcción de reputación, no de ingreso.</li>
+        <li>Competencia de cosignatarias con 30+ años en la zona — tu ventaja tiene que ser precio (comisión más baja al principio) o velocidad (cerrar la operación más rápido).</li>
+        <li>Regulatorio: cambios en las reglas de exportación de granos o restricciones a la circulación de hacienda pueden afectar el volumen.</li>
       </ul>
 
       <h3>Esfuerzo / inversión inicial</h3>
-      <p>USD 5.000–8.000 para el primer pedido. USD 200–300 en comisiones a gestor de frontera. Tiempo: 2–3 semanas desde el primer contacto hasta tener stock en mano. Compatible con trabajo en la financiera — el modelo es comprar stock y vender vía redes sociales en horarios libres. Inversión total inicial muy por debajo del tope de USD 15.000 del plan.</p>
+      <p>Registro SENASA y trámites: ARS 200.000–500.000. Movilidad propia (esencial para visitar campos y ferias): necesaria. Capital propio NO requerido — sos intermediario puro. Tiempo hasta la primera operación: 4–8 semanas desde el registro. 100% compatible con el trabajo en la financiera: las operaciones se coordinan por teléfono y los remates son generalmente una vez por semana en día fijo.</p>
     </div>
   </div>
 
 </div>
 
-<footer>Generado 09:10 hs · sábado 31/05/2026 · Cierre de mayo · Agente personal SN</footer>
+<footer>Generado 09:00 hs · lunes 1/06/2026 · Semana 23 · Agente personal SN</footer>
 
 <script>
 (function(){
@@ -540,16 +531,15 @@
         if(spans.length<2)return;
         var name=spans[0].textContent.trim();
         var badge=spans[1];
-        var pct=parseFloat(badge.textContent.replace('%',''));
+        var raw=badge.textContent.replace('mayo ','').replace('%','');
+        var pct=parseFloat(raw);
         if(isNaN(pct))return;
         labels.push(name);data.push(pct);
-        var cls=badge.className||'';
-        if(cls.indexOf('badge-r')>=0){bgColors.push('rgba(220,38,38,0.75)');borderColors.push('rgba(220,38,38,1)');}
-        else if(cls.indexOf('badge-w')>=0){bgColors.push('rgba(217,119,6,0.75)');borderColors.push('rgba(217,119,6,1)');}
-        else{bgColors.push('rgba(5,150,105,0.75)');borderColors.push('rgba(5,150,105,1)');}
+        bgColors.push('rgba(21,137,200,0.6)');
+        borderColors.push('rgba(21,137,200,1)');
       });
       if(labels.length){
-        new Chart(habEl,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:bgColors,borderColor:borderColors,borderWidth:1,borderRadius:5,borderSkipped:false}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return' '+c.raw+'%';}}}},scales:{x:{max:100,grid:{color:'rgba(0,0,0,0.05)'},border:{color:'rgba(0,0,0,0.08)'},ticks:{callback:function(v){return v+'%';},font:{size:10,family:'Poppins'},color:'#6b7a8d'}},y:{grid:{display:false},border:{display:false},ticks:{font:{size:11,family:'Poppins'},color:'#3a4a5e'}}}}});
+        new Chart(habEl,{type:'bar',data:{labels:labels,datasets:[{data:data,backgroundColor:bgColors,borderColor:borderColors,borderWidth:1,borderRadius:5,borderSkipped:false,label:'Mayo final'}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{callbacks:{label:function(c){return' '+c.raw+'%';}}}},scales:{x:{max:100,grid:{color:'rgba(0,0,0,0.05)'},ticks:{callback:function(v){return v+'%';},font:{size:10,family:'Poppins'},color:'#6b7a8d'}},y:{grid:{display:false},border:{display:false},ticks:{font:{size:11,family:'Poppins'},color:'#3a4a5e'}}}}});
       }
     }
   }
