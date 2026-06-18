@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — miércoles 17 de junio de 2026</title>
+  <title>Briefing — 2026-06-18</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -74,14 +74,11 @@
   }
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
-
   .sn-logo { flex-shrink: 0; display: block; }
-
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
   .header-title { font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -.01em; line-height: 1.15; }
   .header-date  { font-size: 12px; font-weight: 400; color: rgba(255,255,255,.5); margin-top: 4px; }
   .header-week  { font-size: 10px; font-weight: 700; color: #5db8e8; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 4px; }
-
   .header-bar {
     height: 3px;
     background: var(--grad);
@@ -233,7 +230,6 @@
     color: #344055;
   }
   .hab-insights li:last-child { border-bottom: none; }
-
   .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
 
   .lancer-grid { display: grid; gap: 8px; margin-bottom: 16px; }
@@ -249,7 +245,6 @@
   .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
   .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
-
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
   .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
@@ -340,6 +335,10 @@
   .brecha-neu { color: var(--warning); }
   .brecha-ok  { color: var(--success); }
 
+  .macro-item { padding: 8px 0; border-bottom: 1px solid var(--border); font-size: 13px; color: #3a4a5e; }
+  .macro-item:last-child { border-bottom: none; }
+  .macro-dir { font-weight: 700; margin-left: 6px; }
+
   .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .noticia-meta {
@@ -416,7 +415,7 @@
     .site-header { padding: 20px 16px 18px; }
     footer { margin: 0 16px; }
     .grid-2 { grid-template-columns: 1fr; }
-    .lancer-grid { grid-template-columns: repeat(2, 1fr); }
+    .lancer-grid { grid-template-columns: repeat(2, 1fr) !important; }
     .rofex-grid { grid-template-columns: 1fr 1fr 1fr; }
     .tasas-grid { grid-template-columns: 1fr 1fr; }
     .hab-grid { grid-template-columns: 1fr 1fr; }
@@ -447,7 +446,7 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">miércoles 17 de junio de 2026</div>
+          <div class="header-title">jueves 18 de junio de 2026</div>
         </div>
       </div>
       <div class="header-right">
@@ -463,7 +462,7 @@
     <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Estudiar — tenés el límite para rendir los TP 3 y 4 el 6 de julio. Quedan 19 días.</span>
+      <span><strong>Meta del año:</strong> Ver dónde invertir la plata</span>
     </div>
 
     <!-- TAREAS -->
@@ -490,30 +489,34 @@
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
+
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Hoy — miércoles 17/6</div>
-          <div class="cal-titulo">Turno dra. hombro</div>
-          <div class="cal-hora">16:00 – 17:00 hs</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Sábado 4 de julio</div>
+          <div class="cal-cuando">Sáb 4 julio — en 16 días</div>
           <div class="cal-titulo">Mes</div>
-          <div class="cal-hora">Todo el día (recurrente)</div>
+          <div class="cal-hora">Todo el día · Recurrente mensual</div>
         </div>
       </div>
+
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Lunes 6 de julio · en 19 días</div>
+          <div class="cal-cuando">Lun 6 julio — en 18 días</div>
           <div class="cal-titulo">Límite para rendir los TP 3 y 4</div>
-          <div class="cal-hora">Todo el día</div>
+          <div class="cal-hora">Todo el día · Fecha límite académica</div>
         </div>
       </div>
+
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Dom 13 julio — en 25 días</div>
+          <div class="cal-titulo">Cumpleaño Alejo</div>
+          <div class="cal-hora">Todo el día · Recurrente anual</div>
+        </div>
+      </div>
+
     </div>
 
     <!-- HÁBITOS -->
@@ -521,26 +524,26 @@
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">68%</div>
+        <div class="hab-pct">69%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">9 hábitos · datos hasta el día 15 · promedio de días cumplidos sobre días transcurridos</div>
+          <div class="hab-sub">Promedio a día 16 — días 17-18 sin registrar aún</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li>🟢 <strong>Pensar 5 min antes de dormir</strong> lidera el mes con 93% (14/15 días) — racha sólida, no la rompas.</li>
-        <li>🔴 <strong>Estudiar 2h</strong> y <strong>Entrenar</strong> empatados en rojo con 53% (8/15) — necesitás 7 días seguidos de cada uno para llegar al 60% a fin de mes.</li>
-        <li>🟢 <strong>Dejar el celular a las 00:00</strong> y <strong>Despertar 8:00</strong> arriba del 80% — los básicos están sólidos.</li>
+        <li><strong>Pensar antes de dormir</strong> al 94% (15/16 días) — el hábito más sólido del mes. Racha casi perfecta.</li>
+        <li><strong>Entrenar</strong> al 50% (8/16 días) — justo en el piso mínimo. Si no recuperás frecuencia esta semana, no llegás a la meta de 16 días al mes.</li>
+        <li><strong>Estudiar</strong> al 56% (9/16 días) — proyectando ~17 días al cierre, algo por debajo de la meta de 18 días (60%). Hay que apretar esta semana.</li>
       </ul>
       <div class="hab-grid">
-        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">80%</span></div>
-        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">67%</span></div>
-        <div class="hab-item"><span class="hab-name">Trabajar 4h</span><span class="badge-w">67%</span></div>
-        <div class="hab-item"><span class="hab-name">Estudiar 2h</span><span class="badge-r">53%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-w">67%</span></div>
-        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">53%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-r">53%</span></div>
-        <div class="hab-item"><span class="hab-name">Dejar celular</span><span class="badge-g">80%</span></div>
-        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">93%</span></div>
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">81%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">69%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4h</span><span class="badge-w">69%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2h</span><span class="badge-w">56%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-w">69%</span></div>
+        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-w">50%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 págs</span><span class="badge-w">56%</span></div>
+        <div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-g">81%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">94%</span></div>
       </div>
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
@@ -551,181 +554,182 @@
     <div class="sec-title">Financiera</div>
     <div class="card">
 
-      <!-- A. COTIZACIONES -->
+      <!-- A. Cotizaciones -->
       <div class="fin-section">
-        <div class="fin-label">A — Cotizaciones del dólar · 17/06/2026</div>
+        <div class="fin-label">A · Cotizaciones del dólar</div>
         <div class="lancer-grid" style="grid-template-columns: repeat(6,1fr)">
           <div class="lancer-stat">
             <div class="label">Oficial BNA</div>
-            <div class="val">$1.455</div>
-            <div class="sub">referencia</div>
+            <div class="val">$1.460</div>
+            <div class="sub">Referencia</div>
           </div>
           <div class="lancer-stat">
             <div class="label">Blue BsAs</div>
-            <div class="val">$1.480</div>
-            <div class="sub brecha-pos">+1,7% brecha</div>
+            <div class="val">$1.475</div>
+            <div class="sub brecha-neu">+1.0% brecha</div>
           </div>
           <div class="lancer-stat">
             <div class="label">Blue Interior</div>
-            <div class="val">~$1.465</div>
-            <div class="sub brecha-neu">~+0,7% est.</div>
+            <div class="val">$1.465</div>
+            <div class="sub brecha-ok">+0.3% brecha</div>
           </div>
           <div class="lancer-stat">
             <div class="label">MEP</div>
-            <div class="val">$1.456</div>
-            <div class="sub brecha-ok">+0,1% brecha</div>
+            <div class="val">$1.462</div>
+            <div class="sub brecha-ok">+0.1% brecha</div>
           </div>
           <div class="lancer-stat">
             <div class="label">CCL</div>
-            <div class="val">$1.499</div>
-            <div class="sub brecha-pos">+3,0% brecha</div>
+            <div class="val">$1.506</div>
+            <div class="sub brecha-neu">+3.1% brecha</div>
           </div>
           <div class="lancer-stat">
-            <div class="label">USDT P2P</div>
+            <div class="label">USDT / P2P</div>
             <div class="val">$1.504</div>
-            <div class="sub brecha-pos">+3,4% brecha</div>
+            <div class="sub brecha-neu">+3.0% brecha</div>
           </div>
         </div>
-        <p style="font-size:12px;color:var(--muted);margin-bottom:10px;">⚡ <strong>BCRA:</strong> compró USD 79M el martes. Acumula USD 10.786B en 92 días consecutivos. Reservas brutas: USD 47.908M (récord era Milei). Banda cambiaria vigente: $1.380 – $1.787. El oficial sigue operando cerca del piso de banda.</p>
-        <p style="font-size:12px;color:#3a4a5e;margin-bottom:6px;">📌 <strong>Noticias macro y su impacto sobre el dólar:</strong></p>
-        <ul style="font-size:12px;color:#3a4a5e;padding-left:16px;margin-bottom:12px;">
-          <li>FMI elogió el desempeño "mucho mejor de lo anticipado" y el BCRA ya superó la meta de reservas del año → presiona dólar <strong style="color:var(--success)">↓</strong></li>
-          <li>Exportaciones récord: USD 17.605M en Q1 2026 (+20,9% i.a.) → ingreso sostenido de divisas → presiona dólar <strong style="color:var(--success)">↓</strong></li>
-          <li>Cepo parcialmente relajado, banda vigente, tipo de cambio dentro del corredor → <strong style="color:var(--warning)">→</strong> sin sorpresas inminentes</li>
-        </ul>
+
+        <p style="font-size:12px;color:var(--muted);margin-bottom:12px;">Blue interior: estimado (~$1.465) — finanzasargy.com no disponible.</p>
+
+        <div class="macro-item"><strong>BCRA:</strong> reservas brutas en $47.908M (máximo de la era Milei). Acumuló USD 9.100M en 2026 (91% de la meta anual). Vaca Muerta y agro siguen alimentando divisas. <span class="macro-dir brecha-ok">↓ presiona dólar</span></div>
+        <div class="macro-item"><strong>Brechas mínimas:</strong> MEP al 0.1% del oficial es histórico. El mercado cambiario está casi unificado de hecho. Con la banda vigente, el BCRA tiene margen para no subir el tipo de cambio. <span class="macro-dir brecha-ok">→ dólar estable</span></div>
+        <div class="macro-item"><strong>RAF extendido:</strong> el Gobierno amplió el régimen de Aduana en Factoría a todos los sectores. Mayor importación de insumos puede aumentar demanda de divisas en el mediano plazo, aunque marginal. <span class="macro-dir brecha-neu">↑ demanda divisas a futuro</span></div>
+
         <div class="recomendacion">
-          <strong>Recomendación de hoy:</strong> Brecha en mínimos históricos recientes — el blue a $1.480 está apenas 1,7% sobre el oficial. No hay urgencia de comprar dólares; el carry en Lecap sigue ganando. Si necesitás dólares para algo concreto, aprovechar el blue quieto o el MEP (prácticamente sin brecha). Mantener posición en pesos con cobertura en Lecap.
+          <strong>Recomendación:</strong> Con brechas en mínimos históricos (MEP al 0.1% del oficial), hoy es el peor momento para comprar dólares como reserva de valor — el MEP está regalado. Desde la financiera conviene acumular posición USD ahora mientras los precios son bajos, anticipando que la brecha eventualmente se normaliza a 5-8%. Si tenés pesos excedentes, el carry en Lecap (31% TNA) o CPD (26-30%) sigue siendo atractivo mientras el dólar no se mueve.
         </div>
       </div>
 
       <!-- B. ROFEX -->
       <div class="fin-section">
-        <div class="fin-label">B — Futuros ROFEX · estimaciones de mercado</div>
+        <div class="fin-label">B · Futuros ROFEX (estimados)</div>
         <div class="rofex-grid">
           <div class="rofex-item">
-            <div class="label">Jul 2026 (30d)</div>
-            <div class="val">~$1.470</div>
-            <div class="tna">TNA impl. ~12,4%</div>
-            <span class="t-mensual">~1,03%/mes</span>
+            <div class="label">Jul 2026</div>
+            <div class="val">$1.478</div>
+            <div class="tna">TNA ~12.0%</div>
+            <span class="t-mensual">1.00%/mes</span>
           </div>
           <div class="rofex-item">
-            <div class="label">Ago 2026 (60d)</div>
-            <div class="val">~$1.485</div>
-            <div class="tna">TNA impl. ~12,4%</div>
-            <span class="t-mensual">~1,03%/mes</span>
+            <div class="label">Ago 2026</div>
+            <div class="val">$1.497</div>
+            <div class="tna">TNA ~12.5%</div>
+            <span class="t-mensual">1.04%/mes</span>
           </div>
           <div class="rofex-item">
-            <div class="label">Sep 2026 (90d)</div>
-            <div class="val">~$1.500</div>
-            <div class="tna">TNA impl. ~12,3%</div>
-            <span class="t-mensual">~1,03%/mes</span>
+            <div class="label">Sep 2026</div>
+            <div class="val">$1.517</div>
+            <div class="tna">TNA ~13.0%</div>
+            <span class="t-mensual">1.08%/mes</span>
           </div>
         </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:6px;">El mercado descuenta devaluación oficial de ~1% mensual dentro de la banda — muy por debajo de las tasas en pesos (24% TNA). El carry trade sigue siendo ganador mientras el dólar permanezca en el corredor. Datos ROFEX exactos en rava.com/futuros.</p>
+        <p style="font-size:12px;color:var(--muted);margin-top:6px;">El mercado espera devaluación de ~1%/mes (12-13% anual). Con plazo fijo al 1.58%/mes, el carry trade en pesos sigue siendo positivo si el dólar no rompe esa tendencia.</p>
       </div>
 
-      <!-- C. TASAS -->
+      <!-- C. Tasas -->
       <div class="fin-section">
-        <div class="fin-label">C — Tasas de referencia</div>
+        <div class="fin-label">C · Tasas de referencia</div>
         <div class="tasas-grid">
           <div class="tasa-item">
-            <div class="t-label">Plazo Fijo BNA (home banking)</div>
+            <div class="t-label">Plazo fijo BNA</div>
             <div class="t-val">19% TNA</div>
-            <div class="t-sub">30 días mínimo</div>
-            <span class="t-mensual">1,58%/mes</span>
+            <div class="t-sub">Canales digitales, 30 días</div>
+            <span class="t-mensual">1.58%/mes</span>
           </div>
           <div class="tasa-item">
-            <div class="t-label">PF Privados — mejor tasa</div>
-            <div class="t-val">19,5% TNA</div>
-            <div class="t-sub">Banco Provincia de BsAs</div>
-            <span class="t-mensual">1,63%/mes</span>
+            <div class="t-label">Privados (mejor)</div>
+            <div class="t-val">20% TNA</div>
+            <div class="t-sub">Bancos privados líderes</div>
+            <span class="t-mensual">1.67%/mes</span>
           </div>
           <div class="tasa-item">
-            <div class="t-label">Caución bursátil 7 días</div>
-            <div class="t-val">~34% TNA</div>
-            <div class="t-sub">Liquidez diaria</div>
-            <span class="t-mensual">~2,83%/mes</span>
+            <div class="t-label">Caución bursátil 7d</div>
+            <div class="t-val">18% TNA</div>
+            <div class="t-sub">Mercado bursátil, sin riesgo</div>
+            <span class="t-mensual">1.50%/mes</span>
           </div>
           <div class="tasa-item">
-            <div class="t-label">Lecap / Boncap referencia</div>
-            <div class="t-val">~24% TNA</div>
-            <div class="t-sub">Tasas comprimidas vs. 1er sem.</div>
-            <span class="t-mensual">2,00%/mes</span>
+            <div class="t-label">Lecap / Boncap</div>
+            <div class="t-val">31% TNA</div>
+            <div class="t-sub">Letras del Tesoro (referencia)</div>
+            <span class="t-mensual">2.58%/mes</span>
           </div>
         </div>
       </div>
 
       <!-- D. CPD -->
       <div class="fin-section">
-        <div class="fin-label">D — Cheques de Pago Diferido (CPD) — mercado secundario</div>
+        <div class="fin-label">D · Cheques de pago diferido (CPD)</div>
         <div class="rofex-grid">
           <div class="rofex-item">
-            <div class="label">CPD 30 días</div>
-            <div class="val">~32% TNA</div>
+            <div class="label">30 días</div>
+            <div class="val">26% TNA</div>
             <div class="tna">Mercado secundario</div>
-            <span class="t-mensual">~2,67%/mes</span>
+            <span class="t-mensual">2.17%/mes</span>
           </div>
           <div class="rofex-item">
-            <div class="label">CPD 60 días</div>
-            <div class="val">~30% TNA</div>
+            <div class="label">60 días</div>
+            <div class="val">28% TNA</div>
             <div class="tna">Mercado secundario</div>
-            <span class="t-mensual">~2,50%/mes</span>
+            <span class="t-mensual">2.33%/mes</span>
           </div>
           <div class="rofex-item">
-            <div class="label">CPD 90 días</div>
-            <div class="val">~28% TNA</div>
+            <div class="label">90 días</div>
+            <div class="val">30% TNA</div>
             <div class="tna">Mercado secundario</div>
-            <span class="t-mensual">~2,33%/mes</span>
+            <span class="t-mensual">2.50%/mes</span>
           </div>
         </div>
-        <p style="font-size:12px;color:var(--muted);margin-top:6px;">Tasas CPD estables. Con EMBI en mínimos (430 pbs), el riesgo de crédito de las pymes está contenido — las tasas de descuento no sufrieron saltos. La CPD a 30 días ofrece ~2,67%/mes, muy superior al plazo fijo (1,58%) con riesgo de crédito manejable si el librador es solvente.</p>
+        <p style="font-size:12px;color:var(--muted);margin-top:6px;">Con EMBI en mínimos de 8 años, tasas CPD están comprimidas. Igual siguen siendo el doble del plazo fijo: el diferencial vs BNA es +0.59 pp/mes en el tramo corto.</p>
       </div>
 
-      <!-- E. RIESGO PAÍS -->
+      <!-- E. Riesgo país -->
       <div class="fin-section">
-        <div class="fin-label">E — Riesgo País EMBI+</div>
+        <div class="fin-label">E · Riesgo país EMBI+</div>
         <div class="rp-row">
           <div class="rp-label">EMBI+ Argentina</div>
-          <div class="rp-val">430 pbs</div>
-          <div class="rp-delta rp-down">▼ −13 pbs semanal</div>
+          <div class="rp-val">435 <span style="font-size:14px;font-weight:400;color:var(--muted)">pbs</span></div>
+          <div class="rp-delta rp-down">▼ vs 443 sem. pasada</div>
         </div>
-        <p style="font-size:12px;color:#3a4a5e;margin-top:8px;">Mínimo de la gestión Milei (cerró 443 pbs el 11/6, cae a 430). La baja del EMBI señala que el mercado internacional confía más en Argentina → carry en pesos más atractivo, menor presión de dolarización en clientes de la financiera.</p>
+        <p style="font-size:13px;color:#3a4a5e;margin-top:10px;">Mínimo de 8 años. La baja sostenida indica que el mercado confía en la continuidad del programa. Para vos: el carry en pesos es atractivo (EMBI bajo = riesgo dolarización baja), pero si el EMBI rebota, los clientes van a querer dólares rápido.</p>
       </div>
 
-      <!-- F. FLUJO DEL DÍA -->
+      <!-- F. Flujo del día -->
       <div class="fin-section">
-        <div class="fin-label">F — Flujo del día</div>
-        <div class="flujo-card flujo-neutral">
-          <div class="flujo-titulo">Jornada neutral</div>
+        <div class="fin-label">F · Flujo del día</div>
+        <div class="flujo-card flujo-compra">
+          <div class="flujo-titulo">Jornada de compra (USD)</div>
           <div class="flujo-body">
-            Brecha en mínimos (+1,7%) con BCRA comprando activamente (USD 79M ayer). Las reservas en récord histórico (USD 47.908M) le sacan presión al tipo de cambio. No hay catalizadores inminentes que muevan el blue. Mitad de quincena: el pago de sueldos puede generar leve demanda de cambio en días próximos, pero nada disruptivo. Sin señal clara de compra o venta masiva hoy.
+            Las brechas están en mínimos históricos: MEP al 0.1% y Blue al 1.0% del oficial. Esto representa una ventana inusual para comprar dólares baratos. Cuando la brecha inevitablemente se normalice a 5-8%, los dólares comprados hoy tendrán upside. Desde la financiera: esperá alta demanda de clientes que también reconocen la oportunidad. Acumulá posición USD con el excedente disponible.
           </div>
         </div>
       </div>
 
-      <!-- G. RULOS -->
+      <!-- G. Rulos -->
       <div class="fin-section">
-        <div class="fin-label">G — Rulos financieros del día</div>
-
-        <div class="rulo-item">
-          <div class="rulo-titulo">Carry trade vía Lecap <span class="tag-legal">Legal</span></div>
-          <div class="rulo-body">Comprás Lecap (LELE o similar) en pesos al ~24% TNA (2% TEM). Si el CCL se mueve menos del 2% en el mes (hoy en $1.499, breakeven en $1.529), ganás en dólares. Con el BCRA comprando todos los días y reservas récord, el riesgo de salto cambiario brusco es bajo. Rendimiento potencial: +0,5% a +1% en USD en 30 días si el CCL se mantiene. <strong>Stoploss mental:</strong> si el CCL supera $1.530, salir.</div>
-        </div>
-
-        <div class="rulo-item">
-          <div class="rulo-titulo">Diferencial MEP / CCL <span class="tag-gris">Gris · parking 72hs</span></div>
-          <div class="rulo-body">MEP en $1.456 vs CCL en $1.499 = spread del 2,9%. Comprás AL30 en pesos (MEP), esperás 72hs de parking, vendés AL30-C en dólares (CCL). Ganás ~2,9% en el spread. Requiere cuenta comitente, bono argentino y cumplir el parking obligatorio. No apto si necesitás liquidez inmediata.</div>
-        </div>
+        <div class="fin-label">G · Rulos financieros</div>
 
         <div class="rulo-item">
           <div class="rulo-titulo">Caución bursátil 7 días <span class="tag-legal">Legal</span></div>
-          <div class="rulo-body">Colocás pesos en caución a 7 días al ~34% TNA = 0,65%/semana sin riesgo emisor (garantía BYMA). Mejor que el plazo fijo (1,58%/mes) para períodos cortos. Ideal para capital de corto plazo que no querés inmovilizar 30 días. Si ponés $1.000.000, en 7 días obtenés ~$6.500 netos.</div>
+          <div class="rulo-body">Depositá pesos en caución a 7 días al 18% TNA (1.50%/mes). Sin riesgo crediticio, sin parking, sin trabas. Si ponés $1.000.000 en 7 días ganás ~$3.450. Ideal para pesos ociosos que no usás en la semana.</div>
         </div>
 
         <div class="rulo-item">
-          <div class="rulo-titulo">Descuento CPD propio <span class="tag-legal">Legal</span></div>
-          <div class="rulo-body">Si en la financiera recibís cheques de clientes a 30 días, podés descontarlos en el mercado de capitales al ~32% TNA (2,67%/mes) en lugar de esperar. Beneficio: liquidez inmediata con costo financiero inferior al bancario tradicional, exento de IVA sobre intereses. Evaluar por cada operación si el costo de descuento cierra vs. el interés que cobra la financiera.</div>
+          <div class="rulo-titulo">CPD 30 días <span class="tag-legal">Legal</span></div>
+          <div class="rulo-body">Comprá cheques en el mercado secundario al 26% TNA (2.17%/mes). Con $1.000.000 en 30 días ganás ~$21.700. Riesgo crediticio bajo si elegís cheques de primera línea (supermercados, cadenas). Rendimiento 37% superior al plazo fijo BNA.</div>
         </div>
+
+        <div class="rulo-item">
+          <div class="rulo-titulo">Carry trade Lecap <span class="tag-gris">Moderado</span></div>
+          <div class="rulo-body">Vendé USD al CCL ($1.506), invertí en Lecap al 31% TNA (2.58%/mes) por 30 días, luego recomprás USD al CCL. Si el CCL sube menos de 2.5% en el mes, ganás la diferencia. Con brecha en mínimos y BCRA comprando divisas, el riesgo de suba abrupta es bajo pero no nulo.</div>
+        </div>
+
+        <div class="rulo-item">
+          <div class="rulo-titulo">Arbitraje MEP → CCL <span class="tag-gris">Moderado</span></div>
+          <div class="rulo-body">Comprá GD30 con pesos en el segmento MEP ($1.462), esperá el parking de 24hs hábiles, vendé contra USD en el segmento CCL ($1.506). Diferencia: ~$44 por dólar = 3.0%. Requiere cuenta comitente y conocer los plazos de liquidación. Riesgo: variación de precios durante el parking.</div>
+        </div>
+
       </div>
 
     </div>
@@ -735,24 +739,24 @@
     <div class="card">
 
       <div class="noticia">
-        <div class="noticia-meta">La Nación · 9 de junio de 2026 · Startups &amp; Inversión</div>
-        <div class="noticia-titulo">Inversores extranjeros vuelven a apostar por las startups argentinas: USD 270M en 2025 y biotecnología como sector estrella</div>
+        <div class="noticia-meta">El Cronista · 18 jun 2026 · Economía</div>
+        <div class="noticia-titulo">El Gobierno extiende el régimen RAF a todas las industrias: importación de insumos sin derechos para producción local</div>
         <div class="noticia-body">
-          <p>Durante 2025, Argentina captó <strong>USD 270 millones en 73 transacciones</strong> de capital emprendedor, según el "Panorama del Capital Emprendedor Argentino 2026". El dato más llamativo es el giro de actitud de los fondos internacionales: aquellos que antes evitaban invertir en compañías que solo operaban en Argentina hoy están cambiando esa postura.</p>
-          <p>¿Por qué ahora? Según Victoria Akerman (Newtopia VC), el factor clave es la <strong>predictibilidad</strong>. "Existe mayor previsibilidad y una narrativa mucho más alineada entre el sector público, privado y el ecosistema emprendedor", señaló. La estabilidad macroeconómica del gobierno Milei —con inflación desacelerando y tipo de cambio dentro de una banda— redujo la incertidumbre que ahuyentaba al capital extranjero. Señal concreta: figuras como <strong>Peter Thiel</strong> están visitando Argentina y conectándose con fundadores locales, y empresas internacionales de tech están instalando equipos locales usando el país como hub para Sudamérica.</p>
-          <p><strong>Biotecnología lidera</strong> con el 43,1% de las transacciones en 2025. Le siguen inteligencia artificial, cripto y energía. Para el próximo ciclo, los analistas identifican a los <strong>agentes de IA</strong> como la tendencia definitoria de la próxima década: sistemas autónomos que resolverán problemas en múltiples industrias y crearán categorías de empleo desconocidas hoy.</p>
-          <p><strong>Implicancia para vos:</strong> Argentina vuelve a estar en el radar del capital global. Dos lecturas prácticas: (1) si estás desarrollando un proyecto tech, hoy hay más acceso a financiamiento internacional que en 2022-2024; (2) la biotech y los agentes de IA son los sectores con mayor tracción — cualquier negocio que se pueda posicionar ahí tiene viento de cola. La idea de <em>IA para pymes argentinas</em> que ya tenemos en carpeta aplica directamente acá.</p>
+          <p>El Gobierno de Javier Milei modificó el Régimen de Aduana en Factoría (RAF), una herramienta que hasta ahora era exclusiva de la industria automotriz, y la extendió a <strong>todas las cadenas de producción del país</strong>. La medida permite importar partes, insumos y componentes sin pagar derechos de importación, siempre que el producto final sea fabricado en Argentina bajo ciertas condiciones de integración o exportación.</p>
+          <p>El RAF era uno de los instrumentos que le daba ventaja competitiva a la industria automotriz frente al resto del sector manufacturero. Con esta extensión, cualquier empresa que fabrique productos con insumos importados puede acceder al mismo beneficio, lo que reduce los costos de producción de forma directa y hace más competitivo al sector industrial argentino frente a las importaciones terminadas.</p>
+          <p>En el marco de la <strong>apertura comercial acelerada</strong> que implementó el gobierno, esta medida tiene doble filo: por un lado reduce costos para los industriales locales (positivo para el empleo y la producción); por otro lado, si las cadenas productivas locales no son competitivas, la apertura puede desplazarlas frente a productos terminados más baratos del exterior. El debate es si Argentina tiene la base industrial para aprovechar el RAF o si termina siendo solo un canal de mayor importación neta.</p>
+          <p><strong>Para vos (financiera):</strong> Mayor importación de insumos industriales implica mayor demanda de divisas en el mediano plazo, lo que puede generar presión al alza sobre el dólar comercial. A corto plazo el impacto es limitado, pero es un dato a seguir si el volumen de importaciones sube significativamente en los próximos meses.</p>
         </div>
       </div>
 
       <div class="noticia">
-        <div class="noticia-meta">El Cronista · junio 2026 · Comercio Exterior</div>
-        <div class="noticia-titulo">El Gobierno amplía el Régimen de Aduana en Factoría a todos los sectores: qué cambia para importadores y fabricantes</div>
+        <div class="noticia-meta">Ámbito · 18 jun 2026 · Macro</div>
+        <div class="noticia-titulo">Reservas del BCRA tocan récord de la era Milei: USD 47.908 millones y meta 2026 al 91%</div>
         <div class="noticia-body">
-          <p>El Gobierno anunció la <strong>ampliación del Régimen de Aduana en Factoría (RAF)</strong>, que hasta ahora solo aplicaba a la industria automotriz, a todas las cadenas de producción del país. La medida permite importar insumos con suspensión de aranceles aduaneros siempre que esos insumos se usen en la fabricación de bienes para exportación.</p>
-          <p>En términos simples: si una empresa argentina importa materia prima para fabricar un producto que luego exporta, el RAF le permite hacerlo <strong>sin pagar aranceles de entrada</strong>, reduciendo drásticamente el costo de la importación. Antes, este beneficio era exclusivo del sector automotriz. Al extenderlo a todos los sectores, el Gobierno busca impulsar la competitividad industrial y captar más inversión manufacturera.</p>
-          <p><strong>Contexto:</strong> esto se da en un marco de boom exportador récord — USD 17.605M en el primer cuatrimestre de 2026 (+20,9% i.a.) — impulsado por el agro, la minería y la energía. El Gobierno apuesta a que la industria manufacturera se sume a esa corriente exportadora si tiene acceso más barato a insumos importados.</p>
-          <p><strong>Implicancia para vos:</strong> Para alguien que piensa en importación o manufactura, este es un cambio estructural relevante. Cualquier modelo de negocio que combine <strong>importación de insumos + fabricación + exportación</strong> ahora tiene acceso a un esquema que antes solo tenía la gran industria automotriz. También hay un boom de importaciones de productos finales (por el cepo relajado), lo que genera presión competitiva sobre la industria local pero también oportunidades para quien opera como intermediario o importador directo.</p>
+          <p>El Banco Central cerró esta semana con <strong>reservas brutas en USD 47.908 millones</strong>, el nivel más alto desde 2019 y un nuevo máximo de la gestión Milei. En lo que va de 2026, el BCRA acumuló USD 9.100 millones en compras netas de divisas, alcanzando el 91% de la meta anual autoimpuesta de USD 10.000 millones. Fitch Ratings proyecta que las reservas brutas superarán los USD 52.000 millones hacia fin de año.</p>
+          <p>Los drivers detrás de esta acumulación son tres: el <strong>superávit de Vaca Muerta</strong> (exportaciones de gas y petróleo creciendo), las liquidaciones del agro que se mantienen en niveles altos por efecto de la cosecha gruesa, y el acceso a financiamiento del FMI dentro de la fase 4 del programa monetario. El dólar oficial se mantiene estable dentro de la banda cambiaria porque la oferta de divisas supera la demanda.</p>
+          <p>El FMI destacó públicamente que la acumulación de reservas va "a un ritmo más rápido de lo previsto", lo que refuerza la credibilidad del programa y explica por qué el riesgo país cayó a 435 puntos básicos (mínimo de 8 años). Para los analistas, el colchón de reservas reduce el riesgo de un salto cambiario abrupto en 2026.</p>
+          <p><strong>Para vos (financiera):</strong> Un BCRA con reservas récord y comprando divisas constantemente es el principal ancla del tipo de cambio. Mientras la acumulación continúe, el dólar no tiene razón técnica para dispararse. El riesgo es político (elecciones de octubre) o un shock externo (caída del precio del petróleo). A corto plazo, el carry trade en pesos sigue siendo la jugada.</p>
         </div>
       </div>
 
@@ -763,24 +767,24 @@
     <div class="card">
 
       <div class="noticia">
-        <div class="noticia-meta">CNBC · 16 de junio de 2026 · Mercados &amp; Tech</div>
-        <div class="noticia-titulo">SpaceX debuta en Nasdaq a $150 y cierra +19%: Musk se convierte en trillonario y la empresa supera a Microsoft en capitalización</div>
+        <div class="noticia-meta">CNBC · 18 jun 2026 · Mercados</div>
+        <div class="noticia-titulo">La Fed mantiene tasas en 3.5%-3.75% y los mercados globales suben: S&P +0.8%, Nasdaq +1.5%, Nikkei supera 71.000 por primera vez</div>
         <div class="noticia-body">
-          <p>El miércoles 16 de junio quedará en los libros de historia bursátil. <strong>SpaceX debutó en el Nasdaq</strong> con un precio de salida de USD 150 por acción y cerró el día en torno a USD 161, un alza del 19% en la primera jornada. La capitalización de mercado superó los <strong>USD 2 billones</strong> (trillions), ubicando a SpaceX por encima de Microsoft y convirtiéndola en la segunda empresa más valiosa del planeta. Elon Musk, con su participación, cruzó la barrera del <strong>trillón de dólares de riqueza personal</strong> — el primero en la historia.</p>
-          <p>El apetito fue extraordinario. La demanda de inversores institucionales superó varias veces la oferta. El Dow Jones cerró en un <strong>récord histórico de 51.671 puntos</strong> (+0,92%), parcialmente impulsado por el entusiasmo tech y por el anuncio paralelo de un <strong>acuerdo entre EE.UU. e Irán</strong> (promovido por Trump) que redujo las tensiones geopolíticas.</p>
-          <p>El mismo día del IPO, SpaceX anunció la <strong>adquisición de Cursor</strong> (el asistente de código de IA de la empresa Anysphere) por USD 60.000 millones — consolidando su apuesta por la inteligencia artificial generativa aplicada al desarrollo de software. Cursor es hoy una de las herramientas más usadas por desarrolladores a nivel global.</p>
-          <p><strong>Implicancia global:</strong> El éxito del IPO de SpaceX abre la temporada de grandes salidas a bolsa tech en 2026. El mercado está hambriento de activos de alta tecnología y crecimiento. Nvidia también subió +6% en la semana tras presentar un nuevo procesador para PCs. El apetito por riesgo en los mercados globales está en máximos.</p>
+          <p>La Reserva Federal de EE.UU. decidió por unanimidad <strong>mantener la tasa de referencia en 3.5%-3.75%</strong> en la reunión de ayer. De los 18 miembros del Comité que participaron en el "dot plot" de proyecciones, 9 señalaron que esperan al menos una suba de tasas antes de fin de año. El presidente de la Fed, Kevin Warsh, no participó del dot plot esta vez.</p>
+          <p>Los mercados interpretaron la pausa como una señal positiva (se evita un ajuste que podría frenar la economía) y la posibilidad de suba futura como controlable. La reacción fue alcista: <strong>S&P 500 futures +0.8%, Nasdaq 100 +1.5%, Dow Jones +195 puntos (0.4%)</strong>. En Asia, el Nikkei de Japón cotiza 1.35% arriba y superó los 71.000 puntos por primera vez en la historia, mientras que el Kospi de Corea sube 0.89%.</p>
+          <p>El contexto de tasas altas pero estables en EE.UU. tiene implicancias directas para Argentina y los emergentes: mientras el dólar no se fortalezca más, los capitales siguen fluyendo hacia rendimientos en países emergentes con buenos fundamentals (exactamente el perfil que Argentina está construyendo). El EMBI argentino en 435 pbs se beneficia de este contexto global.</p>
+          <p><strong>Para vos (CEDEARs):</strong> La suba del Nasdaq impacta directamente en los precios de CEDEARs de empresas tech. Si tenés o evaluás posición en CEDEARs de semiconductores (Nvidia, AMD) o big tech, hoy es un día de precios arriba. El carry en pesos también se ve favorecido cuando el riesgo de suba agresiva del dólar global es baja.</p>
         </div>
       </div>
 
       <div class="noticia">
-        <div class="noticia-meta">CNBC / Bloomberg · junio 2026 · IA &amp; Mercados</div>
-        <div class="noticia-titulo">Anthropic presenta su prospectus de IPO de forma confidencial: la empresa que hace Claude da el primer paso hacia la bolsa</div>
+        <div class="noticia-meta">CNBC · 18 jun 2026 · Semiconductores</div>
+        <div class="noticia-titulo">Intel sube 9% tras anuncio de Trump: fabricará chips en EE.UU. junto con Apple; ETF de semiconductores +4%</div>
         <div class="noticia-body">
-          <p><strong>Anthropic</strong> — la empresa de IA responsable de Claude, el modelo que usás a diario — presentó confidencialmente su prospectus ante la SEC (Securities and Exchange Commission), el paso previo formal a una salida a bolsa. La noticia confirma lo que el mercado esperaba: Anthropic es la próxima gran IPO de IA, siguiendo los pasos de OpenAI (que también se rumoreaba que prepara su salida).</p>
-          <p>Anthropic fue fundada en 2021 por Dario Amodei y varios ex-OpenAI. Hoy es uno de los dos grandes laboratorios de IA del mundo junto a OpenAI y Google DeepMind. La valuación más reciente en rondas privadas superaba los <strong>USD 60.000 millones</strong>. Su producto principal, la familia Claude, compite directamente con GPT-4o de OpenAI y Gemini de Google.</p>
-          <p><strong>Por qué importa globalmente:</strong> La IPO de Anthropic sería la primera salida a bolsa de un "laboratorio puro de IA" de primer nivel. Si el mercado valúa bien la empresa (similar a lo que hizo con SpaceX), definiría el precio de referencia de toda la industria de IA generativa. Para inversores, sería la primera oportunidad de tener exposición directa a uno de los grandes modelos de lenguaje sin pasar por Microsoft (que tiene a OpenAI) o Google (que tiene DeepMind y Gemini).</p>
-          <p><strong>Implicancia para vos:</strong> Si Anthropic cotiza, será una inversión interesante a analizar para el portfolio. El sector de IA generativa tiene viento de cola por al menos 5 años. También refuerza la tesis de la idea de IA para pymes — si las grandes empresas de IA valen billones, el mercado de aplicaciones y servicios sobre esos modelos tiene escala enorme.</p>
+          <p>El presidente Donald Trump anunció que <strong>Intel colaborará con Apple para diseñar y fabricar chips en suelo americano</strong>, como parte de la política de reshoring industrial tecnológico que impulsa la administración. La noticia desató un rally en el sector: Intel subió un 9% en el premarket, Nvidia avanzó más de 1%, Micron Technology saltó más de 4%, y el ETF de semiconductores iShares (SOXX) trepó más de 4%.</p>
+          <p>El movimiento de Intel es parte de una transformación estructural del sector: después de años de perder terreno frente a TSMC (Taiwan) y Samsung en fabricación de chips avanzados, Intel está apostando a la fabricación doméstica como diferenciador competitivo, respaldado por subsidios del CHIPS Act y ahora por un acuerdo con uno de los mayores consumidores de chips del mundo. El diseño colaborativo con Apple no es un modelo inédito, pero la fabricación en EE.UU. sí marcaría un hito si se concreta.</p>
+          <p>El sector de semiconductores sigue siendo uno de los más volátiles y con mayor potencial de upside/downside. La geopolítica (tensiones EE.UU.-China sobre Taiwan) sigue siendo el mayor riesgo para el sector globalmente, y cualquier acuerdo que reduzca la dependencia de TSMC es visto positivamente por los inversores.</p>
+          <p><strong>Para vos (inversiones):</strong> Si tenés o evaluás CEDEARs de Intel (INTC), hoy es un día de oportunidad dado el movimiento. En el mediano plazo, la apuesta por semiconductores en EE.UU. con respaldo gubernamental tiene lógica estructural. Nvidia sigue siendo el favorito del sector por la demanda de chips de IA. Considerá también que estos movimientos en semis impactan directamente en el Nasdaq, que a su vez mueve los precios de tus CEDEARs tech en pesos.</p>
         </div>
       </div>
 
@@ -793,43 +797,44 @@
       <div class="idea-titulo">Software de gestión para financieras del interior argentino</div>
       <div class="idea-body">
         <h3>Qué es</h3>
-        <p>Un SaaS (software web por suscripción mensual) diseñado específicamente para las operaciones diarias de una financiera o casa de cambio del interior argentino: registro de operaciones de compra/venta de divisas, gestión de cartera de cheques CPD con alertas de vencimiento, control de caja en pesos y dólares, cálculo automático de brechas y rendimientos, y reporte de posición diaria con un clic. No existe hoy nada parecido para este nicho — la mayoría usa Excel o cuadernos.</p>
+        <p>Un SaaS (software web por suscripción mensual) diseñado específicamente para las operaciones diarias de una financiera o casa de cambio del interior argentino: registro de operaciones de compra/venta de divisas, gestión de cartera de cheques CPD con alertas de vencimiento, control de caja en pesos y dólares, cálculo automático de brechas y rendimientos, y reporte de posición diaria con un clic. No existe hoy nada parecido para este nicho — usan Excel o cuadernos.</p>
 
         <h3>Por qué ahora</h3>
         <ul>
-          <li><strong>Vacío de mercado total:</strong> hay entre 3.000 y 5.000 financieras y casas de cambio en el interior de Argentina. El 95% opera con Excel o papel. Ningún software del mercado (ni Tango ni Bejerman) está diseñado para las particularidades de este negocio: compra/venta de divisas, descuento de cheques, cauciones, brechas cambiarias, EMBI.</li>
+          <li><strong>Vacío de mercado total:</strong> hay entre 3.000 y 5.000 financieras y casas de cambio en el interior de Argentina. El 95% opera con Excel o papel. Ningún software del mercado (ni Tango ni Bejerman) está diseñado para las particularidades de este negocio: compra/venta de dólares, descuento de cheques, cauciones, EMBI, brechas cambiarias.</li>
           <li><strong>Regulación que empuja a digitalizarse:</strong> con la AFIP, el BCRA y la UIF aumentando controles sobre operaciones cambiarias, las financieras necesitan trazabilidad y registros claros. Un sistema propio les da cobertura y les ahorra horas de preparación de informes.</li>
-          <li><strong>Timing personal único:</strong> vos trabajás adentro de una financiera. Sabés exactamente qué problema resolver, cuánto tiempo se pierde, qué cálculos son repetitivos. Eso vale más que cualquier investigación de mercado — sos el usuario ideal desarrollando la solución ideal.</li>
-          <li><strong>Costo de desarrollo cayó:</strong> con herramientas de IA para codear y freelancers argentinos, un MVP funcional cuesta USD 2.000-4.000 y se puede tener en 60-90 días.</li>
+          <li><strong>Timing personal único:</strong> vos trabajás adentro de una financiera. Sabés exactamente qué problema resolver, cuánto tiempo se pierde, qué cálculos son repetitivos. Eso vale más que cualquier investigación de mercado. Sos el usuario ideal desarrollando la solución ideal.</li>
+          <li><strong>Costo de desarrollo cayó:</strong> con herramientas de IA para codear (exactamente las que estás aprendiendo con Claude) y freelancers argentinos, un MVP funcional cuesta USD 2.000-4.000 y se puede tener en 60-90 días.</li>
         </ul>
 
         <h3>Cómo arrancarla</h3>
         <ul>
-          <li><strong>Paso 1 — Documentar el problema (2 semanas, costo cero):</strong> anotá todas las tareas repetitivas que hacés o ves en la financiera: ¿qué se registra a mano?, ¿qué se calcula con Excel?, ¿qué se olvida y genera errores? Eso es tu spec del MVP.</li>
-          <li><strong>Paso 2 — Validar antes de construir (2 semanas, costo cero):</strong> hablá con 5-10 dueños de financieras del interior. Preguntá qué herramienta usan y cuánto pagarían por algo mejor. Si 3 de 10 dicen "lo compro a USD 50/mes", tenés suficiente señal para arrancar.</li>
-          <li><strong>Paso 3 — MVP mínimo (2-3 meses, USD 2.000-4.000):</strong> contratar un desarrollador freelance para construir solo las 3 funciones core: registro de operaciones + caja dual pesos/USD + cartera de cheques con alertas. Nada más en la primera versión.</li>
-          <li><strong>Paso 4 — Beta en tu propia financiera:</strong> usarla vos mismo 30 días en el trabajo, identificar bugs y mejoras. Es tu laboratorio de testeo y tu caso de éxito número uno.</li>
-          <li><strong>Paso 5 — Primeros clientes de pago:</strong> con el caso de éxito real, ofrecerla a financieras de ciudades vecinas via WhatsApp, referidos, grupos del sector. Meta año 1: 30 clientes a USD 60/mes = USD 1.800/mes recurrentes.</li>
+          <li><strong>Paso 1 — Documentar el problema (2 semanas, costo cero):</strong> anotá en un doc todas las tareas repetitivas que hacés o ves hacer en la financiera: ¿qué se registra a mano?, ¿qué se calcula con Excel?, ¿qué se olvida y genera errores? Eso es tu spec del MVP.</li>
+          <li><strong>Paso 2 — Validar antes de construir (2 semanas, costo cero):</strong> hablá con 5-10 dueños de financieras del interior (Tucumán, Salta, Jujuy, Santiago del Estero). Preguntá qué herramienta usan y cuánto pagarían por algo mejor. Si 3 de 10 te dicen "lo compro a USD 50/mes", tenés suficiente señal.</li>
+          <li><strong>Paso 3 — MVP mínimo (2-3 meses, USD 2.000-4.000):</strong> contratar un desarrollador freelance argentino (hay buenos en Tucumán mismo) para construir las 3 funciones core: registro de operaciones + caja dual (pesos/USD) + cartera de cheques con alertas. Nada más en la primera versión.</li>
+          <li><strong>Paso 4 — Beta gratuita en tu financiera:</strong> usarla vos mismo 30 días en el trabajo, identificar bugs y mejoras. Es tu laboratorio de testeo y tu caso de éxito número uno.</li>
+          <li><strong>Paso 5 — Primeros clientes de pago:</strong> con el caso de éxito real, ofrecerla a financieras de ciudades vecinas. Grupos de WhatsApp del sector, ferias de la industria, referidos. Meta año 1: 30 clientes a USD 60/mes = USD 1.800/mes recurrentes.</li>
         </ul>
 
         <h3>Modelo de ingreso</h3>
-        <p>SaaS puro: cobro mensual por licencia en USD (cobrado en ARS al CCL del día). Una vez que una financiera carga su operatoria en el sistema, el costo de migrar es alto — la retención es naturalmente buena. Con 50 clientes a USD 65/mes → <strong>USD 3.250/mes</strong>. Con 200 clientes → <strong>USD 13.000/mes</strong>. Ingresos dolarizados, costos en pesos. El margen bruto de un SaaS en escala supera el 70%. Es el tipo de negocio que se construye una vez y genera ingresos crecientes con el tiempo.</p>
+        <p>SaaS puro: cobro mensual por licencia. Precio sugerido USD 50-80/mes por financiera (en ARS al CCL del día). Una vez que una financiera carga su operatoria en el sistema, el costo de migrar a otra herramienta es alto — la retención es naturalmente buena. Con 50 clientes a USD 65/mes → <strong>USD 3.250/mes</strong> recurrentes. Con 200 clientes → <strong>USD 13.000/mes</strong>. Ingresos dolarizados, costos en pesos. El margen bruto de un SaaS en escala supera el 70%.</p>
 
         <h3>Riesgos principales</h3>
         <ul>
-          <li><strong>El mercado es informal y desconfía de los registros digitales:</strong> muchas financieras no quieren rastro. Solución: ofrecer modalidad local (sin sincronización cloud) y dejar claro que el sistema no reporta a ningún organismo.</li>
-          <li><strong>Desarrollo más largo o caro de lo previsto:</strong> pagar por etapas (30% adelanto, 40% al entregar MVP, 30% al aprobar beta) y definir el alcance con precisión antes de arrancar.</li>
-          <li><strong>Competidor grande que entre al nicho:</strong> poco probable. Ninguna empresa de software grande va a construir algo tan específico para financieras del interior — ese foco es exactamente tu ventaja defensiva.</li>
+          <li><strong>El mercado es informal y desconfía de los registros digitales:</strong> muchas financieras no quieren que quede rastro. Solución: ofrecer modalidad sin sincronización cloud (datos solo locales) y enfatizar que el sistema no reporta a ningún organismo.</li>
+          <li><strong>Desarrollo más largo/caro de lo previsto:</strong> solución clásica — pagar por etapas (30% adelanto, 40% al entregar MVP, 30% al aprobar el beta), y definir el alcance con precisión antes de arrancar.</li>
+          <li><strong>Dificultad para cobrar en dólares formalmente:</strong> usar Tilopay, Stripe o PayPal para cobros internacionales, o simplemente cobrar en pesos indexados al CCL.</li>
+          <li><strong>Un competidor grande decide entrar al nicho:</strong> poco probable en el corto plazo, pero el diferenciador defensivo es la especialización en financieras del interior — ninguna empresa grande va a construir algo tan específico para este segmento.</li>
         </ul>
 
         <h3>Esfuerzo e inversión inicial</h3>
-        <p>Inversión total estimada: <strong>USD 3.000-6.000</strong> (desarrollo MVP + 3 meses de hosting + diseño básico). El recurso escaso no es el dinero sino el tiempo de Santiago para documentar el problema y gestionar al desarrollador: unas 10-15 horas/semana durante 3 meses. El retorno potencial — USD 10.000+/mes en 2-3 años — justifica ampliamente ese esfuerzo.</p>
+        <p>Inversión total estimada: <strong>USD 3.000-6.000</strong> (desarrollo MVP + 3 meses de hosting + diseño básico). El recurso escaso no es el dinero sino el tiempo de Santiago para documentar el problema y gestionar al desarrollador: unas 10-15 horas/semana durante 3 meses. El retorno potencial — USD 10.000+/mes en 2-3 años — justifica holgadamente ese esfuerzo. Este es el tipo de negocio que se construye una vez y genera ingresos pasivos crecientes.</p>
       </div>
     </div>
 
   </div><!-- /body-wrap -->
 
-  <footer>Generado 17/06/2026 · Agente personal SN</footer>
+  <footer>Generado 18/6/2026 08:40 · Agente personal SN</footer>
 
   <script>
   (function() {
@@ -908,7 +913,6 @@
         }
       }
     }
-
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initCharts);
     } else {
