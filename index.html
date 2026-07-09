@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — 08/07/2026</title>
+  <title>Briefing — jueves 9 de julio de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -43,9 +43,6 @@
     margin: 0 auto;
   }
 
-  /* ══════════════════════════════
-     HEADER — dark premium
-  ══════════════════════════════ */
   .site-header {
     background: var(--grad-s);
     padding: 28px 36px 22px;
@@ -78,7 +75,6 @@
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
 
-  /* SN Logo */
   .sn-logo { flex-shrink: 0; display: block; }
 
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
@@ -94,14 +90,8 @@
     position: relative; z-index: 1;
   }
 
-  /* ══════════════════════════════
-     BODY
-  ══════════════════════════════ */
   .body-wrap { padding: 32px 36px 48px; }
 
-  /* ══════════════════════════════
-     META ROTATIVA
-  ══════════════════════════════ */
   .meta-rotativa {
     background: var(--grad);
     border-radius: 10px;
@@ -118,9 +108,6 @@
   .meta-rotativa strong { color: #ffffff; font-weight: 700; }
   .meta-icon { font-size: 18px; flex-shrink: 0; }
 
-  /* ══════════════════════════════
-     SECTION TITLES
-  ══════════════════════════════ */
   .sec-title {
     font-size: 10px;
     font-weight: 700;
@@ -143,9 +130,6 @@
     flex-shrink: 0;
   }
 
-  /* ══════════════════════════════
-     CARDS
-  ══════════════════════════════ */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -163,14 +147,8 @@
     margin-bottom: 14px;
   }
 
-  /* ══════════════════════════════
-     GRID 2
-  ══════════════════════════════ */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 
-  /* ══════════════════════════════
-     TAREAS
-  ══════════════════════════════ */
   .task-list { list-style: none; }
   .task-list li {
     padding: 8px 0;
@@ -192,9 +170,6 @@
     line-height: 1.25;
   }
 
-  /* ══════════════════════════════
-     CALENDARIO
-  ══════════════════════════════ */
   .evento-item {
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
@@ -220,9 +195,6 @@
   .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 1px; color: var(--text); }
   .cal-hora   { font-size: 11px; color: var(--muted); }
 
-  /* ══════════════════════════════
-     HÁBITOS
-  ══════════════════════════════ */
   .hab-summary {
     display: flex;
     align-items: flex-end;
@@ -262,12 +234,8 @@
   }
   .hab-insights li:last-child { border-bottom: none; }
 
-  /* Hábitos chart wrapper */
   .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
 
-  /* ══════════════════════════════
-     FINANCIERA — Cotizaciones
-  ══════════════════════════════ */
   .lancer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
   .lancer-stat {
     background: var(--card2);
@@ -280,14 +248,10 @@
   .lancer-stat:hover { box-shadow: var(--shadow-md); }
   .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
-  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
+  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; color: var(--muted); }
 
-  /* Dollar chart wrapper */
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
-  /* ══════════════════════════════
-     FINANCIERA — ROFEX
-  ══════════════════════════════ */
   .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
   .rofex-item {
     background: var(--card2);
@@ -300,9 +264,6 @@
   .rofex-item .val   { font-size: 17px; font-weight: 800; color: var(--text); }
   .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
 
-  /* ══════════════════════════════
-     FINANCIERA — Tasas
-  ══════════════════════════════ */
   .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
   .tasa-item {
     background: var(--card2);
@@ -316,9 +277,6 @@
   .tasa-item .t-mensual { font-size: 11px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
   .rofex-item .t-mensual { font-size: 10px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
 
-  /* ══════════════════════════════
-     FINANCIERA — Riesgo País
-  ══════════════════════════════ */
   .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .rp-row:last-child { border-bottom: none; }
   .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
@@ -328,9 +286,6 @@
   .rp-down  { color: var(--success); }
   .rp-neu   { color: var(--warning); }
 
-  /* ══════════════════════════════
-     FINANCIERA — Flujo del día
-  ══════════════════════════════ */
   .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
   .flujo-compra  { background: #eff8ff; border-left: 4px solid var(--blue); }
   .flujo-venta   { background: #fff5f5; border-left: 4px solid var(--danger); }
@@ -341,9 +296,6 @@
   .flujo-venta   .flujo-titulo { color: var(--danger); }
   .flujo-neutral .flujo-titulo { color: #b45309; }
 
-  /* ══════════════════════════════
-     FINANCIERA — Sección labels
-  ══════════════════════════════ */
   .fin-section { margin-bottom: 22px; }
   .fin-section:last-child { margin-bottom: 0; }
   .fin-label {
@@ -362,10 +314,11 @@
     border-radius: 2px;
     flex-shrink: 0;
   }
+  .fin-section p { font-size: 13px; color: #3a4a5e; margin-bottom: 8px; line-height: 1.7; }
+  .fin-section p:last-child { margin-bottom: 0; }
+  .fin-section ul { padding-left: 18px; margin-bottom: 8px; }
+  .fin-section li { font-size: 13px; color: #3a4a5e; margin-bottom: 5px; line-height: 1.6; }
 
-  /* ══════════════════════════════
-     FINANCIERA — Recomendación
-  ══════════════════════════════ */
   .recomendacion {
     background: #eff8ff;
     border: 1px solid #bde0f5;
@@ -379,9 +332,6 @@
   }
   .recomendacion strong { color: var(--blue); }
 
-  /* ══════════════════════════════
-     FINANCIERA — Tags & Rulos
-  ══════════════════════════════ */
   .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
   .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
 
@@ -390,16 +340,10 @@
   .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
   .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
 
-  /* ══════════════════════════════
-     BRECHAS
-  ══════════════════════════════ */
   .brecha-pos { color: var(--danger); }
   .brecha-neu { color: var(--warning); }
   .brecha-ok  { color: var(--success); }
 
-  /* ══════════════════════════════
-     NOTICIAS
-  ══════════════════════════════ */
   .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .noticia-meta {
@@ -413,9 +357,6 @@
   .noticia-body p:last-child { margin-bottom: 0; }
   .noticia-body strong { color: var(--text); font-weight: 600; }
 
-  /* ══════════════════════════════
-     IDEA DE NEGOCIO
-  ══════════════════════════════ */
   .idea-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -464,9 +405,6 @@
   .idea-body ul li { margin-bottom: 6px; }
   .idea-body strong { color: var(--text); font-weight: 600; }
 
-  /* ══════════════════════════════
-     FOOTER
-  ══════════════════════════════ */
   footer {
     margin: 0 36px;
     padding: 16px 0 32px;
@@ -477,9 +415,6 @@
     letter-spacing: .03em;
   }
 
-  /* ══════════════════════════════
-     RESPONSIVE
-  ══════════════════════════════ */
   @media (max-width: 640px) {
     .body-wrap  { padding: 20px 16px 32px; }
     .site-header { padding: 20px 16px 18px; }
@@ -495,11 +430,9 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
-        <!-- SN Logo -->
         <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -517,7 +450,7 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">miércoles 8 de julio de 2026</div>
+          <div class="header-title">jueves 9 de julio de 2026</div>
         </div>
       </div>
       <div class="header-right">
@@ -530,200 +463,208 @@
 
   <div class="body-wrap">
 
-    <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Prepararme para una pelea de boxeo — conecta directo con que Entrenar sigue en 14% esta semana; hoy es buen día para retomarlo.</span>
+      <span><strong>Meta del año:</strong> Ver si podés vender los terrenos (Juan Mendi y Las Cruces) — conecta directo con la meta de julio de vender pertenencias personales. Buen día para retomar el contacto con compradores.</span>
     </div>
 
-    <!-- TAREAS -->
     <div class="sec-title">Tareas</div>
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
         <ul class="task-list">
-<li>Hacer denuncia de venta</li>
-<li>Terminar curso de Claude y de emprender</li>
-<li>Llamar al IRS</li>
-<li>Entregar papeles de la operación</li>
-<li>TP</li>
-<li>Armar plan con Claude de importación de maquinaria</li>
-<li>Armar plan de cursos de julio con Fable 5</li></ul>
+          <li>Hacer denuncia de venta</li>
+          <li>Terminar curso de Claude y de emprender</li>
+          <li>Llamar al IRS</li>
+          <li>Entregar papeles de operación</li>
+          <li>Armar plan con Claude de importación de maquinaria</li>
+          <li>Armar plan de cursos de julio con Fable 5</li>
+          <li>Ver plata, nueva cotización de Ayala</li>
+        </ul>
       </div>
       <div class="card">
         <div class="card-label">Mañana</div>
         <ul class="task-list">
-<li>Buzo Farías</li>
-<li>Pagar multa suegra</li></ul>
+          <li>Buzo Farías</li>
+          <li>Pagar multa suegra</li>
+        </ul>
       </div>
     </div>
 
-    <!-- CALENDARIO -->
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
-      
-<div class="evento-item">
-  <div class="evento-dot"></div>
-  <div class="evento-content">
-    <div class="cal-cuando">Viernes 10/7</div>
-    <div class="cal-titulo">Parcial comercio exterior</div>
-    <div class="cal-hora">06:00</div>
-  </div>
-</div>
-<div class="evento-item">
-  <div class="evento-dot"></div>
-  <div class="evento-content">
-    <div class="cal-cuando">Lunes 13/7</div>
-    <div class="cal-titulo">Cumpleaños Alejo</div>
-    <div class="cal-hora">Todo el día</div>
-  </div>
-</div>
-<div class="evento-item">
-  <div class="evento-dot"></div>
-  <div class="evento-content">
-    <div class="cal-cuando">Sábado 18/7</div>
-    <div class="cal-titulo">Cumpleaños Gero</div>
-    <div class="cal-hora">Todo el día</div>
-  </div>
-</div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Mañana</div>
+          <div class="cal-titulo">Parcial comercio exterior</div>
+          <div class="cal-hora">Viernes 10/7 · 6:00 AM</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Lunes 13/7</div>
+          <div class="cal-titulo">Cumpleaños Alejo</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Sábado 18/7</div>
+          <div class="cal-titulo">Cumpleaños Gero</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
     </div>
 
-    <!-- HÁBITOS -->
     <div class="sec-title">Hábitos — Julio 2026</div>
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">78%</div>
+        <div class="hab-pct">64%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Día 7 de julio (último día cerrado) — hoy, 8/7, todavía sin registrar</div>
+          <div class="hab-sub">Julio recién arranca (día 8 de 31) — buen ritmo salvo por Entrenar.</div>
         </div>
       </div>
       <ul class="hab-insights">
-<li>El último día cerrado (7/7) terminó en 78% (7 de 9 hábitos) — hoy, 8/7, todavía sin registrar en la planilla.</li>
-<li>Dejar el celular a las 00:00 es el único hábito en 100% esta semana (7/7 días); el resto se mueve entre 43% y 71%.</li>
-<li>Entrenar sigue en rojo: 1 de 7 días (14%). La meta de julio en la planilla pide mínimo 16 días (50%) — al ritmo actual no llega.</li></ul>
+        <li>Dejar el celular a las 00:00 es el único hábito en 100% (8/8 días) — la mejor racha del mes.</li>
+        <li>Entrenar sigue en rojo: apenas 1 de 8 días (12,5%), lejos de la meta de julio (mínimo 16 días / 50%).</li>
+        <li>Cayó fuerte el fin de semana (4-5/7): el cumplimiento diario bajó a 11% y 33%, y se recuperó a 78-89% desde el lunes 6.</li>
+      </ul>
       <div class="hab-grid">
-<div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">71%</span></div>
-<div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">43%</span></div>
-<div class="hab-item"><span class="hab-name">Trabajar 4 horas</span><span class="badge-g">71%</span></div>
-<div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-w">57%</span></div>
-<div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-w">57%</span></div>
-<div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">14%</span></div>
-<div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">57%</span></div>
-<div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-g">100%</span></div>
-<div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">71%</span></div></div>
-      <!-- Gráfico hábitos -->
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">75%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">50%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4hs enfocado</span><span class="badge-g">75%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-g">63%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">63%</span></div>
+        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">13%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-g">63%</span></div>
+        <div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-g">100%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">75%</span></div>
+      </div>
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
       </div>
     </div>
 
-    <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
     <div class="card">
-<div class="fin-section">
-  <div class="fin-label">Cotizaciones del dólar</div>
-  <div class="lancer-grid">
-    <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.513,22</div><div class="sub">Compra $1.461,75</div></div>
-    <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.510</div><div class="sub">Compra $1.490</div></div>
-    <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.575,92</div><div class="sub">Compra $1.575,92</div></div>
-    <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.563,50</div><div class="sub">Compra $1.557,50</div></div>
-  </div>
-  <div class="dolar-chart-wrap"><canvas id="dolarChart"></canvas></div>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:10px;">Blue retrocedió $10 contra ayer y quedó prácticamente pegado al oficial — hoy es el dólar informal el que menos rinde de los cuatro.</p>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:10px;">Brecha vs. oficial (venta): Blue <span class="brecha-ok">-0,2%</span> · CCL <span class="brecha-pos">+4,1%</span> · USDT <span class="brecha-pos">+3,3%</span>.</p>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:6px;"><strong>BCRA:</strong> el Gobierno pagó hoy cerca de USD 2.500M de Bonos Globales (vencimiento de deuda programado, no venta defensiva) y las reservas volvieron a caer por debajo de los USD 49.000M, después de haber tocado el máximo de la gestión (USD 49.536M) ayer.</p>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:6px;">Economía anticipó que va a comprarle al BCRA más de USD 11.000M en lo que resta del programa financiero — la presión sobre reservas por pagos de deuda puede repetirse en las próximas semanas. <span class="brecha-neu">Presiona →</span></p>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:6px;">Milei sigue avanzando con la nueva Carta Orgánica del BCRA (prohibición de emisión hacia el Estado). <span class="brecha-ok">Presiona →</span></p>
-  <p style="font-size:13px;color:#3a4a5e;">Oficial prácticamente sin cambios (+0,01%) y mayorista con leve retroceso — puntas planchadas después del salto de ayer. <span class="brecha-neu">Presiona →</span></p>
-  <div class="recomendacion"><strong>Recomendación:</strong> día de puntas planchadas — el pago de bonos le sacó algo de aire al relato de reservas récord, pero no cambia el diagnóstico de fondo. No hay señal fuerte para moverte hoy: si tenés pesos, el carry sigue rindiendo por encima de la devaluación esperada; si tenés dólares parados, tampoco hay apuro por vender con las puntas tan quietas.</div>
-</div>
 
-<div class="fin-section">
-  <div class="fin-label">Futuros ROFEX</div>
-  <div class="rofex-grid">
-    <div class="rofex-item"><div class="label">Agosto (~30d)</div><div class="val">$1.527,5</div><div class="tna">TNA impl. 12,9%</div><span class="t-mensual">1,07%/mes</span></div>
-    <div class="rofex-item"><div class="label">Septiembre (~60d)</div><div class="val">$1.555</div><div class="tna">TNA impl. 16,2%</div><span class="t-mensual">1,35%/mes</span></div>
-    <div class="rofex-item"><div class="label">Octubre (~90d)</div><div class="val">$1.585,5</div><div class="tna">TNA impl. 18,5%</div><span class="t-mensual">1,54%/mes</span></div>
-  </div>
-  <p style="font-size:13px;color:#3a4a5e;">La curva subió un escalón respecto de ayer (más devaluación implícita a 60-90 días), coherente con el ruido de hoy por el pago de bonos — el mercado le pone un poco más de precio a la incertidumbre de reservas, aunque sigue lejos de descontar un salto brusco.</p>
-</div>
+      <div class="fin-section">
+        <div class="fin-label">Cotizaciones del dólar</div>
+        <div class="lancer-grid">
+          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.510</div><div class="sub">Compra $1.460</div></div>
+          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.520</div><div class="sub">Compra $1.500</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.577,80</div><div class="sub">Compra $1.572,20</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.572,48</div><div class="sub">Compra $1.554,32</div></div>
+        </div>
+        <p><strong>Brecha vs. Oficial (venta):</strong> Blue <span class="brecha-ok">+0,66%</span> · CCL <span class="brecha-neu">+4,49%</span> · USDT <span class="brecha-neu">+4,14%</span> — brecha acotada, sin señales de estrés cambiario.</p>
+        <p><strong>BCRA:</strong> las reservas tocaron máximo de la era Milei (~USD 49.536M, +USD 1.264M en una rueda) de cara al pago de USD 4.300M de deuda que vence hoy 9/7. Lleva 123 jornadas consecutivas con saldo comprador en el mercado desde enero.</p>
+        <p><strong>Noticias macro del día:</strong></p>
+        <ul>
+          <li>Milei define hoy con Caputo, Sturzenegger y Bausili los cambios en la Carta Orgánica del BCRA — reduce incertidumbre institucional. →</li>
+          <li>Pago de USD 4.300M de deuda hoy, ya cubierto con ingresos de organismos multilaterales — sin sorpresa, pero consume reservas. →</li>
+          <li>Dólar mayorista y minorista (BNA) subiendo, cerca del valor más alto desde el 24/10 — primera suba sostenida en varias semanas. ↑</li>
+        </ul>
+        <div class="recomendacion"><strong>Recomendación:</strong> día para quedarte en pesos. Reservas en máximos y riesgo país en mínimos de 8 años no ameritan apuro por dolarizar, pero tampoco hay motivo para vender dólares con el oficial mostrando la primera firmeza alcista real en semanas. El driver de hoy es técnico (vencimiento de deuda), no un cambio de tendencia — esperá a la rueda de mañana con más información antes de mover posición.</div>
+      </div>
 
-<div class="fin-section">
-  <div class="fin-label">Tasas de referencia</div>
-  <div class="tasas-grid">
-    <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">19% TNA</div><span class="t-mensual">1,58%/mes</span></div>
-    <div class="tasa-item"><div class="t-label">Plazo fijo privados</div><div class="t-val">21% TNA</div><div class="t-sub">Banco Provincia, la mejor plaza hoy</div><span class="t-mensual">1,75%/mes</span></div>
-    <div class="tasa-item"><div class="t-label">Caución 7 días</div><div class="t-val">~19,5% TNA</div><div class="t-sub">Referencia reciente, sin cierre confirmado de hoy</div><span class="t-mensual">1,62%/mes</span></div>
-    <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">~31% TNA</div><div class="t-sub">Promedio corto plazo, referencia</div><span class="t-mensual">2,58%/mes</span></div>
-  </div>
-</div>
+      <div class="fin-section">
+        <div class="fin-label">Futuros ROFEX</div>
+        <div class="rofex-grid">
+          <div class="rofex-item"><div class="label">30 días</div><div class="val">$1.522,5</div><div class="tna">TNA 24,5%</div><span class="t-mensual">2,04%/mes</span></div>
+          <div class="rofex-item"><div class="label">60 días</div><div class="val">$1.556,0</div><div class="tna">TNA 25,7%</div><span class="t-mensual">2,14%/mes</span></div>
+          <div class="rofex-item"><div class="label">90 días</div><div class="val">$1.577,0</div><div class="tna">TNA 22,8%</div><span class="t-mensual">1,90%/mes</span></div>
+        </div>
+        <p>El mercado de futuros espera una devaluación gradual, sin saltos — la curva se mantiene relativamente plana entre 30 y 90 días, coherente con la estabilidad cambiaria de las últimas semanas.</p>
+      </div>
 
-<div class="fin-section">
-  <div class="fin-label">Cheques de pago diferido (CPD)</div>
-  <p style="font-size:13px;color:#3a4a5e;margin-bottom:6px;">Sin dato exacto de hoy desagregado por plazo. Última referencia de mercado secundario: cheques avalados operando alrededor de 30-35% TNA a 90 días, con una "guerra de tasas" entre pymes y fondos que viene comprimiendo el margen del inversor.</p>
-  <p style="font-size:13px;color:#3a4a5e;">Sin señales nuevas hoy que cambien ese cuadro — con las tasas en pesos relativamente estables, no hay motivo para esperar un salto brusco en la tasa de CPD en el corto plazo.</p>
-</div>
+      <div class="fin-section">
+        <div class="fin-label">Tasas de referencia</div>
+        <div class="tasas-grid">
+          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">TNA 19%</div><span class="t-mensual">1,58%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor tasa)</div><div class="t-val">TNA 23%</div><span class="t-mensual">1,92%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución bursátil 7 días</div><div class="t-val">TNA ~19,5%</div><span class="t-mensual">1,62%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">Sin dato de hoy</div><span class="t-mensual">No confirmado</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);">Caución: último dato confirmado es de mayo/2026 (no encontré cotización de hoy). Lecap/Boncap: no hay cotización confirmada para hoy en las fuentes consultadas — evitamos inventar el número.</p>
+      </div>
 
-<div class="fin-section">
-  <div class="fin-label">Riesgo país (EMBI+)</div>
-  <div class="rp-row"><div class="rp-label">Argentina</div><div class="rp-val">406 <span class="rp-delta rp-neu">sin cierre confirmado hoy</span></div></div>
-  <p style="font-size:13px;color:#3a4a5e;">Último dato confirmado: 406 pb (7/7), mínimo desde 2018. La tendencia de la semana viene claramente a la baja (415 el 3/7 → 412 el 6/7 → 406 el 7/7) — si se sostiene, sigue siendo carry trade atractivo en pesos.</p>
-</div>
+      <div class="fin-section">
+        <div class="fin-label">Cheques de pago diferido (CPD)</div>
+        <p>No encontré tasas de descuento CPD a 30/60/90 días actualizadas a hoy en fuentes públicas (el dato más reciente disponible es de septiembre 2025, ya vencido). Sí hay dos señales cualitativas frescas: el monto negociado de CPD tocó un <strong>máximo histórico</strong> de volumen, y el diferencial de tasa entre bancos y mercado secundario superó los <strong>30 puntos</strong> — el mercado está descontando cheques más barato que los bancos. Si te llega un cheque para analizar, pedí la tasa puntual del día — no hay proxy confiable hoy.</p>
+      </div>
 
-<div class="fin-section">
-  <div class="fin-label">Flujo del día</div>
-  <div class="flujo-card flujo-neutral">
-    <div class="flujo-titulo">Jornada neutral</div>
-    <div class="flujo-body">El BCRA afrontó hoy un pago de USD 2.500M en Bonos Globales y las reservas volvieron a caer por debajo de los USD 49.000M — es un vencimiento de deuda programado, no una venta defensiva, pero le saca aire al relato de "reservas en máximo histórico" de ayer. El oficial cerró prácticamente sin cambios (+0,01%) y el blue incluso retrocedió $10. Economía ya avisó que va a comprarle al BCRA más de USD 11.000M en lo que resta del programa, así que este tipo de presión puntual sobre reservas puede repetirse. Sin variación confirmada del riesgo país hoy. Día para no apurar decisiones grandes en ningún sentido.</div>
-  </div>
-</div>
+      <div class="fin-section">
+        <div class="fin-label">Riesgo país (EMBI+)</div>
+        <div class="rp-row">
+          <div class="rp-label">Argentina (JP Morgan)</div>
+          <div class="rp-val">408 <span class="rp-delta rp-down">▼ -6 pb</span></div>
+        </div>
+        <p style="font-size:11px;color:var(--muted);margin-top:6px;">Dato del 7/7 (último confirmado, mínimo de toda la era Milei y de los últimos 8 años) — no encontré una lectura específica de hoy 9/7.</p>
+        <p>Riesgo país en mínimos favorece el carry trade en pesos por sobre dolarizarse — es una señal a favor de quedarte posicionado en tasa si no tenés un compromiso en dólares inminente.</p>
+      </div>
 
-<div class="fin-section">
-  <div class="fin-label">Rulo del día</div>
-  <div class="rulo-item">
-    <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
-    <div class="rulo-body">Hoy el dólar oficial está en $1.513,22 (venta) y el CCL en $1.575,92 (compra) → comprás oficial y vendés CCL. Spread: $62,70 (4,14% de ganancia) — un poco mejor que ayer. Requiere cuenta comitente y operar con bonos (AL30/GD30), con liquidación a 2 días. Blue y USDT vuelven a quedar atrás: blue directamente da negativo contra el oficial hoy.</div>
-  </div>
-</div></div>
+      <div class="fin-section">
+        <div class="fin-label">Flujo del día — ¿jornada de compra o venta?</div>
+        <div class="flujo-card flujo-neutral">
+          <div class="flujo-titulo">JORNADA NEUTRAL</div>
+          <div class="flujo-body">
+            Señales mixtas: por un lado, reservas en máximo histórico y riesgo país en mínimo de 8 años empujan hacia quedarse en pesos (carry). Por el otro, el oficial viene mostrando la primera suba sostenida en semanas y hoy vence un pago de deuda de USD 4.300M que va a mover el humor del mercado. No es día 25 (sueldos) ni cierre de mes con vencimientos impositivos relevantes. Con la brecha acotada (0,7%-4,5%) y sin ruptura de tendencia, no hay urgencia de ningún lado — dejá que la city digiera el vencimiento de hoy antes de tomar posición grande.
+          </div>
+        </div>
+      </div>
 
-    <!-- NOTICIAS AR -->
+      <div class="fin-section">
+        <div class="fin-label">Rulo del día</div>
+        <div class="rulo-item">
+          <div class="rulo-titulo">Comprar Oficial → Vender CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.510 (venta) y el CCL en $1.577,80 (compra) → comprás oficial y vendés CCL. Spread: $67,80 (4,49% de ganancia). Riesgo: operar CCL implica pasar por bonos/cuenta comitente — no es instantáneo, tiene riesgo de precio mientras se liquida la operación (parking) y comisiones del bróker que hay que descontar del spread bruto. El resto de las combinaciones (Oficial→Blue, Oficial→USDT) rinden menos hoy.</div>
+        </div>
+      </div>
+
+    </div>
+
     <div class="sec-title">Argentina</div>
     <div class="card">
-<div class="noticia">
-  <div class="noticia-meta">Argentina · Comercio exterior · El Cronista</div>
-  <div class="noticia-titulo">¿De la avalancha a la selectividad? El nuevo perfil de las importaciones para 2026</div>
-  <div class="noticia-body">
-    <p>El Cronista publicó un análisis sobre cómo cambia el perfil de las importaciones argentinas en el tercer año de gestión de Milei: después de un 2025 de apertura acelerada y corrección de precios relativos, el consenso de los especialistas es que 2026 no va a ser un "boom generalizado" de importaciones, sino un año de selectividad — "no se trata de más importaciones, sino de importaciones diferentes".</p>
-    <p>El driver del cambio es el nuevo esquema de bandas cambiarias del BCRA, que ahora ajusta el techo y el piso de la banda según el ritmo de la inflación (y no a un ritmo fijo predefinido como antes), sumado a la desinflación gradual y a la recalibración del acuerdo con el FMI. Ese combo mantiene la apertura comercial, pero la hace más previsible y menos parecida a la "avalancha" de bienes de consumo que se vio el año pasado.</p>
-    <p>En la práctica, esto favorece a los importadores que sepan elegir bien el nicho — sectores con demanda sostenida y menos sensibles a la volatilidad cambiaria (insumos industriales, maquinaria, componentes) — por sobre el importador oportunista de bienes de consumo masivo que dependía del diferencial de precios post-apertura.</p>
-    <p><strong>Para vos el mensaje es doble.</strong> Como intermediario en importación (tenés justo esa tarea en Trello hoy, armar el plan de importación de maquinaria), 2026 pide elegir nicho con más cuidado que el año pasado: la ventana de "comprar cualquier cosa afuera y venderla más barata que la producción local" se va cerrando a medida que los precios se acomodan. Y como financiera, las bandas atadas a la inflación dan más previsibilidad al tipo de cambio para estructurar financiamiento a plazos más largos, con menos riesgo de sorpresas bruscas de devaluación.</p>
-  </div>
-</div></div>
+      <div class="noticia">
+        <div class="noticia-meta">Importación · MDZ / Forbes España · 9 de julio 2026</div>
+        <div class="noticia-titulo">Menos máquinas, más flexibilidad: el Gobierno destraba la importación de equipos usados</div>
+        <div class="noticia-body">
+          <p>El primer trimestre de 2026 cerró con una caída del 7,8% interanual en la importación de bienes de capital (USD 2.764 millones), y el deterioro se agudizó después: maquinaria y equipo cae 23,4% interanual, con la maquinaria agropecuaria retrocediendo 29,6% en lo que va del año. Es la contracara de la desaceleración productiva — menos inversión, menos necesidad de traer insumos y equipos del exterior.</p>
+          <p>En paralelo, el Gobierno tomó una decisión en sentido contrario: flexibilizó el régimen de importación de maquinaria usada con fines industriales, para que las pymes puedan renovar equipamiento sin pagar el costo de una máquina nueva importada. Es una apuesta a que, con menos barreras burocráticas, la demanda reprimida por maquinaria usada compense parte de la caída.</p>
+          <p>El contraste importa: mientras el consumo de maquinaria nueva cae por falta de rentabilidad y financiamiento, el usado se vuelve la puerta de entrada más accesible para modernizar una planta o un campo sin comprometer capital de trabajo. Con el dólar relativamente estable y el riesgo país en mínimos de ocho años, el costo de importar en términos reales es hoy más bajo que hace un año, aunque la demanda todavía no lo refleja.</p>
+          <p><strong>Para vos:</strong> pega directo en la tarea que tenés pendiente en Trello — armar el plan de importación de maquinaria. La flexibilización regulatoria reduce la fricción para traer equipos usados, justo en un momento en que la demanda está deprimida y los vendedores del exterior van a estar más dispuestos a negociar precio y plazos. Si el plan apunta a maquinaria agropecuaria o industrial usada, este es un viento de cola regulatorio que vale la pena aprovechar antes de que la macro se acomode y la demanda repunte.</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- NOTICIAS INT -->
     <div class="sec-title">Internacional</div>
     <div class="card">
-<div class="noticia">
-  <div class="noticia-meta">Internacional · Mercados · Reuters / Forbes / NBC</div>
-  <div class="noticia-titulo">Wall Street sufrió su peor rueda del año: la guerra de Irán y las dudas sobre la burbuja de IA borraron más de un billón de dólares en semiconductores</div>
-  <div class="noticia-body">
-    <p>El Nasdaq Composite cayó 2,2% y el Nasdaq 100 más de 3,2%, con los semiconductores liderando la baja: Sandisk, Micron y Arm se hundieron más del 10%, Intel acumula una caída de 21% en el mes, y KLA, Marvell, Broadcom y AMD también retrocedieron fuerte. En conjunto, el sector borró más de un billón de dólares (USD 1.000.000 millones) de capitalización en pocas ruedas.</p>
-    <p>Se juntaron dos frentes el mismo día. Uno geopolítico: la escalada del conflicto entre EE.UU. e Irán — con ataques renovados en Medio Oriente y sanciones al petróleo iraní — hizo saltar el precio del crudo y encendió el miedo a que la inflación vuelva a subir, lo que obligaría a la Fed a sostener tasas altas por más tiempo. El otro es de mercado puro: las acciones tech venían de subir más de 80% en el primer semestre de 2026, y ya arrastraban dudas sobre si esa suba tiene sustento real — con comparaciones a la burbuja punto-com incluidas — o si el retorno de toda la inversión en infraestructura de IA (los USD 750.000 millones de capex de los que hablamos ayer) todavía está lejos de justificarse.</p>
-    <p>Por qué importa: es la primera corrección seria del año en el sector que venía traccionando todo el rally de Wall Street, y confirma que el mercado no tiene paciencia infinita con las valuaciones de IA si el contexto macro (tasas, inflación, geopolítica) se pone en contra. Para alguien mirando CEDEARs de semiconductores o tech, es la señal de que el "todo sube" del primer semestre puede cortarse de un día para el otro — la volatilidad volvió, y probablemente se quede mientras dure la tensión con Irán.</p>
-  </div>
-</div>
-<div class="noticia">
-  <div class="noticia-meta">Internacional · Startups / Venture Capital</div>
-  <div class="noticia-titulo">Mientras la bolsa castiga a la IA, el venture capital sigue apostando fuerte — pero con un filtro más duro</div>
-  <div class="noticia-body">
-    <p>En medio del ruido de Wall Street, el capital de riesgo privado sigue moviéndose distinto: julio consolida a la IA aplicada, fintech, healthtech, biotecnología, ciberseguridad y deep tech como los sectores que concentran plata y atención. La diferencia respecto de hace un año es que ya no gana el asistente genérico de IA, sino las empresas "infraestructura-primero" que se meten dentro de flujos de trabajo reales que el cliente ya necesita — pagos, salud, voz — con nombres como ElevenLabs, MoonPay y Verily como referencia del momento.</p>
-    <p>Por qué importa: mientras la bolsa pública castiga a la IA por valuaciones exageradas, el venture capital privado sigue apostando fuerte a la misma tecnología, pero exige un estándar distinto — no alcanza con "tener IA", hay que resolver un problema de negocio concreto y demostrar que se acorta el tiempo hasta que el cliente ve resultados. Es el mismo filtro que conviene aplicarle a cualquier idea de negocio digital que evalúes: no "una app con IA", sino IA metida adentro de un proceso que ya le duele a alguien.</p>
-  </div>
-</div></div>
+      <div class="noticia">
+        <div class="noticia-meta">Mercados · CNBC · 7 de julio 2026</div>
+        <div class="noticia-titulo">SpaceX entra al Nasdaq-100 a solo 15 ruedas de su IPO récord</div>
+        <div class="noticia-body">
+          <p>SpaceX se sumó al índice Nasdaq-100 el martes 7 de julio, apenas 15 ruedas después de su debut bursátil del 12 de junio — el IPO más grande de la historia, con una recaudación de USD 75.000 millones. El ingreso se dio bajo un nuevo esquema de "fast-track" que el Nasdaq anunció el 26 de junio, diseñado para permitir que compañías de alto perfil entren al índice antes del período de espera tradicional.</p>
+          <p>Por qué importa: cerca de USD 800.000 millones en fondos y ETFs replican el Nasdaq-100 — incluido el Invesco QQQ, uno de los productos más operados del mundo. Todos esos vehículos están obligados a comprar acciones de SpaceX en proporción a su peso en el índice (~1%), lo que los analistas calculan que va a generar un flujo de compra forzada de más de USD 4.000 millones en los próximos días, más allá de si el precio de la acción lo justifica.</p>
+          <p>El caso es un antecedente relevante: demuestra que el mercado está dispuesto a reescribir sus propias reglas para capturar compañías de altísimo perfil apenas salen a cotizar, en lugar de esperar los plazos históricos de un año o más. Eso cambia el cálculo de cualquier empresa grande que evalúe un IPO en EE.UU. — la ventana para captar flujo pasivo de índice se acortó drásticamente.</p>
+          <p><strong>Qué implica:</strong> es una señal más de que 2026 es el año de las megaofertas — el mismo fenómeno se repite con SK Hynix esta semana (ver nota siguiente). Para un inversor argentino con CEDEARs, el efecto indirecto es que los ETFs tecnológicos que sigan el Nasdaq-100 van a tener más exposición a SpaceX de la que tenían ayer, sin que vos tengas que mover un peso.</p>
+        </div>
+      </div>
+      <div class="noticia">
+        <div class="noticia-meta">Mercados · CNBC · 9 de julio 2026</div>
+        <div class="noticia-titulo">SK Hynix debuta en el Nasdaq con la segunda colocación más grande de la historia</div>
+        <div class="noticia-body">
+          <p>SK Hynix, el segundo mayor fabricante de chips de memoria del mundo, fija hoy jueves el precio de su oferta de ADS en el Nasdaq — unos USD 28.000-29.000 millones, bajo el ticker SKHY — y empieza a cotizar mañana viernes 10. Es la segunda colocación de acciones más grande de la historia, solo detrás de SpaceX (USD 85.700 millones el mes pasado) y por delante de Saudi Aramco (2019) y Alibaba (2014). La demanda de inversores estadounidenses corre siete veces por encima de las acciones disponibles.</p>
+          <p>Por qué importa: SK Hynix es, junto con Samsung y Micron, uno de los tres proveedores que controlan el mercado global de memoria DRAM y HBM (la memoria de alto ancho de banda que usan las GPUs de Nvidia para entrenar modelos de IA). Salir a cotizar en EE.UU. le da acceso directo a los fondos que invierten en la narrativa de IA sin pasar por el mercado surcoreano, justo en un momento de escasez de memoria a nivel global.</p>
+          <p><strong>Qué implica para el mercado tech y para Apple en particular:</strong> la escasez de memoria ya viene presionando los costos de componentes de toda la industria, Apple incluido, que depende de proveedores como SK Hynix y Samsung para la memoria de sus iPhones y Mac. Una colocación de esta magnitud no baja el precio del chip en el corto plazo — al contrario, confirma que la demanda impulsada por IA supera ampliamente la oferta, lo que sostiene presión alcista sobre el costo de los componentes que Apple y el resto de las tecnológicas van a pagar el resto del año.</p>
+        </div>
+      </div>
+    </div>
 
-    <!-- IDEA SEMANAL -->
     <div class="sec-title">Idea de negocio — semana 28</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
@@ -762,16 +703,14 @@
 <p>Inversión piloto: <strong>USD 5.000-10.000</strong> para la primera operación, escalable según resultado. Tiempo: 5-6 horas semanales los primeros dos meses (mapeo de clientes + estructura legal). No requiere dejar la financiera — de hecho, la red de clientes exportadores de la financiera es el activo más valioso para arrancar sin salir a buscar en frío.</p></div>
     </div>
 
-  </div><!-- /body-wrap -->
+  </div>
 
-  <footer>Generado 08/07/2026 21:06 · Agente personal SN</footer>
+  <footer>Generado el 9 de julio de 2026 · Agente personal SN</footer>
 
-  <!-- ══ CHARTS JS ══ -->
   <script>
   (function() {
     function initCharts() {
 
-      /* ── Hábitos chart ── */
       var habEl = document.getElementById('habChart');
       if (habEl) {
         var items = document.querySelectorAll('.hab-item');
@@ -846,7 +785,6 @@
         }
       }
 
-      /* ── Dólar chart ── */
       var dolarEl = document.getElementById('dolarChart');
       if (dolarEl) {
         var stats = document.querySelectorAll('.lancer-stat');
