@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — jueves 9 de julio de 2026</title>
+  <title>Briefing — lunes 13 de julio de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -43,6 +43,9 @@
     margin: 0 auto;
   }
 
+  /* ══════════════════════════════
+     HEADER — dark premium
+  ══════════════════════════════ */
   .site-header {
     background: var(--grad-s);
     padding: 28px 36px 22px;
@@ -75,6 +78,7 @@
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
 
+  /* SN Logo */
   .sn-logo { flex-shrink: 0; display: block; }
 
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
@@ -90,8 +94,14 @@
     position: relative; z-index: 1;
   }
 
+  /* ══════════════════════════════
+     BODY
+  ══════════════════════════════ */
   .body-wrap { padding: 32px 36px 48px; }
 
+  /* ══════════════════════════════
+     META ROTATIVA
+  ══════════════════════════════ */
   .meta-rotativa {
     background: var(--grad);
     border-radius: 10px;
@@ -108,6 +118,9 @@
   .meta-rotativa strong { color: #ffffff; font-weight: 700; }
   .meta-icon { font-size: 18px; flex-shrink: 0; }
 
+  /* ══════════════════════════════
+     SECTION TITLES
+  ══════════════════════════════ */
   .sec-title {
     font-size: 10px;
     font-weight: 700;
@@ -130,6 +143,9 @@
     flex-shrink: 0;
   }
 
+  /* ══════════════════════════════
+     CARDS
+  ══════════════════════════════ */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -147,8 +163,14 @@
     margin-bottom: 14px;
   }
 
+  /* ══════════════════════════════
+     GRID 2
+  ══════════════════════════════ */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 
+  /* ══════════════════════════════
+     TAREAS
+  ══════════════════════════════ */
   .task-list { list-style: none; }
   .task-list li {
     padding: 8px 0;
@@ -170,6 +192,9 @@
     line-height: 1.25;
   }
 
+  /* ══════════════════════════════
+     CALENDARIO
+  ══════════════════════════════ */
   .evento-item {
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
@@ -195,6 +220,9 @@
   .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 1px; color: var(--text); }
   .cal-hora   { font-size: 11px; color: var(--muted); }
 
+  /* ══════════════════════════════
+     HÁBITOS
+  ══════════════════════════════ */
   .hab-summary {
     display: flex;
     align-items: flex-end;
@@ -234,8 +262,12 @@
   }
   .hab-insights li:last-child { border-bottom: none; }
 
+  /* Hábitos chart wrapper */
   .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Cotizaciones
+  ══════════════════════════════ */
   .lancer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
   .lancer-stat {
     background: var(--card2);
@@ -248,10 +280,14 @@
   .lancer-stat:hover { box-shadow: var(--shadow-md); }
   .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
-  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; color: var(--muted); }
+  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
 
+  /* Dollar chart wrapper */
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — ROFEX
+  ══════════════════════════════ */
   .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
   .rofex-item {
     background: var(--card2);
@@ -264,6 +300,9 @@
   .rofex-item .val   { font-size: 17px; font-weight: 800; color: var(--text); }
   .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tasas
+  ══════════════════════════════ */
   .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
   .tasa-item {
     background: var(--card2);
@@ -277,6 +316,9 @@
   .tasa-item .t-mensual { font-size: 11px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
   .rofex-item .t-mensual { font-size: 10px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Riesgo País
+  ══════════════════════════════ */
   .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .rp-row:last-child { border-bottom: none; }
   .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
@@ -286,6 +328,9 @@
   .rp-down  { color: var(--success); }
   .rp-neu   { color: var(--warning); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Flujo del día
+  ══════════════════════════════ */
   .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
   .flujo-compra  { background: #eff8ff; border-left: 4px solid var(--blue); }
   .flujo-venta   { background: #fff5f5; border-left: 4px solid var(--danger); }
@@ -296,6 +341,9 @@
   .flujo-venta   .flujo-titulo { color: var(--danger); }
   .flujo-neutral .flujo-titulo { color: #b45309; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Sección labels
+  ══════════════════════════════ */
   .fin-section { margin-bottom: 22px; }
   .fin-section:last-child { margin-bottom: 0; }
   .fin-label {
@@ -314,11 +362,10 @@
     border-radius: 2px;
     flex-shrink: 0;
   }
-  .fin-section p { font-size: 13px; color: #3a4a5e; margin-bottom: 8px; line-height: 1.7; }
-  .fin-section p:last-child { margin-bottom: 0; }
-  .fin-section ul { padding-left: 18px; margin-bottom: 8px; }
-  .fin-section li { font-size: 13px; color: #3a4a5e; margin-bottom: 5px; line-height: 1.6; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Recomendación
+  ══════════════════════════════ */
   .recomendacion {
     background: #eff8ff;
     border: 1px solid #bde0f5;
@@ -332,6 +379,9 @@
   }
   .recomendacion strong { color: var(--blue); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tags & Rulos
+  ══════════════════════════════ */
   .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
   .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
 
@@ -340,10 +390,16 @@
   .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
   .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
 
+  /* ══════════════════════════════
+     BRECHAS
+  ══════════════════════════════ */
   .brecha-pos { color: var(--danger); }
   .brecha-neu { color: var(--warning); }
   .brecha-ok  { color: var(--success); }
 
+  /* ══════════════════════════════
+     NOTICIAS
+  ══════════════════════════════ */
   .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .noticia-meta {
@@ -359,6 +415,9 @@
   .noticia-body p:last-child { margin-bottom: 0; }
   .noticia-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     IDEA DE NEGOCIO
+  ══════════════════════════════ */
   .idea-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -407,6 +466,9 @@
   .idea-body ul li { margin-bottom: 6px; }
   .idea-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     FOOTER
+  ══════════════════════════════ */
   footer {
     margin: 0 36px;
     padding: 16px 0 32px;
@@ -417,6 +479,9 @@
     letter-spacing: .03em;
   }
 
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
   @media (max-width: 640px) {
     .body-wrap  { padding: 20px 16px 32px; }
     .site-header { padding: 20px 16px 18px; }
@@ -432,9 +497,11 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
+        <!-- SN Logo -->
         <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -452,12 +519,12 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">jueves 9 de julio de 2026</div>
+          <div class="header-title">lunes 13 de julio de 2026</div>
         </div>
       </div>
       <div class="header-right">
-        <div class="header-week">Semana 28</div>
-        <div class="header-date">Julio 2026</div>
+        <div class="header-week">Semana 29</div>
+        <div class="header-date">julio de 2026</div>
       </div>
     </div>
     <div class="header-bar"></div>
@@ -465,23 +532,21 @@
 
   <div class="body-wrap">
 
+    <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Ver si podés vender los terrenos (Juan Mendi y Las Cruces) — conecta directo con la meta de julio de vender pertenencias personales. Buen día para retomar el contacto con compradores.</span>
+      <span><strong>Meta del año:</strong> Ver dónde invertir la plata (moto, campo, etc.) — con el Merval cerca de máximos y el riesgo país en mínimos de la era Milei, hoy es buen día para revisar alternativas concretas en vez de dejar todo en plazo fijo.</span>
     </div>
 
+    <!-- TAREAS -->
     <div class="sec-title">Tareas</div>
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
         <ul class="task-list">
-          <li>Hacer denuncia de venta</li>
           <li>Terminar curso de Claude y de emprender</li>
           <li>Llamar al IRS</li>
           <li>Entregar papeles de operación</li>
-          <li>Armar plan con Claude de importación de maquinaria</li>
-          <li>Armar plan de cursos de julio con Fable 5</li>
-          <li>Ver plata, nueva cotización de Ayala</li>
         </ul>
       </div>
       <div class="card">
@@ -493,226 +558,196 @@
       </div>
     </div>
 
+    <!-- CALENDARIO -->
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Mañana</div>
-          <div class="cal-titulo">Parcial comercio exterior</div>
-          <div class="cal-hora">Viernes 10/7 · 6:00 AM</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Lunes 13/7</div>
-          <div class="cal-titulo">Cumpleaños Alejo</div>
-          <div class="cal-hora">Todo el día</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Sábado 18/7</div>
-          <div class="cal-titulo">Cumpleaños Gero</div>
-          <div class="cal-hora">Todo el día</div>
-        </div>
-      </div>
+      <p style="font-size:13px;color:var(--muted);">Sin datos — no hay conexión activa a Google Calendar en esta sesión. Conectá la integración para ver acá los próximos 3 eventos.</p>
     </div>
 
-    <div class="sec-title">Hábitos — Julio 2026</div>
+    <!-- HÁBITOS -->
+    <div class="sec-title">Hábitos — julio de 2026</div>
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">64%</div>
+        <div class="hab-pct">–%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Julio recién arranca (día 8 de 31) — buen ritmo salvo por Entrenar.</div>
+          <div class="hab-sub">Sin datos — Google Drive no está conectado en esta sesión.</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li>Dejar el celular a las 00:00 es el único hábito en 100% (8/8 días) — la mejor racha del mes.</li>
-        <li>Entrenar sigue en rojo: apenas 1 de 8 días (12,5%), lejos de la meta de julio (mínimo 16 días / 50%).</li>
-        <li>Cayó fuerte el fin de semana (4-5/7): el cumplimiento diario bajó a 11% y 33%, y se recuperó a 78-89% desde el lunes 6.</li>
+        <li>No pude acceder a la tabla de hábitos en Drive esta vez.</li>
+        <li>El archivo local contexto/habitos.md tiene datos de mediados de abril — no los uso acá para no mostrarte números viejos como si fueran de hoy.</li>
+        <li>Reconectá Google Drive para que esta sección vuelva a traer el % real y los insights del mes.</li>
       </ul>
-      <div class="hab-grid">
-        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">75%</span></div>
-        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">50%</span></div>
-        <div class="hab-item"><span class="hab-name">Trabajar 4hs enfocado</span><span class="badge-g">75%</span></div>
-        <div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-g">63%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">63%</span></div>
-        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">13%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-g">63%</span></div>
-        <div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-g">100%</span></div>
-        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">75%</span></div>
-      </div>
+      <div class="hab-grid"></div>
+      <!-- Gráfico hábitos -->
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
       </div>
     </div>
 
+    <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
     <div class="card">
-
       <div class="fin-section">
-        <div class="fin-label">Cotizaciones del dólar</div>
+        <div class="fin-label">A. Cotizaciones del dólar</div>
         <div class="lancer-grid">
-          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.510</div><div class="sub">Compra $1.460</div></div>
+          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.513,22</div><div class="sub">Compra $1.461,71</div></div>
           <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.520</div><div class="sub">Compra $1.500</div></div>
-          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.577,80</div><div class="sub">Compra $1.572,20</div></div>
-          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.572,48</div><div class="sub">Compra $1.554,32</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.564,55</div><div class="sub">Compra $1.564,55</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.568,37</div><div class="sub">Compra $1.561</div></div>
         </div>
-        <p><strong>Brecha vs. Oficial (venta):</strong> Blue <span class="brecha-ok">+0,66%</span> · CCL <span class="brecha-neu">+4,49%</span> · USDT <span class="brecha-neu">+4,14%</span> — brecha acotada, sin señales de estrés cambiario.</p>
-        <p><strong>BCRA:</strong> las reservas tocaron máximo de la era Milei (~USD 49.536M, +USD 1.264M en una rueda) de cara al pago de USD 4.300M de deuda que vence hoy 9/7. Lleva 123 jornadas consecutivas con saldo comprador en el mercado desde enero.</p>
-        <p><strong>Noticias macro del día:</strong></p>
-        <ul>
-          <li>Milei define hoy con Caputo, Sturzenegger y Bausili los cambios en la Carta Orgánica del BCRA — reduce incertidumbre institucional. →</li>
-          <li>Pago de USD 4.300M de deuda hoy, ya cubierto con ingresos de organismos multilaterales — sin sorpresa, pero consume reservas. →</li>
-          <li>Dólar mayorista y minorista (BNA) subiendo, cerca del valor más alto desde el 24/10 — primera suba sostenida en varias semanas. ↑</li>
+        <p style="font-size:13px;color:#3a4a5e;margin-bottom:10px;">Brecha vs. Oficial (venta $1.513,22): Blue <span class="brecha-ok">+0,4%</span> · CCL <span class="brecha-neu">+3,4%</span> · USDT <span class="brecha-neu">+3,6%</span>. Brecha mínima en los tres casos — el mercado no está descontando ningún salto discreto de corto plazo. Fuente: finanzasargy.com, hoy 13/7 (13:43 hs).</p>
+        <p style="font-size:13px;color:#3a4a5e;margin-bottom:10px;"><strong>BCRA:</strong> sigue en modo comprador — 123 jornadas consecutivas con saldo positivo, acumulando USD 11.421M desde enero. Reservas brutas en USD 49.536M, máximo de la era Milei (dato del 7/7, +USD 1.264M ese día por ingreso de organismos multilaterales antes del pago de deuda del 9/7).</p>
+        <p style="font-size:13px;color:#3a4a5e;margin-bottom:6px;"><strong>Noticias que mueven el dólar:</strong></p>
+        <ul style="font-size:13px;color:#3a4a5e;padding-left:18px;line-height:1.8;margin-bottom:0;">
+          <li>Reforma de la Carta Orgánica del BCRA para penalizar emisión sin respaldo, sin forzar dolarización — presiona ↓ (más previsibilidad de mediano plazo).</li>
+          <li>Racha compradora récord del BCRA y reservas en máximos — presiona ↓ (refuerza confianza en el esquema cambiario).</li>
+          <li>Riesgo país cerca de 400 pb, mínimo desde abril 2018, por el plan de financiamiento de Caputo — presiona ↓ (carry trade en pesos más atractivo).</li>
         </ul>
-        <div class="recomendacion"><strong>Recomendación:</strong> día para quedarte en pesos. Reservas en máximos y riesgo país en mínimos de 8 años no ameritan apuro por dolarizar, pero tampoco hay motivo para vender dólares con el oficial mostrando la primera firmeza alcista real en semanas. El driver de hoy es técnico (vencimiento de deuda), no un cambio de tendencia — esperá a la rueda de mañana con más información antes de mover posición.</div>
+        <div class="recomendacion"><strong>Recomendación:</strong> no hay drivers para un salto del dólar en el corto plazo — reservas en máximos, riesgo país en mínimos y brecha casi nula. Si tenés que dolarizar por necesidad real, hacelo vía MEP/CCL (spread mínimo contra el oficial); no tiene sentido pagar el extra de blue o cripto salvo urgencia de liquidez inmediata. Si sos vendedor de dólares, hoy no hay apuro — el oficial viene incluso cediendo unos pesos.</div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Futuros ROFEX</div>
+        <div class="fin-label">B. Futuros ROFEX</div>
         <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">30 días</div><div class="val">$1.522,5</div><div class="tna">TNA 24,5%</div><span class="t-mensual">2,04%/mes</span></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">$1.556,0</div><div class="tna">TNA 25,7%</div><span class="t-mensual">2,14%/mes</span></div>
-          <div class="rofex-item"><div class="label">90 días</div><div class="val">$1.577,0</div><div class="tna">TNA 22,8%</div><span class="t-mensual">1,90%/mes</span></div>
+          <div class="rofex-item"><div class="label">Fin jul (~19d)</div><div class="val">$1.500,5</div><div class="tna">TNA impl. ~17,4%</div><span class="t-mensual">1.45%/mes</span></div>
+          <div class="rofex-item"><div class="label">Fin ago (~49d)</div><div class="val">$1.527,5</div><div class="tna">TNA impl. ~20,3%</div><span class="t-mensual">1.69%/mes</span></div>
+          <div class="rofex-item"><div class="label">Fin dic (ref.)</div><div class="val">$1.643</div><div class="tna">TNA impl. ~22,4%</div><span class="t-mensual">1.87%/mes</span></div>
         </div>
-        <p>El mercado de futuros espera una devaluación gradual, sin saltos — la curva se mantiene relativamente plana entre 30 y 90 días, coherente con la estabilidad cambiaria de las últimas semanas.</p>
+        <p style="font-size:13px;color:#3a4a5e;">No hay un contrato específico a 90 días con precio confirmado hoy — se usa fin de diciembre como referencia de curva larga. El mercado espera devaluación gradual y creciente (17% → 22% TNA), sin saltos discretos, consistente con la calma del spot.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Tasas de referencia</div>
+        <div class="fin-label">C. Tasas de referencia</div>
         <div class="tasas-grid">
-          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">TNA 19%</div><span class="t-mensual">1,58%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor tasa)</div><div class="t-val">TNA 23%</div><span class="t-mensual">1,92%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Caución bursátil 7 días</div><div class="t-val">TNA ~19,5%</div><span class="t-mensual">1,62%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">Sin dato de hoy</div><span class="t-mensual">No confirmado</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">19% TNA</div><span class="t-mensual">1.58%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">23% TNA</div><span class="t-mensual">1.92%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución bursátil 7d</div><div class="t-val">Sin datos actualizados</div><div class="t-sub">último dato: ~19,5% TNA (7/5)</div></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">Sin datos actualizados</div><div class="t-sub">último dato: ~31-35% TNA (feb-jun)</div></div>
         </div>
-        <p style="font-size:11px;color:var(--muted);">Caución: último dato confirmado es de mayo/2026 (no encontré cotización de hoy). Lecap/Boncap: no hay cotización confirmada para hoy en las fuentes consultadas — evitamos inventar el número.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Cheques de pago diferido (CPD)</div>
-        <p>No encontré tasas de descuento CPD a 30/60/90 días actualizadas a hoy en fuentes públicas (el dato más reciente disponible es de septiembre 2025, ya vencido). Sí hay dos señales cualitativas frescas: el monto negociado de CPD tocó un <strong>máximo histórico</strong> de volumen, y el diferencial de tasa entre bancos y mercado secundario superó los <strong>30 puntos</strong> — el mercado está descontando cheques más barato que los bancos. Si te llega un cheque para analizar, pedí la tasa puntual del día — no hay proxy confiable hoy.</p>
+        <div class="fin-label">D. Cheques de pago diferido (CPD)</div>
+        <p style="font-size:13px;color:#3a4a5e;">Sin dato de tasa promedio actualizado para hoy — las últimas cifras públicas confiables que encontré son de 2020, muy viejas para usar sin avisarte. Lo que sí se sostiene: los CPD avalados por SGR siguen cotizando por debajo de las tasas de descuento bancario tradicional, y el volumen de e-cheqs avalados viene en alza. Para una tasa real de hoy, conviene chequear directo en BYMA o con tu mesa habitual antes de cotizar una operación.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Riesgo país (EMBI+)</div>
+        <div class="fin-label">E. Riesgo país (EMBI+)</div>
         <div class="rp-row">
-          <div class="rp-label">Argentina (JP Morgan)</div>
-          <div class="rp-val">408 <span class="rp-delta rp-down">▼ -6 pb</span></div>
+          <div class="rp-label">Argentina EMBI+</div>
+          <div class="rp-val">423 pb <span class="rp-delta rp-down">-6 pb</span></div>
         </div>
-        <p style="font-size:11px;color:var(--muted);margin-top:6px;">Dato del 7/7 (último confirmado, mínimo de toda la era Milei y de los últimos 8 años) — no encontré una lectura específica de hoy 9/7.</p>
-        <p>Riesgo país en mínimos favorece el carry trade en pesos por sobre dolarizarse — es una señal a favor de quedarte posicionado en tasa si no tenés un compromiso en dólares inminente.</p>
+        <p style="font-size:13px;color:#3a4a5e;margin-top:8px;">Cerca del piso de 400 pb, el más bajo desde abril de 2018. Mientras siga bajando, el carry trade en pesos se mantiene atractivo y hay menos presión de que los clientes se dolaricen defensivamente.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Flujo del día — ¿jornada de compra o venta?</div>
+        <div class="fin-label">F. Flujo del día</div>
         <div class="flujo-card flujo-neutral">
           <div class="flujo-titulo">JORNADA NEUTRAL</div>
-          <div class="flujo-body">
-            Señales mixtas: por un lado, reservas en máximo histórico y riesgo país en mínimo de 8 años empujan hacia quedarse en pesos (carry). Por el otro, el oficial viene mostrando la primera suba sostenida en semanas y hoy vence un pago de deuda de USD 4.300M que va a mover el humor del mercado. No es día 25 (sueldos) ni cierre de mes con vencimientos impositivos relevantes. Con la brecha acotada (0,7%-4,5%) y sin ruptura de tendencia, no hay urgencia de ningún lado — dejá que la city digiera el vencimiento de hoy antes de tomar posición grande.
-          </div>
+          <div class="flujo-body">Brecha casi nula (0,4% blue, ~3,4% CCL/USDT), reservas del BCRA en máximos y riesgo país cerca de mínimos — no hay ningún driver empujando fuerte para un lado. A favor de la calma: la racha compradora del BCRA sigue intacta. En contra: estamos a 12 días del 25 (pago de sueldos), que históricamente le agrega algo de demanda al blue/CCL sobre el cierre de mes, y sin vencimientos impositivos grandes a la vista esta semana. Con esto, no hay urgencia ni para comprar ni para vender — hoy es día para calcular, no para apurarse.</div>
         </div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Rulo del día</div>
+        <div class="fin-label">G. Rulo del día</div>
         <div class="rulo-item">
-          <div class="rulo-titulo">Comprar Oficial → Vender CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.510 (venta) y el CCL en $1.577,80 (compra) → comprás oficial y vendés CCL. Spread: $67,80 (4,49% de ganancia). Riesgo: operar CCL implica pasar por bonos/cuenta comitente — no es instantáneo, tiene riesgo de precio mientras se liquida la operación (parking) y comisiones del bróker que hay que descontar del spread bruto. El resto de las combinaciones (Oficial→Blue, Oficial→USDT) rinden menos hoy.</div>
+          <div class="rulo-titulo">Comprar Oficial → vender CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.513,22 (venta) y el CCL en $1.564,55 (compra) → comprás oficial y vendés CCL. Spread: $51,33 (3,4% de ganancia). Es el mejor rulo del día: el USDT da un spread similar (3,2%) pero con más fricción operativa (exchange + volatilidad cripto), y el blue directamente da negativo (-$13,22 — no conviene). Riesgo: el CCL exige cuenta comitente y operar con bonos (AL30/GD30 u otro par), con el riesgo de precio del bono en el medio del rulo — no es instantáneo como una cueva.</div>
         </div>
       </div>
-
     </div>
 
+    <!-- NOTICIAS AR -->
     <div class="sec-title">Argentina</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">Importación · MDZ Online / Forbes España · julio 2026 · <a href="https://www.mdzol.com/dinero/menos-maquinas-cayeron-las-importaciones-bienes-capital-n1517527" target="_blank" rel="noopener">Leer en MDZ</a> · <a href="https://forbes.es/ultima-hora/963177/argentina-flexibiliza-el-regimen-de-importacion-de-maquinaria-usada-para-reforzar-la-competitividad-industrial/" target="_blank" rel="noopener">Leer en Forbes España</a></div>
-        <div class="noticia-titulo">Menos máquinas, más flexibilidad: el Gobierno destraba la importación de equipos usados</div>
+        <div class="noticia-meta">INFOBAE · 12 de julio de 2026 · <a href="https://www.infobae.com/economia/2026/07/12/importaciones-que-puede-cambiar-en-el-segundo-semestre-y-por-que-el-mercado-sigue-de-cerca-a-la-inversion/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Importaciones argentinas repuntan para el segundo semestre: qué cambia y qué mirar</div>
         <div class="noticia-body">
-          <p>El primer trimestre de 2026 cerró con una caída del 7,8% interanual en la importación de bienes de capital (USD 2.764 millones), y el deterioro se agudizó después: maquinaria y equipo cae 23,4% interanual, con la maquinaria agropecuaria retrocediendo 29,6% en lo que va del año. Es la contracara de la desaceleración productiva — menos inversión, menos necesidad de traer insumos y equipos del exterior.</p>
-          <p>En paralelo, el Gobierno tomó una decisión en sentido contrario: flexibilizó el régimen de importación de maquinaria usada con fines industriales, para que las pymes puedan renovar equipamiento sin pagar el costo de una máquina nueva importada. Es una apuesta a que, con menos barreras burocráticas, la demanda reprimida por maquinaria usada compense parte de la caída.</p>
-          <p>El contraste importa: mientras el consumo de maquinaria nueva cae por falta de rentabilidad y financiamiento, el usado se vuelve la puerta de entrada más accesible para modernizar una planta o un campo sin comprometer capital de trabajo. Con el dólar relativamente estable y el riesgo país en mínimos de ocho años, el costo de importar en términos reales es hoy más bajo que hace un año, aunque la demanda todavía no lo refleja.</p>
-          <p><strong>Para vos:</strong> pega directo en la tarea que tenés pendiente en Trello — armar el plan de importación de maquinaria. La flexibilización regulatoria reduce la fricción para traer equipos usados, justo en un momento en que la demanda está deprimida y los vendedores del exterior van a estar más dispuestos a negociar precio y plazos. Si el plan apunta a maquinaria agropecuaria o industrial usada, este es un viento de cola regulatorio que vale la pena aprovechar antes de que la macro se acomode y la demanda repunte.</p>
+          <p>Cámaras de importadores y consultoras privadas proyectan que las importaciones argentinas cerrarán 2026 en torno a USD 77.800 millones (+2,7% vs. 2025), revirtiendo la caída interanual de 6,6% registrada entre enero y mayo. Esperan un salto de ~9% interanual entre junio y diciembre — es decir, casi toda la recuperación del año se concentra en la segunda mitad.</p>
+          <p>Lo llamativo es el desacople: la actividad económica ya venía recuperándose en el primer semestre, pero las importaciones no acompañaron con la intensidad que históricamente muestran las fases de crecimiento en Argentina. En ciclos previos (2016-2017, 2021), las compras al exterior subían casi en espejo con la actividad. Esta vez el desfasaje sugiere que el freno no fue de demanda sino de financiamiento, reglas de acceso a dólares o logística — y que la segunda mitad del año recién ahora destraba ese cuello de botella.</p>
+          <p><strong>Implicancia para vos:</strong> si el segundo semestre trae más importadores volviendo a operar, ahí hay un nicho concreto para la financiera — financiamiento de capital de trabajo para importadores que necesitan cubrir el gap entre pagar al proveedor externo y cobrar en el mercado local (anticipos contra carta de crédito o cobranza documentaria, la misma lógica del factoring de exportación pero del lado de la importación). También es una señal de timing: si en algún momento importás maquinaria o mercadería para un negocio propio, moverte antes de que el resto del mercado recaliente la demanda es mejor que esperar.</p>
         </div>
       </div>
     </div>
 
+    <!-- NOTICIAS INT -->
     <div class="sec-title">Internacional</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">Mercados · CNBC · 6 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/06/spacex-joins-the-nasdaq-100-on-tuesday-what-it-means-for-the-stock.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">SpaceX entra al Nasdaq-100 a solo 15 ruedas de su IPO récord</div>
+        <div class="noticia-meta">CNBC · 10 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/10/stock-market-next-week-outlook-for-july-13-17-2026.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Arranca la temporada de balances con Wall Street cerca de máximos</div>
         <div class="noticia-body">
-          <p>SpaceX se sumó al índice Nasdaq-100 el martes 7 de julio, apenas 15 ruedas después de su debut bursátil del 12 de junio — el IPO más grande de la historia, con una recaudación de USD 75.000 millones. El ingreso se dio bajo un nuevo esquema de "fast-track" que el Nasdaq anunció el 26 de junio, diseñado para permitir que compañías de alto perfil entren al índice antes del período de espera tradicional.</p>
-          <p>Por qué importa: cerca de USD 800.000 millones en fondos y ETFs replican el Nasdaq-100 — incluido el Invesco QQQ, uno de los productos más operados del mundo. Todos esos vehículos están obligados a comprar acciones de SpaceX en proporción a su peso en el índice (~1%), lo que los analistas calculan que va a generar un flujo de compra forzada de más de USD 4.000 millones en los próximos días, más allá de si el precio de la acción lo justifica.</p>
-          <p>El caso es un antecedente relevante: demuestra que el mercado está dispuesto a reescribir sus propias reglas para capturar compañías de altísimo perfil apenas salen a cotizar, en lugar de esperar los plazos históricos de un año o más. Eso cambia el cálculo de cualquier empresa grande que evalúe un IPO en EE.UU. — la ventana para captar flujo pasivo de índice se acortó drásticamente.</p>
-          <p><strong>Qué implica:</strong> es una señal más de que 2026 es el año de las megaofertas — el mismo fenómeno se repite con SK Hynix esta semana (ver nota siguiente). Para un inversor argentino con CEDEARs, el efecto indirecto es que los ETFs tecnológicos que sigan el Nasdaq-100 van a tener más exposición a SpaceX de la que tenían ayer, sin que vos tengas que mover un peso.</p>
+          <p>El S&P 500 cerró la semana en alza (+0,42% el viernes, 7.575 puntos) impulsado por las grandes tecnológicas, justo antes de que arranque la temporada de resultados del segundo trimestre. Citigroup, Goldman Sachs, Wells Fargo, JPMorgan y Bank of America reportan el martes, y se espera que sea el segundo trimestre consecutivo con crecimiento de ganancias corporativas por encima del 20% interanual. En paralelo, el nuevo presidente de la Fed, Kevin Warsh, da su primer testimonio ante el Congreso sobre política monetaria.</p>
+          <p>Un +20% de crecimiento de earnings dos trimestres seguidos es una barra alta, y el mercado viene descontando que se sostiene — cualquier sorpresa a la baja en los bancos (los primeros en reportar) puede gatillar una corrección rápida, con los índices cerca de récords. El testimonio de Warsh es además el primer testeo real de cómo comunica su hoja de ruta de tasas un banco central con nuevo liderazgo, algo que mueve a todos los mercados emergentes —Argentina incluida— vía el costo global del dólar.</p>
+          <p><strong>Implicancia para el mercado tech / Apple:</strong> la fortaleza de las big tech sostuvo al S&P la semana pasada, así que estos resultados bancarios funcionan como termómetro de si el rally se sigue apoyando en pocos nombres o se amplía. Para carteras con CEDEARs, la primera semana de esta temporada suele marcar la volatilidad del resto del trimestre — vale mirar cómo reacciona Apple junto al resto de las big tech ante la guía de tasas de Warsh antes de sumar posiciones nuevas en dólares.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Mercados · The Motley Fool · 8 de julio de 2026 · <a href="https://www.fool.com/investing/2026/07/08/sk-hynixs-28-billion-nasdaq-listing-would-be-the-s/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">SK Hynix debuta en el Nasdaq con la segunda colocación más grande de la historia</div>
+        <div class="noticia-meta">CNBC · 10 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/10/stock-market-next-week-outlook-for-july-13-17-2026.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">SK Hynix debuta en Nasdaq mientras los semiconductores lideran el rally 2026</div>
         <div class="noticia-body">
-          <p>SK Hynix, el segundo mayor fabricante de chips de memoria del mundo, fija hoy jueves el precio de su oferta de ADS en el Nasdaq — unos USD 28.000-29.000 millones, bajo el ticker SKHY — y empieza a cotizar mañana viernes 10. Es la segunda colocación de acciones más grande de la historia, solo detrás de SpaceX (USD 85.700 millones el mes pasado) y por delante de Saudi Aramco (2019) y Alibaba (2014). La demanda de inversores estadounidenses corre siete veces por encima de las acciones disponibles.</p>
-          <p>Por qué importa: SK Hynix es, junto con Samsung y Micron, uno de los tres proveedores que controlan el mercado global de memoria DRAM y HBM (la memoria de alto ancho de banda que usan las GPUs de Nvidia para entrenar modelos de IA). Salir a cotizar en EE.UU. le da acceso directo a los fondos que invierten en la narrativa de IA sin pasar por el mercado surcoreano, justo en un momento de escasez de memoria a nivel global.</p>
-          <p><strong>Qué implica para el mercado tech y para Apple en particular:</strong> la escasez de memoria ya viene presionando los costos de componentes de toda la industria, Apple incluido, que depende de proveedores como SK Hynix y Samsung para la memoria de sus iPhones y Mac. Una colocación de esta magnitud no baja el precio del chip en el corto plazo — al contrario, confirma que la demanda impulsada por IA supera ampliamente la oferta, lo que sostiene presión alcista sobre el costo de los componentes que Apple y el resto de las tecnológicas van a pagar el resto del año.</p>
+          <p>La surcoreana SK Hynix, segundo mayor fabricante mundial de chips de memoria, debutó el viernes en el Nasdaq abriendo en USD 170 y cerrando con una suba de ~13%. Es parte de un rally sectorial: Micron subió más de 200% en lo que va de 2026, y Lam Research, Marvell Technology e Intel más que duplicaron su valor en el año.</p>
+          <p>El boom de semiconductores está atado a la demanda de infraestructura de IA (data centers, entrenamiento de modelos), no a un ciclo especulativo aislado. Que el segundo jugador más grande de memoria del mundo elija debutar en EE.UU. justo ahora es señal de que el mercado ve más upside en Nasdaq que en las bolsas asiáticas para levantar capital, y confirma que la memoria (DRAM/NAND) volvió a ser un cuello de botella crítico que sostiene precios altos en toda la cadena.</p>
+          <p><strong>Implicancia para el mercado tech / Apple:</strong> Apple es comprador masivo de memoria y chips para iPhone, Mac y sus centros de datos de IA — si el rally de semis refleja escasez real de oferta (no solo especulación), eso presiona costos de insumos para Apple en los próximos trimestres, aunque también valida que el ciclo de inversión en IA sigue firme, la tesis detrás de gran parte de la suba de Apple y sus pares este año. Para quien tenga CEDEARs de semis o de Apple, esta semana confirma que el sector sigue siendo el que más mueve al índice.</p>
         </div>
       </div>
     </div>
 
-    <div class="sec-title">Idea de negocio — semana 28</div>
+    <!-- IDEA SEMANAL -->
+    <div class="sec-title">Idea de negocio — semana 29</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
-      <div class="idea-titulo">Factoring de exportaciones para pymes agroindustriales del NOA</div>
-      <div class="idea-body"><h3>Qué es</h3>
-<p>Un servicio de factoring (adelanto de cobranzas) enfocado en pymes exportadoras agroindustriales del NOA — limón, arándanos, tabaco, azúcar, legumbres. La pyme exporta, factura en dólares, pero cobra a 30-90-120 días del importador extranjero. Vos le adelantás ese dinero (con descuento) contra la factura de exportación o el conocimiento de embarque, y cobrás la diferencia cuando el importador paga. Es la misma lógica que ya conocés de los cheques de pago diferido, aplicada a facturas de exportación en dólares en vez de cheques en pesos.</p>
+      <div class="idea-titulo">Scoring crediticio con IA para financieras y mutuales del NOA</div>
+      <div class="idea-body">
+<h3>Qué es</h3>
+<p>Un servicio de scoring crediticio con IA (modelo de riesgo + datos alternativos: facturación electrónica AFIP, Central de deudores del BCRA, historial de pagos) que vendés como software a financieras chicas, mutuales y casas de crédito del NOA que hoy aprueban préstamos o descuentan cheques "a ojo" o con una planilla de Excel. En vez de poner tu propio capital a prestar (como en las ideas de factoring de semanas anteriores), acá vendés la inteligencia que decide a quién prestarle y a qué tasa — es un negocio de software, no de capital.</p>
 
 <h3>Por qué ahora</h3>
 <ul>
-  <li><strong>El boom exportador es un dato duro, no una promesa:</strong> en los primeros 5 meses de 2026 las exportaciones argentinas subieron 24,3% interanual (USD 40.359M) y el superávit comercial acumulado ya es de USD 11.783M. Cada exportador nuevo o que crece es un cliente potencial con necesidad de capital de trabajo mientras espera cobrar.</li>
-  <li><strong>El NOA exporta y cobra tarde:</strong> las economías regionales (limón, azúcar, arándanos) tienen ciclos de cobro largos y bancos tradicionales lentos para financiar pymes chicas. Ahí hay un hueco que hoy nadie llena bien a nivel local.</li>
-  <li><strong>Es en dólares, no en pesos:</strong> a diferencia del cheque CPD (pesos, expuesto a pesificación y devaluación), acá el adelanto y el cobro son en la misma moneda — se elimina el riesgo cambiario que veías en los cheques que no se levantan.</li>
-  <li><strong>Tu know-how ya está armado:</strong> venís de analizar cheques con lógica de tasa mensual, breakeven y riesgo de crédito. Facturas de exportación se evalúan con la misma cabeza, solo cambia el instrumento y la moneda.</li>
+  <li><strong>Las financieras chicas están creciendo más rápido que su capacidad de análisis:</strong> con tasas de plazo fijo cayendo (16%-23% TNA en julio 2026) y más pymes buscando crédito alternativo, muchas casas de crédito del interior amplían cartera sin mejorar el proceso de evaluación de riesgo.</li>
+  <li><strong>Nunca hubo tantos datos disponibles para hacer scoring alternativo:</strong> factura electrónica, Cuenta DNI, comprobantes de VEP, Central de deudores del BCRA — todo consultable vía API, algo que hace 3-4 años no existía con esta madurez.</li>
+  <li><strong>Vos ya tenés la vara de qué preguntar:</strong> tu trabajo analizando cheques y riesgo de crédito en la financiera te da el criterio de qué variables predicen default en pymes del NOA mejor que un modelo genérico armado en Buenos Aires.</li>
+  <li><strong>El costo de correr modelos de IA bajó drásticamente:</strong> se puede armar un MVP de scoring (LLM + modelo clásico tipo XGBoost) sin un equipo de data science grande ni presupuesto de corporación.</li>
 </ul>
 
 <h3>Cómo arrancarla</h3>
 <ul>
-  <li><strong>Paso 1 — Mapear clientes exportadores (0 USD, 2-3 semanas):</strong> desde la financiera, identificar qué clientes ya exportan o están por empezar, y cuánto tardan en cobrar del exterior.</li>
-  <li><strong>Paso 2 — Elegir el primer nicho (0 USD):</strong> arrancar con un solo producto (ej. limón o arándanos) y un solo destino de exportación conocido, para entender bien el ciclo de cobro real antes de escalar.</li>
-  <li><strong>Paso 3 — Primera operación piloto (USD 5.000-10.000):</strong> adelantar una factura de exportación chica, con descuento de 2-4% mensual según plazo y riesgo del importador. Cobrar cuando llega el pago del exterior.</li>
-  <li><strong>Paso 4 — Blindar el riesgo de cobro:</strong> exigir seguro de crédito a la exportación o, al menos, historial de pagos del importador extranjero antes de adelantar sumas grandes.</li>
-  <li><strong>Paso 5 — Escalar (3-6 meses):</strong> con 2-3 operaciones exitosas, formalizar el vehículo (sociedad o fideicomiso) y ampliar a más exportadores del NOA vía el boca a boca del sector agro.</li>
+  <li><strong>Paso 1 — Mapear el mercado (0 USD, 2-3 semanas):</strong> entrevistar 5-10 financieras/mutuales chicas del NOA (contactos de tu propio trabajo) sobre cómo deciden hoy a quién prestarle y qué información usan.</li>
+  <li><strong>Paso 2 — MVP técnico (USD 2.000-4.000):</strong> con un socio técnico o freelance, construir un modelo simple que tome 3-4 fuentes de datos y devuelva un score (semáforo rojo/amarillo/verde + probabilidad de default).</li>
+  <li><strong>Paso 3 — Piloto gratis:</strong> ofrecerlo sin costo a 1-2 financieras conocidas a cambio de feedback y casos reales (default/no default) para calibrar el modelo.</li>
+  <li><strong>Paso 4 — Monetizar (3-6 meses):</strong> con el modelo validado con casos reales, empezar a cobrar por consulta o suscripción mensual y sumar más financieras del NOA.</li>
+  <li><strong>Paso 5 — Expandir:</strong> sumar un módulo de alertas tempranas (detectar clientes que empiezan a atrasarse antes del default) y escalar a otras provincias.</li>
 </ul>
 
 <h3>Modelo de ingreso</h3>
-<p><strong>Descuento sobre la factura:</strong> 2-4% mensual en dólares (bien por debajo de lo que rinde un cheque en pesos, pero sin riesgo cambiario). Con USD 10.000 rotando cada 60 días a 3% mensual, el rendimiento es de <strong>~USD 600 cada dos meses por cada USD 10.000 desplegados</strong> — escalable según cuánto capital y cuántos exportadores sumes.</p>
+<p>Cobro por consulta de scoring (USD 1-3 por consulta) o suscripción mensual fija según volumen de cartera (USD 150-400/mes por financiera). Con 10 financieras pagando en promedio USD 250/mes, son <strong>~USD 2.500/mes de ingreso recurrente</strong> con costos marginales bajos una vez armado el modelo — muy distinto al negocio de capital de las ideas anteriores, acá escala sin necesitar más plata propia.</p>
 
 <h3>Riesgos principales</h3>
 <ul>
-  <li><strong>Riesgo de no cobro del importador extranjero:</strong> el riesgo real no es la pyme del NOA, es que el comprador en el exterior no pague. Mitigar con seguro de crédito a la exportación o financiando solo a compradores con historial.</li>
-  <li><strong>Concentración sectorial:</strong> si arrancás con un solo producto (ej. limón), quedás expuesto a su estacionalidad y precio internacional. Diversificar productos apenas sea posible.</li>
-  <li><strong>Marco legal del factoring de exportación:</strong> confirmar con un contador/abogado la estructura correcta (cesión de factura, fideicomiso) antes de mover capital real.</li>
+  <li><strong>Dependencia de acceso a datos:</strong> BCRA y AFIP pueden restringir o cambiar el acceso a sus APIs, rompiendo el modelo de negocio de un día para el otro.</li>
+  <li><strong>Desconfianza del cliente:</strong> las financieras son conservadoras — el enfoque tiene que ser de asistencia ("co-piloto" para el analista humano), no de reemplazo, al menos al principio.</li>
+  <li><strong>Necesita tiempo real de validación:</strong> un modelo de scoring recién es confiable después de meses de datos reales de aciertos y errores — no se puede vender como infalible desde el día uno.</li>
 </ul>
 
 <h3>Esfuerzo/inversión inicial</h3>
-<p>Inversión piloto: <strong>USD 5.000-10.000</strong> para la primera operación, escalable según resultado. Tiempo: 5-6 horas semanales los primeros dos meses (mapeo de clientes + estructura legal). No requiere dejar la financiera — de hecho, la red de clientes exportadores de la financiera es el activo más valioso para arrancar sin salir a buscar en frío.</p></div>
+<p>Inversión piloto: <strong>USD 2.000-4.000</strong> para el MVP técnico (menos si conseguís un socio técnico a cambio de equity). Tiempo: 8-10 horas semanales los primeros 3 meses (entrevistas + coordinación con el desarrollador + validación de datos). No requiere dejar la financiera — al contrario, tu rol ahí es la fuente de validación real de si el modelo predice bien o no.</p>
+      </div>
     </div>
 
-  </div>
+  </div><!-- /body-wrap -->
 
-  <footer>Generado el 9 de julio de 2026 · Agente personal SN</footer>
+  <footer>Generado 11:32 · Agente personal SN</footer>
 
+  <!-- ══ CHARTS JS ══ -->
   <script>
   (function() {
     function initCharts() {
 
+      /* ── Hábitos chart ── */
       var habEl = document.getElementById('habChart');
       if (habEl) {
         var items = document.querySelectorAll('.hab-item');
@@ -787,6 +822,7 @@
         }
       }
 
+      /* ── Dólar chart ── */
       var dolarEl = document.getElementById('dolarChart');
       if (dolarEl) {
         var stats = document.querySelectorAll('.lancer-stat');
