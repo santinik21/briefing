@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — 15/07/2026</title>
+  <title>Briefing — 20/07/2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -406,6 +406,19 @@
   .idea-body ul li { margin-bottom: 6px; }
   .idea-body strong { color: var(--text); font-weight: 600; }
 
+  .alerta-box {
+    background: #fff5f5;
+    border: 1px solid #f3c9c9;
+    border-left: 3px solid var(--danger);
+    border-radius: 8px;
+    padding: 13px 16px;
+    font-size: 12px;
+    margin-bottom: 14px;
+    color: #5c1f1f;
+    line-height: 1.6;
+  }
+  .alerta-box strong { color: var(--danger); }
+
   footer {
     margin: 0 36px;
     padding: 16px 0 32px;
@@ -452,11 +465,11 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">Miércoles 15 de julio de 2026</div>
+          <div class="header-title">Lunes 20 de julio de 2026</div>
         </div>
       </div>
       <div class="header-right">
-        <div class="header-week">Semana 29</div>
+        <div class="header-week">Semana 30</div>
         <div class="header-date">Julio 2026</div>
       </div>
     </div>
@@ -465,10 +478,12 @@
 
   <div class="body-wrap">
 
+    <div class="alerta-box"><strong>Aviso:</strong> Trello, Google Calendar, Google Drive y Gmail están desconectados en esta sesión (caída de conectores MCP). Tareas, agenda y meta rotativa quedan sin datos frescos; hábitos muestra el último dato real confirmado (13/7). Financiera e Idea semanal sí están actualizados con fuentes en vivo.</div>
+
     <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Curso de venta y finanzas — con las tasas en pesos rindiendo 19-23% TNA y el riesgo país en mínimos de casi 8 años, es buen momento para afilar el lado técnico: ese conocimiento es la base de cualquier negocio de intermediación financiera que evalúes armar.</span>
+      <span><strong>Meta del año:</strong> Sin datos — Trello no disponible en esta sesión (conector caído). No se puede rotar la meta hasta reconectar.</span>
     </div>
 
     <!-- TAREAS -->
@@ -476,19 +491,11 @@
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
-        <ul class="task-list">
-          <li>Terminar curso de Claude y de emprender</li>
-          <li>Llamar al IRS</li>
-          <li>Entregar papeles de operación</li>
-          <li>Ver importación de maquinaria</li>
-        </ul>
+        <p style="font-size:13px;color:var(--muted);">Sin datos — Trello no disponible en esta sesión.</p>
       </div>
       <div class="card">
         <div class="card-label">Mañana</div>
-        <ul class="task-list">
-          <li>Buzo Farías</li>
-          <li>Pagar multa suegra</li>
-        </ul>
+        <p style="font-size:13px;color:var(--muted);">Sin datos — Trello no disponible en esta sesión.</p>
       </div>
     </div>
 
@@ -496,30 +503,7 @@
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Hoy · miércoles 15/7</div>
-          <div class="cal-titulo">Curso Balanz — valuación de bonos</div>
-          <div class="cal-hora">13:00 hs</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Mañana · jueves 16/7</div>
-          <div class="cal-titulo">Recuperación psicología</div>
-          <div class="cal-hora">17:00 hs</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
-          <div class="cal-cuando">Sábado 18/7</div>
-          <div class="cal-titulo">Cumpleaños Gero</div>
-          <div class="cal-hora">Todo el día</div>
-        </div>
-      </div>
+      <p style="font-size:13px;color:var(--muted);">Sin datos — Google Calendar no disponible en esta sesión.</p>
     </div>
 
     <!-- HÁBITOS -->
@@ -529,13 +513,13 @@
       <div class="hab-summary">
         <div class="hab-pct">56%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Último dato confirmado: 13/7 (570 XP · Nivel 3) — hoy Drive devolvió otra hoja del archivo y no se pudo refrescar con los días 14-15/7.</div>
+          <div class="hab-sub">Último dato real confirmado: 13/7 (570 XP · Nivel 3). Google Drive está desconectado en esta sesión — no refleja del 14 al 20/7.</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li><strong>Dato no actualizado hoy:</strong> Google Drive devolvió la pestaña "Facultad S21" en lugar de "Julio" en los intentos de esta mañana — lo de abajo es el último pull confirmado (13/7), no refleja ayer ni hoy.</li>
-        <li>Entrenar seguía en rojo al 13/7: 4 de 13 días (31%), lejos del ritmo necesario para la meta de julio (mínimo 16 días/50%).</li>
-        <li>Dejar celular a las 00:00 arrancó julio con una racha perfecta de 10/10 días (1 al 10/7) antes de cortarse el 11/7 — seguía siendo el hábito más sólido del mes (77%).</li>
+        <li><strong>Sin actualizar hace 7 días:</strong> el conector de Google Drive se desconectó y no se pudo refrescar la planilla. Lo de abajo es el último pull real, no el estado de hoy.</li>
+        <li>Al 13/7, Entrenar seguía en rojo: 4 de 13 días (31%), lejos del ritmo necesario para la meta de julio (mínimo 16 días/50%).</li>
+        <li>Dejar celular a las 00:00 era el hábito más sólido del mes (77%) tras una racha perfecta de 10/10 días al arrancar julio.</li>
       </ul>
       <div class="hab-grid">
         <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">69%</span></div>
@@ -560,14 +544,14 @@
       <div class="fin-section">
         <div class="fin-label">Cotizaciones del dólar</div>
         <div class="lancer-grid">
-          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.495,00</div><div class="sub">Compra $1.450,15</div></div>
-          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.520,00</div><div class="sub brecha-neu">Compra $1.500,00 · brecha +1,7%</div></div>
-          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.557,07</div><div class="sub brecha-pos">Valor único de mercado · brecha +4,2%</div></div>
-          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.560,97</div><div class="sub brecha-pos">Compra $1.542,94 · brecha +4,4%</div></div>
+          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.500,00</div><div class="sub">Compra $1.450,00 (BNA)</div></div>
+          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.530,00</div><div class="sub brecha-neu">Compra $1.510,00 · brecha +2,0%</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.570,83</div><div class="sub brecha-pos">Valor único de mercado · brecha +4,7%</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.577,98</div><div class="sub brecha-pos">Compra $1.559,76 (Binance P2P) · brecha +5,2%</div></div>
         </div>
-        <p><strong>BCRA:</strong> compró USD 532 millones el martes 14/7, la cifra más alta de toda la era Milei, hilvanando 126 ruedas consecutivas compradoras (+USD 12.000M en 2026). Reservas brutas en USD 48.687M, +USD 482M vs. el lunes.</p>
-        <p><strong>Macro que mueve la brecha hoy:</strong> BCRA comprando a ritmo récord (presiona ↓), riesgo país en mínimos de ~8 años ~405 pbs (presiona ↓), IPC de junio en 1,9% confirmando desinflación (presiona ↓ / →), cambio de Jefatura de Gabinete — Santilli reemplazó a Francos, Karina Milei reactivando la mesa política (impacto → por ahora, a monitorear).</p>
-        <div class="recomendacion"><strong>Recomendación:</strong> con brecha mínima (blue apenas 1,7% sobre oficial), BCRA comprando récord y riesgo país en piso de 8 años, hoy conviene quedarse en pesos a tasa (Lecap/plazo fijo 19-23% TNA) antes que dolarizarse — el costo de oportunidad de parar capital en dólares es alto mientras se sostenga este equilibrio. Comprar dólares hoy solo tiene sentido como cobertura de mediano plazo, no como trade de corto plazo.</div>
+        <p><strong>BCRA:</strong> sigue en la mayor racha compradora de dólares en 25 años — más de 120 ruedas consecutivas con saldo positivo y ya superó ampliamente la meta anual de reservas (que era de USD 10.000-17.000M) con más de USD 11.200-12.000M comprados en lo que va de 2026. Reservas brutas en récord histórico de la gestión (~USD 49.500M a inicios de este mes, siguen en alza).</p>
+        <p><strong>Macro que mueve la brecha hoy:</strong> BCRA comprando a ritmo histórico y reservas en máximos (presiona ↓), riesgo país repuntando levemente a ~410 pbs tras tocar mínimos de 402-403 pbs hace una semana (presiona ↑ leve, primera señal de pausa en la baja), tensión geopolítica EEUU-Irán con petróleo subiendo ~3% (presiona → / ↑ leve por volatilidad global, aunque Wall Street igual subió hoy).</p>
+        <div class="recomendacion"><strong>Recomendación:</strong> con la brecha oficial-blue en solo ~2% y el BCRA sosteniendo la racha compradora más larga en 25 años, hoy sigue conviniendo quedarse en pesos a tasa (plazo fijo/Lecap 19-23% TNA) antes que dolarizarse. Lo único a vigilar es el riesgo país: si el repunte a 410 pbs se consolida como tendencia (y no es ruido de un día), ahí empezaría a justificarse algo más de cobertura en dólares para clientes con horizonte de mediano plazo.</div>
       </div>
 
       <div class="fin-section">
@@ -577,7 +561,7 @@
           <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div><div class="tna">No se pudo acceder a la curva en vivo</div></div>
           <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div><div class="tna">No se pudo acceder a la curva en vivo</div></div>
         </div>
-        <p>Matba-Rofex y Ámbito no devolvieron la tabla de contratos en esta sesión (requiere panel en vivo). Contexto indirecto: con el BCRA comprando fuerte y el riesgo país en mínimos, el mercado viene descontando una devaluación gradual, no un salto discreto — pero no tengo el número puntual para confirmarlo hoy.</p>
+        <p>Matba-Rofex y Ámbito no devolvieron la tabla de contratos en esta sesión (panel en vivo, no indexado). Hay notas de El Cronista de la última semana que hablan de "suba en la expectativa de devaluación" y mayor demanda de cobertura, pero sin cifras confiables fechadas a hoy — no las uso para no inventar un número.</p>
       </div>
 
       <div class="fin-section">
@@ -586,9 +570,9 @@
           <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">19% TNA</div><span class="t-mensual">1,58%/mes</span></div>
           <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">~23% TNA</div><span class="t-mensual">1,92%/mes</span></div>
           <div class="tasa-item"><div class="t-label">Caución bursátil 7 días</div><div class="t-val">~20% TNA*</div><span class="t-mensual">1,67%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Lecap / Boncap (referencia)</div><div class="t-val">~35% TIREA</div><span class="t-mensual">2,5-2,55%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap (referencia)</div><div class="t-val">~35% TIREA*</div><span class="t-mensual">2,5-2,55%/mes</span></div>
         </div>
-        <p style="font-size:11px;color:var(--muted);">*Caución 7d sin cotización puntual de hoy — valor referencial de mercado (~20% TNA es el rango que vienen operando las cauciones cortas). Lecap/Boncap: dato real de la última licitación del Tesoro (S30N6 y T15E7), en TIREA (tasa efectiva), no TNA.</p>
+        <p style="font-size:11px;color:var(--muted);">*Caución 7d y Lecap/Boncap sin cotización puntual de hoy — valores de referencia de la última data confiable disponible (mercado viene operando cauciones cortas ~20% TNA; Lecap/Boncap en TIREA de la última licitación del Tesoro conocida).</p>
       </div>
 
       <div class="fin-section">
@@ -598,17 +582,17 @@
           <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div></div>
           <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div></div>
         </div>
-        <p>No conseguí cotizaciones puntuales del mercado secundario de CPD hoy. Contexto: con caución rondando 20% TNA y riesgo país en mínimos de 8 años, el crédito de corto plazo sigue relativamente accesible — favorable para el descuento de cheques avalados por SGR. Si te llega un cheque puntual para evaluar, aplicá el checklist habitual (rendimiento real en USD, plazo, breakeven).</p>
+        <p>No conseguí cotizaciones puntuales del mercado secundario de CPD hoy tampoco. Contexto: con caución rondando 20% TNA y riesgo país todavía bajo (~410 pbs pese al repunte), el crédito de corto plazo sigue relativamente accesible. Si te llega un cheque puntual para evaluar, aplicá el checklist habitual (rendimiento real en USD, plazo, breakeven).</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Riesgo país (EMBI+)</div>
         <div class="rp-row">
           <div class="rp-label">Argentina EMBI+</div>
-          <div class="rp-val rp-neu">405 pbs</div>
-          <div class="rp-delta rp-neu">≈ lateral (dato del 14/7, último confirmado)</div>
+          <div class="rp-val rp-up">~410 pbs</div>
+          <div class="rp-delta rp-up">↑ desde el mínimo de 402-403 pbs de hace una semana</div>
         </div>
-        <p>Mínimo desde abril de 2018. En 2026 acumula una baja de casi 30%. Nivel lateral-bajista: mientras se sostenga cerca de los 400 pbs, el carry trade en pesos sigue siendo el trade dominante — si empezara a subir de forma sostenida, ahí sí esperar más demanda de cobertura en dólares de parte de los clientes.</p>
+        <p>Primer repunte relevante después de tocar mínimos de 8 años (403 pbs, 10/7). Sigue siendo un nivel bajísimo en términos históricos (acumula -29% en 2026), pero si esta suba se sostiene unos días más, empezá a monitorear más de cerca — un cambio de tendencia en el riesgo país suele anticipar más demanda de cobertura en dólares de parte de los clientes.</p>
       </div>
 
       <div class="fin-section">
@@ -616,7 +600,7 @@
         <div class="flujo-card flujo-neutral">
           <div class="flujo-titulo">Jornada neutral</div>
           <div class="flujo-body">
-            Brecha oficial-blue en mínimos (1,7%): poco incentivo a dolarizarse por izquierda. BCRA en racha compradora récord y reservas en alza: oferta de dólares abundante, presión más bien lateral-bajista sobre el tipo de cambio. Riesgo país en piso de 8 años: favorece quedarse en pesos a tasa (Lecap/plazo fijo 19-23% TNA) antes que en dólar quieto. No hay estacionalidad fuerte hoy (15/7, mitad de mes, sin vencimientos impositivos masivos ni pago de sueldos inminente) que dispare demanda de cobertura.
+            La oferta de dólares sigue dominando: BCRA en la racha compradora más larga en 25 años y reservas en récord histórico — eso presiona a la baja o lateral. Contrapeso: el riesgo país repuntó a ~410 pbs después de tocar mínimos de 8 años, primera señal de pausa que conviene no ignorar. Afuera, la tensión EEUU-Irán y el petróleo subiendo ~3% suman volatilidad global, aunque Wall Street igual cerró en alza hoy, sin pánico. Sin estacionalidad fuerte local (lunes 20/7, faltan 5 días para el pago de sueldos del 25, sin vencimientos impositivos masivos hoy).
           </div>
         </div>
       </div>
@@ -625,7 +609,7 @@
         <div class="fin-label">Rulo del día</div>
         <div class="rulo-item">
           <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.495 (venta) y el CCL en $1.557,07 → comprás oficial y vendés vía CCL (bonos). Spread: $62,07 (4,2% de ganancia). Es el mejor spread del día, por encima de Blue ($5, 0,3%) y USDT ($47,94, 3,2%). Riesgo: necesitás cuenta comitente y operar bonos (compra en pesos, venta en dólares vía especie), con liquidación en T+1/T+2, no es instantáneo como el blue.</div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.500 (venta, BNA) y el CCL en $1.570,83 → comprás oficial y vendés vía CCL (bonos). Spread: $70,83 (4,7% de ganancia). Es el mejor spread del día, por encima de Blue ($10, 0,7%) y USDT ($59,76, 4,0%). Riesgo: necesitás cuenta comitente y operar bonos (compra en pesos, venta en dólares vía especie), con liquidación en T+1/T+2 — no es instantáneo como el blue.</div>
         </div>
       </div>
 
@@ -635,21 +619,21 @@
     <div class="sec-title">Argentina</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">Infobae · 14 de julio de 2026 · <a href="https://www.infobae.com/economia/2026/07/14/el-banco-central-compro-usd-532-millones-la-mayor-cifra-en-la-era-milei/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">El BCRA compró USD 532 millones, la cifra más alta de la era Milei</div>
+        <div class="noticia-meta">Infobae · 16 de julio de 2026 · <a href="https://www.infobae.com/economia/2026/07/16/el-banco-central-acelero-las-compras-de-reservas-cuales-son-las-causas-del-salto-en-la-oferta-de-dolares/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">El Banco Central aceleró las compras de reservas: las causas del salto en la oferta de dólares</div>
         <div class="noticia-body">
-          <p>El Banco Central compró USD 532 millones el martes 14/7, la mayor cifra en una sola rueda desde diciembre de 2022 y la más alta de toda la gestión Milei. Con esto, el organismo hilvanó 126 ruedas consecutivas con saldo comprador y ya acumula más de USD 12.000 millones adquiridos en lo que va de 2026. Las reservas brutas treparon a USD 48.687 millones, sumando USD 482 millones respecto del lunes. Desde el BCRA explicaron el salto por la liquidación de una obligación negociable corporativa y una mayor oferta genuina en el Mercado Libre de Cambios — no fue una intervención forzada, sino oferta de privados buscando pesos.</p>
-          <p>El dato importa porque confirma la lógica del programa: reservas en alza + riesgo país en mínimos de 8 años (~405 pbs) están comprimiendo la brecha cambiaria a niveles mínimos (blue apenas 1,7% sobre el oficial). Es el contexto post-2018 más favorable para el peso.</p>
-          <p>Para tu trabajo en la financiera, el mensaje es claro: mientras el BCRA siga comprando a este ritmo, quedarse en pesos a tasa (Lecap, plazo fijo, caución) sigue siendo más rentable que dolarizarse — el "seguro de cambio" hoy sale caro en términos de tasa perdida. Vale vigilar si el ritmo de compra se sostiene tras el cambio de gabinete (Santilli reemplazó a Francos como Jefe de Gabinete): un traspié político podría cortar la racha.</p>
+          <p>El BCRA superó ampliamente su meta anual de acumulación de reservas (estimada entre USD 10.000 y 17.000 millones) con más de USD 11.200 millones comprados en apenas siete meses, y acumuló una racha de más de 120 ruedas consecutivas con saldo comprador — la más larga en 25 años. Según el organismo, el salto responde a la mayor liquidación del agro, energía y minería, sumada a colocaciones de deuda de empresas y provincias en mercados internacionales, todo lo cual infló la oferta genuina de dólares en el Mercado Libre de Cambios.</p>
+          <p>Importa porque no es una intervención forzada del Estado sino oferta real de privados: exportadores y emisores de deuda trayendo dólares porque les conviene, no porque los obliguen. Es la mayor entrada "natural" de divisas desde 2004, según los propios analistas citados. Eso explica por qué la brecha oficial-blue se redujo a apenas ~2%, algo que no se veía en años.</p>
+          <p>Para tu trabajo en la financiera: mientras esta oferta se sostenga, el pesificado a tasa (plazo fijo, Lecap, caución en el 19-23% TNA) le sigue ganando ampliamente a cualquier cobertura en dólares de corto plazo. El punto a vigilar es si el agro y la energía mantienen este ritmo de liquidación en el segundo semestre, cuando estacionalmente baja la cosecha gruesa.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Perfil · 10 de julio de 2026 · <a href="https://www.perfil.com/noticias/economia/el-riesgo-pais-toca-los-403-puntos-acumula-una-baja-de-29-en-2026-y-marca-minimo-de-ocho-a%C3%B1os-a40.phtml" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">El riesgo país tocó los 403 puntos, mínimo de casi 8 años</div>
+        <div class="noticia-meta">Perfil · 10 de julio de 2026 (mínimo) · finarg.net · 20 de julio de 2026 (dato de hoy) · <a href="https://www.perfil.com/noticias/economia/el-riesgo-pais-toca-los-403-puntos-acumula-una-baja-de-29-en-2026-y-marca-minimo-de-ocho-a%C3%B1os-a40.phtml" target="_blank" rel="noopener">Leer la nota del mínimo</a> · <a href="https://finarg.net/indices/riesgo-pais" target="_blank" rel="noopener">Ver tracker en vivo</a></div>
+        <div class="noticia-titulo">El riesgo país repunta a ~410 puntos tras tocar el mínimo de 8 años</div>
         <div class="noticia-body">
-          <p>El riesgo país argentino perforó los 405 puntos básicos y llegó a un mínimo de 403 pbs el viernes 10/7 — el nivel más bajo desde abril de 2018, previo a la crisis cambiaria de ese año. En lo que va de 2026 acumula una baja de casi 30%, empujado por la mejora en los bonos soberanos, el cumplimiento de pagos a acreedores privados y la presentación del programa financiero 2026-2027.</p>
-          <p>El dato es más que un número: significa que Argentina se está acercando al umbral que históricamente habilita volver a emitir deuda en mercados internacionales a tasas razonables. Es la primera vez en casi una década que el país conversa con el mercado desde ese lugar.</p>
-          <p>Para vos, dos lecturas. Primero, contexto macro: con este nivel de riesgo país, el carry trade en pesos (Lecap rindiendo TIREA ~35%) sigue siendo el trade dominante mientras dure la compresión. Segundo, oportunidad de mediano plazo: si el país recupera acceso al crédito externo, se abre una ventana para financiamiento en dólares más barato para cualquier proyecto de intermediación o importación que estés evaluando — algo impensado hace 18 meses.</p>
+          <p>El riesgo país argentino tocó un piso de 403 puntos básicos el viernes 10/7 — el nivel más bajo desde abril de 2018 — acumulando una baja de casi 30% en lo que va de 2026. Diez días después, hoy 20/7, los trackers de mercado lo ubican en torno a 410 pbs: un repunte leve pero el primero relevante desde que arrancó la racha bajista de las últimas semanas.</p>
+          <p>El dato importa por dos motivos. Primero, en términos absolutos sigue siendo un nivel históricamente muy bajo — la mejora de los bonos soberanos, el pago de deuda a privados y el programa financiero 2026-2027 siguen sosteniendo la compresión de fondo. Segundo, un repunte después de tantas semanas de baja ininterrumpida es justamente el tipo de señal que conviene monitorear de cerca, no ignorar por ser "solo unos puntos".</p>
+          <p>Para tu lectura de cliente: mientras el nivel siga por debajo de los 450-500 pbs, el carry trade en pesos sigue siendo el trade dominante. Pero si en los próximos días el riesgo país encadena varias subas seguidas (en vez de ser ruido de una rueda), es la primera señal de que algunos clientes van a empezar a pedir cobertura en dólares de nuevo — vale la pena tenerlo en el radar esta semana.</p>
         </div>
       </div>
     </div>
@@ -658,67 +642,67 @@
     <div class="sec-title">Internacional</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">CNBC · 15 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/15/morgan-stanley-ms-earnings-q2-2026-.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Morgan Stanley reportó ingresos y ganancias récord en el segundo trimestre</div>
+        <div class="noticia-meta">TheStreet · 20 de julio de 2026 · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-20-2026" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Wall Street sube pese a la escalada entre EE.UU. e Irán; el petróleo salta 3%</div>
         <div class="noticia-body">
-          <p>Morgan Stanley presentó resultados del segundo trimestre 2026 muy por encima de lo esperado: ingresos netos de USD 21.300 millones (vs. USD 16.800 millones un año atrás) y ganancia neta de USD 5.600 millones, o USD 3,46 por acción diluida — ambos números récord para la firma. El motor fue el trading de acciones, que saltó 69% y generó USD 6.300 millones, muy por encima de los USD 4.400 millones que esperaba el mercado. El retorno sobre capital tangible llegó a 26,6%.</p>
-          <p>Importa porque confirma que la volatilidad de los últimos meses (rotación hacia IA, ajustes de tasas, earnings season) se tradujo en volumen y comisiones para los grandes bancos de inversión, no en parálisis. Cuando un banco de esta escala bate expectativas por semejante margen, suele anticipar que el resto de la temporada de balances también sorprenda al alza.</p>
-          <p>Para tu lectura de mercado: son señales de un mercado bursátil global con apetito de riesgo alto, no defensivo. Si estás mirando CEDEARs de bancos de inversión o financieras globales, esta temporada de balances es el momento de prestar atención — el sector viene con viento a favor.</p>
+          <p>En la apertura de esta semana, el S&P 500 subió 0,63%, el Nasdaq 1,02% y el Dow Jones 0,23%, mientras el Russell 2000 (small caps) cayó 0,42%. El movimiento contrasta con la escalada de tensión entre Estados Unidos e Irán, que llevó al petróleo Brent a saltar cerca de 3% y superar los USD 90 el barril por primera vez desde el 11 de junio, en medio de temores de disrupción de envíos por el Estrecho de Ormuz.</p>
+          <p>Importa porque muestra un mercado que absorbe riesgo geopolítico real (una escalada militar con impacto directo en el precio de la energía) sin entrar en pánico, sostenido por la expectativa de una semana cargada de balances tecnológicos. Es una señal de que el apetito de riesgo sigue firme incluso con ruido de fondo serio — algo que no siempre ocurre cuando hay tensión militar activa de por medio.</p>
+          <p>Para vos: un petróleo más caro sostenido en el tiempo no es neutral para Argentina — por un lado encarece la energía importada, pero por otro favorece a Vaca Muerta y a la balanza energética que viene siendo uno de los motores de la oferta de dólares este año. Si la tensión se prolonga, vale la pena seguir el Brent como variable a mirar de reojo, no solo el S&P.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">BioSpace · recopilación primer semestre 2026 (hito: IPO de Parabilis, 9 de junio de 2026) · <a href="https://www.biospace.com/business/biotech-ipos-surge-in-h1-2026-shattering-records-and-doubling-last-years-total" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Las IPOs de biotecnología duplican el total del año pasado en el primer semestre 2026</div>
+        <div class="noticia-meta">Bloomberg · 20 de julio de 2026 · <a href="https://www.bloomberg.com/news/articles/2026-07-20/ai-pioneer-kai-fu-lee-s-startup-targets-hong-kong-ipo-next-year" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">01.ai, la startup de IA de Kai-Fu Lee, apunta a una IPO en Hong Kong en 2027</div>
         <div class="noticia-body">
-          <p>El mercado de IPOs biotecnológicas tuvo su mejor semestre en años: en el primer semestre de 2026 salieron a bolsa una docena de laboratorios, con una mediana de USD 300 millones recaudados cada uno — más del doble que la mediana de 2025. Dos casos marcan el techo: Parabilis Medicines debutó el 9 de junio con una IPO de USD 670 millones (récord histórico para una biotech financiada con capital de riesgo), superando el récord que Kailera había puesto un mes antes con USD 625 millones.</p>
-          <p>El dato importa porque las ventanas de IPO en biotech suelen ser el termómetro más sensible del apetito de riesgo del mercado — cuando cierran, cierran rápido y para todos los sectores de crecimiento. Que sigan abiertas y batiendo récords en julio 2026 confirma que el rally no es solo de las tecnológicas de siempre.</p>
-          <p>Para vos, es una señal indirecta más que una oportunidad directa: mercados de riesgo abiertos en EE.UU. típicamente preceden mejores condiciones de financiamiento para emprendimientos de alto crecimiento en toda la región, incluida Argentina, y sostienen el apetito por activos de riesgo en general (Merval incluido).</p>
+          <p>01.ai, la startup china de inteligencia artificial fundada por Kai-Fu Lee (ex-cabeza de Google China), avanza con una ronda de financiamiento previa a una salida a bolsa en Hong Kong prevista para 2027. La compañía, con sede en Beijing y valuada en más de USD 1.000 millones desde 2023 (con Alibaba Cloud entre sus inversores), está desarmando su estructura societaria offshore para habilitar la cotización. Lee busca cerrar la ronda cerca de cuando la empresa presente por primera vez resultados anuales, sin revelar todavía el monto objetivo ni los inversores.</p>
+          <p>Importa porque confirma que Hong Kong se consolidó como la plaza preferida para IPOs de IA chinas — PwC proyecta hasta HKD 380.000-400.000 millones en fondos recaudados en 2026 en esa plaza, y Goldman Sachs habla directamente de que "las acciones de Hong Kong entraron en la era de la IA". Es un mercado de capitales alternativo al de EE.UU. que está absorbiendo el boom de IA por su cuenta.</p>
+          <p>Para vos: es una señal más de que el capital de riesgo sigue fluyendo hacia IA con fuerza a nivel global, no solo en Silicon Valley — un contexto que sostiene el apetito general por activos de riesgo y tecnología, relevante si mirás CEDEARs o fondos con exposición a mercados asiáticos además de los tradicionales de EE.UU.</p>
         </div>
       </div>
     </div>
 
     <!-- IDEA SEMANAL -->
-    <div class="sec-title">Idea de negocio — semana 29</div>
+    <div class="sec-title">Idea de negocio — semana 30</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
-      <div class="idea-titulo">Scoring crediticio con IA para financieras y mutuales del NOA</div>
+      <div class="idea-titulo">Escrow digital para operaciones de granos y hacienda en el NOA</div>
       <div class="idea-body"><h3>Qué es</h3>
-<p>Un servicio de scoring crediticio con IA (modelo de riesgo + datos alternativos: facturación electrónica AFIP, Central de deudores del BCRA, historial de pagos) que vendés como software a financieras chicas, mutuales y casas de crédito del NOA que hoy aprueban préstamos o descuentan cheques "a ojo" o con una planilla de Excel. En vez de poner tu propio capital a prestar (como en las ideas de factoring de semanas anteriores), acá vendés la inteligencia que decide a quién prestarle y a qué tasa — es un negocio de software, no de capital.</p>
+<p>Un servicio de escrow (custodia de pago) digital para operaciones de compraventa de granos y hacienda entre productores chicos y medianos del NOA que hoy operan "de palabra" o con cheques diferidos sin ninguna garantía de que la mercadería entregada coincida con lo pactado (calidad, peso, plazo de pago). Vos actuás como tercero neutral: el comprador deposita el pago en una cuenta custodia, un verificador independiente confirma la entrega y la calidad, y recién ahí se libera el pago al vendedor. Reduce el riesgo de estafa y de default en operaciones informales que hoy se resuelven por confianza personal o aval bancario caro.</p>
 
 <h3>Por qué ahora</h3>
 <ul>
-  <li><strong>Las financieras chicas están creciendo más rápido que su capacidad de análisis:</strong> con tasas de plazo fijo cayendo (16%-23% TNA en julio 2026) y más pymes buscando crédito alternativo, muchas casas de crédito del interior amplían cartera sin mejorar el proceso de evaluación de riesgo.</li>
-  <li><strong>Nunca hubo tantos datos disponibles para hacer scoring alternativo:</strong> factura electrónica, Cuenta DNI, comprobantes de VEP, Central de deudores del BCRA — todo consultable vía API, algo que hace 3-4 años no existía con esta madurez.</li>
-  <li><strong>Vos ya tenés la vara de qué preguntar:</strong> tu trabajo analizando cheques y riesgo de crédito en la financiera te da el criterio de qué variables predicen default en pymes del NOA mejor que un modelo genérico armado en Buenos Aires.</li>
-  <li><strong>El costo de correr modelos de IA bajó drásticamente:</strong> se puede armar un MVP de scoring (LLM + modelo clásico tipo XGBoost) sin un equipo de data science grande ni presupuesto de corporación.</li>
+  <li><strong>El campo del NOA mueve muchas operaciones chicas que quedan atadas a la palabra:</strong> productores de menos de 500 hectáreas y feedlots chicos no acceden a mercados de futuros ni SGR, y dependen de la confianza personal con el comprador.</li>
+  <li><strong>El sistema financiero está más digitalizado que nunca:</strong> con transferencias instantáneas y cuentas remuneradas, armar un escrow simple (cuenta custodia + verificador) es más barato y rápido que hace unos años.</li>
+  <li><strong>El contexto cambiario da previsibilidad:</strong> con el BCRA acumulando reservas a ritmo récord (mayor racha compradora en 25 años) y la brecha oficial-blue en mínimos (~2%), un servicio que cobra comisión en pesos no corre el riesgo de que una devaluación brusca licue el negocio a mitad de operación.</li>
+  <li><strong>Tu experiencia en riesgo crediticio es la ventaja:</strong> diseñar las reglas de liberación de pago (qué documentación exigir, cómo verificar calidad y peso) te sale más natural que a un desarrollador sin trayectoria en el campo o en financiera.</li>
 </ul>
 
 <h3>Cómo arrancarla</h3>
 <ul>
-  <li><strong>Paso 1 — Mapear el mercado (0 USD, 2-3 semanas):</strong> entrevistar 5-10 financieras/mutuales chicas del NOA (contactos de tu propio trabajo) sobre cómo deciden hoy a quién prestarle y qué información usan.</li>
-  <li><strong>Paso 2 — MVP técnico (USD 2.000-4.000):</strong> con un socio técnico o freelance, construir un modelo simple que tome 3-4 fuentes de datos y devuelva un score (semáforo rojo/amarillo/verde + probabilidad de default).</li>
-  <li><strong>Paso 3 — Piloto gratis:</strong> ofrecerlo sin costo a 1-2 financieras conocidas a cambio de feedback y casos reales (default/no default) para calibrar el modelo.</li>
-  <li><strong>Paso 4 — Monetizar (3-6 meses):</strong> con el modelo validado con casos reales, empezar a cobrar por consulta o suscripción mensual y sumar más financieras del NOA.</li>
-  <li><strong>Paso 5 — Expandir:</strong> sumar un módulo de alertas tempranas (detectar clientes que empiezan a atrasarse antes del default) y escalar a otras provincias.</li>
+  <li><strong>Paso 1 — Mapear el problema real (0 USD, 2-3 semanas):</strong> hablar con 8-10 productores, acopiadores y feedlots del NOA sobre cómo cierran hoy sus operaciones y qué fricciones tienen (impagos, mercadería no conforme, cheques rechazados).</li>
+  <li><strong>Paso 2 — Diseñar el proceso mínimo, manual al inicio:</strong> una cuenta bancaria o de fintech como custodia, y un verificador de confianza (ingeniero agrónomo o veterinario freelance) que confirme la entrega antes de liberar el pago.</li>
+  <li><strong>Paso 3 — Piloto con 3-5 operaciones reales (USD 2.000-20.000 cada una):</strong> cobrar una comisión simbólica o nada al inicio, para validar el proceso y conseguir casos de éxito.</li>
+  <li><strong>Paso 4 — Digitalizar lo mínimo indispensable (USD 3.000-6.000):</strong> una app o formulario simple donde ambas partes suban documentación y el verificador confirme, con la plata quieta en la cuenta hasta la liberación.</li>
+  <li><strong>Paso 5 — Escalar con comisión por operación (3-6 meses):</strong> sumar más acopiadores y feedlots de la zona una vez validado el modelo.</li>
 </ul>
 
 <h3>Modelo de ingreso</h3>
-<p>Cobro por consulta de scoring (USD 1-3 por consulta) o suscripción mensual fija según volumen de cartera (USD 150-400/mes por financiera). Con 10 financieras pagando en promedio USD 250/mes, son <strong>~USD 2.500/mes de ingreso recurrente</strong> con costos marginales bajos una vez armado el modelo — muy distinto al negocio de capital de las ideas anteriores, acá escala sin necesitar más plata propia.</p>
+<p>Comisión de 0,5%-1,5% sobre el monto de cada operación custodiada. Con operaciones promedio de USD 10.000-30.000 (venta de un lote chico de granos o de hacienda), una comisión del 1% son USD 100-300 por operación. Con 15-20 operaciones mensuales una vez validado el modelo, estimás <strong>~USD 2.000-4.000/mes de ingreso</strong> con costo marginal bajo — el verificador de campo es el único costo variable relevante.</p>
 
 <h3>Riesgos principales</h3>
 <ul>
-  <li><strong>Dependencia de acceso a datos:</strong> BCRA y AFIP pueden restringir o cambiar el acceso a sus APIs, rompiendo el modelo de negocio de un día para el otro.</li>
-  <li><strong>Desconfianza del cliente:</strong> las financieras son conservadoras — el enfoque tiene que ser de asistencia ("co-piloto" para el analista humano), no de reemplazo, al menos al principio.</li>
-  <li><strong>Necesita tiempo real de validación:</strong> un modelo de scoring recién es confiable después de meses de datos reales de aciertos y errores — no se puede vender como infalible desde el día uno.</li>
+  <li><strong>Adopción lenta:</strong> el campo funciona a pura confianza y puede resistirse a "pagarle a un tercero" por algo que hoy resuelve gratis (con el riesgo que eso implica).</li>
+  <li><strong>La verificación de calidad es el punto débil:</strong> necesitás verificadores confiables en terreno, y un error de verificación te expone a un reclamo.</li>
+  <li><strong>Escala geográfica limitada al principio:</strong> a diferencia de un negocio de software puro, acá necesitás presencia física en cada zona, no es 100% remoto.</li>
 </ul>
 
 <h3>Esfuerzo/inversión inicial</h3>
-<p>Inversión piloto: <strong>USD 2.000-4.000</strong> para el MVP técnico (menos si conseguís un socio técnico a cambio de equity). Tiempo: 8-10 horas semanales los primeros 3 meses (entrevistas + coordinación con el desarrollador + validación de datos). No requiere dejar la financiera — al contrario, tu rol ahí es la fuente de validación real de si el modelo predice bien o no.</p></div>
+<p>Inversión piloto: <strong>USD 3.000-6.000</strong> (desarrollo mínimo + honorarios de verificadores en los primeros casos). Tiempo: 6-8 horas semanales los primeros 2-3 meses en entrevistas y armado del proceso manual antes de digitalizar. No requiere dejar la financiera — tu rol ahí te da acceso directo a productores y acopiadores que hoy ya son tus contactos.</p></div>
     </div>
 
   </div><!-- /body-wrap -->
 
-  <footer>Generado 12:00 hs · Agente personal SN</footer>
+  <footer>Generado 11:19 hs · Agente personal SN</footer>
 
   <!-- ══ CHARTS JS ══ -->
   <script>
