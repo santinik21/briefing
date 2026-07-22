@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — 20/07/2026</title>
+  <title>Briefing — 21/07/2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -465,7 +465,7 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">Lunes 20 de julio de 2026</div>
+          <div class="header-title">Martes 21 de julio de 2026</div>
         </div>
       </div>
       <div class="header-right">
@@ -478,12 +478,12 @@
 
   <div class="body-wrap">
 
-    <div class="alerta-box"><strong>Aviso:</strong> Trello, Google Calendar, Google Drive y Gmail están desconectados en esta sesión (caída de conectores MCP). Tareas, agenda y meta rotativa quedan sin datos frescos; hábitos muestra el último dato real confirmado (13/7). Financiera e Idea semanal sí están actualizados con fuentes en vivo.</div>
+    <div class="alerta-box"><strong>Aviso:</strong> Trello sigue desconectado en esta sesión — tareas y meta rotativa sin datos. Calendar y Drive ya reconectaron: la agenda está actualizada, pero la planilla de hábitos es demasiado grande y la extracción se traba en la primera pestaña — van 6 intentos fallidos entre ayer y hoy. Financiera, noticias e idea semanal están 100% frescos.</div>
 
     <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Sin datos — Trello no disponible en esta sesión (conector caído). No se puede rotar la meta hasta reconectar.</span>
+      <span><strong>Meta del año:</strong> Sin datos — Trello sigue sin conexión en esta sesión.</span>
     </div>
 
     <!-- TAREAS -->
@@ -503,7 +503,30 @@
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
-      <p style="font-size:13px;color:var(--muted);">Sin datos — Google Calendar no disponible en esta sesión.</p>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Hoy · martes 21/7</div>
+          <div class="cal-titulo">Final psicología</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Mañana · miércoles 22/7</div>
+          <div class="cal-titulo">Curso Balanz — negociación de bonos</div>
+          <div class="cal-hora">13:00 hs</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Viernes 24/7</div>
+          <div class="cal-titulo">Cumple Durso</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
     </div>
 
     <!-- HÁBITOS -->
@@ -513,11 +536,11 @@
       <div class="hab-summary">
         <div class="hab-pct">56%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Último dato real confirmado: 13/7 (570 XP · Nivel 3). Google Drive está desconectado en esta sesión — no refleja del 14 al 20/7.</div>
+          <div class="hab-sub">Último dato real confirmado: 13/7 (570 XP · Nivel 3). Drive ya reconectó pero la planilla es muy grande y la extracción no llega a la pestaña de julio.</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li><strong>Sin actualizar hace 7 días:</strong> el conector de Google Drive se desconectó y no se pudo refrescar la planilla. Lo de abajo es el último pull real, no el estado de hoy.</li>
+        <li><strong>Sin refrescar hace 8 días:</strong> Drive volvió a conectar pero la extracción del archivo se traba en la primera pestaña ("Facultad S21") — lo de abajo sigue siendo el último pull real del 13/7, no el estado de hoy.</li>
         <li>Al 13/7, Entrenar seguía en rojo: 4 de 13 días (31%), lejos del ritmo necesario para la meta de julio (mínimo 16 días/50%).</li>
         <li>Dejar celular a las 00:00 era el hábito más sólido del mes (77%) tras una racha perfecta de 10/10 días al arrancar julio.</li>
       </ul>
@@ -545,34 +568,35 @@
         <div class="fin-label">Cotizaciones del dólar</div>
         <div class="lancer-grid">
           <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.500,00</div><div class="sub">Compra $1.450,00 (BNA)</div></div>
-          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.530,00</div><div class="sub brecha-neu">Compra $1.510,00 · brecha +2,0%</div></div>
-          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.570,83</div><div class="sub brecha-pos">Valor único de mercado · brecha +4,7%</div></div>
-          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.577,98</div><div class="sub brecha-pos">Compra $1.559,76 (Binance P2P) · brecha +5,2%</div></div>
+          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.545,00</div><div class="sub brecha-neu">Compra $1.525,00 · brecha +3,0%</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.565,81</div><div class="sub brecha-pos">Valor único de mercado · brecha +4,4%</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.577,48</div><div class="sub brecha-pos">Compra $1.559,27 (Binance P2P) · brecha +5,2%</div></div>
         </div>
-        <p><strong>BCRA:</strong> sigue en la mayor racha compradora de dólares en 25 años — más de 120 ruedas consecutivas con saldo positivo y ya superó ampliamente la meta anual de reservas (que era de USD 10.000-17.000M) con más de USD 11.200-12.000M comprados en lo que va de 2026. Reservas brutas en récord histórico de la gestión (~USD 49.500M a inicios de este mes, siguen en alza).</p>
-        <p><strong>Macro que mueve la brecha hoy:</strong> BCRA comprando a ritmo histórico y reservas en máximos (presiona ↓), riesgo país repuntando levemente a ~410 pbs tras tocar mínimos de 402-403 pbs hace una semana (presiona ↑ leve, primera señal de pausa en la baja), tensión geopolítica EEUU-Irán con petróleo subiendo ~3% (presiona → / ↑ leve por volatilidad global, aunque Wall Street igual subió hoy).</p>
-        <div class="recomendacion"><strong>Recomendación:</strong> con la brecha oficial-blue en solo ~2% y el BCRA sosteniendo la racha compradora más larga en 25 años, hoy sigue conviniendo quedarse en pesos a tasa (plazo fijo/Lecap 19-23% TNA) antes que dolarizarse. Lo único a vigilar es el riesgo país: si el repunte a 410 pbs se consolida como tendencia (y no es ruido de un día), ahí empezaría a justificarse algo más de cobertura en dólares para clientes con horizonte de mediano plazo.</div>
+        <p><strong>BCRA:</strong> compró USD 32 millones ayer lunes 20/7 (ritmo más moderado que los USD 500M+ de mediados de julio), reservas brutas en USD 48.807M (+23M vs. viernes). Acumulado 2026: más de USD 12.500M comprados, reservas netas en ~USD 10.800M — el nivel más alto de toda la gestión Milei.</p>
+        <p><strong>Macro que mueve la brecha hoy:</strong> BCRA sosteniendo la racha compradora aunque a menor ritmo (presiona ↓ pero más débil que semanas atrás), riesgo país en clara suba por tercer día consecutivo a ~418-420 pbs sin lograr perforar el piso de 400 (presiona ↑, ya no es "ruido de una rueda"), Jamie Dimon (CEO de JPMorgan) advirtiendo que el mercado global subestima riesgos geopolíticos y fiscales (presiona → / ↑ leve, sentimiento de cautela).</p>
+        <div class="recomendacion"><strong>Recomendación:</strong> la brecha se sigue manteniendo baja (blue apenas 3%), pero el riesgo país lleva tres ruedas seguidas subiendo — ya no conviene ignorarlo como hacías hace unos días. Hoy sigue rindiendo más quedarse en pesos a tasa (19-22% TNA) que dolarizarse, pero si mañana el riesgo país encadena una cuarta suba, es momento de empezar a sugerirle a algún cliente con horizonte de mediano plazo que arme algo de cobertura.</div>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Futuros ROFEX</div>
         <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">30 días</div><div class="val">Sin datos</div><div class="tna">No se pudo acceder a la curva en vivo</div></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div><div class="tna">No se pudo acceder a la curva en vivo</div></div>
-          <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div><div class="tna">No se pudo acceder a la curva en vivo</div></div>
+          <div class="rofex-item"><div class="label">~30 días</div><div class="val">$1.512</div><div class="tna">TNA implícita ~16,8%<span class="t-mensual">1,4%/mes</span></div></div>
+          <div class="rofex-item"><div class="label">~60 días</div><div class="val">$1.538</div><div class="tna">TNA implícita ~18,0%<span class="t-mensual">1,5%/mes</span></div></div>
+          <div class="rofex-item"><div class="label">~90 días</div><div class="val">$1.567</div><div class="tna">TNA implícita ~19,2%<span class="t-mensual">1,6%/mes</span></div></div>
         </div>
-        <p>Matba-Rofex y Ámbito no devolvieron la tabla de contratos en esta sesión (panel en vivo, no indexado). Hay notas de El Cronista de la última semana que hablan de "suba en la expectativa de devaluación" y mayor demanda de cobertura, pero sin cifras confiables fechadas a hoy — no las uso para no inventar un número.</p>
+        <p style="font-size:11px;color:var(--muted);">Datos del informe semanal A3 (Cohen Perspectivas) del 17/7 — el más reciente con cifras concretas de contratos agosto/septiembre/octubre, no de hoy puntual.</p>
+        <p>El mercado sigue descontando una devaluación gradual y contenida (curva de pendiente positiva, sin saltos), consistente con el esquema actual — nada que sugiera un salto discreto en el corto plazo.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Tasas de referencia</div>
         <div class="tasas-grid">
           <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">19% TNA</div><span class="t-mensual">1,58%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">~23% TNA</div><span class="t-mensual">1,92%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Caución bursátil 7 días</div><div class="t-val">~20% TNA*</div><span class="t-mensual">1,67%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">22% TNA</div><span class="t-mensual">1,83%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución bursátil (referencia)</div><div class="t-val">18,4% TNA</div><span class="t-mensual">1,53%/mes</span></div>
           <div class="tasa-item"><div class="t-label">Lecap / Boncap (referencia)</div><div class="t-val">~35% TIREA*</div><span class="t-mensual">2,5-2,55%/mes</span></div>
         </div>
-        <p style="font-size:11px;color:var(--muted);">*Caución 7d y Lecap/Boncap sin cotización puntual de hoy — valores de referencia de la última data confiable disponible (mercado viene operando cauciones cortas ~20% TNA; Lecap/Boncap en TIREA de la última licitación del Tesoro conocida).</p>
+        <p style="font-size:11px;color:var(--muted);">*Lecap/Boncap sin licitación nueva esta semana — valor de referencia de la última licitación conocida (TIREA, no TNA).</p>
       </div>
 
       <div class="fin-section">
@@ -582,25 +606,25 @@
           <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div></div>
           <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div></div>
         </div>
-        <p>No conseguí cotizaciones puntuales del mercado secundario de CPD hoy tampoco. Contexto: con caución rondando 20% TNA y riesgo país todavía bajo (~410 pbs pese al repunte), el crédito de corto plazo sigue relativamente accesible. Si te llega un cheque puntual para evaluar, aplicá el checklist habitual (rendimiento real en USD, plazo, breakeven).</p>
+        <p>Tercer día seguido sin cotizaciones puntuales del mercado secundario de CPD. Contexto: con caución en ~18,4% TNA y el riesgo país subiendo, el costo de crédito de corto plazo probablemente empiece a firmarse un poco al alza esta semana — vigilar si eso se traduce en tasas de descuento CPD más altas.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Riesgo país (EMBI+)</div>
         <div class="rp-row">
           <div class="rp-label">Argentina EMBI+</div>
-          <div class="rp-val rp-up">~410 pbs</div>
-          <div class="rp-delta rp-up">↑ desde el mínimo de 402-403 pbs de hace una semana</div>
+          <div class="rp-val rp-up">~418-420 pbs</div>
+          <div class="rp-delta rp-up">↑ tercer día consecutivo de suba (403 → 410 → ~419 pbs en 11 días)</div>
         </div>
-        <p>Primer repunte relevante después de tocar mínimos de 8 años (403 pbs, 10/7). Sigue siendo un nivel bajísimo en términos históricos (acumula -29% en 2026), pero si esta suba se sostiene unos días más, empezá a monitorear más de cerca — un cambio de tendencia en el riesgo país suele anticipar más demanda de cobertura en dólares de parte de los clientes.</p>
+        <p>El Cronista lo describe como "rebote inesperado" que no logra perforar el piso de 400 puntos, en un contexto de tasas globales al alza que limitan la caída del indicador argentino. Todavía está lejísimos de niveles de estrés (sigue -28% en el año), pero la racha de tres subas seguidas es la primera señal de cambio de tendencia desde el mínimo del 10/7 — dejó de ser ruido de una rueda.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Flujo del día</div>
         <div class="flujo-card flujo-neutral">
-          <div class="flujo-titulo">Jornada neutral</div>
+          <div class="flujo-titulo">Jornada neutral (con más atención que ayer)</div>
           <div class="flujo-body">
-            La oferta de dólares sigue dominando: BCRA en la racha compradora más larga en 25 años y reservas en récord histórico — eso presiona a la baja o lateral. Contrapeso: el riesgo país repuntó a ~410 pbs después de tocar mínimos de 8 años, primera señal de pausa que conviene no ignorar. Afuera, la tensión EEUU-Irán y el petróleo subiendo ~3% suman volatilidad global, aunque Wall Street igual cerró en alza hoy, sin pánico. Sin estacionalidad fuerte local (lunes 20/7, faltan 5 días para el pago de sueldos del 25, sin vencimientos impositivos masivos hoy).
+            El BCRA sigue comprando pero bajó el ritmo (USD32M ayer, lejos de los USD500M+ de mediados de mes) — la oferta de dólares sigue dominando pero con menos fuerza. El riesgo país encadena tres subas seguidas (403→410→419 pbs) sin todavía cambiar el cuadro de fondo, pero es la primera señal de reversión desde el mínimo de 8 años. Afuera, Dimon advirtiendo sobre riesgos subestimados y la tensión en Medio Oriente suman cautela, aunque Wall Street sigue en modo risk-on (rally de semiconductores). Sin estacionalidad fuerte hoy — faltan 4 días para el pago de sueldos del 25/7.
           </div>
         </div>
       </div>
@@ -609,7 +633,7 @@
         <div class="fin-label">Rulo del día</div>
         <div class="rulo-item">
           <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.500 (venta, BNA) y el CCL en $1.570,83 → comprás oficial y vendés vía CCL (bonos). Spread: $70,83 (4,7% de ganancia). Es el mejor spread del día, por encima de Blue ($10, 0,7%) y USDT ($59,76, 4,0%). Riesgo: necesitás cuenta comitente y operar bonos (compra en pesos, venta en dólares vía especie), con liquidación en T+1/T+2 — no es instantáneo como el blue.</div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.500 (venta, BNA) y el CCL en $1.565,81 → comprás oficial y vendés vía CCL (bonos). Spread: $65,81 (4,4% de ganancia). Es el mejor spread del día, por encima de Blue ($25, 1,7%) y USDT ($59,27, 4,0%). Riesgo: necesitás cuenta comitente y operar bonos (compra en pesos, venta en dólares vía especie), con liquidación en T+1/T+2 — no es instantáneo como el blue.</div>
         </div>
       </div>
 
@@ -619,21 +643,21 @@
     <div class="sec-title">Argentina</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">Infobae · 16 de julio de 2026 · <a href="https://www.infobae.com/economia/2026/07/16/el-banco-central-acelero-las-compras-de-reservas-cuales-son-las-causas-del-salto-en-la-oferta-de-dolares/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">El Banco Central aceleró las compras de reservas: las causas del salto en la oferta de dólares</div>
+        <div class="noticia-meta">Aduana News · semana del 21 de julio de 2026 (datos de junio 2026, INDEC) · <a href="https://aduananews.com/las-exportaciones-siguen-acelerando-y-las-importaciones-vuelven-a-crecer-una-senal-alentadora-para-la-produccion/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Las exportaciones siguen acelerando y las importaciones vuelven a crecer</div>
         <div class="noticia-body">
-          <p>El BCRA superó ampliamente su meta anual de acumulación de reservas (estimada entre USD 10.000 y 17.000 millones) con más de USD 11.200 millones comprados en apenas siete meses, y acumuló una racha de más de 120 ruedas consecutivas con saldo comprador — la más larga en 25 años. Según el organismo, el salto responde a la mayor liquidación del agro, energía y minería, sumada a colocaciones de deuda de empresas y provincias en mercados internacionales, todo lo cual infló la oferta genuina de dólares en el Mercado Libre de Cambios.</p>
-          <p>Importa porque no es una intervención forzada del Estado sino oferta real de privados: exportadores y emisores de deuda trayendo dólares porque les conviene, no porque los obliguen. Es la mayor entrada "natural" de divisas desde 2004, según los propios analistas citados. Eso explica por qué la brecha oficial-blue se redujo a apenas ~2%, algo que no se veía en años.</p>
-          <p>Para tu trabajo en la financiera: mientras esta oferta se sostenga, el pesificado a tasa (plazo fijo, Lecap, caución en el 19-23% TNA) le sigue ganando ampliamente a cualquier cobertura en dólares de corto plazo. El punto a vigilar es si el agro y la energía mantienen este ritmo de liquidación en el segundo semestre, cuando estacionalmente baja la cosecha gruesa.</p>
+          <p>En junio de 2026 las exportaciones argentinas alcanzaron USD 9.055 millones, con un crecimiento interanual del 24,5% — uno de los mejores desempeños de los últimos años. En simultáneo, las importaciones también crecieron 7,3% interanual hasta USD 6.861 millones, revirtiendo varios meses de compras al exterior estancadas o en baja.</p>
+          <p>El dato importa por partida doble. Las exportaciones en alza confirman que el agro, la energía y la minería siguen siendo el motor de dólares que sostiene al BCRA en su racha compradora. Pero el repunte de las importaciones es la señal más interesante: en un país que viene de años de cepo y restricciones, que las importaciones vuelvan a crecer normalmente indica recuperación de la producción (insumos, bienes de capital, maquinaria) y no solo consumo — es la lectura que hacen los propios analistas del sector.</p>
+          <p>Para vos es la confirmación más concreta de que el momento para pensar en importación (la tarea que tenés pendiente de "ver importación de maquinaria") tiene viento a favor: hay más previsibilidad cambiaria, acceso a divisas más fluido, y una demanda de bienes importados que está en franca recuperación, no en el piso post-cepo. Vale la pena acelerar esa exploración mientras la ventana esté abierta.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Perfil · 10 de julio de 2026 (mínimo) · finarg.net · 20 de julio de 2026 (dato de hoy) · <a href="https://www.perfil.com/noticias/economia/el-riesgo-pais-toca-los-403-puntos-acumula-una-baja-de-29-en-2026-y-marca-minimo-de-ocho-a%C3%B1os-a40.phtml" target="_blank" rel="noopener">Leer la nota del mínimo</a> · <a href="https://finarg.net/indices/riesgo-pais" target="_blank" rel="noopener">Ver tracker en vivo</a></div>
-        <div class="noticia-titulo">El riesgo país repunta a ~410 puntos tras tocar el mínimo de 8 años</div>
+        <div class="noticia-meta">El Cronista · semana del 21 de julio de 2026 · <a href="https://www.cronista.com/finanzas-mercados/sube-el-riesgo-pais-y-no-lograr-quebrar-el-piso-de-400-puntos-las-causas-del-rebote-inesperado/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Sube el riesgo país y no logra quebrar el piso de 400 puntos: las causas del rebote inesperado</div>
         <div class="noticia-body">
-          <p>El riesgo país argentino tocó un piso de 403 puntos básicos el viernes 10/7 — el nivel más bajo desde abril de 2018 — acumulando una baja de casi 30% en lo que va de 2026. Diez días después, hoy 20/7, los trackers de mercado lo ubican en torno a 410 pbs: un repunte leve pero el primero relevante desde que arrancó la racha bajista de las últimas semanas.</p>
-          <p>El dato importa por dos motivos. Primero, en términos absolutos sigue siendo un nivel históricamente muy bajo — la mejora de los bonos soberanos, el pago de deuda a privados y el programa financiero 2026-2027 siguen sosteniendo la compresión de fondo. Segundo, un repunte después de tantas semanas de baja ininterrumpida es justamente el tipo de señal que conviene monitorear de cerca, no ignorar por ser "solo unos puntos".</p>
-          <p>Para tu lectura de cliente: mientras el nivel siga por debajo de los 450-500 pbs, el carry trade en pesos sigue siendo el trade dominante. Pero si en los próximos días el riesgo país encadena varias subas seguidas (en vez de ser ruido de una rueda), es la primera señal de que algunos clientes van a empezar a pedir cobertura en dólares de nuevo — vale la pena tenerlo en el radar esta semana.</p>
+          <p>Después de tocar un mínimo de 403 puntos básicos el 10/7 (el nivel más bajo desde 2018), el riesgo país argentino encadenó tres ruedas de suba consecutivas y hoy ronda los 418-420 pbs. El Cronista atribuye el "rebote inesperado" a que las tasas globales se mantienen en tendencia alcista, lo que limita el margen para que el spread argentino siga comprimiéndose, más allá de que la deuda soberana local siga mejorando de fondo.</p>
+          <p>Importa porque es la primera reversión de tendencia desde que arrancó la baja sostenida de las últimas semanas. En términos absolutos el nivel sigue siendo bajísimo (acumula -28% en 2026), pero el mercado de renta fija argentina lleva tres días seguidos mandando la misma señal, y eso ya no se puede leer como ruido de una sola rueda.</p>
+          <p>Para tu trabajo: mientras el nivel se mantenga por debajo de los 450-500 pbs, el carry trade en pesos sigue siendo el trade dominante y no hay que sobrerreaccionar. Pero si mañana hay una cuarta suba, ahí sí es la señal de arrancar a sugerir cobertura en dólares a los clientes con perfil más conservador o con pagos en dólares próximos.</p>
         </div>
       </div>
     </div>
@@ -642,21 +666,21 @@
     <div class="sec-title">Internacional</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">TheStreet · 20 de julio de 2026 · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-20-2026" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Wall Street sube pese a la escalada entre EE.UU. e Irán; el petróleo salta 3%</div>
+        <div class="noticia-meta">TheStreet · 21 de julio de 2026 · <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-july-21-2026" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Nasdaq y S&P 500 suben impulsados por balances, pese a la tensión en Medio Oriente</div>
         <div class="noticia-body">
-          <p>En la apertura de esta semana, el S&P 500 subió 0,63%, el Nasdaq 1,02% y el Dow Jones 0,23%, mientras el Russell 2000 (small caps) cayó 0,42%. El movimiento contrasta con la escalada de tensión entre Estados Unidos e Irán, que llevó al petróleo Brent a saltar cerca de 3% y superar los USD 90 el barril por primera vez desde el 11 de junio, en medio de temores de disrupción de envíos por el Estrecho de Ormuz.</p>
-          <p>Importa porque muestra un mercado que absorbe riesgo geopolítico real (una escalada militar con impacto directo en el precio de la energía) sin entrar en pánico, sostenido por la expectativa de una semana cargada de balances tecnológicos. Es una señal de que el apetito de riesgo sigue firme incluso con ruido de fondo serio — algo que no siempre ocurre cuando hay tensión militar activa de por medio.</p>
-          <p>Para vos: un petróleo más caro sostenido en el tiempo no es neutral para Argentina — por un lado encarece la energía importada, pero por otro favorece a Vaca Muerta y a la balanza energética que viene siendo uno de los motores de la oferta de dólares este año. Si la tensión se prolonga, vale la pena seguir el Brent como variable a mirar de reojo, no solo el S&P.</p>
+          <p>Los principales índices de Wall Street cerraron en alza este martes, con los fabricantes de memoria liderando la suba y arrastrando al resto del mercado, incluso mientras los inversores siguen de cerca los riesgos geopolíticos y arancelarios en curso. La temporada de balances del segundo trimestre está en pleno desarrollo y viene sorprendiendo positivamente en varios sectores, lo que compensó el nerviosismo por la tensión en Medio Oriente que ya venía golpeando al petróleo desde el lunes.</p>
+          <p>Importa porque muestra, otra vez, un mercado que prioriza los fundamentals corporativos (ganancias reales, crecimiento de ingresos) por sobre el ruido geopolítico de fondo — algo que no es automático ni garantizado, y que habla de un apetito de riesgo todavía firme a mitad de año.</p>
+          <p>Para vos: la temporada de balances que sigue esta semana (bancos, tech, semiconductores) es el termómetro más directo de si ese optimismo tiene sustento real. Si tenés CEDEARs o estás mirando entrar a alguno, esta semana concentra mucha de la información que va a mover precios en el corto plazo.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Bloomberg · 20 de julio de 2026 · <a href="https://www.bloomberg.com/news/articles/2026-07-20/ai-pioneer-kai-fu-lee-s-startup-targets-hong-kong-ipo-next-year" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">01.ai, la startup de IA de Kai-Fu Lee, apunta a una IPO en Hong Kong en 2027</div>
+        <div class="noticia-meta">Yahoo Finance · 21 de julio de 2026 · <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-july-21-212344066.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Micron salta 12% y arrastra al Nasdaq, mientras Dimon advierte sobre riesgos subestimados</div>
         <div class="noticia-body">
-          <p>01.ai, la startup china de inteligencia artificial fundada por Kai-Fu Lee (ex-cabeza de Google China), avanza con una ronda de financiamiento previa a una salida a bolsa en Hong Kong prevista para 2027. La compañía, con sede en Beijing y valuada en más de USD 1.000 millones desde 2023 (con Alibaba Cloud entre sus inversores), está desarmando su estructura societaria offshore para habilitar la cotización. Lee busca cerrar la ronda cerca de cuando la empresa presente por primera vez resultados anuales, sin revelar todavía el monto objetivo ni los inversores.</p>
-          <p>Importa porque confirma que Hong Kong se consolidó como la plaza preferida para IPOs de IA chinas — PwC proyecta hasta HKD 380.000-400.000 millones en fondos recaudados en 2026 en esa plaza, y Goldman Sachs habla directamente de que "las acciones de Hong Kong entraron en la era de la IA". Es un mercado de capitales alternativo al de EE.UU. que está absorbiendo el boom de IA por su cuenta.</p>
-          <p>Para vos: es una señal más de que el capital de riesgo sigue fluyendo hacia IA con fuerza a nivel global, no solo en Silicon Valley — un contexto que sostiene el apetito general por activos de riesgo y tecnología, relevante si mirás CEDEARs o fondos con exposición a mercados asiáticos además de los tradicionales de EE.UU.</p>
+          <p>Micron Technology saltó 12% hoy, liderando un rally generalizado de las fabricantes de semiconductores de memoria y empujando al Nasdaq a nuevos máximos intradía. En paralelo, Jamie Dimon, CEO de JPMorgan Chase, advirtió públicamente que los inversores están subestimando una lista creciente de riesgos geopolíticos y fiscales que el mercado, a su juicio, no está incorporando correctamente en los precios.</p>
+          <p>La combinación es la típica de un mercado maduro en plena euforia sectorial: mientras el dinero sigue entrando de lleno en semiconductores y memoria (motor central del ciclo de inversión en IA), la voz más senior de Wall Street pone un cartel de precaución sobre el resto del tablero — deuda, geopolítica, aranceles.</p>
+          <p>Para vos, ninguna de las dos señales es para ignorar: el rally de semiconductores confirma que el ciclo de IA sigue siendo el motor de rentabilidad más fuerte del año si estás mirando CEDEARs tech, pero la advertencia de Dimon es la que viene de la persona con mejor visión agregada del sistema financiero global — vale la pena no perder de vista el nivel de concentración que está tomando el rally en pocos sectores.</p>
         </div>
       </div>
     </div>
@@ -673,7 +697,7 @@
 <ul>
   <li><strong>El campo del NOA mueve muchas operaciones chicas que quedan atadas a la palabra:</strong> productores de menos de 500 hectáreas y feedlots chicos no acceden a mercados de futuros ni SGR, y dependen de la confianza personal con el comprador.</li>
   <li><strong>El sistema financiero está más digitalizado que nunca:</strong> con transferencias instantáneas y cuentas remuneradas, armar un escrow simple (cuenta custodia + verificador) es más barato y rápido que hace unos años.</li>
-  <li><strong>El contexto cambiario da previsibilidad:</strong> con el BCRA acumulando reservas a ritmo récord (mayor racha compradora en 25 años) y la brecha oficial-blue en mínimos (~2%), un servicio que cobra comisión en pesos no corre el riesgo de que una devaluación brusca licue el negocio a mitad de operación.</li>
+  <li><strong>El contexto cambiario da previsibilidad:</strong> con el BCRA acumulando reservas a ritmo récord (mayor racha compradora en 25 años) y la brecha oficial-blue en mínimos, un servicio que cobra comisión en pesos no corre el riesgo de que una devaluación brusca licue el negocio a mitad de operación.</li>
   <li><strong>Tu experiencia en riesgo crediticio es la ventaja:</strong> diseñar las reglas de liberación de pago (qué documentación exigir, cómo verificar calidad y peso) te sale más natural que a un desarrollador sin trayectoria en el campo o en financiera.</li>
 </ul>
 
@@ -702,7 +726,7 @@
 
   </div><!-- /body-wrap -->
 
-  <footer>Generado 11:19 hs · Agente personal SN</footer>
+  <footer>Generado 22:27 hs · Agente personal SN</footer>
 
   <!-- ══ CHARTS JS ══ -->
   <script>
