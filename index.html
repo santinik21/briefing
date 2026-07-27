@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — viernes 24 de julio de 2026</title>
+  <title>Briefing — lunes 27 de julio de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -43,6 +43,9 @@
     margin: 0 auto;
   }
 
+  /* ══════════════════════════════
+     HEADER — dark premium
+  ══════════════════════════════ */
   .site-header {
     background: var(--grad-s);
     padding: 28px 36px 22px;
@@ -75,6 +78,7 @@
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
 
+  /* SN Logo */
   .sn-logo { flex-shrink: 0; display: block; }
 
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
@@ -90,8 +94,14 @@
     position: relative; z-index: 1;
   }
 
+  /* ══════════════════════════════
+     BODY
+  ══════════════════════════════ */
   .body-wrap { padding: 32px 36px 48px; }
 
+  /* ══════════════════════════════
+     META ROTATIVA
+  ══════════════════════════════ */
   .meta-rotativa {
     background: var(--grad);
     border-radius: 10px;
@@ -108,6 +118,9 @@
   .meta-rotativa strong { color: #ffffff; font-weight: 700; }
   .meta-icon { font-size: 18px; flex-shrink: 0; }
 
+  /* ══════════════════════════════
+     SECTION TITLES
+  ══════════════════════════════ */
   .sec-title {
     font-size: 10px;
     font-weight: 700;
@@ -130,6 +143,9 @@
     flex-shrink: 0;
   }
 
+  /* ══════════════════════════════
+     CARDS
+  ══════════════════════════════ */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -147,8 +163,14 @@
     margin-bottom: 14px;
   }
 
+  /* ══════════════════════════════
+     GRID 2
+  ══════════════════════════════ */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 
+  /* ══════════════════════════════
+     TAREAS
+  ══════════════════════════════ */
   .task-list { list-style: none; }
   .task-list li {
     padding: 8px 0;
@@ -170,6 +192,9 @@
     line-height: 1.25;
   }
 
+  /* ══════════════════════════════
+     CALENDARIO
+  ══════════════════════════════ */
   .evento-item {
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
@@ -195,6 +220,9 @@
   .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 1px; color: var(--text); }
   .cal-hora   { font-size: 11px; color: var(--muted); }
 
+  /* ══════════════════════════════
+     HÁBITOS
+  ══════════════════════════════ */
   .hab-summary {
     display: flex;
     align-items: flex-end;
@@ -234,8 +262,12 @@
   }
   .hab-insights li:last-child { border-bottom: none; }
 
+  /* Hábitos chart wrapper */
   .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Cotizaciones
+  ══════════════════════════════ */
   .lancer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
   .lancer-stat {
     background: var(--card2);
@@ -250,8 +282,12 @@
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
   .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
 
+  /* Dollar chart wrapper */
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — ROFEX
+  ══════════════════════════════ */
   .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
   .rofex-item {
     background: var(--card2);
@@ -264,6 +300,9 @@
   .rofex-item .val   { font-size: 17px; font-weight: 800; color: var(--text); }
   .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tasas
+  ══════════════════════════════ */
   .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
   .tasa-item {
     background: var(--card2);
@@ -277,6 +316,9 @@
   .tasa-item .t-mensual { font-size: 11px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
   .rofex-item .t-mensual { font-size: 10px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Riesgo País
+  ══════════════════════════════ */
   .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .rp-row:last-child { border-bottom: none; }
   .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
@@ -286,6 +328,9 @@
   .rp-down  { color: var(--success); }
   .rp-neu   { color: var(--warning); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Flujo del día
+  ══════════════════════════════ */
   .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
   .flujo-compra  { background: #eff8ff; border-left: 4px solid var(--blue); }
   .flujo-venta   { background: #fff5f5; border-left: 4px solid var(--danger); }
@@ -296,6 +341,9 @@
   .flujo-venta   .flujo-titulo { color: var(--danger); }
   .flujo-neutral .flujo-titulo { color: #b45309; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Sección labels
+  ══════════════════════════════ */
   .fin-section { margin-bottom: 22px; }
   .fin-section:last-child { margin-bottom: 0; }
   .fin-label {
@@ -314,10 +362,10 @@
     border-radius: 2px;
     flex-shrink: 0;
   }
-  .fin-section p { font-size: 13px; color: #3a4a5e; line-height: 1.7; margin-bottom: 8px; }
-  .fin-section p:last-child { margin-bottom: 0; }
-  .fin-section p strong { color: var(--text); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Recomendación
+  ══════════════════════════════ */
   .recomendacion {
     background: #eff8ff;
     border: 1px solid #bde0f5;
@@ -331,6 +379,9 @@
   }
   .recomendacion strong { color: var(--blue); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tags & Rulos
+  ══════════════════════════════ */
   .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
   .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
 
@@ -339,10 +390,16 @@
   .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
   .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
 
+  /* ══════════════════════════════
+     BRECHAS
+  ══════════════════════════════ */
   .brecha-pos { color: var(--danger); }
   .brecha-neu { color: var(--warning); }
   .brecha-ok  { color: var(--success); }
 
+  /* ══════════════════════════════
+     NOTICIAS
+  ══════════════════════════════ */
   .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .noticia-meta {
@@ -358,6 +415,9 @@
   .noticia-body p:last-child { margin-bottom: 0; }
   .noticia-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     IDEA DE NEGOCIO
+  ══════════════════════════════ */
   .idea-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -406,6 +466,9 @@
   .idea-body ul li { margin-bottom: 6px; }
   .idea-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     FOOTER
+  ══════════════════════════════ */
   footer {
     margin: 0 36px;
     padding: 16px 0 32px;
@@ -416,6 +479,9 @@
     letter-spacing: .03em;
   }
 
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
   @media (max-width: 640px) {
     .body-wrap  { padding: 20px 16px 32px; }
     .site-header { padding: 20px 16px 18px; }
@@ -435,6 +501,7 @@
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
+        <!-- SN Logo -->
         <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -452,11 +519,11 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">viernes 24 de julio de 2026</div>
+          <div class="header-title">lunes 27 de julio de 2026</div>
         </div>
       </div>
       <div class="header-right">
-        <div class="header-week">Semana 30</div>
+        <div class="header-week">Semana 31</div>
         <div class="header-date">Julio 2026</div>
       </div>
     </div>
@@ -468,7 +535,7 @@
     <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Curso de venta y finanzas — con la balanza comercial en récord semestral y más pymes entrando al circuito importador, cuanto mejor manejes finanzas y ventas, mejor vas a poder asesorar y detectar oportunidades reales entre tus clientes de la financiera.</span>
+      <span><strong>Meta del año:</strong> Ver dónde invertir la plata (moto, campo, etc.) — con el BCRA acumulando reservas récord y el campo con margen para liquidar todavía más dólares, es buen momento para mapear alternativas concretas antes de que se acomoden los precios.</span>
     </div>
 
     <!-- TAREAS -->
@@ -476,11 +543,20 @@
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
-        <ul class="task-list"><li>Terminar curso de Claude y de emprender</li><li>Entregar papeles de la operación</li><li>Ver importación de maquinaria</li><li>Pedir buzo a Mariana</li><li>Ver denuncia de venta</li></ul>
+        <ul class="task-list">
+          <li>Terminar curso de Claude y de emprender</li>
+          <li>Entregar papeles de operación</li>
+          <li>Ver importación de maquinaria</li>
+          <li>Pedir buzo a Mariana</li>
+          <li>Ver denuncia de venta</li>
+        </ul>
       </div>
       <div class="card">
         <div class="card-label">Mañana</div>
-        <ul class="task-list"><li>Buzo Farías</li><li>Pagar multa suegra</li></ul>
+        <ul class="task-list">
+          <li>Buzo Farías</li>
+          <li>Pagar multa suegra</li>
+        </ul>
       </div>
     </div>
 
@@ -491,16 +567,8 @@
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Hoy</div>
-          <div class="cal-titulo">Cumple durso</div>
-          <div class="cal-hora">Todo el día</div>
-        </div>
-      </div>
-      <div class="evento-item">
-        <div class="evento-dot"></div>
-        <div class="evento-content">
           <div class="cal-cuando">Miércoles 29/07</div>
-          <div class="cal-titulo">Curso Balanz — evaluar la inversión de bonos</div>
+          <div class="cal-titulo">Curso Balanz: evaluar la inversión de bonos</div>
           <div class="cal-hora">13:00</div>
         </div>
       </div>
@@ -512,6 +580,14 @@
           <div class="cal-hora">Todo el día</div>
         </div>
       </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Martes 04/08</div>
+          <div class="cal-titulo">Mes</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
     </div>
 
     <!-- HÁBITOS -->
@@ -519,13 +595,29 @@
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">61%</div>
+        <div class="hab-pct">47%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Cumplido en lo que va de julio (23 días transcurridos, según planilla de Drive)</div>
+          <div class="hab-sub">Julio viene flojo: ningún hábito llegó al 60% y la carga está parada desde el 23/07.</div>
         </div>
       </div>
-      <ul class="hab-insights"><li>Entrenar sigue en rojo (30%) — la meta explícita del mes es volver a boxeo, y es tu hábito más flojo con diferencia.</li><li>Estudiar 2 horas en 57%, todavía por debajo del 60% mensual que te propusiste.</li><li>Buena racha en Dejar celular 00:00 y Pensar 5 min antes de dormir, ambos en 70%.</li></ul>
-      <div class="hab-grid"><div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">74%</span></div><div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">61%</span></div><div class="hab-item"><span class="hab-name">Trabajar 4hs enfocado</span><span class="badge-w">61%</span></div><div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-w">57%</span></div><div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">70%</span></div><div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">30%</span></div><div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">57%</span></div><div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-g">70%</span></div><div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">70%</span></div></div>
+      <ul class="hab-insights">
+        <li>Entrenar es el punto más débil del mes: 23% (7 de 31 días) — lejos de la meta mínima de 16 días (50%) que te fijaste para julio.</li>
+        <li>La planilla no tiene registro desde el 23/07 — faltan cargar jueves 24 a hoy lunes 27, y hasta que no los cargues cuentan como "no hecho".</li>
+        <li>Estudiar 2 horas está en 45%, todavía lejos del 60% mensual que buscás.</li>
+        <li>Comparado con junio (promedio ~70% en los mismos hábitos), julio cayó fuerte en casi todos los frentes.</li>
+      </ul>
+      <div class="hab-grid">
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-w">58%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">48%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4 horas</span><span class="badge-w">48%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-w">45%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-w">55%</span></div>
+        <div class="hab-item"><span class="hab-name">Entrenar</span><span class="badge-r">23%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">42%</span></div>
+        <div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-w">55%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar antes de dormir</span><span class="badge-w">52%</span></div>
+      </div>
+      <!-- Gráfico hábitos -->
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
       </div>
@@ -534,100 +626,93 @@
     <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
     <div class="card">
-
       <div class="fin-section">
         <div class="fin-label">Cotizaciones del dólar</div>
         <div class="lancer-grid">
-          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.510,00</div><div class="sub">Compra $1.460,00 (BNA)</div></div>
-          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.560,00</div><div class="sub brecha-pos">Compra $1.540,00 · brecha +3,3%</div></div>
-          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.585,84</div><div class="sub brecha-pos">Valor único de mercado · brecha +5,0%</div></div>
-          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.585,31</div><div class="sub brecha-pos">Compra $1.566,88 (Binance P2P) · brecha +5,0%</div></div>
+          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.520</div><div class="sub">Compra $1.470</div></div>
+          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.545</div><div class="sub brecha-neu">Compra $1.525 · +1,6%</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.600</div><div class="sub brecha-pos">+5,3% vs oficial</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.598,80</div><div class="sub brecha-pos">Compra $1.580,34 · +5,2%</div></div>
         </div>
-        <p><strong>BCRA:</strong> completó 130 ruedas consecutivas con saldo comprador, el acumulado 2026 llega a USD 12.773 millones y las reservas superaron los USD 49.000 millones — el nivel más alto de la gestión Milei.</p>
-        <p><strong>Macro que mueve la brecha hoy:</strong> riesgo país en 423 pbs, cayendo 6 pbs en el día (presiona ↓, mejora el carry); BCRA sosteniendo el ritmo comprador (presiona ↓, refuerza confianza); balance comercial semestral en récord con superávit de casi USD 14.000M (presiona →, sostiene el fondo sin mover el corto plazo).</p>
-        <div class="recomendacion"><strong>Recomendación:</strong> con reservas en récord, el BCRA comprando fuerte y el riesgo país cayendo, no hay apuro para dolarizarse hoy — sigue rindiendo más quedarse en pesos a tasa (PF/Lecap por encima del 19-20% TNA). Si necesitás dólares, la brecha vía CCL/USDT (~5%) es más conveniente que ir al blue.</div>
+        <p style="font-size:13px; color:#3a4a5e; margin-bottom:10px;">BCRA: siguió comprando — sumó US$1.406 M en julio y ya lleva US$12.580 M acumulados en 2026. Reservas en el nivel más alto de la gestión Milei: US$49.183 M.</p>
+        <ul style="padding-left:16px; font-size:13px; color:#3a4a5e;">
+          <li style="margin-bottom:6px;">Riesgo país subió a 421 pts (+2,68% vs. cierre anterior) por dudas sobre el déficit fiscal — presiona dólar ↑</li>
+          <li style="margin-bottom:6px;">Milei propuso reformar la Carta Orgánica del BCRA para que su único objetivo sea preservar el valor de la moneda — señal de sostenimiento del ancla → dólar →</li>
+          <li>BCRA sigue comprando reservas a ritmo récord (más oferta de dólares en el mercado) — presiona dólar ↓</li>
+        </ul>
+        <div class="recomendacion"><strong>Recomendación:</strong> con el oficial estable y el BCRA comprando fuerte, no hay urgencia para salir a comprar billete hoy. La brecha con CCL/cripto ronda 5%: si tenés pesos ociosos para dolarizar, hacelo vía CCL/MEP antes que blue. Para vender dólares, no es el mejor momento — esperá algún salto de brecha.</div>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Futuros ROFEX</div>
-        <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">~30 días</div><div class="val">Sin datos</div></div>
-          <div class="rofex-item"><div class="label">~60 días</div><div class="val">Sin datos</div></div>
-          <div class="rofex-item"><div class="label">~90 días</div><div class="val">Sin datos</div></div>
-        </div>
-        <p style="font-size:11px;color:var(--muted);">No se pudo acceder a una cotización puntual de los contratos ROFEX de hoy en las fuentes consultadas (Matba-Rofex, Rava, Ámbito no devolvieron cifras concretas en la búsqueda).</p>
+        <p style="font-size:13px; color:#3a4a5e;">Sin datos confiables de cotización de futuros ROFEX para hoy — las fuentes consultadas no publican precios en tiempo real accesibles. Contexto: con riesgo país en el máximo de julio y el BCRA comprando fuerte, no hay señal pública de una devaluación acelerada esperada en el corto plazo, pero no hay dato concreto de tasa implícita para confirmarlo.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Tasas de referencia</div>
         <div class="tasas-grid">
-          <div class="tasa-item"><div class="t-label">Plazo fijo BNA (digital)</div><div class="t-val">19% TNA</div><span class="t-mensual">1,58%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">21% TNA</div><span class="t-mensual">1,75%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Caución bursátil 7 días</div><div class="t-val">~19% TNA*</div><span class="t-mensual">1,58%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Lecap / Boncap (referencia)</div><div class="t-val">~33% TNA*</div><span class="t-mensual">2,75%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">19% TNA</div><span class="t-mensual">1,58%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">21% TNA</div><div class="t-sub">Banco Provincia</div><span class="t-mensual">1,75%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución bursátil 7d</div><div class="t-val">Sin datos</div><div class="t-sub">no se encontró tasa de hoy</div></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">~36% TNA</div><div class="t-sub">ref. última licitación (2,99% TEM)</div><span class="t-mensual">2,99%/mes</span></div>
         </div>
-        <p style="font-size:11px;color:var(--muted);">*Caución y Lecap/Boncap sin cotización puntual de hoy — referencia de la última data concreta disponible (caución ~mayo, Lecap rango 31-37% TNA de febrero). Tomalo como orden de magnitud, no como dato del día.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Cheques de pago diferido (CPD)</div>
         <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">30 días</div><div class="val">Sin datos</div></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div></div>
-          <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div></div>
+          <div class="rofex-item"><div class="label">30 días</div><div class="val">46,5% TNA</div><span class="t-mensual">3,88%/mes</span></div>
+          <div class="rofex-item"><div class="label">60 días</div><div class="val">46,5% TNA</div><span class="t-mensual">3,88%/mes</span></div>
+          <div class="rofex-item"><div class="label">90 días</div><div class="val">46,5% TNA</div><span class="t-mensual">3,88%/mes</span></div>
         </div>
-        <p>Sin cotización puntual del mercado secundario de CPD hoy. Con la caución de referencia en ~19% TNA y el contexto de reservas en máximos, el crédito de corto plazo debería seguir relativamente accesible.</p>
+        <p style="font-size:13px; color:#3a4a5e;">Tasa promedio del mercado secundario (BYMA), sin discriminar por plazo en la fuente consultada. Subió de 42,9% en junio a 46,5% en julio, mientras los bancos siguen cobrando 60-70%. La suba de tasa en el mercado achica el spread contra bancos, pero también refleja mayor cautela crediticia — más presión sobre el que necesita descontar cheques de clientes poco calificados.</p>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Riesgo país (EMBI+)</div>
         <div class="rp-row">
-          <div class="rp-label">Argentina EMBI+</div>
-          <div class="rp-val rp-down">423 pbs</div>
-          <div class="rp-delta rp-down">-6 pbs en el día</div>
+          <div class="rp-label">Argentina</div>
+          <div class="rp-val">421 pts <span class="rp-delta rp-up">+2,68%</span></div>
         </div>
-        <p>Sigue en zona de mínimos y hoy comprime un poco más. Con el riesgo país bajando, mejora el carry en pesos — es un contexto que favorece sostener posiciones en Lecap/plazo fijo antes que dolarizarse.</p>
+        <p style="font-size:13px; color:#3a4a5e; margin-top:8px;">Máximo de julio, por dudas sobre el déficit fiscal y una caída bursátil global tech. Si sigue subiendo, esperá que más clientes busquen dolarizarse; si baja, se abre ventana de carry en pesos.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Flujo del día — ¿jornada de compra o venta?</div>
+        <div class="fin-label">Flujo del día — ¿compra o venta?</div>
         <div class="flujo-card flujo-neutral">
           <div class="flujo-titulo">Jornada neutral</div>
-          <div class="flujo-body">
-            La brecha se mantiene contenida (~5% contra CCL/USDT) y el contexto de fondo es favorable: reservas en récord, BCRA sosteniendo el ritmo comprador y riesgo país cayendo. No hay estacionalidad relevante hoy (viernes, a un día del pago de sueldos del 25/7, sin vencimientos impositivos destacados). El único ruido viene de afuera — la caída de Wall Street de ayer por la tensión en Medio Oriente— pero no es un driver específico para el peso hoy. Sin urgencia de mover posiciones en ningún sentido.
-          </div>
+          <div class="flujo-body">Señales cruzadas: el BCRA sigue comprando reservas a ritmo récord (más oferta, presiona a la baja), pero el riesgo país tocó el máximo de julio por dudas fiscales (presiona al alza). No es fin de quincena ni hay vencimiento impositivo inmediato que mueva la aguja. La brecha CCL/cripto ronda 5%, estable respecto a la semana pasada — no hay señal de estrés cambiario para operar con apuro hoy.</div>
         </div>
       </div>
 
       <div class="fin-section">
         <div class="fin-label">Rulo del día</div>
         <div class="rulo-item">
-          <div class="rulo-titulo">Oficial → USDT <span class="tag-gris">Requiere exchange cripto</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.510 (venta, BNA) y el USDT en $1.566,88 (compra, Binance P2P) → comprás oficial y vendés USDT. Spread: $56,88 (3,8% de ganancia). Es mejor que el Blue ($30, 2,0%). El CCL no tiene un valor de compra separado y claro en las fuentes de hoy, así que no entra en la comparación. Riesgo: necesitás cuenta en un exchange cripto y pasar por el paso extra de comprar/vender USDT, con la volatilidad puntual (aunque baja) de la criptomoneda de por medio.</div>
+          <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.520 (venta) y el CCL en ~$1.600 → comprás oficial y vendés vía CCL (bonos). Spread: $80 (5,3% de ganancia). Requiere cuenta comitente y operar bonos (GD30/AL30), con liquidación a 48-72hs — no es instantáneo. Segunda opción, más simple pero con menos margen: USDT (compra $1.580,34), spread 3,97%, necesita exchange.</div>
         </div>
       </div>
-
     </div>
 
     <!-- NOTICIAS AR -->
     <div class="sec-title">Argentina</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">Hoydia.com.ar · 20 de julio de 2026 · <a href="https://hoydia.com.ar/economia/exportaciones-comercio-exterior-indec/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Semestre récord en la balanza comercial: superávit de casi USD 14.000 millones</div>
+        <div class="noticia-meta">Argentina.gob.ar · 1 de julio de 2026 · <a href="https://www.argentina.gob.ar/noticias/entro-en-funcionamiento-la-plataforma-importa-pyme" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">El Gobierno puso en marcha "Importa PyME", la ventanilla digital para simplificar importaciones</div>
         <div class="noticia-body">
-          <p>Las exportaciones de junio sumaron USD 9.055 millones (+24,5% interanual) mientras las importaciones llegaron a USD 6.861 millones (+7,3%). Argentina acumula 31 meses consecutivos de saldo comercial positivo, y el semestre cerró con un superávit cercano a los USD 14.000 millones, uno de los mejores resultados de los últimos años.</p>
-          <p>El sector energético fue el gran motor: las exportaciones de combustibles crecieron 42,5% en el semestre hasta USD 7.619 millones, con el petróleo crudo como principal producto (USD 4.693 millones). Del lado de las importaciones, China lideró el origen de las compras con el 22,5%, seguida por Brasil con el 21,5%.</p>
-          <p>Para Santiago esto importa en dos frentes: primero, confirma que hay demanda real y creciente de bienes del exterior en Argentina, algo que suma a favor de cualquier jugada de intermediación o importación que esté evaluando (como la maquinaria agrícola que tiene anotada en Trello). Segundo, con China y Brasil como principales orígenes de importación, cualquier operación de comercio exterior que arme conviene mirarla primero en esos dos mercados por escala y logística ya aceitada.</p>
+          <p>Desde el 1 de julio funciona "Importa PyME", una plataforma de autogestión asistida pensada para dar más agilidad y trazabilidad al proceso de importar. Permite acceder a trámites simplificados dentro del Sistema de Importaciones de la República Argentina (SIRA) y consultar en tiempo real el estado de cada expediente, además de pedir asesoramiento directo. El Gobierno estima que la herramienta va a alcanzar a más de 18.000 empresas que hoy importan insumos, piezas o mercadería para revender.</p>
+          <p>La medida se suma a otro cambio reciente: el Decreto 604/2026 habilitó a las pymes a exportar por correo (courier), algo que antes no estaba permitido y que achica drásticamente el costo de sacar lotes chicos al exterior. En conjunto, son señales de que el Gobierno sigue destrabando fricciones burocráticas del comercio exterior, en línea con la apertura de importaciones que viene empujando desde 2024.</p>
+          <p><strong>Para vos:</strong> si estás mirando meter mano en importación de maquinaria agrícola o cualquier otro rubro (tenés justo esa tarea anotada para hoy), esto reduce directamente el papeleo y los tiempos muertos de nacionalizar mercadería. Para tus clientes de la financiera que importan insumos, es un argumento concreto para asesorarlos: hoy es más barato y rápido operar en blanco que buscar atajos informales.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Argentina.gob.ar · julio de 2026 (inscripción abierta hasta el 31/7) · <a href="https://www.argentina.gob.ar/noticias/el-gobierno-nacional-lanza-emprendimiento-argentino-2026-el-concurso-federal-que-impulsa" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">El Gobierno lanzó "Emprendimiento Argentino 2026", concurso federal para proyectos innovadores</div>
+        <div class="noticia-meta">Argentina.gob.ar · julio de 2026 (inscripción hasta el 31/07) · <a href="https://www.argentina.gob.ar/noticias/el-gobierno-nacional-lanza-emprendimiento-argentino-2026-el-concurso-federal-que-impulsa" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Abrió la inscripción a "Emprendimiento Argentino 2026", el concurso federal para proyectos innovadores</div>
         <div class="noticia-body">
-          <p>El Gobierno nacional abrió la convocatoria a "Emprendimiento Argentino 2026", un concurso federal para reconocer los proyectos más destacados del país, con inscripción abierta hasta el 31 de julio. Los ganadores acceden a mentorías personalizadas, becas de formación ejecutiva y capacitaciones especializadas.</p>
-          <p>Este tipo de iniciativas importa menos por el premio en sí y más por la señal y la puerta de entrada: suelen conectar a los proyectos ganadores con redes de contactos, inversores y programas de aceleración que después sí mueven la aguja, más allá del dinero del concurso.</p>
-          <p>Para Santiago, con una idea de negocio nueva rotando cada semana (esta semana, el escrow digital para granos y hacienda del NOA), vale la pena anotar el 31/7 como fecha límite: aplicar a este tipo de concursos no cuesta nada y puede ser el empujón —contactos, visibilidad o validación— que a un proyecto en etapa de idea le falta antes de poner plata propia.</p>
+          <p>El Gobierno lanzó "Emprendimiento Argentino 2026", un concurso federal que busca visibilizar y premiar proyectos innovadores de todo el país. La inscripción cierra el <strong>31 de julio</strong> — esta semana. Los seleccionados acceden a visibilidad, contactos con inversores y potenciales fondos de apoyo para escalar el proyecto.</p>
+          <p>Este tipo de concursos estatales no suelen mover la aguja en plata dura, pero sí sirven como vidriera: conectan con inversores, medios y otros emprendedores que de otra forma cuesta mucho conseguir. En un contexto donde la economía del conocimiento (software, industrias creativas, servicios financieros) es el sector con más emprendimientos nuevos del país, es una vía barata de exposición si tenés algo armado o casi armado.</p>
+          <p><strong>Para vos:</strong> si alguna de las ideas de negocio que venís laburando (la de esta semana incluida) llega a tener un mínimo de forma para fin de mes, inscribirla no cuesta nada y te da feedback externo gratis. Con el deadline tan cerca, es de las pocas noticias de "hacé algo ya" de este briefing.</p>
         </div>
       </div>
     </div>
@@ -636,73 +721,84 @@
     <div class="sec-title">Internacional</div>
     <div class="card">
       <div class="noticia">
-        <div class="noticia-meta">CNBC · 23 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/23/stock-market-today-live-updates.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Wall Street cerró en baja: petróleo al alza por Medio Oriente y dudas sobre el gasto en IA</div>
+        <div class="noticia-meta">CNBC · 24 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/24/stock-market-next-week-outlook-for-july-27-31-2026.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Wall Street arranca la semana en alza: baja el petróleo y se viene una ronda fuerte de balances</div>
         <div class="noticia-body">
-          <p>Los tres índices principales cerraron en baja el jueves 23: el Dow Jones perdió 506,93 puntos (-0,97%), el S&P 500 cayó 1,21% y el Nasdaq se desplomó 2,15%. Dos frentes explican la caída: una escalada del conflicto en Medio Oriente que disparó el precio del petróleo, y una temporada de balances que generó dudas puntuales sobre el gasto en inteligencia artificial.</p>
-          <p>Alphabet cayó 7% pese a resultados sólidos, porque el mercado se enfocó en el aumento proyectado de inversión en IA (capex) más que en las ganancias. Tesla se hundió 14% tras un informe de resultados débil.</p>
-          <p>Para Santiago esto es una muestra de cómo el mercado está premiando resultados concretos y castigando promesas de gasto futuro sin traducción inmediata en rentabilidad — un criterio útil para pensar cualquier CEDEAR de tecnología que tenga en la mira: no alcanza con "estar en IA", el mercado hoy exige mostrar el retorno concreto de esa apuesta.</p>
+          <p>Los futuros de Wall Street subieron con fuerza para el arranque de la semana del 27 al 31 de julio: el Dow ganaba 610 puntos (+1,2%), el S&P 500 +0,9% y el Nasdaq-100 +1,4%. El impulso vino de una pausa en los combates entre EE.UU. e Irán durante el fin de semana, que hizo retroceder al petróleo: el Brent cayó 6,2% a US$90,79 y el WTI 5,7% a US$84,2 el barril.</p>
+          <p>De fondo, la temporada de balances viene fuerte: FactSet proyecta que las empresas del S&P 500 muestren un crecimiento de ganancias interanual del 38% en el segundo trimestre, un número muy por encima del promedio histórico. Esta semana además hay una reunión de la Reserva Federal que el mercado mira con atención por si hay sorpresas en la tasa.</p>
+          <p><strong>Para vos:</strong> un petróleo más barato es buena noticia para la inflación importada argentina (combustibles, fletes) y para el equilibrio fiscal si el país sigue importando energía neta. Para tu cartera de CEDEARs, una temporada de balances tan fuerte en EE.UU. sostiene el momentum de las tech americanas, aunque valuaciones ya exigentes dejan menos margen de error si algún balance decepciona.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">CNBC · 23 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/23/stock-market-today-live-updates.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Oracle e Intel, las dos historias que se destacaron en medio de la caída del mercado</div>
+        <div class="noticia-meta">CNBC · 17 de julio de 2026 · <a href="https://www.cnbc.com/2026/07/17/homebuyer-affordability.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">El mercado inmobiliario de EE.UU. sufre: la tasa hipotecaria más alta en casi un año y la confianza de constructoras en mínimos</div>
         <div class="noticia-body">
-          <p>En medio de la jornada roja, dos historias corporativas se destacaron por motivos distintos. Oracle subió casi 3% después de confirmar un contrato de software con el Pentágono a 10 años, por hasta USD 7.000 millones. Intel subió 3,6% en pre-market tras resultados del segundo trimestre mejores a lo esperado y una guía para el tercer trimestre que superó las proyecciones del mercado.</p>
-          <p>Estas dos noticias muestran que, incluso en una jornada roja para los índices, el mercado sigue premiando con fuerza a las compañías que entregan resultados concretos o contratos grandes y verificables, no promesas.</p>
-          <p>Para Santiago, que mira CEDEARs como parte de su estrategia de inversión, es un dato más a favor de mirar más allá del índice general: en mercados volátiles como el actual (con petróleo subiendo por tensión geopolítica), las historias individuales de compañías con catalizadores concretos pueden moverse en la dirección contraria al mercado.</p>
+          <p>La tasa hipotecaria a 30 años subió a 6,65%, la más alta desde agosto de 2025, y la accesibilidad para comprar vivienda cayó por quinto mes consecutivo. El índice de confianza de las constructoras bajó a 34 puntos en julio (venía de 36 en junio), y ya lleva 15 meses seguidos por debajo de 40 — la racha más larga desde 2012. Land caro, materiales en alza y falta de mano de obra calificada siguen golpeando al sector.</p>
+          <p>Un dato paralelo llamativo: las viviendas en manos de inversores institucionales puestas en venta más que se duplicaron desde febrero, después de que una nueva ley les prohibiera seguir comprando casas salvo excepciones puntuales (como construir para alquilar). Es un cambio regulatorio de fondo en cómo el capital institucional participa del mercado residencial norteamericano.</p>
+          <p><strong>Para vos:</strong> es una señal de que el ciclo de tasas altas en EE.UU. todavía pesa fuerte sobre el real estate, justo un sector que te interesa. Si en algún momento pensás en exposición a real estate americano (REITs, CEDEARs del sector), este no es el momento de entrar buscando rebote — el ciclo bajista de construcción todavía no tocó piso.</p>
+        </div>
+      </div>
+      <div class="noticia">
+        <div class="noticia-meta">TechCrunch · 5 de julio de 2026 · <a href="https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Van casi 90 nuevos unicornios en lo que va de 2026, la mayoría ligados a IA</div>
+        <div class="noticia-body">
+          <p>Con datos de Crunchbase y PitchBook, TechCrunch contabilizó casi 90 startups que alcanzaron valuación de unicornio (US$1.000M+) en lo que va de 2026. La mayoría son de inteligencia artificial, pero sorprende la cantidad que viene de otros rubros: salud y hasta un puñado de cripto. En paralelo, siguen apareciendo rondas gigantes fuera del software puro — un caso destacado es Valar Atomics, una startup de energía nuclear que está en tratativas para levantar una ronda que la valuaría en US$6.000M.</p>
+          <p>El artículo también marca una tendencia a mirar con lupa: rondas cada vez más complejas y en múltiples etapas que terminan disimulando el precio real de entrada de cada inversor, algo que complica comparar valuaciones "a simple vista" entre startups.</p>
+          <p><strong>Para vos:</strong> el ritmo de creación de unicornios sigue firme pese a tasas altas en EE.UU., lo que confirma que el capital de riesgo global sigue con apetito — especialmente en IA aplicada a sectores tradicionales (energía, salud), no solo software. Es el mismo patrón que podés buscar en chico para Argentina: aplicar IA a un sector tradicional donde nadie más lo está haciendo todavía (agro, financiera, pymes).</p>
         </div>
       </div>
     </div>
 
     <!-- IDEA SEMANAL -->
-    <div class="sec-title">Idea de negocio — semana 30</div>
+    <div class="sec-title">Idea de negocio — semana 31</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
-      <div class="idea-titulo">Escrow digital para operaciones de granos y hacienda en el NOA</div>
-      <div class="idea-body"><h3>Qué es</h3>
-<p>Un servicio de escrow (custodia de pago) digital para operaciones de compraventa de granos y hacienda entre productores chicos y medianos del NOA que hoy operan "de palabra" o con cheques diferidos sin ninguna garantía de que la mercadería entregada coincida con lo pactado (calidad, peso, plazo de pago). Vos actuás como tercero neutral: el comprador deposita el pago en una cuenta custodia, un verificador independiente confirma la entrega y la calidad, y recién ahí se libera el pago al vendedor. Reduce el riesgo de estafa y de default en operaciones informales que hoy se resuelven por confianza personal o aval bancario caro.</p>
+      <div class="idea-titulo">Garante profesional para arrendamientos rurales del NOA</div>
+      <div class="idea-body">
+        <h3>Qué es</h3>
+        <p>Un servicio de garantía/aval profesional para contratos de arrendamiento de campos, feedlots o galpones de acopio en el NOA. Hoy, cuando un productor chico o mediano quiere arrendar un campo, el propietario o la inmobiliaria rural le exige un garante con patrimonio — y muchos arrendatarios jóvenes o en expansión no tienen uno confiable a mano. Vos ocupás ese lugar: evaluás el riesgo crediticio del arrendatario con la misma lógica que usás en la financiera (historial de pago, superficie sembrada, rendimiento histórico) y cobrás una comisión por avalar el contrato, asumiendo (o reasegurando) ese riesgo.</p>
 
-<h3>Por qué ahora</h3>
-<ul>
-  <li><strong>El campo del NOA mueve muchas operaciones chicas que quedan atadas a la palabra:</strong> productores de menos de 500 hectáreas y feedlots chicos no acceden a mercados de futuros ni SGR, y dependen de la confianza personal con el comprador.</li>
-  <li><strong>El sistema financiero está más digitalizado que nunca:</strong> con transferencias instantáneas y cuentas remuneradas, armar un escrow simple (cuenta custodia + verificador) es más barato y rápido que hace unos años.</li>
-  <li><strong>El contexto cambiario da previsibilidad:</strong> con el BCRA acumulando reservas a ritmo récord (mayor racha compradora en 25 años) y la brecha oficial-blue en mínimos (~2%), un servicio que cobra comisión en pesos no corre el riesgo de que una devaluación brusca licue el negocio a mitad de operación.</li>
-  <li><strong>Tu experiencia en riesgo crediticio es la ventaja:</strong> diseñar las reglas de liberación de pago (qué documentación exigir, cómo verificar calidad y peso) te sale más natural que a un desarrollador sin trayectoria en el campo o en financiera.</li>
-</ul>
+        <h3>Por qué ahora</h3>
+        <ul>
+          <li><strong>El campo está rotando y ampliando arriendo:</strong> con el BCRA acumulando reservas a ritmo récord y todavía margen de liquidación del agro, hay más movimiento de contratos de arrendamiento en el corto plazo.</li>
+          <li><strong>La banca tradicional exige garantías patrimoniales rígidas</strong> que muchos productores en crecimiento no pueden ofrecer, dejando un hueco entre "aval de un familiar" y "garantía bancaria formal".</li>
+          <li><strong>Tu expertise en riesgo crediticio es la ventaja directa:</strong> diseñar un scoring simple para decidir a quién avalar y en qué condiciones es exactamente lo que hacés hoy en la financiera, aplicado a un activo distinto (tierra en vez de cheques o préstamos).</li>
+        </ul>
 
-<h3>Cómo arrancarla</h3>
-<ul>
-  <li><strong>Paso 1 — Mapear el problema real (0 USD, 2-3 semanas):</strong> hablar con 8-10 productores, acopiadores y feedlots del NOA sobre cómo cierran hoy sus operaciones y qué fricciones tienen (impagos, mercadería no conforme, cheques rechazados).</li>
-  <li><strong>Paso 2 — Diseñar el proceso mínimo, manual al inicio:</strong> una cuenta bancaria o de fintech como custodia, y un verificador de confianza (ingeniero agrónomo o veterinario freelance) que confirme la entrega antes de liberar el pago.</li>
-  <li><strong>Paso 3 — Piloto con 3-5 operaciones reales (USD 2.000-20.000 cada una):</strong> cobrar una comisión simbólica o nada al inicio, para validar el proceso y conseguir casos de éxito.</li>
-  <li><strong>Paso 4 — Digitalizar lo mínimo indispensable (USD 3.000-6.000):</strong> una app o formulario simple donde ambas partes suban documentación y el verificador confirme, con la plata quieta en la cuenta hasta la liberación.</li>
-  <li><strong>Paso 5 — Escalar con comisión por operación (3-6 meses):</strong> sumar más acopiadores y feedlots de la zona una vez validado el modelo.</li>
-</ul>
+        <h3>Cómo arrancarla</h3>
+        <ul>
+          <li><strong>Paso 1 — Mapear el problema (0 USD, 2-3 semanas):</strong> hablar con 8-10 propietarios, inmobiliarias rurales y arrendatarios del NOA sobre qué garantías exigen hoy y dónde se traba más seguido una operación.</li>
+          <li><strong>Paso 2 — Diseñar el scoring de riesgo del arrendatario:</strong> qué documentación pedís, cómo pondera historial de pago, superficie y rendimiento histórico.</li>
+          <li><strong>Paso 3 — Piloto con 2-3 contratos reales:</strong> cobrar una comisión baja o simbólica al inicio para validar el proceso con inmobiliarias rurales de referencia.</li>
+          <li><strong>Paso 4 — Formalizar el instrumento legal:</strong> una fianza solidaria notarial simple, o evaluar reasegurar el riesgo con una aseguradora vía póliza de caución.</li>
+          <li><strong>Paso 5 — Escalar sumando inmobiliarias rurales y acopiadores de la zona como canal de derivación.</strong></li>
+        </ul>
 
-<h3>Modelo de ingreso</h3>
-<p>Comisión de 0,5%-1,5% sobre el monto de cada operación custodiada. Con operaciones promedio de USD 10.000-30.000 (venta de un lote chico de granos o de hacienda), una comisión del 1% son USD 100-300 por operación. Con 15-20 operaciones mensuales una vez validado el modelo, estimás <strong>~USD 2.000-4.000/mes de ingreso</strong> con costo marginal bajo — el verificador de campo es el único costo variable relevante.</p>
+        <h3>Modelo de ingreso</h3>
+        <p>Comisión de 3%-5% sobre el valor anual del contrato de arrendamiento garantizado. Con arriendos promedio de campo mediano en el NOA de USD 15.000-40.000 al año, una comisión del 4% son USD 600-1.600 por contrato. Con 10-15 contratos activos (se renuevan año a año, así que el ingreso se acumula), estimás <strong>~USD 8.000-20.000/año</strong> de ingreso recurrente con costo marginal bajo.</p>
 
-<h3>Riesgos principales</h3>
-<ul>
-  <li><strong>Adopción lenta:</strong> el campo funciona a pura confianza y puede resistirse a "pagarle a un tercero" por algo que hoy resuelve gratis (con el riesgo que eso implica).</li>
-  <li><strong>La verificación de calidad es el punto débil:</strong> necesitás verificadores confiables en terreno, y un error de verificación te expone a un reclamo.</li>
-  <li><strong>Escala geográfica limitada al principio:</strong> a diferencia de un negocio de software puro, acá necesitás presencia física en cada zona, no es 100% remoto.</li>
-</ul>
+        <h3>Riesgos principales</h3>
+        <ul>
+          <li><strong>Exposición directa como garante:</strong> si el arrendatario hace default, respondés vos — necesitás reservar capital propio o reasegurar con una aseguradora desde el día uno.</li>
+          <li><strong>Adopción lenta:</strong> el campo suele resolver esto con avales informales (familia, conocidos) y puede resistirse a pagar por algo que hoy "se arregla de palabra".</li>
+          <li><strong>Requiere reputación:</strong> una inmobiliaria o propietario tiene que confiar en tu aval tanto como en uno personal, y eso se construye con casos de éxito, no de entrada.</li>
+        </ul>
 
-<h3>Esfuerzo/inversión inicial</h3>
-<p>Inversión piloto: <strong>USD 3.000-6.000</strong> (desarrollo mínimo + honorarios de verificadores en los primeros casos). Tiempo: 6-8 horas semanales los primeros 2-3 meses en entrevistas y armado del proceso manual antes de digitalizar. No requiere dejar la financiera — tu rol ahí te da acceso directo a productores y acopiadores que hoy ya son tus contactos.</p></div>
+        <h3>Esfuerzo/inversión inicial</h3>
+        <p>Inversión: <strong>USD 2.000-5.000</strong> (asesoría legal para el instrumento de fianza + capital de reserva para los primeros avales). Tiempo: 6-8 horas semanales los primeros meses en entrevistas y armado del scoring. No requiere dejar la financiera — tu cartera de clientes ahí ya te da acceso directo a productores y propietarios rurales que hoy necesitan exactamente esto.</p>
+      </div>
     </div>
 
   </div><!-- /body-wrap -->
 
-  <footer>Generado 24/07/2026 10:42 · Agente personal SN</footer>
+  <footer>Generado 27/07/2026 13:11 · Agente personal SN</footer>
 
   <!-- ══ CHARTS JS ══ -->
   <script>
   (function() {
     function initCharts() {
 
+      /* ── Hábitos chart ── */
       var habEl = document.getElementById('habChart');
       if (habEl) {
         var items = document.querySelectorAll('.hab-item');
@@ -777,6 +873,7 @@
         }
       }
 
+      /* ── Dólar chart ── */
       var dolarEl = document.getElementById('dolarChart');
       if (dolarEl) {
         var stats = document.querySelectorAll('.lancer-stat');
