@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — miércoles 19 de agosto de 2026</title>
+  <title>Briefing — 21 de agosto de 2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -43,6 +43,9 @@
     margin: 0 auto;
   }
 
+  /* ══════════════════════════════
+     HEADER — dark premium
+  ══════════════════════════════ */
   .site-header {
     background: var(--grad-s);
     padding: 28px 36px 22px;
@@ -75,6 +78,7 @@
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
 
+  /* SN Logo */
   .sn-logo { flex-shrink: 0; display: block; }
 
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
@@ -90,8 +94,14 @@
     position: relative; z-index: 1;
   }
 
+  /* ══════════════════════════════
+     BODY
+  ══════════════════════════════ */
   .body-wrap { padding: 32px 36px 48px; }
 
+  /* ══════════════════════════════
+     META ROTATIVA
+  ══════════════════════════════ */
   .meta-rotativa {
     background: var(--grad);
     border-radius: 10px;
@@ -108,6 +118,9 @@
   .meta-rotativa strong { color: #ffffff; font-weight: 700; }
   .meta-icon { font-size: 18px; flex-shrink: 0; }
 
+  /* ══════════════════════════════
+     SECTION TITLES
+  ══════════════════════════════ */
   .sec-title {
     font-size: 10px;
     font-weight: 700;
@@ -130,6 +143,9 @@
     flex-shrink: 0;
   }
 
+  /* ══════════════════════════════
+     CARDS
+  ══════════════════════════════ */
   .card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -147,8 +163,14 @@
     margin-bottom: 14px;
   }
 
+  /* ══════════════════════════════
+     GRID 2
+  ══════════════════════════════ */
   .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 0; }
 
+  /* ══════════════════════════════
+     TAREAS
+  ══════════════════════════════ */
   .task-list { list-style: none; }
   .task-list li {
     padding: 8px 0;
@@ -170,6 +192,9 @@
     line-height: 1.25;
   }
 
+  /* ══════════════════════════════
+     CALENDARIO
+  ══════════════════════════════ */
   .evento-item {
     padding: 12px 0;
     border-bottom: 1px solid var(--border);
@@ -195,6 +220,9 @@
   .cal-titulo { font-size: 14px; font-weight: 600; margin-bottom: 1px; color: var(--text); }
   .cal-hora   { font-size: 11px; color: var(--muted); }
 
+  /* ══════════════════════════════
+     HÁBITOS
+  ══════════════════════════════ */
   .hab-summary {
     display: flex;
     align-items: flex-end;
@@ -234,8 +262,12 @@
   }
   .hab-insights li:last-child { border-bottom: none; }
 
+  /* Hábitos chart wrapper */
   .chart-wrap { position: relative; height: 200px; margin-top: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Cotizaciones
+  ══════════════════════════════ */
   .lancer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
   .lancer-stat {
     background: var(--card2);
@@ -250,8 +282,12 @@
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
   .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
 
+  /* Dollar chart wrapper */
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — ROFEX
+  ══════════════════════════════ */
   .rofex-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 8px; }
   .rofex-item {
     background: var(--card2);
@@ -264,6 +300,9 @@
   .rofex-item .val   { font-size: 17px; font-weight: 800; color: var(--text); }
   .rofex-item .tna   { font-size: 10px; color: var(--muted); margin-top: 3px; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tasas
+  ══════════════════════════════ */
   .tasas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-bottom: 8px; }
   .tasa-item {
     background: var(--card2);
@@ -277,6 +316,9 @@
   .tasa-item .t-mensual { font-size: 11px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
   .rofex-item .t-mensual { font-size: 10px; font-weight: 600; color: var(--blue-lt); margin-top: 2px; display: block; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Riesgo País
+  ══════════════════════════════ */
   .rp-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
   .rp-row:last-child { border-bottom: none; }
   .rp-label { font-size: 12px; color: var(--muted); width: 150px; flex-shrink: 0; }
@@ -286,6 +328,9 @@
   .rp-down  { color: var(--success); }
   .rp-neu   { color: var(--warning); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Flujo del día
+  ══════════════════════════════ */
   .flujo-card  { border-radius: 8px; padding: 14px 16px; margin-top: 6px; }
   .flujo-compra  { background: #eff8ff; border-left: 4px solid var(--blue); }
   .flujo-venta   { background: #fff5f5; border-left: 4px solid var(--danger); }
@@ -296,6 +341,9 @@
   .flujo-venta   .flujo-titulo { color: var(--danger); }
   .flujo-neutral .flujo-titulo { color: #b45309; }
 
+  /* ══════════════════════════════
+     FINANCIERA — Sección labels
+  ══════════════════════════════ */
   .fin-section { margin-bottom: 22px; }
   .fin-section:last-child { margin-bottom: 0; }
   .fin-label {
@@ -315,6 +363,9 @@
     flex-shrink: 0;
   }
 
+  /* ══════════════════════════════
+     FINANCIERA — Recomendación
+  ══════════════════════════════ */
   .recomendacion {
     background: #eff8ff;
     border: 1px solid #bde0f5;
@@ -328,6 +379,9 @@
   }
   .recomendacion strong { color: var(--blue); }
 
+  /* ══════════════════════════════
+     FINANCIERA — Tags & Rulos
+  ══════════════════════════════ */
   .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
   .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
 
@@ -336,10 +390,16 @@
   .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
   .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
 
+  /* ══════════════════════════════
+     BRECHAS
+  ══════════════════════════════ */
   .brecha-pos { color: var(--danger); }
   .brecha-neu { color: var(--warning); }
   .brecha-ok  { color: var(--success); }
 
+  /* ══════════════════════════════
+     NOTICIAS
+  ══════════════════════════════ */
   .noticia { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid var(--border); }
   .noticia:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
   .noticia-meta {
@@ -355,6 +415,9 @@
   .noticia-body p:last-child { margin-bottom: 0; }
   .noticia-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     IDEA DE NEGOCIO
+  ══════════════════════════════ */
   .idea-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -403,6 +466,9 @@
   .idea-body ul li { margin-bottom: 6px; }
   .idea-body strong { color: var(--text); font-weight: 600; }
 
+  /* ══════════════════════════════
+     FOOTER
+  ══════════════════════════════ */
   footer {
     margin: 0 36px;
     padding: 16px 0 32px;
@@ -413,6 +479,9 @@
     letter-spacing: .03em;
   }
 
+  /* ══════════════════════════════
+     RESPONSIVE
+  ══════════════════════════════ */
   @media (max-width: 640px) {
     .body-wrap  { padding: 20px 16px 32px; }
     .site-header { padding: 20px 16px 18px; }
@@ -428,9 +497,11 @@
 </head>
 <body>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
+        <!-- SN Logo -->
         <svg class="sn-logo" viewBox="0 0 60 60" width="60" height="60" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="sn-g" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -448,12 +519,12 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">miércoles 19 de agosto de 2026</div>
+          <div class="header-title">viernes 21 de agosto de 2026</div>
         </div>
       </div>
       <div class="header-right">
         <div class="header-week">Semana 34</div>
-        <div class="header-date">agosto 2026</div>
+        <div class="header-date">Agosto 2026</div>
       </div>
     </div>
     <div class="header-bar"></div>
@@ -461,22 +532,24 @@
 
   <div class="body-wrap">
 
+    <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Curso de venta y finanzas</span>
+      <span><strong>Meta del año:</strong> Ver dónde invertir la plata (moto, campo, etc)</span>
     </div>
 
+    <!-- TAREAS -->
     <div class="sec-title">Tareas</div>
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
         <ul class="task-list">
+          <li>Pagar nuevo curso</li>
           <li>Terminar curso de Claude y de emprender</li>
           <li>Llevar chaleco a Juan</li>
           <li>Hacer agente de IA de finanzas para mí</li>
           <li>Estudiar parte legal de cheques</li>
           <li>Estudiar dólar</li>
-          <li>Terminar el curso y calculadoras de renta fija</li>
           <li>Llamar al IRS</li>
         </ul>
       </div>
@@ -489,208 +562,182 @@
       </div>
     </div>
 
+    <!-- CALENDARIO -->
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
       <div class="evento-item">
+        <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-titulo">Sin datos</div>
-          <div class="cal-hora">No se pudo conectar Google Calendar en esta sesión — sin acceso a la agenda hoy.</div>
+          <div class="cal-cuando">Hoy</div>
+          <div class="cal-titulo">Cumpleaños Paquito</div>
+          <div class="cal-hora">Todo el día</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Viernes 28/08</div>
+          <div class="cal-titulo">Cumpleaños de Povi</div>
+          <div class="cal-hora">13:00</div>
+        </div>
+      </div>
+      <div class="evento-item">
+        <div class="evento-dot"></div>
+        <div class="evento-content">
+          <div class="cal-cuando">Lunes 31/08</div>
+          <div class="cal-titulo">Fecha límite para TP 1 y 2</div>
+          <div class="cal-hora">Todo el día</div>
         </div>
       </div>
     </div>
 
-    <div class="sec-title">Hábitos — agosto 2026</div>
+    <!-- HÁBITOS -->
+    <div class="sec-title">Hábitos — Agosto 2026</div>
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">31,5%</div>
+        <div class="hab-pct">42%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Promedio de los 9 hábitos trackeados — último dato cargado en la planilla: 13/08 (6 días sin actualizar)</div>
+          <div class="hab-sub">Promedio de cumplimiento en lo que va de agosto (dato al 20/08, último día cargado).</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li>Racha activa 09/08–13/08 (5 días): Leer inversiones, Leer 10 páginas y Dejar celular a las 00:00.</li>
-        <li>Salir a caminar / fisio sigue en rojo (9,7%), el más bajo del mes — reemplazo de "Entrenar" tras la operación de hombro que no termina de despegar.</li>
-        <li>Estudiar 2 hs en 25,8%, lejos del objetivo mensual de 60% (18 de 31 días) — mejor que el mes pasado (19,4%), pero la planilla lleva 6 días sin actualizarse: cargá los últimos días para tener el dato real de hoy.</li>
+        <li>Ayer (20/08) fue un día en blanco: 0 de 9 hábitos cumplidos, el segundo del mes tras el 16/08.</li>
+        <li>El 18 y 19/08 fueron los mejores días del mes: 8 de 9 hábitos cumplidos (89%) en ambas jornadas.</li>
+        <li>Salir a caminar / fisio sigue siendo el punto más débil: apenas 3 días en todo agosto (9,7%) y ninguno en las últimas dos semanas.</li>
+        <li>Estudiar 2 horas está en 38,7%, lejos del objetivo mensual del 60%.</li>
       </ul>
       <div class="hab-grid">
-        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-w">38,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">38,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Trabajar 4 hs</span><span class="badge-w">38,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Estudiar 2 hs</span><span class="badge-r">25,8%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-r">29,0%</span></div>
-        <div class="hab-item"><span class="hab-name">Caminar / fisio</span><span class="badge-r">9,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">32,3%</span></div>
-        <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-w">35,5%</span></div>
-        <div class="hab-item"><span class="hab-name">Pensar antes de dormir</span><span class="badge-w">35,5%</span></div>
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-w">51.6%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-w">51.6%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4 horas</span><span class="badge-w">48.4%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2 horas</span><span class="badge-r">38.7%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-w">45.2%</span></div>
+        <div class="hab-item"><span class="hab-name">Caminar / fisio</span><span class="badge-r">9.7%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">41.9%</span></div>
+        <div class="hab-item"><span class="hab-name">Dejar celular 00:00</span><span class="badge-w">45.2%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-w">45.2%</span></div>
       </div>
+      <!-- Gráfico hábitos -->
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
       </div>
     </div>
 
+    <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
     <div class="card">
-
       <div class="fin-section">
-        <div class="fin-label">Cotizaciones del dólar</div>
+        <div class="fin-label">A. Cotizaciones del dólar</div>
         <div class="lancer-grid">
-          <div class="lancer-stat">
-            <div class="label">Oficial</div>
-            <div class="val">$1.515,00</div>
-            <div class="sub">Compra $1.469,55</div>
-          </div>
-          <div class="lancer-stat">
-            <div class="label">Blue</div>
-            <div class="val">$1.555,00</div>
-            <div class="sub brecha-neu">Compra $1.508,35 · brecha +2,6%</div>
-          </div>
-          <div class="lancer-stat">
-            <div class="label">CCL</div>
-            <div class="val">$1.580,76</div>
-            <div class="sub brecha-pos">Sin desagregado de compra · brecha +4,3%</div>
-          </div>
-          <div class="lancer-stat">
-            <div class="label">USDT</div>
-            <div class="val">$1.581,79</div>
-            <div class="sub brecha-pos">Compra $1.563,36 · brecha +4,4%</div>
-          </div>
+          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.520,00</div><div class="sub">Compra $1.470,00</div></div>
+          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.555,00</div><div class="sub">Compra $1.508,35</div></div>
+          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.588,54</div><div class="sub">Compra $1.581,49</div></div>
+          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.583,79</div><div class="sub">Compra $1.565,07</div></div>
         </div>
-        <p style="font-size:13px;color:#3a4a5e;margin-bottom:8px;">Brecha calculada contra el oficial venta ($1.515). Fuentes: Banco Nación (oficial), La Nación/Infobae (blue), Rionegro/Cronista (CCL), Binance P2P (USDT) — miércoles 19/08.</p>
-        <p style="font-size:13px;color:#3a4a5e;margin-bottom:8px;"><strong>BCRA:</strong> compró — absorbió USD 15 M en el mercado spot (apenas 3,4% de la oferta del día). Las reservas brutas subieron USD 410 M y volvieron a superar los USD 50.000 M (USD 50.002 M), impulsadas en parte por la suba de 3,2% del oro. En 2026 el BCRA ya acumuló compras por USD 9.102 M, el 91% de la meta anual.</p>
-        <p style="font-size:13px;color:#3a4a5e;">Noticias que pueden mover el tipo de cambio:</p>
-        <ul style="padding-left:16px;font-size:13px;color:#3a4a5e;">
-          <li>Reservas en récord y meta BCRA 2026 casi cumplida (91%) → presiona dólar ↓</li>
-          <li>Riesgo país saltó +22 puntos (+4,5%) en un día y tocó el máximo en 3 meses → presiona dólar ↑</li>
-          <li>Reforma de la Carta Orgánica del BCRA avanza en el Congreso (le prohibiría financiar al Tesoro) → presiona dólar → (efecto de mediano plazo, no hoy)</li>
-        </ul>
-        <div class="recomendacion"><strong>Recomendación:</strong> con brecha todavía contenida (2,6%-4,4%) y reservas en récord no hay urgencia por dolarizarse en el día a día. Pero el salto brusco del riesgo país (+22 pb, máximo en 3 meses) es la señal a vigilar de cerca los próximos días — si se traslada al blue/CCL, ahí sí conviene adelantar la cobertura en vez de esperar.</div>
+        <p style="font-size:12px; color:var(--muted); margin-bottom:10px;">Brecha vs. Oficial (venta $1.520): Blue <span class="brecha-neu">+2,3%</span> · CCL <span class="brecha-pos">+4,5%</span> · USDT <span class="brecha-pos">+4,2%</span>. Fuente: Dolarito.ar y Binance P2P — finanzasargy.com no respondió (error 403) al momento de armar el briefing.</p>
+        <p style="font-size:13px; margin-bottom:8px;"><strong>BCRA:</strong> compró dólares pero bajó el ritmo a USD 28M/día para contener el tipo de cambio; reservas en USD 50.002 millones, el segundo nivel más alto de la gestión Milei y el mayor en casi 7 años. El mayorista subió a $1.497, +0,8% acumulado en agosto (máximo desde el 7/08).</p>
+        <p style="font-size:13px; margin-bottom:4px;"><strong>Noticias macro:</strong></p>
+        <p style="font-size:13px; margin-bottom:4px;">BCRA reduce el ritmo de compras diarias para frenar al oficial → presiona <span class="brecha-ok">↓</span></p>
+        <p style="font-size:13px; margin-bottom:4px;">Reservas en máximo de casi 7 años (USD 50.002M) → refuerza confianza, presiona <span class="brecha-ok">↓</span></p>
+        <p style="font-size:13px; margin-bottom:0;">Mayorista sube 0,8% en el mes pese a la calma cambiaria → presión de fondo <span class="brecha-pos">↑</span></p>
+        <div class="recomendacion"><strong>Recomendación:</strong> con reservas en máximos y brecha comprimida (2-4%), no hay urgencia para dolarizarse hoy. Con pesos ociosos rinde más quedarse en tasas cortas (cauciones/Lecap) que forzar un arbitraje cambiario. Si necesitás cobertura, el CCL es el canal con mejor spread relativo del día.</div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Futuros ROFEX</div>
-        <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">30 días</div><div class="val">Sin datos</div><div class="tna">Sin pizarra de cierre confiable hoy</div></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div><div class="tna">Sin pizarra de cierre confiable hoy</div></div>
-          <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div><div class="tna">Sin pizarra de cierre confiable hoy</div></div>
-        </div>
-        <p style="font-size:13px;color:#3a4a5e;">No se encontró cotización de cierre verificable de ROFEX para hoy. Contexto: con el riesgo país en alza el mercado sigue demandando cobertura cambiaria de cara a lo que resta del año electoral.</p>
+        <div class="fin-label">B. Futuros ROFEX</div>
+        <p style="font-size:13px;">Sin datos intradía de los contratos a 30/60/90 días — Matba-Rofex y Ámbito no devolvieron cotización en tiempo real en la búsqueda de hoy. Con el mayorista firme (+0,8% en agosto) y el BCRA frenando el ritmo de compras, no se ve por ahora una señal de fuerte expectativa devaluatoria de corto plazo.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Tasas de referencia</div>
+        <div class="fin-label">C. Tasas de referencia</div>
         <div class="tasas-grid">
-          <div class="tasa-item">
-            <div class="t-label">Plazo fijo BNA</div>
-            <div class="t-val">19% TNA</div>
-            <span class="t-mensual">1,58%/mes</span>
-          </div>
-          <div class="tasa-item">
-            <div class="t-label">Plazo fijo privados (mejor tasa)</div>
-            <div class="t-val">19,5% TNA</div>
-            <span class="t-mensual">1,63%/mes</span>
-            <div class="t-sub">Banco Provincia, líder entre entidades grandes</div>
-          </div>
-          <div class="tasa-item">
-            <div class="t-label">Caución bursátil</div>
-            <div class="t-val">19,46% TNA</div>
-            <span class="t-mensual">1,62%/mes</span>
-            <div class="t-sub">Dato de caución a 1 día — sin cotización puntual a 7 días para hoy</div>
-          </div>
-          <div class="tasa-item">
-            <div class="t-label">Lecap / Boncap</div>
-            <div class="t-val">31%-37% TNA</div>
-            <div class="t-sub">Rango de mercado de referencia — sin TNA puntual de hoy</div>
-          </div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo BNA (30d)</div><div class="t-val">19% TNA</div><span class="t-mensual">1.58%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">21% TNA</div><div class="t-sub">Banco Provincia, no clientes — online sube hasta 23%</div><span class="t-mensual">1.75%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución bursátil 7d</div><div class="t-val">Sin dato hoy</div><div class="t-sub">Última referencia BYMA (1 día) ~19-20% TNA, dato de mayo/26 — no representativo de hoy</div></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap (ref.)</div><div class="t-val">~25% TNA</div><div class="t-sub">Lecap corta, vto. nov-26</div><span class="t-mensual">2.0%/mes</span></div>
         </div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Cheques de pago diferido (CPD)</div>
-        <p style="font-size:13px;color:#3a4a5e;margin-bottom:8px;">Sin tasa promedio de mercado secundario verificable para hoy en las fuentes consultadas. Contexto: los cheques rechazados subieron 6,6% en junio y se estabilizaron cerca de 80.000 unidades, con mora empresarial elevada y crédito restringido.</p>
-        <p style="font-size:13px;color:#3a4a5e;">Con el riesgo país saltando a su máximo en 3 meses, es esperable presión al alza en las tasas de descuento de CPD en los próximos días — mayor percepción de riesgo de crédito en la cadena de pagos.</p>
+        <div class="fin-label">D. Cheques de pago diferido (CPD)</div>
+        <p style="font-size:13px; margin-bottom:8px;">30 días: ~41,5% TNA (canal bancario, tarifario Banco Provincia) → <span class="t-mensual" style="display:inline;">3.46%/mes</span>. 60/90 días: sin cifra puntual confiable hoy — el mercado de capitales (MAV) opera con tasas sensiblemente menores al canal bancario, pero no hay dato exacto de hoy.</p>
+        <p style="font-size:13px;">Los cheques rechazados subieron 6,6% en junio y se estabilizaron cerca de 80.000 unidades, con la mora empresarial todavía elevada → el riesgo de crédito en la cadena de pagos sigue firme, conviene no relajar el filtro en el descuento.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Riesgo país (EMBI+)</div>
+        <div class="fin-label">E. Riesgo país (EMBI+)</div>
         <div class="rp-row">
           <div class="rp-label">Argentina hoy</div>
-          <div class="rp-val">511 pb <span class="rp-delta rp-up">↑ +22 pb (+4,5%)</span></div>
+          <div class="rp-val">517 <span class="rp-delta rp-neu">0,00%</span></div>
         </div>
-        <p style="font-size:13px;color:#3a4a5e;">Máximo en 3 meses, arrastrado por una ola de ventas en mercados globales. Sube el riesgo país → los clientes tienden a dolarizarse y a exigir mejores tasas en pesos; hoy no es un buen momento para ofrecer carry trade largo.</p>
+        <p style="font-size:13px; margin-top:8px;">Fuente: Rava Bursátil (cotización intradía; otras fuentes muestran 511, la variación diaria es la señal más confiable). Sin movimiento hoy: no hay impulso extra ni para dolarizarse ni para el carry trade — el foco del mercado sigue en la desaceleración de la inflación y el nivel de reservas.</p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Flujo del día — ¿jornada de compra o venta?</div>
         <div class="flujo-card flujo-neutral">
-          <div class="flujo-titulo">JORNADA NEUTRAL</div>
-          <div class="flujo-body">Señales mixtas: reservas en récord (USD 50.002 M) y BCRA comprando con tranquilidad (solo absorbió 3,4% de la oferta) tiran el dólar para abajo, pero el salto de +22 pb en el riesgo país en una sola rueda es una señal de alerta que todavía no se trasladó a la brecha (2,6%-4,4%, sin sobresaltos). No estamos cerca de fin de quincena ni de pago de sueldos (25/08 es la semana que viene). Con esta mezcla no conviene tomar posición fuerte en ningún sentido hoy — mejor esperar 24-48 hs para ver si la suba del riesgo país contagia al blue/CCL.</div>
+          <div class="flujo-titulo">Jornada neutral</div>
+          <div class="flujo-body">Reservas en el nivel más alto en casi 7 años y el BCRA bajando el ritmo de compra le quitan urgencia al dólar. La brecha con blue/CCL/USDT está comprimida (2-4%), sin señal de estrés. Todavía faltan los pagos de sueldos del 25 y no hay vencimientos impositivos grandes reportados para hoy. Sin catalizador claro, es un día para operar lo de siempre sin forzar posición.</div>
         </div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Rulo del día</div>
+        <div class="fin-label">G. Rulo del día</div>
         <div class="rulo-item">
-          <div class="rulo-titulo">Comprar Oficial → vender USDT <span class="tag-gris">Requiere exchange</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.515,00 (venta) y el USDT en $1.563,36 (compra, Binance P2P) → comprás oficial y vendés USDT. Spread: $48,36 (3,2% de ganancia). Es el mejor spread verificable del día — el CCL cotiza más alto ($1.580,76) pero no hay un precio de compra desagregado confiable para calcularlo con precisión. Riesgo: requiere cuenta en exchange cripto y expone a volatilidad de USDT/ARS entre que comprás y vendés.</div>
+          <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
+          <div class="rulo-body">Hoy el dólar oficial está en $1.520 (venta) y el CCL en $1.581,49 (compra) → comprás oficial y vendés CCL. Spread: $61,49 (4,05% de ganancia). Requiere cuenta comitente y operar bonos (parking) para el CCL; el USDT da un spread menor (2,97%, vía exchange) y el Blue hoy no deja margen (compra $1.508,35 por debajo de la venta del oficial).</div>
         </div>
       </div>
-
     </div>
 
+    <!-- NOTICIAS AR -->
     <div class="sec-title">Argentina</div>
     <div class="card">
-
       <div class="noticia">
-        <div class="noticia-meta">El Cronista · 18 de agosto de 2026 · <a href="https://www.cronista.com/economia-politica/nuevos-jugadores-que-marcas-productos-y-sectores-impulsan-la-importacion-de-bienes-finales/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Las importaciones de bienes finales tocan récord histórico — y la industria pierde 75.000 empleos</div>
+        <div class="noticia-meta">La Nación · 15 de julio de 2026 · <a href="https://www.lanacion.com.ar/economia/campo/hecho-historico-india-habilito-la-importacion-comercial-de-la-yerba-mate-argentina-nid15072026/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">India habilitó la importación comercial regular de yerba mate argentina</div>
         <div class="noticia-body">
-          <p>Durante el primer semestre de 2026 Argentina importó productos finales por USD 5.362 millones, el monto más alto para una primera mitad de año desde que hay registro, superando en 20,7% el récord anterior de 2018. Desde 2023 se sumaron más de 33.000 nuevas empresas importadoras al mercado, un número que muestra hasta qué punto la apertura comercial cambió el mapa competitivo en apenas tres años.</p>
-          <p>El crecimiento es parejo entre rubros pero especialmente fuerte en electrodomésticos (+109,2%), con Whirlpool Argentina (USD 21,2 M), Carrier (USD 14,4 M, +2.077%) y Frimetal (USD 14,2 M, +1.887%) a la cabeza. En indumentaria (+86,3%) lideran Adidas Argentina (USD 47,2 M, +339%) y TAC Argentina/Zara (USD 33,8 M). En motos (+67,6%) Honda ya se queda con el 26% del mercado importado (USD 105,5 M) y en alimentos (+51,9%) sorprende el salto de fideos y pastas importados, +530,8%.</p>
-          <p>El contexto histórico es lo que más pesa: los bienes de consumo ya explican el 15,1% de las importaciones totales, el máximo desde 2004 — año de referencia de otra etapa de apertura post-crisis. En paralelo, la producción manufacturera local cayó 12% y se perdieron 75.000 empleos industriales desde agosto de 2023. Es el mismo patrón de otras aperturas comerciales argentinas: gana el consumidor de corto plazo, pierde la base productiva.</p>
-          <p><strong>Para vos:</strong> la data confirma que importar bienes de consumo masivo (electro, indumentaria, alimentos envasados, motos chicas) sigue siendo el negocio de moda del momento — con 33.000 empresas nuevas ya jugando, la ventana de "poca competencia" se está cerrando rápido. Si evaluás meterte en importación, el filtro ya no es "¿se puede importar esto?" sino "¿con qué margen y qué diferencial contra jugadores que ya se instalaron hace 2-3 años?". Para la financiera, más importadores nuevos = más demanda de descuento de cheques y financiamiento de capital de trabajo en el corto plazo de ese segmento.</p>
+          <p>Tras meses de gestiones conjuntas entre los gobiernos de Misiones y Corrientes, la Cancillería, Senasa y las autoridades sanitarias indias, India incorporó la yerba mate a su Código Alimentario y habilitó las importaciones comerciales regulares del producto argentino. Hasta ahora sólo existía un esquema de envíos de prueba; a partir de esta habilitación, las empresas argentinas pueden operar de forma sostenida hacia ese mercado.</p>
+          <p>El dato de contexto es enorme: India tiene más de 1.400 millones de habitantes y hasta ahora la yerba mate prácticamente no se exportaba fuera de Sudamérica — la producción argentina se destina casi en su totalidad al mercado interno y a Siria, Chile y Uruguay como principales compradores externos. Abrir un mercado de ese tamaño, aunque el consumo per cápita arranque bajo, es un cambio estructural para toda la cadena yerbatera del NEA.</p>
+          <p><strong>Para vos:</strong> es un caso de estudio de cómo se abre un mercado de exportación de nicho para un producto regional con escasa competencia internacional — la misma lógica aplica a otros productos del NOA (limón, poroto, garbanzo, miel). Si en algún momento evaluás un negocio de intermediación o trading de exportación, este tipo de apertura sanitaria/comercial es la señal a rastrear: cuando un país grande habilita un producto regional, se abre una ventana de años antes de que la competencia se organice del todo.</p>
         </div>
       </div>
-
       <div class="noticia">
-        <div class="noticia-meta">El Cronista · 14 de agosto de 2026 · <a href="https://www.cronista.com/economia-politica/saltaron-26-las-exportaciones-pyme-pero-arrastran-una-deuda-que-no-logran-revertir/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Las exportaciones pyme suben 26% y tocan máximo en 13 años, pero la base exportadora sigue en caída estructural</div>
+        <div class="noticia-meta">DolarHoy · semana del 10 de agosto de 2026 · <a href="https://dolarhoy.com/economia/se-abre-una-oportunidad-para-las-pymes-por-que-2026-puede-ser-el-ano-de-la-inversion-20268121520" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">2026, el año en que se separan las pymes que se digitalizaron de las que no</div>
         <div class="noticia-body">
-          <p>Las pymes argentinas exportaron USD 6.446 millones en los primeros siete meses de 2026, el nivel más alto en 13 años y un salto interanual del 26%. El número de empresas exportadoras pyme pasó de 9.107 en 2024 a 9.399 en 2025 — una mejora real, pero insuficiente frente al problema de fondo que señala la Cámara de Exportadores: Argentina perdió cerca de 6.000 empresas exportadoras respecto a sus máximos históricos, cayendo de 15.000 a 9.000 en la última década.</p>
-          <p>El detalle importa: el boom actual está concentrado en sectores primarios — agro, energía, minería — mientras que los bienes industriales y la carga contenerizada (más intensiva en mano de obra y valor agregado) siguen rezagados. Las pymes, además, representan apenas entre 7,6% y 7,9% del total exportado por el país, lo que confirma una estructura exportadora muy concentrada en pocas empresas grandes y sectores primarios.</p>
-          <p>Es un patrón conocido en la historia económica argentina: los ciclos de boom exportador basados en commodities generan una foto de corto plazo positiva (como la de este informe) sin resolver el problema estructural de una base productiva angosta y poco diversificada, que es lo que determina si el crecimiento exportador es sostenible más allá del ciclo de precios internacionales.</p>
-          <p><strong>Para vos:</strong> el dato relevante es que la "exportación pyme" real sigue siendo un nicho chico (menos del 8% del total) y muy atado a agro/energía/minería — si estás evaluando un negocio de intermediación o servicios para exportadores, el NOA (agro, minería, energía) está mejor posicionado que casi cualquier otra región del país para captar esta ola, con menos competencia que en el AMBA. Vale la pena cruzarlo con lo que ya ves en la financiera: qué pymes exportadoras de la zona muestran mejor salud de caja hoy.</p>
+          <p>Un análisis sobre el estado de las pymes argentinas en 2026 marca que los sectores mejor posicionados este año son energía, agro, minería, economía del conocimiento y servicios para empresas, con la exportación de servicios tecnológicos creciendo a tasas de doble dígito. El punto central del informe es que las pymes que sistematizaron procesos y adoptaron tecnología en los últimos años están escalando de forma notable, mientras que las que no lo hicieron enfrentan las mismas presiones de costos e inflación sin herramientas para gestionarlas.</p>
+          <p>En paralelo, el Gobierno cerró hace unos días la convocatoria al concurso federal "Emprendimiento Argentino 2026", que da premios, mentorías y becas a proyectos innovadores de todo el país — otra señal de que hay más movimiento oficial (y de fondos) alrededor del ecosistema pyme/emprendedor este año que en los anteriores.</p>
+          <p><strong>Para vos:</strong> esto valida en el terreno la idea de negocio de esta semana (capacitación en IA aplicada para pymes del NOA) — el mercado está confirmando en tiempo real que la brecha de digitalización es la que define qué pyme sobrevive en 2026. También es una señal para tu trabajo en la financiera: las pymes del lado equivocado de esa brecha son las que más probablemente terminen con cheques en rojo, así que vale la pena empezar a mirar el nivel de digitalización como variable de riesgo de cartera, no sólo el estado de caja.</p>
         </div>
       </div>
-
     </div>
 
+    <!-- NOTICIAS INT -->
     <div class="sec-title">Internacional</div>
     <div class="card">
-
       <div class="noticia">
-        <div class="noticia-meta">Bloomberg / CNBC · 19 de agosto de 2026 · <a href="https://www.cnbc.com/2026/08/19/china-backflipping-robot-maker-unitree-jumps-shanghai-ipo.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">El fabricante chino de robots humanoides Unitree sube 460% en su debut bursátil en Shanghái</div>
+        <div class="noticia-meta">CNBC · semana del 17 de agosto de 2026</div>
+        <div class="noticia-titulo">Unitree Robotics se dispara 629% en su debut bursátil en Shanghái</div>
         <div class="noticia-body">
-          <p>Unitree Robotics (oficialmente Yushu Technology), la empresa china conocida por sus robots humanoides y cuadrúpedos que bailan y hacen flips, debutó en el mercado STAR de Shanghái y sus acciones treparon hasta 460% sobre el precio de colocación, llegando a subir 629% en el pico intradiario (de 150,8 a 1.100 yuanes) antes de cerrar en 845 yuanes. La compañía había recaudado USD 904 millones (6.100 millones de yuanes) en su IPO, y el cierre de la primera rueda la valuó en unos USD 50.000 millones.</p>
-          <p>El salto duplica el promedio de suba en el primer día para debuts bursátiles en China este año (279%), y ocurrió incluso con el índice de referencia chino cayendo 3% en la misma jornada — una divergencia que muestra el apetito puntual por activos de robótica e inteligencia artificial. Entre los inversores de la ronda estuvo DeepSeek, la firma china de IA, que puso unos 140,8 millones de yuanes, además de Tencent como inversor previo. Unitree, fundada en 2016, es una pieza central de la estrategia china de desarrollo tecnológico en robótica avanzada.</p>
-          <p><strong>Para vos:</strong> es la confirmación más contundente hasta ahora de que el mercado sigue pagando cualquier múltiplo por exposición a robótica/IA aplicada, incluso en un día de caída generalizada del mercado local chino — la narrativa manda por sobre el contexto macro. Como referencia de mercado bursátil (no hay CEDEAR de Unitree hoy, cotiza solo en Shanghái), es una señal de hacia dónde sigue yendo el capital de riesgo global: humanoides y robótica industrial, un sector que también empieza a asomar en la agenda de fondos que miran CEDEARs de robótica/IA en Wall Street.</p>
+          <p>Unitree Robotics, fabricante chino de robots humanoides con sede en Hangzhou, debutó en la bolsa de Shanghái y sus acciones subieron 629,4% en la primera rueda. La compañía había recaudado unos USD 905 millones (6.100 millones de yuanes) en su IPO, con una ronda que contó con el respaldo de DeepSeek, que invirtió cerca de 140,8 millones de yuanes.</p>
+          <p>El salto no es sólo una anécdota de mercado: es una de las señales más fuertes del año de que el capital global sigue apostando fuerte a la robótica y la IA física (humanoides), no sólo al software de IA. Ocurre además en una semana en la que los índices de EE.UU. venían en baja (el S&P 500 cayó 0,87% y el Nasdaq 1%), lo que muestra que el apetito de riesgo se concentra en nichos muy específicos más que en el mercado en general.</p>
+          <p><strong>Para vos:</strong> como inversor en CEDEARs, valida la robótica y los semiconductores ligados a IA como temática de largo plazo. Pero un salto de +629% en un día no es una tesis de inversión, es especulación pura — sirve como termómetro de hacia dónde va el capital, no como gatillo para comprar. Mejor mirar las compañías de la cadena (semiconductores, memoria) que ya tienen ingresos reales creciendo, no la IPO del momento.</p>
         </div>
       </div>
-
       <div class="noticia">
-        <div class="noticia-meta">CNBC / TheStreet · 19 de agosto de 2026 · <a href="https://www.cnbc.com/2026/08/18/stock-market-today-live-updates.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Wall Street sube tras el anuncio de la Tesorería de EE.UU. de duplicar su programa de recompra de bonos</div>
+        <div class="noticia-meta">CNBC · semana del 17 de agosto de 2026</div>
+        <div class="noticia-titulo">SK Hynix invierte 54 billones de wones en nuevas plantas de memoria para IA</div>
         <div class="noticia-body">
-          <p>El Tesoro de Estados Unidos anunció que más que duplicará el tamaño de sus operaciones de recompra de deuda de largo plazo (bonos a 10-20 y 20-30 años), lo que hizo retroceder al rendimiento del bono a 30 años desde su nivel más alto desde 2007. La tasa a 30 años cerró en 5,196% (-9 puntos básicos) y la de 10 años en 4,647% (-6 pb), después de que el 30 años había tocado un máximo de 19 años por encima de 5,33% el martes. El Dow Jones subió 230 puntos (+0,4%), con el S&P 500 y el Nasdaq subiendo también 0,4% cada uno.</p>
-          <p>La suba fue pareja pero no total: el sector tecnológico dentro del S&P 500 volvió a caer 0,4%, con los semiconductores (Intel, AMD, Broadcom) liderando las bajas por segunda rueda consecutiva — el mercado sigue castigando a las empresas más sensibles al costo de financiamiento y con valuaciones más estiradas, incluso en un día de alivio generalizado en tasas.</p>
-          <p><strong>Para vos:</strong> la intervención del Tesoro para contener los rendimientos largos es una señal de que EE.UU. está activamente gestionando el costo de su propia deuda — algo para seguir de cerca porque un mercado de bonos más estable en EE.UU. suele ser viento a favor para emergentes como Argentina (menor presión sobre tasas globales, más apetito por riesgo). Puertas adentro de la cartera, el castigo puntual a semiconductores es una oportunidad para mirar entradas escalonadas en CEDEARs tech de calidad si la corrección continúa, separando el ruido de corto plazo (rotación sectorial) del driver de fondo (IA sigue siendo la tendencia dominante, como confirma también el caso Unitree).</p>
+          <p>SK Hynix anunció una inversión de 54 billones de wones surcoreanos en la construcción de nuevas plantas de fabricación de chips de memoria, impulsada por la demanda creciente de componentes clave para inteligencia artificial (memoria de alto ancho de banda, HBM). La inversión se suma a anuncios similares de otras compañías del sector en la misma semana, como Samsung invirtiendo en nuevas líneas de producción.</p>
+          <p>Esto confirma que el ciclo de inversión en infraestructura de IA (data centers, GPUs, memoria) sigue acelerando en 2026 pese a la volatilidad reciente en las bolsas de EE.UU. La memoria es uno de los cuellos de botella físicos de toda la cadena de IA: sin suficiente capacidad de fabricación, no hay suficientes GPUs terminadas, sin importar cuánta demanda haya.</p>
+          <p><strong>Para vos:</strong> refuerza que el hardware de IA (semiconductores, memoria) sigue siendo uno de los sectores con mayor visibilidad de crecimiento estructural para 2026-2027 — relevante si estás mirando CEDEARs del sector semiconductores. También sirve como termómetro: mientras las grandes fabricantes de memoria sigan anunciando inversiones multianuales de esta magnitud, es una señal de que el ciclo de IA todavía no muestra signos de agotarse, más allá de la volatilidad de corto plazo en las acciones.</p>
         </div>
       </div>
-
     </div>
 
+    <!-- IDEA SEMANAL -->
     <div class="sec-title">Idea de negocio — semana 34</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
@@ -728,14 +775,16 @@
 <p>Inversión: <strong>menor a USD 500</strong> para arrancar (materiales, alguna suscripción a herramientas de IA para armar demos, movilidad para las visitas) — de las ideas más baratas de arrancar de las últimas semanas. Tiempo: 6-8 horas semanales para el piloto y las primeras ventas, compatible con el trabajo en la financiera si se arranca con 1 pyme por vez.</p></div>
     </div>
 
-  </div>
+  </div><!-- /body-wrap -->
 
-  <footer>Generado 19:45 hs · miércoles 19 de agosto · Agente personal SN</footer>
+  <footer>Generado 00:46 del 21/08/2026 · Agente personal SN</footer>
 
+  <!-- ══ CHARTS JS ══ -->
   <script>
   (function() {
     function initCharts() {
 
+      /* ── Hábitos chart ── */
       var habEl = document.getElementById('habChart');
       if (habEl) {
         var items = document.querySelectorAll('.hab-item');
@@ -810,6 +859,7 @@
         }
       }
 
+      /* ── Dólar chart ── */
       var dolarEl = document.getElementById('dolarChart');
       if (dolarEl) {
         var stats = document.querySelectorAll('.lancer-stat');
