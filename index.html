@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — jueves 27 de agosto de 2026</title>
+  <title>Briefing — 28-08-2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -74,14 +74,11 @@
   }
   .header-left  { display: flex; align-items: center; gap: 18px; }
   .header-right { text-align: right; }
-
   .sn-logo { flex-shrink: 0; display: block; }
-
   .header-brand { font-size: 10px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: rgba(255,255,255,.45); margin-bottom: 5px; }
   .header-title { font-size: 24px; font-weight: 800; color: #ffffff; letter-spacing: -.01em; line-height: 1.15; }
   .header-date  { font-size: 12px; font-weight: 400; color: rgba(255,255,255,.5); margin-top: 4px; }
   .header-week  { font-size: 10px; font-weight: 700; color: #5db8e8; letter-spacing: .09em; text-transform: uppercase; margin-bottom: 4px; }
-
   .header-bar {
     height: 3px;
     background: var(--grad);
@@ -162,7 +159,7 @@
   }
   .task-list li:last-child { border-bottom: none; padding-bottom: 0; }
   .task-list li::before {
-    content: "›";
+    content: "\203A";
     color: var(--blue-lt);
     font-size: 17px;
     font-weight: 700;
@@ -248,7 +245,7 @@
   .lancer-stat:hover { box-shadow: var(--shadow-md); }
   .lancer-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
   .lancer-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
-  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; }
+  .lancer-stat .sub   { font-size: 10px; margin-top: 4px; color: var(--muted); }
 
   .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
@@ -428,7 +425,6 @@
 </head>
 <body>
 
-  <!-- HEADER -->
   <header class="site-header">
     <div class="header-inner">
       <div class="header-left">
@@ -449,7 +445,7 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">jueves 27 de agosto de 2026</div>
+          <div class="header-title">viernes 28 de agosto de 2026</div>
         </div>
       </div>
       <div class="header-right">
@@ -462,13 +458,11 @@
 
   <div class="body-wrap">
 
-    <!-- META DEL AÑO -->
     <div class="meta-rotativa">
-      <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Aprender de contabilidad</span>
+      <span class="meta-icon">&#127919;</span>
+      <span><strong>Meta del año:</strong> Ganar en estos &uacute;ltimos 6 meses un promedio de USD 1.800/mes</span>
     </div>
 
-    <!-- TAREAS -->
     <div class="sec-title">Tareas</div>
     <div class="grid-2">
       <div class="card">
@@ -476,259 +470,351 @@
         <ul class="task-list">
           <li>Terminar curso de emprender</li>
           <li>Llevar chaleco a Juan</li>
-          <li>Hacer agente de IA de finanzas para mí</li>
+          <li>Hacer agente de IA de finanzas (para m&iacute; y el gym)</li>
           <li>Estudiar parte legal de cheques</li>
-          <li>Estudiar dólar</li>
-          <li>Llamar al IRS</li>
+          <li>Estudiar d&oacute;lar</li>
           <li>Modificar memoria VS y Claude</li>
+          <li>Averiguar lo de F&eacute;lix</li>
         </ul>
       </div>
       <div class="card">
-        <div class="card-label">Mañana</div>
+        <div class="card-label">Ma&ntilde;ana</div>
         <ul class="task-list">
-          <li>Buzo Farías</li>
+          <li>Buzo Far&iacute;as</li>
           <li>Pagar multa suegra</li>
         </ul>
       </div>
     </div>
 
-    <!-- CALENDARIO -->
     <div class="sec-title">Agenda</div>
     <div class="card">
-      <div class="card-label">Próximos eventos</div>
+      <div class="card-label">Pr&oacute;ximos eventos</div>
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Hoy</div>
-          <div class="cal-titulo">Cita en Rocky's Barbería Yerba Buena</div>
-          <div class="cal-hora">19:20 a 19:50hs</div>
+          <div class="cal-cuando">Hoy &middot; viernes 28/8</div>
+          <div class="cal-titulo">Cumplea&ntilde;os de Povi</div>
+          <div class="cal-hora">13:00</div>
         </div>
       </div>
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Mañana</div>
-          <div class="cal-titulo">Cumpleaños de Povi</div>
-          <div class="cal-hora">Viernes 28/08, 13:00 a 14:00hs</div>
+          <div class="cal-cuando">Lunes 31/8</div>
+          <div class="cal-titulo">Fecha l&iacute;mite para TP 1 y 2</div>
+          <div class="cal-hora">Todo el d&iacute;a</div>
         </div>
       </div>
       <div class="evento-item">
         <div class="evento-dot"></div>
         <div class="evento-content">
-          <div class="cal-cuando">Lunes 31/08</div>
-          <div class="cal-titulo">Fecha límite para TP 1 y 2</div>
-          <div class="cal-hora">Todo el día</div>
+          <div class="cal-cuando">Mi&eacute;rcoles 2/9</div>
+          <div class="cal-titulo">Mandar mensajes a amigos olvidados</div>
+          <div class="cal-hora">Todo el d&iacute;a &middot; chino, alu, Gilberto, Pedrito, Nacho, centuri&oacute;n, mojarra</div>
         </div>
       </div>
     </div>
 
-    <!-- HÁBITOS -->
-    <div class="sec-title">Hábitos — Agosto 2026</div>
+    <div class="sec-title">H&aacute;bitos &mdash; Agosto 2026</div>
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">56,3%</div>
+        <div class="hab-pct">56%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Datos al 26/08 — subió desde 48,7% con una gran racha 24-26/08. XP total 1370, Nivel 4</div>
+          <div class="hab-sub">Promedio de los 9 h&aacute;bitos al 28/8. Caminar/fisio (9,7%) tira todo el promedio abajo; sin ese, ronda 62%.</div>
         </div>
       </div>
       <ul class="hab-insights">
-        <li>Muy buena racha del 24 al 26/08: el 26/08 fue el mejor día del mes, 8 de 9 hábitos cumplidos (89%).</li>
-        <li>Caminar/fisio sigue siendo el único hábito realmente abandonado (9,7%) — ni un solo día marcado desde el 09/08. El resto subió bastante esta semana.</li>
-        <li>Despertar 8:00, Desayuno sano y Trabajar 4h ya están en el rango 58-71%, la mejor racha del mes para esos tres.</li>
+        <li><strong>Estudiar 2 hs salt&oacute; a 48,4%</strong> (15 d&iacute;as) &mdash; casi el doble que a mitad de mes (25,8% al 13/8). Para el 60% (18 d&iacute;as) necesit&aacute;s los 3 d&iacute;as que quedan; no da, pero la tendencia se dio vuelta.</li>
+        <li><strong>Salir a caminar / fisio: 9,7%</strong> &mdash; 3 d&iacute;as en todo el mes y ninguno desde el 9/8. Es el mismo agujero que "Entrenar" en meses anteriores: la rehab de hombro no arranca.</li>
+        <li><strong>Lo que sostiene el mes:</strong> Trabajar 4 hs (71%), Despertar 8:00 y Desayuno sano (67,7%), Pensar 5 min y Leer inversiones (64,5%). El bloque trabajo/rutina firme; el de salud, no.</li>
+        <li><strong>Cierre flojo:</strong> 27 y 28 sin marcar nada y la semana del 21 promedi&oacute; ~45%. Baj&oacute;n t&iacute;pico de fin de mes.</li>
       </ul>
       <div class="hab-grid">
-        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">67,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">67,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Trabajar 4h enfocado</span><span class="badge-g">71,0%</span></div>
-        <div class="hab-item"><span class="hab-name">Estudiar 2h</span><span class="badge-w">48,4%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">64,5%</span></div>
-        <div class="hab-item"><span class="hab-name">Caminar / fisio</span><span class="badge-r">9,7%</span></div>
-        <div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">54,8%</span></div>
-        <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-w">58,1%</span></div>
-        <div class="hab-item"><span class="hab-name">Pensar antes de dormir</span><span class="badge-g">64,5%</span></div>
+        <div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">67.7%</span></div>
+        <div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">67.7%</span></div>
+        <div class="hab-item"><span class="hab-name">Trabajar 4 hs</span><span class="badge-g">71.0%</span></div>
+        <div class="hab-item"><span class="hab-name">Estudiar 2 hs</span><span class="badge-w">48.4%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">64.5%</span></div>
+        <div class="hab-item"><span class="hab-name">Caminar / fisio</span><span class="badge-r">9.7%</span></div>
+        <div class="hab-item"><span class="hab-name">Leer 10 p&aacute;ginas</span><span class="badge-w">54.8%</span></div>
+        <div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-w">58.1%</span></div>
+        <div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">64.5%</span></div>
       </div>
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
       </div>
     </div>
 
-    <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
     <div class="card">
 
       <div class="fin-section">
-        <div class="fin-label">Cotizaciones del dólar</div>
+        <div class="fin-label">A &middot; Cotizaciones del d&oacute;lar</div>
         <div class="lancer-grid">
-          <div class="lancer-stat"><div class="label">Oficial</div><div class="val">$1.535</div><div class="sub">Compra $1.485</div></div>
-          <div class="lancer-stat"><div class="label">Blue</div><div class="val">$1.555</div><div class="sub">Compra $1.535</div></div>
-          <div class="lancer-stat"><div class="label">CCL</div><div class="val">$1.607,23</div><div class="sub">Compra $1.595,50</div></div>
-          <div class="lancer-stat"><div class="label">USDT</div><div class="val">$1.603,80</div><div class="sub">Compra $1.585,29</div></div>
+          <div class="lancer-stat">
+            <div class="label">Oficial (BNA)</div>
+            <div class="val">$1.535</div>
+            <div class="sub">Compra $1.485</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">Blue</div>
+            <div class="val">$1.555</div>
+            <div class="sub">Compra $1.535</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">CCL</div>
+            <div class="val">$1.606</div>
+            <div class="sub">Compra $1.605</div>
+          </div>
+          <div class="lancer-stat">
+            <div class="label">USDT</div>
+            <div class="val">$1.604</div>
+            <div class="sub">Compra $1.585</div>
+          </div>
         </div>
-        <p style="font-size:12px;color:#3a4a5e;margin-bottom:8px;">Brecha vs. Oficial (venta $1.535): Blue <span class="brecha-neu">+1,3%</span> · CCL <span class="brecha-pos">+4,7%</span> · USDT <span class="brecha-pos">+4,5%</span>. El oficial y el blue se mantienen sin cambios respecto a ayer; MEP casi calcado al oficial ($1.535,35 venta, brecha de apenas 0,02%) — señal de mucha calma en el segmento regulado. Mayorista en $1.514. Fuente: Cronista, La Nación, Página/12, Dolarito.ar — jueves 27/08.</p>
-        <p style="font-size:12px;color:#3a4a5e;margin-bottom:8px;"><strong>BCRA:</strong> compró USD93M en el mercado spot hoy y las reservas subieron USD77M, a USD50.860M. Pero el ritmo general de agosto se nota más lento que en meses previos: en lo que va del mes acumuló solo USD486M, bien por debajo del pulso que traía en julio.</p>
-        <p style="font-size:12px;color:#3a4a5e;">Noticias que mueven el dólar hoy: BCRA volvió a comprar con fuerza (presiona ↓) · pero el acumulado de agosto se desaceleró bastante (presiona → ) · Diputados le dio media sanción a la reforma de la Carta Orgánica del BCRA y a "Inocencia Fiscal II" (ver Argentina), medidas que buscan blanquear dólares fuera del sistema — si funciona, mete oferta genuina de dólares (presiona ↓ a mediano plazo) · afuera, rally de Wall Street por Nvidia mejora el clima de riesgo global (presiona ↓ leve).</p>
-        <div class="recomendacion"><strong>Recomendación:</strong> el oficial y el blue están planchados hace dos días, con el MEP prácticamente pegado al oficial — es una foto de mucha calma cambiaria. El BCRA sigue comprando aunque más despacio. No hay urgencia ni para comprar ni para vender fuerte hoy; el foco de la semana pasa más por lo político (Inocencia Fiscal II, reforma BCRA) que por el spot.</div>
+        <div class="dolar-chart-wrap">
+          <canvas id="dolarChart"></canvas>
+        </div>
+        <p style="font-size:12px;margin:-4px 0 12px;color:#3a4a5e">
+          Brecha vs oficial (venta $1.535): Blue <span class="brecha-neu">+1,3%</span> &middot;
+          CCL <span class="brecha-pos">+4,6%</span> &middot;
+          USDT <span class="brecha-pos">+4,5%</span> &middot;
+          MEP (~$1.537) <span class="brecha-ok">+0,1%</span>.
+          Fuente: BNA / &Aacute;mbito / La Naci&oacute;n, 28/8. finanzasargy.com no respondi&oacute; hoy (403).
+        </p>
+        <p style="font-size:12px;margin:0 0 10px;color:#3a4a5e">
+          <strong>BCRA:</strong> 21 ruedas seguidas comprador. Ayer (27/8) compr&oacute; USD 93 M &mdash; la mayor del mes &mdash; y acumula ~USD 14.000 M en 2026.
+          Reservas brutas ~USD 50.860 M, m&aacute;ximo de la era Milei.
+        </p>
+        <p style="font-size:12px;margin:0 0 4px;color:#3a4a5e">
+          <strong>Macro que mueve el TC:</strong>
+          riesgo pa&iacute;s 512 pb, +71 en el mes <span class="brecha-pos">&uarr;</span> &middot;
+          expectativa devaluatoria en la curva de futuros al alza <span class="brecha-pos">&uarr;</span> &middot;
+          elecciones legislativas 2027 en el horizonte, humor social en duda <span class="brecha-pos">&uarr;</span> &middot;
+          BCRA comprando fuerte + Gobierno adelanta otros USD 10.000 M de reservas <span class="brecha-neu">&rarr;</span>.
+        </p>
+        <div class="recomendacion">
+          <strong>Hoy:</strong> sesgo comprador de cobertura. Con CCL/USDT a solo ~4,5% de brecha y el mercado priceando ~8%/mes de devaluaci&oacute;n, dolarizar parte de los pesos ociosos tiene sentido. La v&iacute;a barata sigue siendo el oficial ($1.535). No te quedes largo en pesos salvo tasa corta que puedas rotar semana a semana.
+        </div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Futuros ROFEX</div>
+        <div class="fin-label">B &middot; Futuros ROFEX (estimado)</div>
         <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">Fin agosto</div><div class="val">$1.513,5</div><div class="tna">Dato del 24/08, sin update hoy</div></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div><div class="tna">No se encontró cotización confiable</div></div>
-          <div class="rofex-item"><div class="label">Fin septiembre</div><div class="val">$1.540</div><div class="tna">TNA implícita ≈27,8% (dato 24/08)</div><span class="t-mensual">2,32%/mes</span></div>
+          <div class="rofex-item">
+            <div class="label">30 d&iacute;as (est.)</div>
+            <div class="val">~$1.655</div>
+            <div class="tna">TNA impl. ~95%</div>
+            <span class="t-mensual">~7,9%/mes</span>
+          </div>
+          <div class="rofex-item">
+            <div class="label">60 d&iacute;as (est.)</div>
+            <div class="val">~$1.775</div>
+            <div class="tna">TNA impl. ~95%</div>
+            <span class="t-mensual">~7,9%/mes</span>
+          </div>
+          <div class="rofex-item">
+            <div class="label">90 d&iacute;as (est.)</div>
+            <div class="val">~$1.895</div>
+            <div class="tna">TNA impl. ~95%</div>
+            <span class="t-mensual">~7,9%/mes</span>
+          </div>
         </div>
-        <p style="font-size:12px;color:#3a4a5e;">Cuarto día seguido sin poder confirmar una actualización de ROFEX en las búsquedas — se repiten los últimos datos verificados del 24/08. Conviene chequear directo en Matba-Rofex antes de operar con esto.</p>
+        <p style="font-size:12px;margin:6px 0 0;color:#3a4a5e">
+          No hubo precios de pantalla firmes hoy. El Cronista reporta que las tasas implícitas de la curva Rofex vienen subiendo (~90-100% TNA). Traducido: el mercado ve el oficial cerca de <strong>$1.900 para fin de noviembre</strong>. Son estimados sobre esa tasa, no cotizaciones cerradas.
+        </p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Tasas de referencia</div>
+        <div class="fin-label">C &middot; Tasas de referencia</div>
         <div class="tasas-grid">
-          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">20% TNA</div><div class="t-sub">30 días, según reporte al BCRA</div><span class="t-mensual">1,67%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Plazo fijo privados</div><div class="t-val">~24% TNA</div><div class="t-sub">Ualá, mejor tasa (dato de días atrás)</div><span class="t-mensual">2,00%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Caución 1 día</div><div class="t-val">Sin datos de hoy</div><div class="t-sub">Última ref. formal: 19,46% TNA (07/05)</div></div>
-          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">~37% TNA</div><div class="t-sub">Referencia; hoy el Tesoro convalidó tasas más altas en la licitación de letras cortas</div><span class="t-mensual">3,08%/mes</span></div>
+          <div class="tasa-item">
+            <div class="t-label">Plazo fijo BNA (30d)</div>
+            <div class="t-val">19,0% TNA</div>
+            <span class="t-mensual">1,58%/mes</span>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">PF privados (mejor)</div>
+            <div class="t-val">~23% TNA</div>
+            <div class="t-sub">bancos chicos online; Provincia no cliente 21%</div>
+            <span class="t-mensual">1,92%/mes</span>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Cauci&oacute;n bursátil 7d (ref.)</div>
+            <div class="t-val">~19,5% TNA</div>
+            <div class="t-sub">&uacute;ltimo dato firme BYMA</div>
+            <span class="t-mensual">1,63%/mes</span>
+          </div>
+          <div class="tasa-item">
+            <div class="t-label">Lecap / Boncap (ref.)</div>
+            <div class="t-val">~30% TNA</div>
+            <div class="t-sub">referencia, sin dato de pantalla hoy</div>
+            <span class="t-mensual">2,50%/mes</span>
+          </div>
         </div>
+        <p style="font-size:12px;margin:6px 0 0;color:#3a4a5e">
+          Solo el PF tiene dato de esta semana. Cauci&oacute;n y Lecap son referencias &mdash; conviene confirmarlas en pantalla antes de mover plata. Nada de esto le gana a ~8%/mes de devaluaci&oacute;n esperada: la tasa en pesos hoy es defensiva, no ganadora.
+        </p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Cheques de pago diferido (CPD)</div>
+        <div class="fin-label">D &middot; Cheques de pago diferido (estimado)</div>
         <div class="rofex-grid">
-          <div class="rofex-item"><div class="label">30 días</div><div class="val">~36% TNA</div><div class="tna">Dato agregado MAV</div><span class="t-mensual">3,00%/mes</span></div>
-          <div class="rofex-item"><div class="label">60 días</div><div class="val">~36% TNA</div><div class="tna">Dato agregado MAV</div><span class="t-mensual">3,00%/mes</span></div>
-          <div class="rofex-item"><div class="label">90 días</div><div class="val">~36% TNA</div><div class="tna">Dato agregado MAV</div><span class="t-mensual">3,00%/mes</span></div>
+          <div class="rofex-item">
+            <div class="label">30 d&iacute;as (est.)</div>
+            <div class="val">~34% TNA</div>
+            <span class="t-mensual">~2,83%/mes</span>
+          </div>
+          <div class="rofex-item">
+            <div class="label">60 d&iacute;as (est.)</div>
+            <div class="val">~37% TNA</div>
+            <span class="t-mensual">~3,08%/mes</span>
+          </div>
+          <div class="rofex-item">
+            <div class="label">90 d&iacute;as (est.)</div>
+            <div class="val">~40% TNA</div>
+            <span class="t-mensual">~3,33%/mes</span>
+          </div>
         </div>
-        <p style="font-size:12px;color:#3a4a5e;">Sin cambios respecto a los últimos días — el MAV sigue publicando un promedio agregado (~36% hasta 90 días) sin discriminar por tramo. Con el Tesoro convalidando tasas más altas hoy en su licitación, no sería raro que el CPD también empiece a subir en los próximos días — vale la pena chequearlo pronto.</p>
+        <p style="font-size:12px;margin:6px 0 0;color:#3a4a5e">
+          Con el riesgo pa&iacute;s en 512 pb la tasa de CPD va para arriba: el cr&eacute;dito privado se encarece. Para descontar, mejor tasa para vos; para colocar plata, exig&iacute; aval y plazo &le;30-60 d&iacute;as. Rendimiento real en USD dif&iacute;cil que llegue a tu meta 7-9% con esta expectativa de devaluaci&oacute;n.
+        </p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Riesgo país (EMBI+)</div>
+        <div class="fin-label">E &middot; Riesgo pa&iacute;s (EMBI+)</div>
         <div class="rp-row">
           <div class="rp-label">EMBI+ Argentina</div>
-          <div class="rp-val">512 pts <span class="rp-delta rp-up">▲ vs. 464 del martes</span></div>
+          <div class="rp-val">512 pb</div>
+          <div class="rp-delta rp-up">+71 pb en el mes</div>
         </div>
-        <p style="font-size:12px;color:#3a4a5e;margin-top:8px;">Volvió a subir después de la buena baja del martes — sigue moviéndose en un rango de 460-535 pts en las últimas dos semanas, sin una tendencia clara todavía. Mientras se mantenga en esa banda, no hay señal fuerte ni para más cobertura ni para más carry — recién si perfora los 460 con continuidad conviene pensarlo como cambio de tendencia real.</p>
+        <p style="font-size:12px;margin:8px 0 0;color:#3a4a5e">
+          Al 27/8, m&aacute;ximo desde mayo. Sube &rarr; se cierra la ventana de deuda nueva y los clientes se dolarizan. Para el mostrador: m&aacute;s demanda de d&oacute;lar billete y CCL, y descuento de cheques m&aacute;s caro.
+        </p>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Flujo del día — ¿jornada de compra o venta?</div>
-        <div class="flujo-card flujo-neutral">
-          <div class="flujo-titulo">JORNADA NEUTRAL</div>
+        <div class="fin-label">F &middot; Flujo del d&iacute;a</div>
+        <div class="flujo-card flujo-venta">
+          <div class="flujo-titulo">Jornada de venta (de d&oacute;lares)</div>
           <div class="flujo-body">
-            Dos días seguidos de oficial y blue completamente planchados, con el MEP pegado al oficial — es la foto de un mercado tranquilo, sin presión en ningún sentido. El BCRA compró bien hoy (USD93M) pero el acumulado de agosto viene bastante más flojo que julio. El riesgo país rebotó de 464 a 512 pts, todavía dentro del rango de las últimas semanas, sin ruptura de tendencia. Lo más relevante del día es político, no cambiario: la media sanción de la reforma del BCRA y de Inocencia Fiscal II en Diputados, que si prospera en el Senado podría sumar oferta genuina de dólares en los próximos meses. Nada de esto justifica salir a operar en volumen distinto al habitual hoy.
+            Viernes de fin de mes, sueldos ya pagados el 25, fin de semana por delante. Riesgo pa&iacute;s en 512 pb (+71 en el mes) y expectativa devaluatoria en la curva de futuros &rarr; el ahorrista se cubre y viene a comprar. El BCRA lleva 21 ruedas comprando (+USD 93 M ayer): le pone piso al oficial pero no frena la dolarizaci&oacute;n minorista. Brecha comprimida (blue +1,3%, CCL/USDT +4,5%): el spread de venta es chico, cuid&aacute; el margen. Posici&oacute;n sugerida: net seller de d&oacute;lar billete, comprar pesos solo contra tasa corta.
           </div>
         </div>
       </div>
 
       <div class="fin-section">
-        <div class="fin-label">Rulo del día</div>
+        <div class="fin-label">G &middot; Rulo del d&iacute;a</div>
         <div class="rulo-item">
-          <div class="rulo-titulo">Oficial → CCL <span class="tag-gris">Requiere cuenta comitente</span></div>
-          <div class="rulo-body">Hoy el dólar oficial está en $1.535 (venta) y el CCL en $1.595,50 (compra) → comprás oficial y vendés CCL. Spread: $60,50 (3,9% de ganancia) — por encima de USDT ($50,29, 3,3%). El Blue prácticamente no deja margen hoy: su compra ($1.535) quedó exactamente igual al precio de venta del oficial, spread $0. Riesgo del CCL: necesitás cuenta comitente y mover bonos (AL30, GD30).</div>
+          <div class="rulo-titulo">Comprar oficial &rarr; vender CCL <span class="tag-gris">requiere estructuraci&oacute;n</span></div>
+          <div class="rulo-body">
+            Hoy el oficial est&aacute; en $1.535 (venta) y el CCL en $1.605 (compra) &rarr; compr&aacute;s oficial y vend&eacute;s CCL.
+            Spread: <strong>$70 (4,5% bruto)</strong>. Neto ~3,5% despu&eacute;s de comisiones y parking T+1.
+            Riesgo: necesit&aacute;s cuenta comitente y aguantar el parking de 24 hs &mdash; el CCL puede moverse en contra en el medio.
+            Contra blue el spread es casi nulo hoy ($0-20) y contra USDT ~$50 (3,3%); el CCL es el &uacute;nico que paga.
+          </div>
         </div>
       </div>
 
     </div>
 
-    <!-- NOTICIAS AR -->
     <div class="sec-title">Argentina</div>
     <div class="card">
 
       <div class="noticia">
-        <div class="noticia-meta">Infobae / La Nación · 26-27 de agosto de 2026</div>
-        <div class="noticia-titulo">Diputados le dio media sanción a la reforma del BCRA y a "Inocencia Fiscal II", pensada para blanquear dólares fuera del sistema</div>
+        <div class="noticia-meta">&Aacute;mbito / BAE Negocios &middot; semana del 24 de agosto de 2026 &middot; <a href="https://www.ambito.com/economia/record-importaciones-bienes-consumo-que-productos-registraron-subas-530-n6311906" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">R&eacute;cord hist&oacute;rico de importaciones de bienes de consumo: USD 5.362 M en el primer semestre y 3.516 importadores nuevos</div>
         <div class="noticia-body">
-          <p>En una noche de victorias legislativas para el oficialismo, la Cámara de Diputados aprobó dos proyectos clave: la reforma de la Carta Orgánica del Banco Central (que refuerza su independencia y redefine reglas sobre reservas, utilidades y estabilidad del directorio) y la ampliación de "Inocencia Fiscal II", con 139 votos a favor, 110 en contra y dos abstenciones. El proyecto de Inocencia Fiscal elimina los topes que existían para adherir al régimen — ya no van a regir los límites de $10.000 millones de patrimonio ni de $1.000 millones de ingresos — y amplía el universo de contribuyentes que pueden blanquear ahorros fuera del sistema bajo la Declaración Jurada Simplificada de Ganancias. Durante el debate, el oficialismo sumó una modificación para excluir del beneficio a funcionarios y ex funcionarios de alta responsabilidad de los últimos cinco años.</p>
-          <p>La oposición cuestionó la medida como "un nuevo blanqueo" disfrazado, mientras el Gobierno la defiende como una herramienta para formalizar ahorros genuinos que hoy están fuera del sistema bancario. El proyecto pasa ahora al Senado, donde el oficialismo espera conseguir la sanción definitiva en las próximas semanas.</p>
-          <p><strong>Para vos:</strong> si el proyecto se convierte en ley, es un evento relevante para tu trabajo en la financiera — más dólares "blanqueados" entrando al sistema formal puede significar más liquidez bancaria y eventualmente algo de presión bajista adicional sobre la brecha cambiaria, en la misma línea que el driver de fondo que ya se ve en las reservas del BCRA. Vale la pena seguir de cerca el tratamiento en el Senado en las próximas semanas.</p>
+          <p>Las importaciones de bienes de consumo tocaron un techo hist&oacute;rico en el primer semestre de 2026: USD 5.362 M, 1,8% arriba de 2025 y 20,7% por encima del r&eacute;cord previo para un primer semestre (2018, USD 4.443 M). La cantidad de empresas importadoras creci&oacute; 175% &mdash; 3.516 firmas nuevas &mdash; aunque las que ya importaban en 2023 siguen explicando el 80% del monto.</p>
+          <p>El motor es la combinaci&oacute;n de apertura comercial (reforma del C&oacute;digo Aduanero v&iacute;a DNU 41/2026, que recort&oacute; tiempos y discrecionalidad), peso apreciado en t&eacute;rminos hist&oacute;ricos y demanda interna que se recompuso. El contracara: entre el primer semestre de 2023 y el de 2026 la producci&oacute;n industrial manufacturera (IPI Indec) cay&oacute; 12%, y las compras de bienes intermedios y de piezas para bienes de capital se contrajeron 17-21%. Hay sectores que ganan (comercio, distribuci&oacute;n, retail de importados) y otros que pierden (industria que compet&iacute;a con protecci&oacute;n).</p>
+          <p><strong>Para vos:</strong> es la ventana de la idea que ya ten&eacute;s anotada (app / negocio de importaci&oacute;n). Barrera de entrada m&aacute;s baja que nunca &mdash; tr&aacute;mite m&aacute;s corto, m&aacute;s players nuevos &mdash; pero el 80% del volumen sigue concentrado en los incumbentes, as&iacute; que el juego no es competir en commodities importados sino nichos: producto que hoy no entra bien, marca propia, o servicio de intermediaci&oacute;n para pymes que quieren importar y no saben c&oacute;mo. Con peso fuerte y arancel bajo, el margen de arbitraje product-por-product existe; el riesgo es que una correcci&oacute;n cambiaria te licue el stock importado.</p>
         </div>
       </div>
 
       <div class="noticia">
-        <div class="noticia-meta">iProfesional / El Cronista · semana del 25 de agosto de 2026</div>
-        <div class="noticia-titulo">Las importaciones de bienes finales tocaron un récord semestral: USD 5.362 millones, 20,7% por encima del máximo de 2018</div>
+        <div class="noticia-meta">El Cronista / AduanaNews &middot; 25 de agosto de 2026 &middot; <a href="https://www.cronista.com/economia-politica/las-exportaciones-argentinas-superaran-un-record-historico-en-2026-cuales-son-los-motores/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Exportaciones rumbo a r&eacute;cord hist&oacute;rico (podr&iacute;an superar USD 100.000 M) y las pymes exportadoras en su mejor nivel en 13 a&ntilde;os</div>
         <div class="noticia-body">
-          <p>Durante el primer semestre de 2026 ingresaron a la Argentina productos finales por USD 5.362 millones, el monto más alto registrado para una primera mitad de año — superando en 20,7% el máximo histórico anterior, que databa de 2018. El fenómeno confirma la tendencia que ya veníamos siguiendo en briefings anteriores (el "efecto Shein y Temu", el boom importador de indumentaria): la apertura comercial sigue ampliando la variedad de productos disponibles, sumando nuevos jugadores importadores y aumentando la competencia — algo que el Gobierno señala como una pieza clave para seguir bajando la inflación.</p>
-          <p>Entre los rubros que más está impulsando la importación aparecen los componentes de automatización industrial (PLCs, sensores, actuadores), cada vez más relevantes para que las pymes manufactureras argentinas puedan modernizarse y competir en un contexto de mayor apertura.</p>
-          <p><strong>Para vos:</strong> es la tercera semana seguida que aparece un dato de importación en niveles récord — ya no es un evento puntual sino una tendencia consolidada de 2026. Para cualquier negocio de intermediación o importación que evalúes (sea consumo, indumentaria o componentes industriales), esta es la confirmación más sólida hasta ahora de que la ventana sigue abierta y no da señales de cerrarse en el corto plazo.</p>
+          <p>Proyecciones privadas (CIEN) ubican las exportaciones 2026 en el nivel m&aacute;s alto de la historia argentina, con chance de perforar por primera vez la barrera de los USD 100.000 M &mdash; estimaciones m&aacute;s conservadoras hablan de USD 90.500 M de exportaciones contra USD 81.500 M de importaciones y un super&aacute;vit cercano a USD 9.000 M. Los motores: agro, energ&iacute;a (Vaca Muerta) y miner&iacute;a.</p>
+          <p>El dato m&aacute;s relevante para un negocio chico es el de las pymes: sus exportaciones crecieron 26% interanual en los primeros siete meses del a&ntilde;o y tocaron el mejor nivel en 13 a&ntilde;os. La debilidad estructural sigue siendo la misma: pocas pymes exportan y la canasta est&aacute; concentrada en pocos productos, as&iacute; que el margen para sumar empresas nuevas a la base exportadora es enorme.</p>
+          <p><strong>Para vos:</strong> encaja directo con la idea de la semana (consignataria / intermediaci&oacute;n agro en el NOA) y con el circuito de la financiera. M&aacute;s volumen exportador pyme = m&aacute;s demanda de prefinanciaci&oacute;n, descuento de cheques agropecuarios y cobertura cambiaria &mdash; todo lo que ya ves pasar por el mostrador. Un productor o una pyme del NOA que empieza a exportar necesita capital de trabajo antes de cobrar; ah&iacute; hay negocio de intermediaci&oacute;n financiera y de asesor&iacute;a, no solo de comisi&oacute;n por operaci&oacute;n.</p>
         </div>
       </div>
 
     </div>
 
-    <!-- NOTICIAS INT -->
     <div class="sec-title">Internacional</div>
     <div class="card">
 
       <div class="noticia">
-        <div class="noticia-meta">Bloomberg / TheStreet · 27 de agosto de 2026</div>
-        <div class="noticia-titulo">Nvidia salta 9% con un pronóstico de ventas "de otro planeta" y arrastra a todo el sector de semiconductores</div>
+        <div class="noticia-meta">CNBC &middot; 25-26 de agosto de 2026 &middot; <a href="https://www.cnbc.com/2026/08/25/stock-market-today-live-updates.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Wall Street lateral tras el dato de inflaci&oacute;n PCE; el mercado sigue esperando recorte de la Fed y UBS proyecta ganancias corporativas fuertes</div>
         <div class="noticia-body">
-          <p>Nvidia, la empresa más valiosa del mundo, subió 9% después de proyectar que sus ingresos van a crecer cerca de 70% en el próximo año fiscal — un pronóstico que superó ampliamente las expectativas del mercado y disparó un rally global de semiconductores. En Europa, las fabricantes de equipos para chips ASML y ASMI subieron más de 2%, STMicroelectronics ganó 3% y BE Semiconductor sumó 2% en la apertura del jueves. Tech fue el único sector del S&amp;P 500 que avanzó en la rueda, mientras el resto del mercado quedó relativamente plano — una señal de que el apetito por IA sigue siendo el motor casi exclusivo de las subas bursátiles en este momento.</p>
-          <p>Es el tercer evento en un mes (después de Foxconn y CoreWeave) donde un dato puntual de una empresa de infraestructura de IA termina moviendo el humor de todo el mercado global. La diferencia con Nvidia es que, a diferencia de CoreWeave, la compañía ya es ampliamente rentable — así que su optimismo pesa mucho más como validación de que el ciclo de inversión en IA sigue firme.</p>
-          <p><strong>Para vos:</strong> si tenés CEDEARs de Nvidia o del ecosistema de semiconductores, esta fue una de las mejores jornadas del año para el sector. Pero entrar después de una suba de 9% no es el mejor punto de entrada — si te interesa sumar exposición al tema IA, mejor esperar algún retroceso antes que perseguir el rally del día después de la noticia.</p>
+          <p>El S&amp;P 500 cerr&oacute; pr&aacute;cticamente sin cambios despu&eacute;s de que el &iacute;ndice de precios PCE &mdash; la medida de inflaci&oacute;n preferida de la Fed &mdash; mostrara que la inflaci&oacute;n sigue elevada. Aun as&iacute;, el mercado mantiene el precio de un recorte de tasas en la pr&oacute;xima reuni&oacute;n. La oficina de inversiones de UBS espera que las ganancias por acci&oacute;n del S&amp;P 500 crezcan 25% este a&ntilde;o y 14% el pr&oacute;ximo, y anticipa que los rendimientos de los bonos van a bajar en el largo plazo, lo que dar&iacute;a soporte a las acciones globales.</p>
+          <p>Por qu&eacute; importa: el escenario &quot;inflaci&oacute;n pegajosa pero ganancias en alza + Fed que igual recorta&quot; es el que sostiene los m&aacute;ximos. Si la inflaci&oacute;n obliga a la Fed a frenar los recortes, la correcci&oacute;n puede ser fuerte porque las valuaciones ya descuentan el escenario optimista.</p>
+          <p><strong>Para vos:</strong> el driver de tus CEDEARs sigue siendo la Fed. Mientras el mercado crea en el recorte, los CEDEARs de S&amp;P 500 / Nasdaq acompa&ntilde;an y adem&aacute;s te cubren del d&oacute;lar. El riesgo concreto a vigilar es el pr&oacute;ximo dato de inflaci&oacute;n de EE.UU.: un n&uacute;mero alto pega en tech y, por brecha, suele empujar el CCL para arriba &mdash; doble golpe si est&aacute;s mal parado.</p>
         </div>
       </div>
 
       <div class="noticia">
-        <div class="noticia-meta">CNBC / Yahoo Finance · 26 de agosto de 2026</div>
-        <div class="noticia-titulo">Salesforce sube 14% tras subir su pronóstico anual y lanzar "Claudeforce", su nueva alianza con Anthropic</div>
+        <div class="noticia-meta">CNBC &middot; 25 de agosto de 2026 &middot; <a href="https://www.cnbc.com/2026/08/25/stock-market-today-live-updates.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Silver Lake negocia comprar Workday y el capex de infraestructura de IA sigue firme (Foxconn, CoreWeave)</div>
         <div class="noticia-body">
-          <p>Salesforce elevó sus previsiones de ingresos y ganancias para todo el año y lanzó "Claudeforce", un plugin que combina su plataforma CRM con los modelos Claude de Anthropic, lo que disparó la acción 14% en el after-market. El producto central, "Salesforce en Claude", viene con 37 habilidades de venta preconstruidas (preparación de reuniones, revisión de salud de negocios, análisis de pipeline) y permite a los vendedores consultar y actualizar datos del CRM sin abrir la aplicación de Salesforce. Ya está disponible para clientes piloto seleccionados, con una beta abierta planeada para septiembre. Es una expansión de la alianza entre ambas empresas, que habían anunciado su primer acuerdo en junio.</p>
-          <p>En paralelo, Okta también amplió su alianza con Anthropic: desde agosto los administradores pueden empezar a usar Okta como capa de gobernanza de identidad para Claude Enterprise, con clientes conjuntos como Ramp, Webflow y HubSpot ya integrados.</p>
-          <p><strong>Para vos:</strong> es un caso muy concreto de cómo las herramientas de IA se están integrando directo en el software de gestión que usan las empresas todos los días — la misma lógica que ya viste en la idea de "capacitación de empleados de pymes con IA" de hace unas semanas, pero a escala de las CRM más grandes del mundo. Vale la pena tenerlo de referencia: cuando gigantes como Salesforce apuestan así de fuerte a integrar IA en el trabajo diario, confirma que ese tipo de servicio para pymes locales tiene piso de demanda real, no es una moda pasajera.</p>
+          <p>El fondo de private equity Silver Lake est&aacute; en conversaciones para adquirir Workday, una de las operaciones de software m&aacute;s grandes que se plantear&iacute;an en el a&ntilde;o. En paralelo, Foxconn afirm&oacute; que la infraestructura de inteligencia artificial est&aacute; impulsando su crecimiento y anticipa &quot;crecimiento significativo&quot; en electr&oacute;nica de consumo inteligente en 2026, y la compa&ntilde;&iacute;a de c&oacute;mputo para IA CoreWeave mostr&oacute; m&aacute;rgenes en alza seg&uacute;n un an&aacute;lisis de Freedom Capital Markets.</p>
+          <p>Por qu&eacute; importa: dos se&ntilde;ales de que el ciclo de IA todav&iacute;a est&aacute; en fase de inversi&oacute;n, no de resaca. El PE volviendo a hacer buyouts grandes de software indica que hay financiamiento disponible y que los fondos ven valor tras la correcci&oacute;n de m&uacute;ltiplos SaaS. El gasto en data centers y hardware sigue siendo el piso del mercado.</p>
+          <p><strong>Para vos:</strong> si ten&eacute;s exposici&oacute;n a tech v&iacute;a CEDEARs, el capex de IA es el sost&eacute;n de la tesis &mdash; mientras Foxconn, CoreWeave y las hyperscalers sigan invirtiendo, el sector tiene suelo. La se&ntilde;al de alerta ser&iacute;a lo contrario: la primera empresa grande que recorte gu&iacute;a de capex de IA marca el techo del ciclo. Por ahora no pas&oacute;.</p>
         </div>
       </div>
 
     </div>
 
-    <!-- IDEA SEMANAL -->
-    <div class="sec-title">Idea de negocio — semana 35</div>
+    <div class="sec-title">Idea de negocio &mdash; semana 35</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
       <div class="idea-titulo">Consignataria de hacienda en el NOA</div>
-      <div class="idea-body"><h3>Qué es</h3>
-<p>Una consignataria de hacienda es la figura clásica del negocio agropecuario argentino: un agente/comisionista que actúa de intermediario entre productores ganaderos y compradores (frigoríficos, invernadores, otros productores) en remates o ventas directas, cobrando una comisión por operación cerrada. A nivel nacional existen jugadores grandes (Rosgan, Copra, etc.), pero a escala Tucumán/NOA el negocio sigue siendo bastante informal y atomizado — hay lugar para un consignatario profesional, con buena reputación y conocimiento real de la zona, que le dé más transparencia de precios y menos fricción a productores chicos y medianos que hoy venden sin intermediación seria.</p>
+      <div class="idea-body">
+        <h3>Qu&eacute; es</h3>
+        <p>Una consignataria de hacienda es la figura cl&aacute;sica del negocio agropecuario argentino: un agente/comisionista que act&uacute;a de intermediario entre productores ganaderos y compradores (frigor&iacute;ficos, invernadores, otros productores) en remates o ventas directas, cobrando una comisi&oacute;n por operaci&oacute;n cerrada. A nivel nacional existen jugadores grandes (Rosgan, Copra, etc.), pero a escala Tucum&aacute;n/NOA el negocio sigue siendo bastante informal y atomizado &mdash; hay lugar para un consignatario profesional, con buena reputaci&oacute;n y conocimiento real de la zona, que le d&eacute; m&aacute;s transparencia de precios y menos fricci&oacute;n a productores chicos y medianos que hoy venden sin intermediaci&oacute;n seria.</p>
 
-<h3>Por qué ahora</h3>
-<ul>
-<li><strong>Ganadería del NOA en expansión con feedlots:</strong> la actividad viene creciendo en Tucumán y Santiago del Estero, y necesita canales de comercialización más profesionales que el boca en boca tradicional.</li>
-<li><strong>Tu lugar en la financiera es una ventaja competitiva real:</strong> ya estás en contacto permanente con productores rurales, cheques agropecuarios y consignatarios existentes — conocés el circuito de pagos, quién cumple y quién no, y eso es exactamente la reputación que hace falta para arrancar en este negocio.</li>
-<li><strong>Apertura comercial general:</strong> el contexto de mayor apertura y comercio (que también está impulsando las exportaciones pyme y agro a niveles récord) le da más aire a todo el circuito de comercialización de hacienda, no solo a la exportación.</li>
-</ul>
+        <h3>Por qu&eacute; ahora</h3>
+        <ul>
+        <li><strong>Ganader&iacute;a del NOA en expansi&oacute;n con feedlots:</strong> la actividad viene creciendo en Tucum&aacute;n y Santiago del Estero, y necesita canales de comercializaci&oacute;n m&aacute;s profesionales que el boca en boca tradicional.</li>
+        <li><strong>Tu lugar en la financiera es una ventaja competitiva real:</strong> ya est&aacute;s en contacto permanente con productores rurales, cheques agropecuarios y consignatarios existentes &mdash; conoc&eacute;s el circuito de pagos, qui&eacute;n cumple y qui&eacute;n no, y eso es exactamente la reputaci&oacute;n que hace falta para arrancar en este negocio.</li>
+        <li><strong>Apertura comercial general:</strong> el contexto de mayor apertura y comercio (que tambi&eacute;n est&aacute; impulsando las exportaciones pyme y agro a niveles r&eacute;cord) le da m&aacute;s aire a todo el circuito de comercializaci&oacute;n de hacienda, no solo a la exportaci&oacute;n.</li>
+        </ul>
 
-<h3>Cómo arrancarla</h3>
-<ul>
-<li><strong>Paso 1 — Sacar la matrícula habilitante</strong> como agente/corredor de hacienda (colegio de corredores correspondiente, inscripción en SENASA/RENSPA según corresponda).</li>
-<li><strong>Paso 2 — Arrancar asociado a un consignatario ya establecido</strong> de la zona, para aprender el oficio de primera mano y empezar a construir cartera sin asumir todo el riesgo comercial solo desde el día uno.</li>
-<li><strong>Paso 3 — Armar cartera propia de productores chicos/medianos</strong> de Tucumán y Santiago del Estero que hoy venden sin intermediación profesional — el segmento más desatendido y con más margen de mejora.</li>
-<li><strong>Paso 4 — Digitalizar lo básico:</strong> WhatsApp Business con actualización de precios de mercado, planillas simples de seguimiento de hacienda ofrecida — un nivel de profesionalismo que hoy la mayoría de los consignatarios chicos de la zona no tiene, y que genera confianza rápido.</li>
-<li><strong>Paso 5 — Escalar</strong> hacia organizar remates propios o alianzas con ferias/mercados concentradores regionales una vez que la cartera y la reputación estén asentadas.</li>
-</ul>
+        <h3>C&oacute;mo arrancarla</h3>
+        <ul>
+        <li><strong>Paso 1 &mdash; Sacar la matr&iacute;cula habilitante</strong> como agente/corredor de hacienda (colegio de corredores correspondiente, inscripci&oacute;n en SENASA/RENSPA seg&uacute;n corresponda).</li>
+        <li><strong>Paso 2 &mdash; Arrancar asociado a un consignatario ya establecido</strong> de la zona, para aprender el oficio de primera mano y empezar a construir cartera sin asumir todo el riesgo comercial solo desde el d&iacute;a uno.</li>
+        <li><strong>Paso 3 &mdash; Armar cartera propia de productores chicos/medianos</strong> de Tucum&aacute;n y Santiago del Estero que hoy venden sin intermediaci&oacute;n profesional &mdash; el segmento m&aacute;s desatendido y con m&aacute;s margen de mejora.</li>
+        <li><strong>Paso 4 &mdash; Digitalizar lo b&aacute;sico:</strong> WhatsApp Business con actualizaci&oacute;n de precios de mercado, planillas simples de seguimiento de hacienda ofrecida &mdash; un nivel de profesionalismo que hoy la mayor&iacute;a de los consignatarios chicos de la zona no tiene, y que genera confianza r&aacute;pido.</li>
+        <li><strong>Paso 5 &mdash; Escalar</strong> hacia organizar remates propios o alianzas con ferias/mercados concentradores regionales una vez que la cartera y la reputaci&oacute;n est&eacute;n asentadas.</li>
+        </ul>
 
-<h3>Modelo de ingreso</h3>
-<p>La comisión estándar del sector ronda 2-3% sobre el valor de la operación. Intermediando, por ejemplo, entre USD 50.000 y USD 150.000 mensuales en valor de hacienda (volumen modesto para arrancar, escalable con el tiempo), la comisión mensual estimada rondaría USD 1.000-4.500, creciendo a medida que se consolida la cartera de productores y compradores.</p>
+        <h3>Modelo de ingreso</h3>
+        <p>La comisi&oacute;n est&aacute;ndar del sector ronda 2-3% sobre el valor de la operaci&oacute;n. Intermediando, por ejemplo, entre USD 50.000 y USD 150.000 mensuales en valor de hacienda (volumen modesto para arrancar, escalable con el tiempo), la comisi&oacute;n mensual estimada rondar&iacute;a USD 1.000-4.500, creciendo a medida que se consolida la cartera de productores y compradores.</p>
 
-<h3>Riesgos principales</h3>
-<ul>
-<li><strong>Es un negocio de confianza construida en años, no en meses:</strong> arrancar sin cartera propia es lento — depende de reputación, no de marketing.</li>
-<li><strong>Riesgo de cobro:</strong> igual que con los cheques que ya manejás en la financiera, hay que blindar bien los términos de pago con el comprador antes de cerrar cada operación.</li>
-<li><strong>Estacionalidad y clima:</strong> sequías o años de escasez de pasturas afectan directamente la oferta de hacienda disponible para intermediar.</li>
-</ul>
+        <h3>Riesgos principales</h3>
+        <ul>
+        <li><strong>Es un negocio de confianza construida en a&ntilde;os, no en meses:</strong> arrancar sin cartera propia es lento &mdash; depende de reputaci&oacute;n, no de marketing.</li>
+        <li><strong>Riesgo de cobro:</strong> igual que con los cheques que ya manej&aacute;s en la financiera, hay que blindar bien los t&eacute;rminos de pago con el comprador antes de cerrar cada operaci&oacute;n.</li>
+        <li><strong>Estacionalidad y clima:</strong> sequ&iacute;as o a&ntilde;os de escasez de pasturas afectan directamente la oferta de hacienda disponible para intermediar.</li>
+        </ul>
 
-<h3>Esfuerzo/inversión inicial</h3>
-<p>Inversión moderada: <strong>USD 1.000-3.000</strong> para matrícula, movilidad para visitar campos y remates, y algo de presencia/marketing en el ambiente rural. Tiempo: compatible con arrancar part-time desde la financiera, pero a diferencia de las ideas más digitales de semanas anteriores, este negocio exige presencia física real en el campo y en los remates — no se arma solo desde el escritorio.</p></div>
+        <h3>Esfuerzo/inversi&oacute;n inicial</h3>
+        <p>Inversi&oacute;n moderada: <strong>USD 1.000-3.000</strong> para matr&iacute;cula, movilidad para visitar campos y remates, y algo de presencia/marketing en el ambiente rural. Tiempo: compatible con arrancar part-time desde la financiera, pero a diferencia de las ideas m&aacute;s digitales de semanas anteriores, este negocio exige presencia f&iacute;sica real en el campo y en los remates &mdash; no se arma solo desde el escritorio.</p>
+      </div>
     </div>
 
-  </div><!-- /body-wrap -->
+  </div>
 
-  <footer>Generado 28/08/2026 (retroactivo — briefing correspondiente al 27/08) · Agente personal SN</footer>
+  <footer>Generado viernes 28 de agosto de 2026, 13:23 &middot; Agente personal SN</footer>
 
-  <!-- ══ CHARTS JS ══ -->
   <script>
   (function() {
     function initCharts() {
-
       var habEl = document.getElementById('habChart');
       if (habEl) {
         var items = document.querySelectorAll('.hab-item');
@@ -738,7 +824,7 @@
           if (spans.length < 2) return;
           var name = spans[0].textContent.trim();
           var badge = spans[1];
-          var pct = parseFloat(badge.textContent.replace('%','').replace(',','.'));
+          var pct = parseFloat(badge.textContent.replace('%',''));
           if (isNaN(pct)) return;
           labels.push(name);
           data.push(pct);
