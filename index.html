@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Briefing — 01-09-2026</title>
+  <title>Briefing — 02-09-2026</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 <style>
@@ -268,7 +268,7 @@
   /* ══════════════════════════════
      FINANCIERA — Cotizaciones
   ══════════════════════════════ */
-  .dolar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin-bottom: 16px; }
+  .dolar-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px; margin-bottom: 16px; }
   .dolar-stat {
     background: var(--card2);
     border: 1px solid var(--border);
@@ -281,9 +281,6 @@
   .dolar-stat .label { font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); margin-bottom: 6px; }
   .dolar-stat .val   { font-size: 19px; font-weight: 800; color: var(--text); }
   .dolar-stat .sub   { font-size: 10px; margin-top: 4px; }
-
-  /* Dollar chart wrapper */
-  .dolar-chart-wrap { position: relative; height: 160px; margin-bottom: 16px; }
 
   /* ══════════════════════════════
      FINANCIERA — ROFEX
@@ -378,17 +375,6 @@
     line-height: 1.65;
   }
   .recomendacion strong { color: var(--blue); }
-
-  /* ══════════════════════════════
-     FINANCIERA — Tags & Rulos
-  ══════════════════════════════ */
-  .tag-legal { background: rgba(5,150,105,.12); color: var(--success); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
-  .tag-gris  { background: rgba(217,119,6,.12);  color: var(--warning); font-size: 9px; font-weight: 700; padding: 2px 7px; border-radius: 4px; text-transform: uppercase; letter-spacing: .05em; }
-
-  .rulo-item { background: var(--card2); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; margin-bottom: 8px; }
-  .rulo-item:last-child { margin-bottom: 0; }
-  .rulo-titulo { font-size: 13px; font-weight: 700; margin-bottom: 6px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; color: var(--text); }
-  .rulo-body   { font-size: 13px; color: #3a4a5e; line-height: 1.65; }
 
   /* ══════════════════════════════
      BRECHAS
@@ -487,7 +473,6 @@
     .site-header { padding: 20px 16px 18px; }
     footer { margin: 0 16px; }
     .grid-2 { grid-template-columns: 1fr; }
-    .dolar-grid { grid-template-columns: repeat(2, 1fr); }
     .rofex-grid { grid-template-columns: 1fr 1fr 1fr; }
     .tasas-grid { grid-template-columns: 1fr 1fr; }
     .hab-grid { grid-template-columns: 1fr 1fr; }
@@ -519,7 +504,7 @@
         </svg>
         <div>
           <div class="header-brand">Briefing personal</div>
-          <div class="header-title">martes 1 de septiembre de 2026</div>
+          <div class="header-title">miércoles 2 de septiembre de 2026</div>
         </div>
       </div>
       <div class="header-right">
@@ -535,7 +520,7 @@
     <!-- META DEL AÑO -->
     <div class="meta-rotativa">
       <span class="meta-icon">🎯</span>
-      <span><strong>Meta del año:</strong> Ver dónde invertir la plata (moto, campo, etc.).</span>
+      <span><strong>Meta del año:</strong> Ver si puedo vender los terrenos (Juan Mendi y Las Cruces).</span>
     </div>
 
     <!-- TAREAS -->
@@ -543,11 +528,13 @@
     <div class="grid-2">
       <div class="card">
         <div class="card-label">Hoy</div>
-        <ul class="task-list"><li>Que Flor le mandé un mensaje a su DR</li><li>Terminar curso de emprender</li><li>Llevar chaleco a Juan</li><li>Hacer el agente de IA de finanzas (para mí y el gym)</li><li>Estudiar la parte legal de cheques</li><li>Estudiar dólar</li><li>Modificar memoria de VS y Claude</li><li>Averiguar lo de Félix</li></ul>
+        <ul class="task-list"><li>RENDIR TP</li><li>Terminar curso de emprender</li><li>Llevar chaleco a Juan</li><li>Hacer el agente de IA de finanzas (para mí y el gym)</li><li>Estudiar la parte legal de cheques</li><li>Estudiar dólar</li><li>Averiguar lo de Félix</li>
+</ul>
       </div>
       <div class="card">
         <div class="card-label">Mañana</div>
-        <ul class="task-list"><li>Buzo Farías</li><li>Pagar multa suegra</li></ul>
+        <ul class="task-list"><li>Buzo Farías</li><li>Pagar multa suegra</li>
+</ul>
       </div>
     </div>
 
@@ -555,9 +542,10 @@
     <div class="sec-title">Agenda</div>
     <div class="card">
       <div class="card-label">Próximos eventos</div>
-      <div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Mañana · miércoles 2/9</div><div class="cal-titulo">Mandar mensajes a amigos olvidados</div><div class="cal-hora">Todo el día</div></div></div>
-      <div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Jueves 3/9</div><div class="cal-titulo">Turno de Flor con el médico</div><div class="cal-hora">Todo el día</div></div></div>
-      <div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Viernes 4/9</div><div class="cal-titulo">"Mes" — recordatorio mensual recurrente</div><div class="cal-hora">Todo el día</div></div></div>
+      <div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Hoy &middot; miércoles 2</div><div class="cal-titulo">Mandar mensajes amigos olvidados</div><div class="cal-hora">Todo el día &middot; recurrente &mdash; chino, alu, Gilberto, Pedrito, Nacho, centurión y mojarra</div></div></div>
+<div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Mañana &middot; jueves 3</div><div class="cal-titulo">Turno de flor médico</div><div class="cal-hora">Todo el día</div></div></div>
+<div class="evento-item"><div class="evento-dot"></div><div class="evento-content"><div class="cal-cuando">Viernes 4 de septiembre</div><div class="cal-titulo">Mes</div><div class="cal-hora">Todo el día &middot; recurrente</div></div></div>
+
     </div>
 
     <!-- HÁBITOS -->
@@ -565,13 +553,15 @@
     <div class="card">
       <div class="card-label">Progreso mensual</div>
       <div class="hab-summary">
-        <div class="hab-pct">0%</div>
+        <div class="hab-pct">78%</div>
         <div class="hab-pct-right">
-          <div class="hab-sub">Planilla de septiembre sin cargar (0/31 en todo). Los números de la grilla son del último mes con datos.</div>
+          <div class="hab-sub">14 de 18 checks posibles en los 2 días cargados de septiembre (1 y 2). Planilla leída el 03/09.</div>
         </div>
       </div>
-      <ul class="hab-insights"><li>Septiembre arranca sin registro: la pestaña del mes está vacía y la de agosto también. El tracking se cortó a mediados de agosto y no se retomó.</li><li>Último mes con datos: promedio ~64%. Lo único en rojo crónico es caminar/fisio (10%).</li><li>Estudiar cerró ese mes en 58%: cerca de la meta de 60%, pero sin llegar.</li></ul>
-      <div class="hab-grid"><div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">77%</span></div><div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">77%</span></div><div class="hab-item"><span class="hab-name">Trabajar 4 h</span><span class="badge-g">81%</span></div><div class="hab-item"><span class="hab-name">Estudiar 2 h</span><span class="badge-w">58%</span></div><div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">74%</span></div><div class="hab-item"><span class="hab-name">Caminar / fisio</span><span class="badge-r">10%</span></div><div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-g">65%</span></div><div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-g">68%</span></div><div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">74%</span></div></div>
+      <ul class="hab-insights"><li>Arrancaste septiembre con 7 de 9 los dos días (78% el 1 y 78% el 2). El mejor arranque de mes que hay en la planilla: el último mes completo cerró en 64% promedio.</li><li><strong>Entrenar / fisio: 0 de 2.</strong> Viene de 9,7% el último mes con datos. Es el único hábito que arranca el mes en cero y el que más te está costando desde la operación de hombro.</li><li>Los dos que rompen el pleno son Estudiar 2 h (1/2) y Leer 10 páginas (1/2). La meta de 60% mensual de estudio son 18 días de 30: a día por medio no llegás, necesitás 3 de cada 5.</li>
+</ul>
+      <div class="hab-grid"><div class="hab-item"><span class="hab-name">Despertar 8:00</span><span class="badge-g">100%</span></div><div class="hab-item"><span class="hab-name">Desayuno sano</span><span class="badge-g">100%</span></div><div class="hab-item"><span class="hab-name">Trabajar 4 h</span><span class="badge-g">100%</span></div><div class="hab-item"><span class="hab-name">Estudiar 2 h</span><span class="badge-w">50%</span></div><div class="hab-item"><span class="hab-name">Leer inversiones</span><span class="badge-g">100%</span></div><div class="hab-item"><span class="hab-name">Entrenar / fisio</span><span class="badge-r">0%</span></div><div class="hab-item"><span class="hab-name">Leer 10 páginas</span><span class="badge-w">50%</span></div><div class="hab-item"><span class="hab-name">Celular 00:00</span><span class="badge-g">100%</span></div><div class="hab-item"><span class="hab-name">Pensar 5 min</span><span class="badge-g">100%</span></div>
+</div>
       <!-- Gráfico hábitos -->
       <div class="chart-wrap">
         <canvas id="habChart"></canvas>
@@ -580,130 +570,123 @@
 
     <!-- FINANCIERA -->
     <div class="sec-title">Financiera</div>
-    <div class="card">
-      <div class="fin-section">
+    <div class="card">      <div class="fin-section">
         <div class="fin-label">A · Cotizaciones del dólar</div>
         <div class="dolar-grid">
           <div class="dolar-stat"><div class="label">Oficial (BNA)</div><div class="val">$1.535</div><div class="sub">Compra $1.485</div></div>
-          <div class="dolar-stat"><div class="label">Blue</div><div class="val">$1.545</div><div class="sub">Compra $1.525</div></div>
-          <div class="dolar-stat"><div class="label">CCL</div><div class="val">$1.595,34</div><div class="sub">Compra $1.589,09</div></div>
-          <div class="dolar-stat"><div class="label">USDT</div><div class="val">$1.596</div><div class="sub">Compra $1.580</div></div>
+          <div class="dolar-stat"><div class="label">Blue</div><div class="val">$1.540</div><div class="sub">Compra $1.520</div></div>
+          <div class="dolar-stat"><div class="label">MEP</div><div class="val">$1.533,97</div><div class="sub">Compra $1.533,51</div></div>
+          <div class="dolar-stat"><div class="label">CCL</div><div class="val">$1.597,99</div><div class="sub">Compra $1.596,60</div></div>
+          <div class="dolar-stat"><div class="label">USDT</div><div class="val">$1.595,90</div><div class="sub">Compra $1.577,47</div></div>
         </div>
-        <div class="dolar-chart-wrap"><canvas id="dolarChart"></canvas></div>
-        <p style="font-size:12px;margin:-4px 0 10px;color:#6b7a8d">Fuente: Cronista · 21:28 hs (Oficial, Blue, CCL, MEP). USDT: Binance P2P vía Dolarito, 1/9 — Cronista no publica USDT.</p>
-        <p style="font-size:13px;margin-bottom:8px;color:#3a4a5e">Brecha vs oficial (venta $1.535): Blue <span class="brecha-neu">+0,7%</span> &middot; CCL <span class="brecha-pos">+3,9%</span> &middot; USDT <span class="brecha-pos">+4,0%</span> &middot; MEP ($1.532,81) <span class="brecha-ok">&minus;0,1%</span>.</p>
-        <p style="font-size:13px;color:#3a4a5e"><strong>BCRA / macro:</strong> el Central compró US$769 M en el mercado oficial en agosto, el registro mensual más bajo del año (menos oferta de divisas de emisiones corporativas por la suba del riesgo país). Reservas brutas en torno a US$51.000 M, máximo de la era Milei. Frente externo: petróleo en alza por el conflicto EE.UU.&ndash;Irán y una Fed que podría subir tasas presionan al dólar global &uarr;; localmente, brecha comprimida y BCRA presente lo contienen &rarr;.</p>
-        <div class="recomendacion"><strong>Recomendación:</strong> sin urgencia hoy, pero el contexto de afuera (Fed dura, petróleo caro, sell-off de bonos) da razones para ir dolarizando de a poco los pesos ociosos en vez de dejarlos en plazo fijo al 20%. Si comprás, MEP antes que blue: misma cobertura, spread más chico, y es legal.</div>
+        <p style="font-size:12px;margin:-6px 0 10px;color:#6b7a8d">Fuente: Cronista &middot; 2/9 17:11 hs (Oficial, Blue, MEP, CCL). USDT: Binance P2P vía Dolarito, 2/9 &mdash; Cronista no publica USDT.</p>
+        <p style="font-size:13px;margin-bottom:8px;color:#3a4a5e">Brecha vs oficial (venta $1.535): Blue <span class="brecha-ok">+0,3%</span> &middot; MEP <span class="brecha-ok">&minus;0,1%</span> &middot; CCL <span class="brecha-pos">+4,1%</span> &middot; USDT <span class="brecha-pos">+4,0%</span>.</p>
+        <p style="font-size:13px;color:#3a4a5e"><strong>BCRA / macro:</strong> reservas brutas en US$50.250 M, otra vez arriba de los US$50.000 M, con recuperación en el volumen de compras del Central en el contado. El mayorista subió $4,50 (+0,3%) a $1.513 y acumula +4% en 2026. Bonares y Globales operan +0,3% promedio. Del lado de afuera, los Treasuries se movieron a un rango de 4,55%-5,27% anual, máximo desde octubre de 2023: presiona al dólar global &uarr;, pero localmente la brecha casi nula y el BCRA comprando lo contienen &rarr;.</p>
+        <div class="recomendacion"><strong>Recomendación:</strong> el dato del día es que el <strong>MEP ($1.533,97) cotiza por debajo del oficial ($1.535)</strong>. Si vas a dolarizar, hoy la vía más barata es MEP, no el oficial ni el blue: es legal, sin cupo y con brecha negativa. Comprar CCL o USDT a estos precios es pagar 4% de más salvo que necesites la plata afuera o en cripto.</div>
       </div>
       <div class="fin-section">
-        <div class="fin-label">B · Futuros ROFEX / A3 &mdash; dato semanal · 01/09</div>
+        <div class="fin-label">B · Futuros ROFEX / A3 &mdash; reintentado hoy 02/09, sin dato</div>
         <div class="rofex-grid">
           <div class="rofex-item"><div class="label">30 días</div><div class="val">Sin datos</div><div class="tna">&mdash;</div></div>
           <div class="rofex-item"><div class="label">60 días</div><div class="val">Sin datos</div><div class="tna">&mdash;</div></div>
           <div class="rofex-item"><div class="label">90 días</div><div class="val">Sin datos</div><div class="tna">&mdash;</div></div>
         </div>
-        <p style="font-size:12px;color:#6b7a8d">La búsqueda semanal no trajo curva de futuros con fecha verificable. Guardado como <code>null</code> en <code>mercado-semanal.json</code>; se reintenta el lunes que viene.</p>
+        <p style="font-size:12px;color:#6b7a8d">Reintento del 02/09 sin resultado: Ámbito carga la tabla de futuros por JS (no hay números en el HTML) y A3/Matba-Rofex no publica la curva fechada de forma abierta. Sigue en <code>null</code>; se reintenta mañana.</p>
       </div>
       <div class="fin-section">
-        <div class="fin-label">C · Tasas de referencia &mdash; dato semanal · 01/09</div>
+        <div class="fin-label">C · Tasas de referencia</div>
         <div class="tasas-grid">
-          <div class="tasa-item"><div class="t-label">Plazo fijo BNA</div><div class="t-val">20,00% TNA</div><div class="t-sub">30 d &middot; 20,25% a 60-89 d</div><span class="t-mensual">1,67%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Plazo fijo privados (mejor)</div><div class="t-val">~24% TNA</div><div class="t-sub">Reba; Banco Macro 19,5%</div><span class="t-mensual">2,00%/mes</span></div>
-          <div class="tasa-item"><div class="t-label">Caución 7 días</div><div class="t-val">Sin datos</div><div class="t-sub">no fechado hoy</div></div>
-          <div class="tasa-item"><div class="t-label">Lecap / Boncap</div><div class="t-val">Sin datos</div><div class="t-sub">no fechado hoy</div></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo BNA &mdash; dato del 01/09</div><div class="t-val">20,00% TNA</div><div class="t-sub">30 d &middot; 20,25% a 60-89 d</div><span class="t-mensual">1,67%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Plazo fijo privados &mdash; dato del 01/09</div><div class="t-val">~24% TNA</div><div class="t-sub">Reba; Banco Macro 19,5%</div><span class="t-mensual">2,00%/mes</span></div>
+          <div class="tasa-item"><div class="t-label">Caución 7 días &mdash; reintentado hoy 02/09</div><div class="t-val">Sin datos</div><div class="t-sub">solo hay dato del 07/05/2026, se descartó</div></div>
+          <div class="tasa-item"><div class="t-label">Lecap / Boncap &mdash; reintentado hoy 02/09</div><div class="t-val">Sin datos</div><div class="t-sub">solo hay dato de feb-2026, se descartó</div></div>
         </div>
       </div>
       <div class="fin-section">
-        <div class="fin-label">D · Cheques de pago diferido (CPD) &mdash; dato semanal · 01/09</div>
-        <p style="font-size:13px;color:#3a4a5e">Sin tasa de mercado secundario con fecha verificable hoy (guardado <code>null</code>). Referencia histórica: 2,5-3,5%/mes según plazo. Cuando traigas un cheque concreto, aplicá el checklist: rendimiento real en USD &ge;5% mensual, plazo &le;30 días, breakeven cómodo.</p>
+        <div class="fin-label">D · Cheques de pago diferido (CPD) &mdash; reintentado hoy 02/09, sin dato</div>
+        <p style="font-size:13px;color:#3a4a5e">El reintento trajo una nota de El Cronista <strong>publicada el 2/9/2026 pero con tasas de septiembre de <em>2020</em></strong> (26% a menos de 90 días). Se descartó por no ser dato actual. Queda en <code>null</code> y se reintenta mañana. Cuando traigas un cheque concreto, aplicá el checklist: rendimiento real en USD &ge;5% mensual, plazo &le;30 días, breakeven cómodo.</p>
       </div>
       <div class="fin-section">
         <div class="fin-label">E · Riesgo país (EMBI+)</div>
-        <div class="rp-row"><div class="rp-label">EMBI+ Argentina</div><div class="rp-val">512 pb <span class="rp-delta rp-neu">&asymp; estable</span></div></div>
-        <p style="font-size:13px;color:#3a4a5e">La compresión se frenó: el riesgo país incluso subió algo en agosto y por eso el BCRA compró menos (menos emisiones corporativas). Mientras no perfore los 500 de forma sostenida, la ventana para que el gobierno emita deuda barata afuera se sigue postergando. Para la financiera: riesgo país que no baja = clientes que no terminan de soltar el dólar &rarr; tasas de descuento de cheques firmes.</p>
+        <div class="rp-row"><div class="rp-label">EMBI+ Argentina</div><div class="rp-val">496 pb <span class="rp-delta rp-down">&darr; perfora los 500</span></div></div>
+        <p style="font-size:13px;color:#3a4a5e">Mínimo desde el 17 de agosto y &minus;73 puntos en lo que va de 2026. Con reservas otra vez arriba de US$50.000 M, el mercado vuelve a pricear que Argentina puede emitir deuda afuera. Para la financiera: riesgo país en baja + brecha casi nula suele traducirse en clientes menos apurados por dolarizarse y, con el tiempo, en tasas de descuento de cheques más comprimidas.</p>
       </div>
       <div class="fin-section">
         <div class="fin-label">F · Flujo del día</div>
-        <div class="flujo-card flujo-neutral"><div class="flujo-titulo">Jornada neutral con sesgo a compra</div><div class="flujo-body">Arranca mes y semana sin vencimientos impositivos ni pago de sueldos inmediato: localmente, poca presión. Pero el frente externo mete ruido (Fed hawkish, petróleo, sell-off de bonos globales). Brecha de un dígito y BCRA presente contienen. Si sobra peso, es día para acumular dólares de a poco, no para quedarse corto.</div></div>
+        <div class="flujo-card flujo-neutral"><div class="flujo-titulo">Jornada neutral</div><div class="flujo-body">Brecha prácticamente cerrada (Blue +0,3%, MEP en negativo), riesgo país perforando los 500 y BCRA comprando: no hay presión dolarizadora hoy. Del otro lado, los Treasuries en máximos de tres años son el único factor que empuja para arriba. Sin vencimientos impositivos ni pago de sueldos en el medio de la semana. Día para operar lo justo: si tenés que comprar, MEP; si no, quedarte en pesos con el carry a favor.</div></div>
       </div>
-      <div class="fin-section">
-        <div class="fin-label">G · Rulo del día</div>
-        <div class="rulo-item"><div class="rulo-titulo">Comprar Oficial &rarr; vender CCL <span class="tag-gris">requiere comitente</span></div><div class="rulo-body">Hoy el oficial está en $1.535 (venta) y el CCL en $1.589,09 (compra) &rarr; comprás oficial y vendés CCL. Spread: $54 (3,5% bruto). El mismo rulo con USDT da menos ($45 / 2,9%) y con blue da negativo. Riesgo: el CCL necesita cuenta comitente y bonos (AL30/GD30), la liquidación lleva 1-2 días y hay que netear comisiones &mdash; el 3,5% bruto queda bastante más flaco en la práctica.</div></div>
-      </div>
-    </div>
+</div>
 
     <!-- NOTICIAS AR -->
     <div class="sec-title">Argentina</div>
-    <div class="card">
-      <div class="noticia">
-        <div class="noticia-meta">El Cronista &middot; 29 de agosto de 2026 &middot; <a href="https://www.cronista.com/economia-politica/saltaron-26-las-exportaciones-pyme-pero-arrastran-una-deuda-que-no-logran-revertir/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Las exportaciones pyme saltaron 26%, pero casi no aparecen firmas nuevas</div>
+    <div class="card">      <div class="noticia">
+        <div class="noticia-meta">El Cronista &middot; 2 de septiembre de 2026 &middot; <a href="https://www.cronista.com/negocios/la-nueva-racha-del-agro-que-empresas-activaron-inversiones-por-us-3800-millones/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">El agro activó inversiones por US$3.800 millones mientras baja el esquema de retenciones</div>
         <div class="noticia-body">
-          <p><strong>Qué pasó y contexto.</strong> Las exportaciones de las pymes argentinas sumaron US$6.446 millones entre enero y julio de 2026, un 26% más que en el mismo período de 2025, según la Subsecretaría Pyme. Pero el número de empresas que exportan casi no se movió: pasó de 9.107 a 9.399 en un año. Las pymes siguen representando apenas entre 7,6% y 7,9% del comercio exterior total; el grueso de las divisas lo aportan un puñado de cerealeras y automotrices. El salto del 26% se explica más por precios y por mayor volumen de las que ya exportaban que por nuevas firmas sumándose. La apertura y la baja de retenciones ayudaron, pero el cuello de botella no es la demanda externa: exportar sigue siendo un laberinto administrativo para una empresa chica sin área de comercio exterior.</p>
-          <p><strong>Implicancia concreta para vos.</strong> Acá hay un negocio de intermediación puro, que es lo tuyo. El NOA produce cosas exportables &mdash;limón y derivados, arándano, azúcar orgánica, legumbres, miel&mdash; y la mayoría de los productores medianos no exporta porque no sabe cómo, no porque le falte comprador. Un gestor de comercio exterior llave en mano (documentación, logística, cobro, primer contacto con importadores) cobra 3-5% del valor FOB por operación y no pone capital de mercadería. Es el mismo modelo que la consignataria de hacienda que venías mirando, pero para exportación. Decisión de esta semana: identificá 2-3 productores tucumanos que hoy vendan solo al mercado interno y preguntales qué los frena para exportar; si es papeleo y miedo, tenés clientes. Segundo, en la financiera: una pyme que ya exporta tiene flujo en dólares y es mejor pagador que una que factura solo en pesos &mdash; priorizá sus cheques. Y tercero: el driver de crecimiento del país por dos años más va a ser la exportación pyme; cualquier negocio tuyo que se cuelgue de esa ola tiene viento a favor.</p>
+          <p><strong>Qué pasó y contexto.</strong> Las principales agroexportadoras argentinas ya anunciaron inversiones por unos US$3.800 millones en lo que va de 2026, destinadas a montar plantas nuevas, ampliar capacidad productiva y reforzar posición de mercado. Entre los anuncios, Bio4 &mdash;una de las mayores productoras de bioetanol del país&mdash; junto a ACA y Promaíz comprometió a fines de julio un plan de US$70 millones a tres años para aumentar su capacidad de bioetanol de maíz. La racha llega en un contexto de cambios regulatorios: en junio el Gobierno bajó las retenciones al trigo y la cebada del 7,5% al 5,5%, y anunció un cronograma de reducciones graduales para el resto de los principales cultivos a partir de enero de 2027. Varias medidas del paquete siguen pendientes, y el esquema de derechos de exportación es el punto que más define la rentabilidad del sector.</p>
+          <p><strong>Implicancia &mdash; ángulo financiera.</strong> Un productor con retenciones más bajas y una cadena que está invirtiendo tiene margen más grande y flujo más previsible: su cheque vale más que hace un año. Concretamente, cuando entre un cheque de una firma del circuito agro &mdash;acopio, transporte, insumos, bioetanol&mdash; podés aceptar una tasa de descuento algo menor que la de un cheque comercial cualquiera, porque el riesgo de crédito bajó. Y al revés: si el cronograma de enero 2027 se posterga, esa prima de calidad se evapora rápido. Seguilo como dato de riesgo crediticio, no como noticia agropecuaria.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Infobae &middot; 15 de agosto de 2026 &middot; <a href="https://www.infobae.com/economia/2026/08/15/inversion-en-argentina-cae-la-construccion-y-avanzan-los-desembolsos-orientados-a-la-actividad-productiva/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">La construcción pierde impulso: la inversión se corre a proyectos grandes y zonas consolidadas</div>
+        <div class="noticia-meta">El Cronista &middot; 2 de septiembre de 2026 &middot; <a href="https://www.cronista.com/negocios/" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">Unibaio, agtech argentina, se llevó el premio a startup más sustentable en South Summit Brasil</div>
         <div class="noticia-body">
-          <p><strong>Qué pasó y contexto.</strong> El mercado inmobiliario argentino perdió impulso en 2026 después de dos años de mejora. Según Infobae y research de BBVA, la construcción privada enfrenta costos cada vez más dolarizados y una demanda que se volvió selectiva. La inversión dejó de concentrarse en vivienda e infraestructura urbana y se corrió hacia proyectos privados de gran escala y sectores con capacidad exportadora, que generan menos empleo directo. Cemento, cal y ladrillos siguen protegidos por barreras logísticas, pero acero, cerámicos, grifería y madera empiezan a competir con importados. Los especialistas insisten en que el ladrillo sigue siendo el vehículo preferido para multiplicar capital a mediano plazo: si el crédito hipotecario sostiene el ritmo, esperan una recuperación gradual de precios en dólares, sobre todo en zonas consolidadas de CABA y GBA.</p>
-          <p><strong>Implicancia concreta para vos.</strong> Tenés dos metas del año que tocan esto de lleno: "ver dónde invertir la plata" y "ver si puedo vender los terrenos de Juan Mendi y Las Cruces". El mensaje del informe es directo: un terreno suelto en el interior, sin desarrollo alrededor, es el activo inmobiliario que menos se aprecia en este ciclo &mdash; la plata está yendo a proyectos grandes y a zonas ya consolidadas, no a lotes a la espera. Si el objetivo es liquidez, no es mal momento para vender esos terrenos y rotar a algo que rinda: un pozo en zona consolidada de Yerba Buena o el centro tucumano, o instrumentos en dólares mientras mirás. Si el objetivo es holdear, tené presente que el costo de oportunidad de tener capital dormido en un lote es alto con plazo fijo al 20% y cheques al 2,5-3% mensual. Para la financiera: construcción más selectiva significa menos obra chica y más obra grande, así que los cheques que van a circular son de proveedores de proyectos grandes &mdash; mejor calidad crediticia, pero plazos más largos.</p>
+          <p><strong>Qué pasó y contexto.</strong> Unibaio, una startup biotecnológica argentina, fue distinguida como startup más sustentable en el South Summit Brasil 2026. Su desarrollo es una plataforma de nanotecnología aplicada a agroquímicos: encapsula los principios activos y permite reducir entre 50% y 80% la cantidad de producto necesaria por hectárea, manteniendo el mismo efecto agronómico. El premio la pone en el radar de fondos e inversores regionales en el evento de innovación más grande de Brasil. Es parte de una camada de agtech argentinas que están saliendo a competir afuera apoyadas en investigación local y en el prestigio técnico del agro argentino. El caso muestra que el diferencial exportable del país ya no es solo el grano: también son la tecnología y los servicios que se construyen alrededor de producirlo, un segmento donde el ticket es más chico pero el margen del proveedor es mucho más alto.</p>
+          <p><strong>Implicancia &mdash; ángulo negocio.</strong> Esto le abre una veta concreta a la gestoría de exportación que tenés como idea de la semana: no todo lo exportable del NOA es commodity. Hay insumos, bioinsumos y servicios técnicos que necesitan exactamente lo mismo &mdash;papeleo, logística, comprador del otro lado&mdash; y pagan comisiones más altas que un embarque de legumbres, porque el ticket es menor pero el margen del cliente es mucho mayor. Acción de esta semana: mirá quiénes compitieron en South Summit y en las aceleradoras del NOA; ese listado es tu primer deal flow.</p>
         </div>
       </div>
-    </div>
+</div>
 
     <!-- NOTICIAS INT -->
     <div class="sec-title">Internacional</div>
-    <div class="card">
-      <div class="noticia">
-        <div class="noticia-meta">The Motley Fool / TheStreet &middot; 1 de septiembre de 2026 &middot; <a href="https://www.fool.com/coverage/stock-market-today/2026/09/01/stock-market-today-sept-1-stocks-slide-and-oil-surges-amid-u-s-iran-tension/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Wall Street abre septiembre en rojo: petróleo en alza y sell-off de bonos por el conflicto EE.UU.–Irán</div>
+    <div class="card">      <div class="noticia">
+        <div class="noticia-meta">Yahoo Finance &middot; 2 de septiembre de 2026 &middot; <a href="https://finance.yahoo.com/markets/stocks/articles/stock-market-today-sept-2-134032621.html" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">El Treasury a 10 años toca 4,814%, máximo desde noviembre de 2023</div>
         <div class="noticia-body">
-          <p><strong>Qué pasó y contexto.</strong> El S&amp;P 500 cerró el 1&deg; de septiembre en 7.631 puntos (&minus;0,71%), el Nasdaq en 26.099 (&minus;1,03%) y el Dow perdió 419 puntos (&minus;0,79%). El detonante fue la reactivación del conflicto entre Estados Unidos e Irán en el estrecho de Ormuz, que llevó al Brent a la zona de US$91-94 el barril, unos US$25 más que hace un año. Se sumó un sell-off global de bonos que empujó al alza los rendimientos del Tesoro a 10 años, y las tecnológicas lideraron las bajas: Palo Alto Networks y CrowdStrike arrastraron al software tras balances flojos. Agosto había cerrado en positivo, así que este arranque de septiembre corta una racha buena.</p>
-          <p><strong>Implicancia concreta para vos.</strong> Un petróleo caro sostenido no es del todo malo para Argentina: Vaca Muerta y el saldo energético positivo se benefician, y eso ayuda a la balanza comercial y, por elevación, a las reservas del BCRA. El problema es el otro lado: un sell-off de bonos globales y tasas largas de EE.UU. más altas le ponen techo al rally de los bonos argentinos justo cuando el gobierno quería aprovechar el riesgo país bajo para emitir deuda afuera. Si esa ventana se cierra, el peso pierde una de sus anclas y el dólar local tiene una razón más para moverse. Para tu portafolio de CEDEARs: energía (petroleras, servicios de perforación) y defensa juegan a favor en este escenario, tecnología y software en contra &mdash; si tenés exposición al Nasdaq o a nombres de crecimiento, es momento de revisarla y de mirar bancos y energéticas. Para la financiera: un mundo risk-off se traduce casi siempre en más demanda de dólares en la calle y en tasas de descuento de cheques más altas, porque el que tiene pesos prefiere dolarizarse antes que prestarlos. Si tenés pesos esperando, esta semana conviene tenerlos líquidos para comprar cheques a mejor tasa o para dolarizar, no clavados en un plazo fijo al 20% que te empata la inflación en el mejor de los casos.</p>
+          <p><strong>Qué pasó y contexto.</strong> El rendimiento del bono del Tesoro estadounidense a 10 años tocó 4,814% el 2 de septiembre, su nivel más alto desde noviembre de 2023. No fue un movimiento aislado: los rendimientos también subieron en Reino Unido, Alemania y Francia, y en Japón el bono a 10 años se mantiene cerca de máximos de varias décadas. Es un reacomodamiento global del costo del dinero largo, empujado por el rebote del petróleo tras las hostilidades entre Estados Unidos e Irán y por una inflación que no termina de ceder. Las acciones estadounidenses rebotaron ese día después de dos jornadas de caídas, pero el movimiento de fondo en las tasas largas es el dato que manda. Los Treasuries operan hoy en un rango de 4,55% a 5,27% anual, el más alto en casi tres años.</p>
+          <p><strong>Implicancia &mdash; ángulo portafolio.</strong> Una tasa libre de riesgo al 4,8% a diez años reprecia todo lo que vale por flujos futuros lejanos: las empresas de crecimiento son las que más pierden, porque su valor está casi todo en el año diez. Si tenés CEDEARs concentrados en tecnología y software, este es el momento de bajar esa exposición y correrla a energía, bancos y compañías con dividendo, que aguantan mejor con tasas altas. No es una jugada de corto plazo: mientras las tasas largas globales sigan en máximos de tres años, el sesgo se mantiene.</p>
         </div>
       </div>
       <div class="noticia">
-        <div class="noticia-meta">Bankrate / Yahoo Finance &middot; semana del 25 de agosto de 2026 &middot; <a href="https://www.bankrate.com/banking/federal-reserve/will-the-fed-cut-rates-in-2026/" target="_blank" rel="noopener">Leer la nota completa</a></div>
-        <div class="noticia-titulo">Giro hawkish de la Fed: el mercado ya descuenta una posible suba de tasas en septiembre</div>
+        <div class="noticia-meta">TheStreet &middot; 2 de septiembre de 2026 &middot; <a href="https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-sept-02-2026" target="_blank" rel="noopener">Leer la nota completa</a></div>
+        <div class="noticia-titulo">ADP: el empleo privado sumó 38.000 puestos, el peor mes desde enero, y el software paga las guías tibias</div>
         <div class="noticia-body">
-          <p><strong>Qué pasó y contexto.</strong> La Reserva Federal dio un giro duro. Bajo la conducción de Kevin Warsh, el 29 de julio mantuvo la tasa en el rango 3,50%-3,75% por inflación todavía elevada, y de cara a la reunión del 15-16 de septiembre el mercado pasó de descontar un recorte casi seguro (85% de probabilidad hace unas semanas) a asignarle alrededor de 60% de chance a una suba de 25 puntos básicos. Es un cambio de expectativas fuerte en poco tiempo, alimentado por el rebote del petróleo, por datos de inflación que no ceden y por un tono más agresivo del propio Warsh en sus últimas apariciones.</p>
-          <p><strong>Implicancia concreta para vos.</strong> Una Fed que en vez de bajar sube es la peor combinación para los emergentes: fortalece al dólar a nivel global, sube el rendimiento de los bonos del Tesoro y da vuelta el capital que estaba yendo a países de riesgo como Argentina. En concreto, el "riesgo país que perfora los 500 puntos" que se venía celebrando pierde impulso, y con él la expectativa de que el gobierno consiga deuda barata afuera para cubrir los vencimientos de 2026 y 2027. Para tu portafolio: los CEDEARs de crecimiento y tecnología, ya golpeados, sufren más con tasas altas; bancos, energía y compañías que pagan dividendos aguantan mejor &mdash; si estás armando cartera, inclinala para ese lado y evitá pagar múltiplos caros por promesas de crecimiento futuro. Decisión concreta: si venías postergando dolarizar una parte de los ahorros, el combo Fed dura + elecciones locales en octubre + petróleo caro son tres razones convergentes para hacerlo ahora y no esperar al ruido de campaña. Cubrirte hoy, con brecha de un dígito, sale barato; si el dólar se recalienta después de las elecciones, esa misma cobertura te va a costar bastante más. Y para la financiera: tasas globales altas suelen adelantar tasas locales altas, así que los cheques que descuentes esta semana probablemente rindan menos que los de dentro de un mes &mdash; no te apures a colocar todo el capital hoy.</p>
+          <p><strong>Qué pasó y contexto.</strong> El informe de empleo privado de ADP mostró que Estados Unidos sumó 38.000 puestos en agosto, por debajo de los 46.000 del mes anterior y de los 47.000 que esperaba el mercado. Es el registro mensual más flojo desde enero. En paralelo, el mercado castigó con dureza a las tecnológicas que decepcionaron en perspectivas más que en resultados: MongoDB se derrumbó 12,4% pese a haber superado las estimaciones de ganancias del segundo trimestre, porque dio una guía cautelosa; Datadog cedió 2,63% y Snowflake 2,5% antes de reportar. Broadcom, Snowflake y Hewlett Packard Enterprise presentaban balances ese mismo día. Con el costo del dinero alto, el mercado ya no perdona una proyección tibia aunque el trimestre haya salido bien: la prima que pagaba por crecimiento futuro se achicó fuerte en pocas semanas.</p>
+          <p><strong>Implicancia &mdash; ángulo portafolio.</strong> La lección operativa es que en software ya no alcanza con batir el trimestre: si la guía es floja, el papel se lleva un &minus;12% en un día. Si tenés CEDEARs de SaaS o data &mdash;el tipo de nombre que quedó en toda cartera armada en 2024&mdash; revisá cuáles reportan en las próximas dos semanas y decidí antes del balance, no después. Va en la misma dirección que el dato de Treasuries: menos crecimiento, más flujo de caja presente.</p>
         </div>
       </div>
-    </div>
+</div>
 
     <!-- IDEA SEMANAL -->
     <div class="sec-title">Idea de negocio — semana 36</div>
     <div class="idea-card">
       <div class="idea-tag">Idea de la semana</div>
-      <div class="idea-titulo">Gestoría de exportación llave en mano para pymes del NOA</div>
-      <div class="idea-body">
-        <h3>Qué es</h3>
-        <p>Un servicio que le resuelve a un productor o pyme del NOA todo el proceso de exportar, de punta a punta, sin que la empresa tenga que armar un área de comercio exterior: inscripción como exportador, clasificación arancelaria, documentación (factura E, packing list, certificados SENASA/origen), coordinación de logística y aduana, y &mdash; lo más importante &mdash; el primer contacto con importadores del exterior y el blindaje del cobro. El cliente pone el producto; vos ponés el know-how y la red. No comprás mercadería: cobrás una comisión por operación cerrada.</p>
-        <h3>Por qué ahora</h3>
-        <p>Las exportaciones pyme crecieron 26% en lo que va de 2026 pero el número de empresas que exportan casi no se movió: hay demanda externa y hay productos, lo que falta es quién arme el puente. El NOA tiene oferta exportable subaprovechada (limón y derivados, arándano, azúcar orgánica, legumbres, miel, nuez) y muy pocos operadores serios de comercio exterior fuera de las grandes agroindustrias. La apertura comercial y la baja de retenciones bajaron la barrera; la burocracia sigue siendo el freno real, y ese freno es exactamente lo que un gestor cobra por sacar.</p>
-        <h3>Cómo arrancarla</h3>
-        <ul>
-          <li><strong>Paso 1:</strong> hacer un curso corto de comercio exterior y sacar la matrícula / inscripción que corresponda; asociarte a un despachante de aduana con el que tercerizar la parte técnica.</li>
-          <li><strong>Paso 2:</strong> elegir UN producto y UN destino para arrancar (ej. legumbres a Brasil, o limón a la UE) y mapear 3-4 productores tucumanos que ya lo produzcan con calidad exportable pero vendan solo al mercado interno.</li>
-          <li><strong>Paso 3:</strong> cerrar la primera operación aunque sea a comisión baja, para tener caso testigo y aprender el circuito real (tiempos, costos ocultos, cobro).</li>
-          <li><strong>Paso 4:</strong> construir cartera de importadores por el otro lado (ferias, cámaras, ProTucumán, agregadurías comerciales) &mdash; esa red es el activo que te hace difícil de reemplazar.</li>
-          <li><strong>Paso 5:</strong> escalar sumando productos y destinos, y ofrecer prefinanciación de exportación (ahí se cruza con la financiera).</li>
-        </ul>
-        <h3>Modelo de ingreso</h3>
-        <p>Comisión de 3% a 5% sobre el valor FOB de cada operación. Con un volumen modesto para arrancar &mdash; digamos US$80.000 a US$200.000 mensuales de mercadería intermediada &mdash; la comisión mensual quedaría entre US$2.400 y US$10.000, creciendo con la cartera. Ingreso extra: fee fijo por armado de legajo de exportador para clientes nuevos, y spread por prefinanciar la operación con capital propio o de la financiera.</p>
-        <h3>Riesgos principales</h3>
-        <p>Riesgo de cobro del importador: hay que trabajar con carta de crédito o anticipo hasta conocer al comprador. Curva de aprendizaje real: la primera exportación siempre sale más cara y más lenta de lo previsto. Dependencia de un puñado de productores al principio &mdash; si el más grande te saltea y exporta directo, perdés volumen. Y riesgo regulatorio: un cambio de retenciones o de régimen cambiario puede frenar operaciones en curso.</p>
-        <h3>Esfuerzo / inversión inicial</h3>
-        <p>Inversión: US$3.000 a US$8.000 (curso, matrícula, viajes a ferias y a campos, algo de marketing y capital para cubrir costos de la primera operación). Tiempo: alto los primeros meses hasta cerrar la primera exportación; después es compatible con seguir en la financiera, que además te da acceso directo a productores y a información de quién cumple y quién no.</p>
-      </div>
+      <div class="idea-titulo">Gestoría de exportación llave en mano para pymes del NOA
+</div>
+      <div class="idea-body"><h3>Qué es</h3>
+<p>Un servicio que le resuelve a un productor o pyme del NOA todo el proceso de exportar, de punta a punta, sin que la empresa tenga que armar un área de comercio exterior: inscripción como exportador, clasificación arancelaria, documentación (factura E, packing list, certificados SENASA/origen), coordinación de logística y aduana, y &mdash; lo más importante &mdash; el primer contacto con importadores del exterior y el blindaje del cobro. El cliente pone el producto; vos ponés el know-how y la red. No comprás mercadería: cobrás una comisión por operación cerrada.</p>
+<h3>Por qué ahora</h3>
+<p>Las exportaciones pyme crecieron 26% en lo que va de 2026 pero el número de empresas que exportan casi no se movió: hay demanda externa y hay productos, lo que falta es quién arme el puente. El NOA tiene oferta exportable subaprovechada (limón y derivados, arándano, azúcar orgánica, legumbres, miel, nuez) y muy pocos operadores serios de comercio exterior fuera de las grandes agroindustrias. La apertura comercial y la baja de retenciones bajaron la barrera; la burocracia sigue siendo el freno real, y ese freno es exactamente lo que un gestor cobra por sacar.</p>
+<h3>Cómo arrancarla</h3>
+<ul>
+<li><strong>Paso 1:</strong> hacer un curso corto de comercio exterior y sacar la matrícula / inscripción que corresponda; asociarte a un despachante de aduana con el que tercerizar la parte técnica.</li>
+<li><strong>Paso 2:</strong> elegir UN producto y UN destino para arrancar (ej. legumbres a Brasil, o limón a la UE) y mapear 3-4 productores tucumanos que ya lo produzcan con calidad exportable pero vendan solo al mercado interno.</li>
+<li><strong>Paso 3:</strong> cerrar la primera operación aunque sea a comisión baja, para tener caso testigo y aprender el circuito real (tiempos, costos ocultos, cobro).</li>
+<li><strong>Paso 4:</strong> construir cartera de importadores por el otro lado (ferias, cámaras, ProTucumán, agregadurías comerciales) &mdash; esa red es el activo que te hace difícil de reemplazar.</li>
+<li><strong>Paso 5:</strong> escalar sumando productos y destinos, y ofrecer prefinanciación de exportación (ahí se cruza con la financiera).</li>
+</ul>
+<h3>Modelo de ingreso</h3>
+<p>Comisión de 3% a 5% sobre el valor FOB de cada operación. Con un volumen modesto para arrancar &mdash; digamos US$80.000 a US$200.000 mensuales de mercadería intermediada &mdash; la comisión mensual quedaría entre US$2.400 y US$10.000, creciendo con la cartera. Ingreso extra: fee fijo por armado de legajo de exportador para clientes nuevos, y spread por prefinanciar la operación con capital propio o de la financiera.</p>
+<h3>Riesgos principales</h3>
+<p>Riesgo de cobro del importador: hay que trabajar con carta de crédito o anticipo hasta conocer al comprador. Curva de aprendizaje real: la primera exportación siempre sale más cara y más lenta de lo previsto. Dependencia de un puñado de productores al principio &mdash; si el más grande te saltea y exporta directo, perdés volumen. Y riesgo regulatorio: un cambio de retenciones o de régimen cambiario puede frenar operaciones en curso.</p>
+<h3>Esfuerzo / inversión inicial</h3>
+<p>Inversión: US$3.000 a US$8.000 (curso, matrícula, viajes a ferias y a campos, algo de marketing y capital para cubrir costos de la primera operación). Tiempo: alto los primeros meses hasta cerrar la primera exportación; después es compatible con seguir en la financiera, que además te da acceso directo a productores y a información de quién cumple y quién no.</p>
+</div>
     </div>
 
   </div><!-- /body-wrap -->
 
-  <footer>Generado martes 1 de septiembre de 2026, 21:55 · Agente personal SN</footer>
+  <footer>Generado miércoles 2 de septiembre de 2026, 17:15 · Agente personal SN</footer>
 
   <!-- ══ CHARTS JS ══ -->
   <script>
@@ -772,77 +755,6 @@
                   }
                 },
                 y: {
-                  grid: { display: false },
-                  border: { display: false },
-                  ticks: {
-                    font: { size: 11, family: 'Poppins' },
-                    color: '#3a4a5e'
-                  }
-                }
-              }
-            }
-          });
-        }
-      }
-
-      /* ── Dólar chart ── */
-      var dolarEl = document.getElementById('dolarChart');
-      if (dolarEl) {
-        var stats = document.querySelectorAll('.dolar-stat');
-        var dLabels = [], dData = [];
-        var palette = ['#0066a0','#dc2626','#7b5ea7','#bc1b88','#0891b2'];
-        var ci = 0;
-        stats.forEach(function(stat) {
-          var labelEl = stat.querySelector('.label');
-          var valEl   = stat.querySelector('.val');
-          if (!labelEl || !valEl) return;
-          var raw = valEl.textContent.replace('$','').replace(/\./g,'').replace(',','.').trim();
-          var price = parseFloat(raw);
-          if (isNaN(price) || price < 100) return;
-          dLabels.push(labelEl.textContent.trim());
-          dData.push(price);
-          ci++;
-        });
-        var dColors = dLabels.map(function(_, i) { return palette[i % palette.length]; });
-        if (dLabels.length) {
-          new Chart(dolarEl, {
-            type: 'bar',
-            data: {
-              labels: dLabels,
-              datasets: [{
-                data: dData,
-                backgroundColor: dColors.map(function(c) { return c + 'cc'; }),
-                borderColor: dColors,
-                borderWidth: 2,
-                borderRadius: 7,
-                borderSkipped: false
-              }]
-            },
-            options: {
-              responsive: true,
-              maintainAspectRatio: false,
-              plugins: {
-                legend: { display: false },
-                tooltip: {
-                  callbacks: {
-                    label: function(c) {
-                      return ' $' + c.raw.toLocaleString('es-AR');
-                    }
-                  }
-                }
-              },
-              scales: {
-                y: {
-                  min: 1360,
-                  grid: { color: 'rgba(0,0,0,0.05)' },
-                  border: { color: 'rgba(0,0,0,0.08)' },
-                  ticks: {
-                    callback: function(v) { return '$' + v.toLocaleString('es-AR'); },
-                    font: { size: 10, family: 'Poppins' },
-                    color: '#6b7a8d'
-                  }
-                },
-                x: {
                   grid: { display: false },
                   border: { display: false },
                   ticks: {
